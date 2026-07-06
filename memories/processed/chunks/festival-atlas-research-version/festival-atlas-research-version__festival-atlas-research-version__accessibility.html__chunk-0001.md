@@ -1,0 +1,29 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__accessibility.html__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/accessibility.html",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 2692,
+  "source_sha256": "f23b4c7d86c150d975d267661506d8a6753e78316b1f08c263d8944e4cd12715",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Production Atlas — Accessibility Statement</title><link rel="stylesheet" href="assets/atlas.css?v=atlas7"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0c1219"><link rel="apple-touch-icon" href="assets/icons/icon-192.png"><meta name="description" content="Accessibility Statement for the Production Atlas public work-mapping app."><link rel="canonical" href="https://atlas.thecrewblueprint.com/accessibility.html"></head>
+<body data-page="accessibility">
+<header class="hero"><div class="wrap"><div class="eyebrow">Production Atlas • Legal</div><h1>Accessibility Statement</h1><p>Production Atlas aims to keep public work-mapping information usable across devices and assistive technologies.</p></div></header>
+<nav class="nav"><div class="wrap"><div class="navInner"><a href="./index.html">Home</a><a href="./opportunities.html">Opportunities</a><a href="./calendar.html">Calendar</a><a href="./map.html">Map</a><a href="./employers.html">Employers</a><a href="./iatse.html">IATSE</a><a href="./contribute.html">Contribute</a></div></div></nav>
+<main class="wrap page">
+<section class="card"><h2>Accessibility goal</h2><p>Production Atlas is intended to be readable, navigable, and usable on mobile and desktop browsers. The app uses standard links, headings, buttons, responsive layouts, modal focus handling, and plain-language page structure wherever practical.</p></section>
+<section class="card" style="margin-top:16px"><h2>Current navigation</h2><p>The current header navigation is Home, Opportunities, Calendar, Map, Employers, IATSE, and Contribute. Guide and Sources remain available through footer/reference flows. Schedule is functional by direct URL but is off public header navigation pending rebuild.</p></section>
+<section class="card" style="margin-top:16px"><h2>Known limitations</h2><p>Some interactive planning views, including maps, calendars, analytics queues, and schedule timelines, may be easier to use on larger screens. Alternative card and list views are provided where practical, and further mobile testing remains part of the roadmap.</p></section>
+<section class="card" style="margin-top:16px"><h2>Feedback</h2><p>Use the Contact & Data Requests page to report accessibility barriers or request a reasonable format adjustment for public information shown in the app.</p></section>
+</main>
+<footer class="wrap"></footer><script src="assets/site-footer.js?v=footer14"></script><script src="assets/icons.js?v=icons1"></script>
+</body></html>

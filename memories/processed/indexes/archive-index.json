@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-07-06T16:08:31+00:00",
+  "generator": "scripts/process-memories.py",
+  "chunking": {
+    "max_chars": 12000,
+    "overlap_chars": 600,
+    "no_truncation_policy": true
+  },
+  "archives": [
+    {
+      "archive_id": "chatgpt-export-2026-07-05",
+      "archive_filename": "chatgpt-export-2026-07-05.zip",
+      "archive_type": "zip",
+      "archive_sha256": "a6f200569c19aeea5fbea2c2d8a9ea2a27c7e88bfecc3f2b7067fa0c0a519d0f",
+      "processed_member_count": 16
+    },
+    {
+      "archive_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41",
+      "archive_filename": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41.zip",
+      "archive_type": "zip",
+      "archive_sha256": "29d6403c0fc78a5ee7fdb94cd530c4ecd9e30b56492cb70e762920fcc8e9f34a",
+      "processed_member_count": 15
+    },
+    {
+      "archive_id": "Claude-Batch-2026-07-05",
+      "archive_filename": "Claude-Batch-2026-07-05.zip",
+      "archive_type": "zip",
+      "archive_sha256": "654241feb695757cfac63846ed0781f9edf3a67f7464d70667408e489912dd10",
+      "processed_member_count": 34
+    },
+    {
+      "archive_id": "Contentrepo-main",
+      "archive_filename": "Contentrepo-main.zip",
+      "archive_type": "zip",
+      "archive_sha256": "d779327d11d80e95eabaa0211db139df15a378180dbf29779ef93d25adfc8b13",
+      "processed_member_count": 2
+    },
+    {
+      "archive_id": "festival-atlas-research-version",
+      "archive_filename": "festival-atlas-research-version.zip",
+      "archive_type": "zip",
+      "archive_sha256": "14b4a8bb502f808e4ba56c7ebb33f3086d8055a602c3158dbd0cfde08a9ed408",
+      "processed_member_count": 398
+    },
+    {
+      "archive_id": "Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46",
+      "archive_filename": "Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46.json",
+      "archive_type": "json",
+      "archive_sha256": "741d04023ae78bb31571ef74f2117ecf12338e25fe3643ee2ba8a637c2b62ec5",
+      "processed_member_count": 1
+    },
+    {
+      "archive_id": "kimi-batch-2026-07-05",
+      "archive_filename": "kimi-batch-2026-07-05.zip",
+      "archive_type": "zip",
+      "archive_sha256": "6c72a10bd97b4ef733757b5278d31d3fba59485dbafd2469a96249c07ca46857",
+      "processed_member_count": 12
+    },
+    {
+      "archive_id": "Perplexity-Batch-2026-07-05",
+      "archive_filename": "Perplexity-Batch-2026-07-05.zip",
+      "archive_type": "zip",
+      "archive_sha256": "904e7ccf46720de2614406cbacddada6b9b6e28e60d6a09ff5bb7598a976c362",
+      "processed_member_count": 40
+    }
+  ],
+  "source_count": 518,
+  "chunk_count": 880,
+  "output_roots": {
+    "chunks": "memories/processed/chunks",
+    "indexes": "memories/processed/indexes",
+    "extracted_raw": "memories/processed/_extracted_raw"
+  }
+}

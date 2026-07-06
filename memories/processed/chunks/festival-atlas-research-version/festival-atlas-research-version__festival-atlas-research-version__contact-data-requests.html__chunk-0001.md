@@ -1,0 +1,29 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__contact-data-requests.html__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/contact-data-requests.html",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 2775,
+  "source_sha256": "58bbaeb70e0e36053b0b1d9b02de3af30288e466da55300e62ce628d66a19aba",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Production Atlas — Contact & Data Requests</title><link rel="stylesheet" href="assets/atlas.css?v=atlas7"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0c1219"><link rel="apple-touch-icon" href="assets/icons/icon-192.png"><meta name="description" content="Contact and data request information for Production Atlas."><link rel="canonical" href="https://atlas.thecrewblueprint.com/contact-data-requests.html"></head>
+<body data-page="contact-data-requests">
+<header class="hero"><div class="wrap"><div class="eyebrow">Production Atlas • Legal</div><h1>Contact & Data Requests</h1><p>How to request corrections, ask privacy questions, or report public information issues in Production Atlas.</p></div></header>
+<nav class="nav"><div class="wrap"><div class="navInner"><a href="./index.html">Home</a><a href="./opportunities.html">Opportunities</a><a href="./calendar.html">Calendar</a><a href="./map.html">Map</a><a href="./employers.html">Employers</a><a href="./iatse.html">IATSE</a><a href="./contribute.html">Contribute</a></div></div></nav>
+<main class="wrap page">
+<section class="card"><h2>Public information corrections</h2><p>If an event date, employer route, source reference, company label, producer label, map location, department connection, IATSE/local reference, or supplemental analytics/audit item appears inaccurate, use this page as the public correction route.</p></section>
+<section class="card" style="margin-top:16px"><h2>Privacy or data questions</h2><p>Production Atlas is a static public app and does not provide public visitor accounts. Privacy or public data questions can still be directed through the site owner’s public contact or feedback route.</p></section>
+<section class="card" style="margin-top:16px"><h2>Current contact</h2><p>Use the public contact form provided by the site owner or the linked Contribute / feedback form when available. Do not send private personal information, confidential employment records, pay information, lodging details, NDA information, or non-public company information through public correction requests.</p></section>
+<section class="card" style="margin-top:16px"><h2>Public-safe submission rule</h2><p>Corrections and feedback may be reviewed for possible future public use. Submit only information that can be safely reviewed, verified, and summarized without exposing private contacts or sensitive work details.</p></section>
+</main>
+<footer class="wrap"></footer><script src="assets/site-footer.js?v=footer14"></script><script src="assets/icons.js?v=icons1"></script>
+</body></html>

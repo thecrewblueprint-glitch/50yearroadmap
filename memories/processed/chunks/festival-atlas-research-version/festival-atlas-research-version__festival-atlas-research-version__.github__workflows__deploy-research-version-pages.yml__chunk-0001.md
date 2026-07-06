@@ -1,0 +1,101 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__.github__workflows__deploy-research-version-pages.yml__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/.github/workflows/deploy-research-version-pages.yml",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 2117,
+  "source_sha256": "dc7b11fe6b10b8c251950234328a16ac956427eba6ea492e7d90a1aaef5f66ba",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - research-version
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one Pages deployment at a time. Do NOT cancel an in-progress run:
+# cancelling a deploy mid-registration leaves the Pages backend with a stuck
+# deployment and makes the next run fail with "Deployment failed, try again
+# later." Queued runs between the in-progress one and the latest are skipped.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  validate:
+    name: Validate static app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Run validation
+        run: npm run validate:all
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build public site artifact
+        run: |
+          rm -rf _site
+          mkdir -p _site
+
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.claude' \
+            --exclude='ai-communication' \
+            --exclude='archive' \
+            --exclude='docs' \
+            --exclude='handoffs' \
+            --exclude='research' \
+            --exclude='schemas' \
+            --exclude='tools' \
+            --exclude='node_modules' \
+            --exclude='package.json' \
+            --exclude='package-lock.json' \
+            --exclude='README.md' \
+            --exclude='ROADMAP.md' \
+            ./ _site/
+
+      - name: Upload static site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

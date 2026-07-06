@@ -1,0 +1,115 @@
+---
+{
+  "chunk_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__ChatGPT_Production_Atlas_-_Repo_Downloadable_Fil_2026-07-05_17-56-06-1-.json__chunk-0001",
+  "archive_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41",
+  "archive_filename": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41.zip",
+  "source_path": "ChatGPT_Production_Atlas_-_Repo_Downloadable_Fil_2026-07-05_17-56-06 (1).json",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 4809,
+  "source_sha256": "0cdb20665f6311c76a43d196fe63e285ff8c125ec3b592292871f5cfa9173d28",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+{
+  "v": 2,
+  "p": "chatgpt",
+  "m": [
+    [
+      "a",
+      "t1",
+      "Root ROADMAP.md is now updated. I’m applying the same direction to ai-communication/PRODUCT_ROADMAP.md and the collaboration instructions so future AI sessions follow the current public scope."
+    ],
+    [
+      "u",
+      "t2",
+      "Continue"
+    ],
+    [
+      "a",
+      "t3",
+      "Continuing. ai-communication/PRODUCT_ROADMAP.md is now aligned. I’m updating the AI startup/collaboration files next, then I’ll add a repo-visible handoff/log with the exact validation limitation."
+    ],
+    [
+      "u",
+      "t4",
+      "Continue"
+    ],
+    [
+      "a",
+      "t5",
+      "Continuing from the interrupted write. I need to verify whether the project instructions update committed cleanly before proceeding, then I’ll either finish that file or move on to the collaboration protocol."
+    ],
+    [
+      "a",
+      "t6",
+      "Project chat instructions are now updated and committed. I’m moving to AI_COLLABORATION_PROTOCOL.md; I’ll keep it concise so it does not conflict with the now-updated README and roadmap."
+    ],
+    [
+      "a",
+      "t7",
+      "The collaboration protocol is now updated and committed. I’m creating the required repo-visible collaboration log with the commit range, files changed, validation limitation, and next action."
+    ],
+    [
+      "a",
+      "t8",
+      {
+        "txt": "Updated public pages / filters\nChanged the public filter direction so it matches your instruction:\nopportunities.html\nfilters now limited to producer/promoter and date/month\nremoved state filter from public UI\ncalendar.html\npublic filter reduced to date/month\nmap.html\npublic filter reduced to date/month\nschedule.html\npublic filter reduced to date/month\nassets/opportunities-promoter-filter.js\nno longer recreates the retired state/broad filters\nUpdated white pages\nRefreshed public-safe copy in:\nabout.html\ndata-methodology.html\nemployer-route-methodology.html\ndate-work-window-disclaimer.html\nUpdated legal / policy pages\nRefreshed:\nprivacy-policy.html\nterms-and-conditions.html\nlimitation-of-liability.html\ncookie-notice.html\naccessibility.html\naffiliate-disclosure.html\ncontact-data-requests.html\nThese now better match the static app boundary, localStorage schedule behavior, third-party forms/links, no-employment-guarantee language, and public-safe submission rules. Updated repo documentation / AI handoff files\nUpdated:\nREADME.md\nROADMAP.md\nai-communication/PRODUCT_ROADMAP.md\nai-communication/PROJECT_CHAT_GROUP_INSTRUCTIONS.md\nai-communication/AI_COLLABORATION_PROTOCOL.md\nThese now explicitly say not to reintroduce:\npublic confidence badges\npublic value-tier labels\npublic research queue panels\nbroad public filter bars\nbackend/login/private workflow scope\nFirecrawl/scraping automation\nHandoff / collaboration log added\nCreated:\nLatest commit from this pass:\nValidation\nValidation was not run because this was done through the GitHub connector, not a local checkout. Next required command on research-version:\nIf it fails, the most likely place to check first is tools/validate-static-app.js, because the product scope changed away from older public confidence/value/research-queue behavior.",
+        "c": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      }
+    ]
+  ],
+  "t": {
+    "t1": "2026-07-05T21:56:17.869Z",
+    "t2": "2026-07-05T21:56:17.869Z",
+    "t3": "2026-07-05T21:56:17.869Z",
+    "t4": "2026-07-05T21:56:17.869Z",
+    "t5": "2026-07-05T21:56:17.869Z",
+    "t6": "2026-07-05T21:56:17.870Z",
+    "t7": "2026-07-05T21:56:17.870Z",
+    "t8": "2026-07-05T21:56:17.870Z"
+  },
+  "c": {
+    "c1": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-27-001-chatgpt-public-scope-pages-docs.md"
+    ],
+    "c2": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-27-001-chatgpt-public-scope-pages-docs.md"
+    ],
+    "c3": [
+      "text",
+      "4142bb481171bf385f70ea6872b609167e00e945"
+    ],
+    "c4": [
+      "text",
+      "4142bb481171bf385f70ea6872b609167e00e945"
+    ],
+    "c5": [
+      "text",
+      "npm run validate:all"
+    ],
+    "c6": [
+      "text",
+      "npm run validate:all"
+    ]
+  },
+  "tokenStats": {
+    "rawChatTokens": 708,
+    "compressedTokens": 700,
+    "reductionPercent": 1,
+    "note": "Reduced from ~708 to ~700 tokens (1% reduction)"
+  },
+  "chatTitle": "Production Atlas - Repo updates June 2026",
+  "_context": "=== LLM MEMORY EXPORT ===\nSource: chatgpt | 8 messages\nExported: 2026-07-05\n\nINSTRUCTIONS FOR AI: This file contains a compressed export of a prior\nconversation. Please read the notes and context below, then resume\nnaturally as if continuing from where we left off.\n\n--- CONVERSATION FOLLOWS ---"
+}

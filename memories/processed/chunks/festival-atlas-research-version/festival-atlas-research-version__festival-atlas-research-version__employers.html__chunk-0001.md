@@ -1,0 +1,24 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__employers.html__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/employers.html",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 3308,
+  "source_sha256": "8e55c0485ebf498f4a143c2c376bcda0f55e9b6d8a791512d44bc972180c8d50",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Production Atlas — Employers</title><link rel="stylesheet" href="assets/atlas.css?v=atlas7"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0c1219"><link rel="apple-touch-icon" href="assets/icons/icon-192.png"><meta name="description" content="Public employers, vendors, producers, labor organizations, venues, and production companies in live-event production."><meta property="og:title" content="Production Atlas — Employers"><meta property="og:description" content="Find public apply, careers, contact, and company research links for live-event production employers."><meta property="og:url" content="https://atlas.thecrewblueprint.com/employers.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Production Atlas"><link rel="canonical" href="https://atlas.thecrewblueprint.com/employers.html"></head>
+<body data-page="employers">
+<header class="hero"><div class="wrap"><div class="eyebrow">Production Atlas</div><h1>Employers</h1><p>Public employers in live-event production: apply pages, careers pages, contact pages, and official company websites.</p></div></header>
+<nav class="nav"><div class="wrap"><div class="navInner"><a href="index.html">Home</a><a href="opportunities.html">Opportunities</a><a href="calendar.html">Calendar</a><a href="map.html">Map</a><a class="active" href="employers.html">Employers</a><a href="iatse.html">IATSE</a><a href="contribute.html">Contribute</a></div><div id="filters" class="filters"><input id="q" placeholder="Search employers by name, type, or state…" aria-label="Search employers"><select id="branchFilter" aria-label="Filter by department"><option value="">All departments</option></select><select id="stateFilter" aria-label="Filter by state"><option value="">All states</option></select><select id="employerTypeFilter" aria-label="Filter by employer type"><option value="">All employer types</option></select><button class="btn" id="reset">Reset</button></div></div></nav>
+<main class="wrap page" id="app"></main><div id="stats" class="hiddenRuntime"></div><div id="calendarGrid" class="hiddenRuntime"></div><div id="modal" class="modal"><div class="modalbox"><button class="btn close" onclick="closeModal()">Close</button><div id="modalContent"></div></div></div><footer class="wrap"></footer>
+<script src="data/packages/production-branches.js?v=multi1"></script><script src="data/packages/opportunities-2026.js?v=multi4"></script><script src="data/packages/us-employers.js?v=multi1"></script><script src="data/iatse-us-local-directory.js?v=multi1"></script><script src="data/packages/opportunity-taxonomy.js?v=taxonomy2"></script><script src="data/packages/research-queue-route-updates.js?v=route1"></script><script src="data/packages/opportunity-rollover-2027.js?v=rollover2"></script><script src="assets/atlas-core-v2.js?v=multi30"></script><script src="assets/approx-date-labels.js?v=approx1"></script><script src="assets/employers-department-browser.js?v=dept15"></script><script src="assets/site-footer.js?v=footer14"></script><script src="assets/icons.js?v=icons1"></script>
+</body></html>

@@ -1,0 +1,110 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__ai-communication__collaboration-log__2026-06-27-046-chatgpt-sta__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/ai-communication/collaboration-log/2026-06-27-046-chatgpt-standalone-static-map.md",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 1914,
+  "source_sha256": "20e2ab099562c44085f9827e6c21816b70661cde254067fdede92dfef6ef36a3",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+# Collaboration Log Entry — Standalone Static Map
+
+Status: incomplete
+Created: 2026-06-27
+Review after: 2026-07-11
+Assistant: ChatGPT
+Branch: research-version
+Commit: adbef59
+
+## Files changed
+
+```text
+assets/map-page-static.js
+map.html
+```
+
+## What changed
+
+Aaron reported that the map still did not work after the Leaflet fallback attempt.
+
+This update stops relying on Leaflet entirely for the map page. The map page now loads a standalone static map renderer instead of the external Leaflet CSS/JS path.
+
+## Implementation
+
+Added:
+
+```text
+assets/map-page-static.js
+```
+
+Updated:
+
+```text
+map.html
+```
+
+The page no longer loads:
+
+```text
+Leaflet CSS
+Leaflet JS
+assets/map-static-fallback.js
+```
+
+The page now loads:
+
+```html
+<script src="assets/map-page-static.js?v=mapstatic1"></script>
+```
+
+## Behavior
+
+The map page now renders from existing public static app data:
+
+```text
+window.scopedOpportunities
+window.RESOURCE_OPP_COORDS
+window.branches
+openOpportunity(id)
+```
+
+Features:
+
+```text
+Static clickable regional map panel
+Clickable approximate markers
+Mapped festival cards
+Multi-market / unmapped festival cards
+Search / department / state / month filtering
+Festival modal opening from markers and cards
+No external map dependency
+No backend
+```
+
+## Public safety
+
+The map note explicitly says marker placement is approximate and intended for regional planning. No private contact, pay, lodging, or internal notes are exposed.
+
+## Why
+
+The earlier Leaflet page had an external dependency failure mode. A local static renderer is more reliable for the current static GitHub Pages app boundary.
+
+## Validation status
+
+Validation not run; connector session cannot run local repo validation.
+
+Required next command:
+
+```bash
+npm run validate:all
+```
+
+## Next action
+
+Validate, wait for GitHub Pages deploy, hard refresh the map page, and test that the static map panel appears with clickable markers/cards.

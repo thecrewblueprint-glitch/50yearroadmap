@@ -1,0 +1,497 @@
+{
+  "v": 2,
+  "p": "chatgpt",
+  "m": [
+    [
+      "a",
+      "t1",
+      "I’ll create a clean standalone handoff document for an outside researcher who has no project context. I’ll pull the current repo-visible research guide first, then generate a downloadable file."
+    ],
+    [
+      "a",
+      "t2",
+      "I’ll pull the latest repo-visible research guide and package it as a standalone outside-researcher handoff. I’ll generate a polished .docx and verify the rendered pages before giving you the download."
+    ],
+    [
+      "a",
+      "t3",
+      "The repo search index is not finding the new file by keyword, so I’m fetching the exact path from the last update. Then I’ll build the standalone handoff from that content plus the mapped execution plan."
+    ],
+    [
+      "a",
+      "t4",
+      {
+        "txt": "Created a standalone outside-researcher handoff file. It includes:\nDownload it here:",
+        "c": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t5",
+      {
+        "txt": "Production_Atlas_External_Research_Handoff.docxDocumentHere is the revised handoff document with all critical, moderate, and minor flaws addressed. ---\n\nProduction Atlas External Research Handoff\n\nResearch guide for outside sources with no prior app context\n\nVersion: 2.0\n\nCurrent as of: 2026-06-23\n\n---\n\n1. The research should answer three practical questions:\n\n- Can a traveling technician get there and afford to work the event? - Who is the public hiring route? - Is there a union or non-union route? The packet must include:\n\n- A short producer-level summary when researching a producer group. - One event-level structured block per event using the output template in Section 10. - Public source URLs for every confirmed or partial claim. - Clear status values: confirmed, partial, possible, unlikely, unknown, or not_applicable. - A short unknowns list showing what still needs human verification. - A lastVerified timestamp for every event block. Absolute Public-Safety Rules\n\nDo not research, record, publish, or infer any of the following:\n\n- Private contact names, personal phone numbers, or personal email addresses. - Pay rates, hourly rates, day rates, weekly rates, salary ranges, or compensation amounts. - Hotel names, hotel addresses, crew lodging booking details, rooming lists, or private accommodation instructions. - Private field notes, NDA-covered information, client-sensitive information, crew gossip, or forum rumors as confirmed facts. - Anything behind a login, paywall, private Facebook group, private Discord, private crew board, or non-public document. - Raw scraped text. Summarize and attribute instead of dumping copied source text. Public-safe sources include: official festival/producer/venue websites, verified social media accounts, press releases, industry publications (TPi, IQ, Mondodr, Pollstar), public LinkedIn case studies, and IATSE.org local directory listings. If a section cannot be confirmed publicly, write exactly:\n\n> Unknown publicly. Travel / per diem / mileage confirmed / possible / unknown / unlikely / not_applicable Do not guess. possible for remote, multi-week, or known touring-vendor patterns only when evidence supports the pattern. Event status confirmed / postponed / cancelled / tbd Use confirmed only when dates and producer are publicly announced for 2026.\n\n4.1 \"Possible\" Decision Rubric\n\nBefore assigning possible to any field, at least one of the following must be true:\n\n1. Required Research Sections for Each Event\n\nA. Crew Accommodation\n\nQuestion: Is lodging, camping, or crew housing typically provided or arranged for production crew? - This is not attendee hotel-block research. - Look for official crew/vendor pages, producer job postings, vendor job postings, production profiles, and public producer/venue statements. - Treat Reddit or forum discussions as leads only, not confirmed facts. Travel Compensation\n\nQuestion: Does the production company or vendor route pay for travel, mileage, flights, rental cars, housing, or per diem for out-of-market crew? - Search producer and vendor job postings for travel, per diem, mileage reimbursement, housing provided, or fly-out language. - Company-level evidence is useful, but do not overstate it as event-specific unless the source supports the specific event. - Do not record dollar amounts or pay rates. Labor and Staffing Route\n\nQuestion: How does a production technician get hired for this event? - Research IATSE/local jurisdiction route, non-union labor/staffing route, and direct vendor application route. - Do not name a specific IATSE local number unless confirmed from IATSE.org or a direct current public source. - Use this wording when uncertain: verify applicable IATSE/local jurisdiction for <city or site> (research local number before outreach)\n\nD. Vendor Stack\n\nQuestion: What audio, lighting, video/LED, staging, rigging, site-operations, and power companies publicly work this event? - Priority departments: staging/structural, audio, lighting, video/LED, rigging, site ops, power, and fencing. - Use public production profiles, official vendor case studies, official festival partner pages, public LinkedIn credits, and public industry features. - Do not claim a vendor works a specific event unless the source supports that event or supports the producer route. Hand to Claude Code or the database maintainer only after each event block is complete and public-safe. Search Query Bank\n\nResearch area Suggested searches\nCrew accommodation <festival name> crew camping production <festival name> production crew lodging <festival name> vendor camping crew <producer name> production jobs lodging provided <festival name> site crew housing\nTravel and per diem <producer name> production jobs per diem <producer name> travel crew lodging production <vendor name> festival crew travel per diem <festival name> production manager crew logistics\nLabor and staffing route <festival name> production crew jobs 2026 <festival name> stagehand jobs <festival name> labor provider <venue name> IATSE <city name> IATSE jurisdiction <producer name> careers event production\nVendor stack <festival name> TPi Magazine production <festival name> Mondo dr production <festival name> IQ Magazine production vendors <festival name> audio lighting video staging vendor <festival name> production credits vendors <vendor name> <festival name> case study\n\nAdvanced operators for 2026-specific results:\n- \"<festival name>\" \"2026\" \"production crew\" after:2025-09-01\n- site:linkedin.com \"<festival name>\" \"production\"\n- site:glassdoor.com \"<producer name>\" \"festival\" \"per diem\"\n- site:iatse.org \"<city name>\" local\n\n---\n\n10. Required Output Template\n\nReturn one block per event. Do not include private contacts, pay rates, lodging addresses, or rumor-only claims. Paste into data/packages/opportunities-2026.js and run npm run validate:all before pushing. - Industry publications like TPi, IQ, Mondodr, Pollstar, SoundGirls, and vendor case studies are especially useful for vendor-stack research. - If using Reddit or forums, use them only to generate search leads. Do not cite them as confirmed production facts unless the requester explicitly permits that level of evidence. - Separate producer-level patterns from event-specific confirmed facts. Use the evidenceLevel field to flag the distinction. - If a source supports only a producer-level pattern, label it producer-pattern in evidenceLevel. Never imply one event uses a vendor because another event by the same producer does. Update data/packages/opportunities-2026.js with these fields: <paste output block>. - possible values are labeled and meet the rubric in Section 4.1. - Unknown sections say: Unknown publicly. - No private contacts, phone numbers, personal emails, pay rates, hotel names, rooming details, rumors, or NDA-sensitive material are included. - IATSE/local wording is cautious unless a current direct public source confirms exact jurisdiction details. - Vendor names are tied to public source evidence and separated by department. - evidenceLevel is set for every source. - lastVerified is today's date. - eventDates and eventStatus are filled if publicly available. - The final answer includes one data-ready block per event and a source list. Do not use private crew boards or DMs.\n3. What to ask: \"What is the public application process for production crew for [event name] 2026?\" or \"Does [producer/vendor] provide crew lodging or travel support for out-of-market technicians?\"\n4. Do not ask about: Pay rates, specific hotel names, rooming lists, or private contact details.\n5. Re-submission: Verified data should be returned as a new research packet with lastVerified updated and sources labeled event-specific. ---\n\nSummary of Changes from Version 1.0\n\nChange Section Rationale\nAdded eventStatus 4, 10 Track cancelled/postponed/TBD events\nAdded eventDates (load-in, show, strike) 10 Essential for travel cost decisions\nAdded lastVerified 10 Freshness tracking\nAdded not_applicable status 4 Handle structurally irrelevant fields\nAdded \"Possible\" rubric 4.1 Reduce researcher inconsistency\nAdded evidenceLevel 5, 10 Separate producer patterns from event facts\nSplit site_ops_power into site_ops and power 5D More actionable vendor detail\nAdded other vendor department 5D Catch-all for non-standard vendors\nAdded advanced search operators 9 2026-specific results\nAdded unknownsList 10 Track gaps for human verification\nAdded Human Verification Protocol 13 Close process loop on unknown fields\nDocumented scoring methodology 8 Transparency for researchers\nAdded positive public-safe source definition 3 Clarify what is acceptable\n\n---\n\nReady to research an event or producer batch whenever you name one.",
+        "c": [
+          "c3",
+          "c4",
+          "c5",
+          "c6",
+          "c7"
+        ]
+      }
+    ],
+    [
+      "a",
+      "t6",
+      {
+        "txt": "Truncation check\nThe pasted text does not look truncated. It has a complete beginning, numbered sections, summary-of-changes table, and closes with:\nSo the paste appears complete. File mismatch\nThe uploaded DOCX appears to be the older handoff, not the revised v2.0 you pasted. The file version still says only “Current as of 2026-06-23,” not “Version 2.0,” and its Expected Deliverable only lists status values as confirmed, partial, possible, unlikely, or unknown—it does not include the newer not_applicable, eventStatus, eventDates, or lastVerified structure from your paste. The uploaded file’s output template also still uses the older shape with lodgingStatus, travelStatus, laborRouteStatus, vendorStackStatus, and site_ops_power; it does not include the revised eventStatus, eventDates, lastVerified, unknownsList, split site_ops / power, or evidenceLevel. So: your pasted v2.0 is newer than the uploaded file. The new evidenceLevel field is especially useful because it forces the researcher to say whether a source is:\nThat distinction matters. Remaining problems to fix before using it\n1. “Unchanged from original” cannot stay\nSections 7 and 8 say:\nThat breaks the document for an outside researcher with no prior context. Since this is supposed to be a standalone handoff, every section must be fully included. Do not reference an “original” document. Fix: paste the full Recommended Batch Order and Priority Event List directly into v2.0.\n2. “Paste into opportunities-2026.js” is too risky\nThis line is dangerous:\nAn outside researcher should not be told to paste directly into the app data file. Better wording:\nThis matters because the output block is not guaranteed to match the current app schema yet.\n3. eventDates may create false precision\nThis field:\nis valuable, but load-in and strike dates are often not public. It does not solve the hidden-data problem by itself. It is useful for:\nIt is not enough for:\nThose need the Airtable human-intake workflow. So the clean split should be:\nDocument A — Outside Public Research Handoff\nUse this for public web research only. Recommendation\nUse the pasted v2.0 as the new base, but make a v2.1 with these corrections:\nOnce those are fixed, the handoff becomes usable for outside public researchers.",
+        "c": [
+          "c8",
+          "c9",
+          "c10",
+          "c11",
+          "c12",
+          "c13",
+          "c14",
+          "c15",
+          "c16",
+          "c17",
+          "c18",
+          "c19",
+          "c20",
+          "c21",
+          "c22",
+          "c23",
+          "c24",
+          "c25",
+          "c26",
+          "c27",
+          "c28",
+          "c29",
+          "c30",
+          "c31",
+          "c32",
+          "c33",
+          "c34",
+          "c35",
+          "c36",
+          "c37",
+          "c38",
+          "c39",
+          "c40",
+          "c41",
+          "c42",
+          "c43"
+        ]
+      }
+    ],
+    [
+      "a",
+      "t7",
+      "— I converted it into a NotebookLM-friendly PDF. I used a landscape layout because the research tables and JavaScript output template are wide. Download:"
+    ],
+    [
+      "a",
+      "t8",
+      "I still have the pending Bonnaroo vendor-stack pass from the previous message. I’ll capture that first as ITEM 012, then capture this DWP producer/event-pattern pass as ITEM 013 so the sequence stays clean."
+    ],
+    [
+      "a",
+      "t9",
+      "ITEM 012 is committed. Now I’ll capture the DWP producer/event-pattern pass as ITEM 013."
+    ],
+    [
+      "u",
+      "t10",
+      "## Louder Than Life\nThe official festival info page confirms the event’s location at Kentucky Expo Center in Louisville, says it is an all-ages rain-or-shine event, and gives current general FAQ-style information [1]. ## What this confirms\nThis is enough to confirm event identity, city/venue, and producer for the Louder Than Life side of the batch [1][5][2]. It is also enough to say the festival has a current public FAQ/info page, which is the key source type you wanted for the event-level packet [1]. ## What is still missing\nI still do not yet have direct public evidence for the full production vendor stack, crew lodging/travel support, or venue-specific IATSE jurisdiction for Kentucky Expo Center in this pass [1][6]. Those will need separate vendor and union-source searches if you want the field-by-field packet completed later. ## Best next search targets\n- \"Louder Than Life\" production vendor\n- \"Louder Than Life\" TPi production\n- \"Highland Festival Grounds\" IATSE\n- \"Kentucky Expo Center\" IATSE\n- \"Louder Than Life\" crew lodging\n- \"Louder Than Life\" crew travel"
+    ],
+    [
+      "a",
+      "t11",
+      "I got the Louder Than Life pass while ITEM 013 was still in progress. I’m checking whether ITEM 013 committed; then I’ll finish/repair ITEM 013 if needed and capture the Louder Than Life pass as ITEM 014."
+    ],
+    [
+      "a",
+      "t12",
+      "ITEM 013 did not commit before the interruption. I’ll create ITEM 013 now, then ITEM 014."
+    ],
+    [
+      "a",
+      "t13",
+      "ITEM 013 is committed. I’m capturing the Louder Than Life event-level pass as ITEM 014."
+    ],
+    [
+      "a",
+      "t14",
+      {
+        "txt": "Captured and committed the pending items in order. ITEM 012 — Bonnaroo vendor-stack evidence map\nCommit:\nITEM 013 — DWP producer / event-pattern evidence map\nCommit:\nITEM 014 — Louder Than Life event evidence map\nCommit:\nCollaboration log\nCommit:\nAll three are public-safe and useful as evidence maps, but still need the actual URLs behind the NotebookLM citations before app-data updates.",
+        "c": [
+          "c44",
+          "c45",
+          "c46",
+          "c47",
+          "c48",
+          "c49",
+          "c50",
+          "c51",
+          "c52",
+          "c53",
+          "c54",
+          "c55",
+          "c56",
+          "c57",
+          "c58",
+          "c59"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t15",
+      "Get up to date and write a handoff to Claude"
+    ],
+    [
+      "a",
+      "t16",
+      "I’ll refresh from research-version, read the current project instructions, roadmap, README, and recent collaboration context, then commit a Claude handoff in ai-communication/."
+    ],
+    [
+      "a",
+      "t17",
+      "I need to finish the interrupted capture first. I’m checking whether ITEM 013 and the later Louder Than Life files already exist so I don’t duplicate them, then I’ll complete the current capture/handoff cleanly."
+    ],
+    [
+      "a",
+      "t18",
+      "ITEM 013 and ITEM 014 are already present, so I won’t duplicate them. I’m now refreshing the current repo instructions/roadmap/README and then I’ll write the Claude handoff."
+    ],
+    [
+      "a",
+      "t19",
+      {
+        "txt": "I refreshed the repo instructions/roadmap/README and wrote a current Claude handoff. Handoff created\nCommit:\nCollaboration log created\nCommit:\nWhat the handoff tells Claude\nIt covers:\nValidation not run; documentation/handoff-only change.",
+        "c": [
+          "c60",
+          "c61",
+          "c62",
+          "c63",
+          "c64",
+          "c65",
+          "c66",
+          "c67",
+          "c68",
+          "c69"
+        ]
+      }
+    ]
+  ],
+  "t": {
+    "t1": "2026-07-05T21:57:00.263Z",
+    "t2": "2026-07-05T21:57:00.263Z",
+    "t3": "2026-07-05T21:57:00.263Z",
+    "t4": "2026-07-05T21:57:00.263Z",
+    "t5": "2026-07-05T21:57:00.266Z",
+    "t6": "2026-07-05T21:57:00.268Z",
+    "t7": "2026-07-05T21:57:00.275Z",
+    "t8": "2026-07-05T21:57:00.275Z",
+    "t9": "2026-07-05T21:57:00.275Z",
+    "t10": "2026-07-05T21:57:00.275Z",
+    "t11": "2026-07-05T21:57:00.277Z",
+    "t12": "2026-07-05T21:57:00.277Z",
+    "t13": "2026-07-05T21:57:00.277Z",
+    "t14": "2026-07-05T21:57:00.277Z",
+    "t15": "2026-07-05T21:57:00.279Z",
+    "t16": "2026-07-05T21:57:00.280Z",
+    "t17": "2026-07-05T21:57:00.280Z",
+    "t18": "2026-07-05T21:57:00.280Z",
+    "t19": "2026-07-05T21:57:00.280Z"
+  },
+  "c": {
+    "c1": [
+      "text",
+      "project overview\npublic-safety rules\nresearch objectives\nstatus/value definitions\nrequired research sections\nproducer-batch execution map\npriority event tables\nsearch query bank\nrequired output template\ndatabase handoff instructions\nfinal quality checklist"
+    ],
+    "c2": [
+      "text",
+      "project overview\npublic-safety rules\nresearch objectives\nstatus/value definitions\nrequired research sections\nproducer-batch execution map\npriority event tables\nsearch query bank\nrequired output template\ndatabase handoff instructions\nfinal quality checklist"
+    ],
+    "c3": [
+      "javascript",
+      "lodgingStatus: 'confirmed|possible|unknown|unlikely|not_applicable',\nlodgingNotes: '<public-safe summary>',\nlodgingSources: [\n  { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n]"
+    ],
+    "c4": [
+      "javascript",
+      "travelStatus: 'confirmed|possible|unknown|unlikely|not_applicable',\ntravelNotes: '<public-safe summary>',\ntravelSources: [\n  { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n]"
+    ],
+    "c5": [
+      "javascript",
+      "laborRouteStatus: 'confirmed|possible|unknown',\nlaborRouteNotes: '<public-safe summary>',\niatseJurisdictionNote: 'verify applicable IATSE/local jurisdiction for <city or site> (research local number before outreach)',\nnonUnionRouteNotes: '<public-safe non-union route notes or unknown publicly>',\nlaborSources: [\n  { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n]"
+    ],
+    "c6": [
+      "javascript",
+      "vendorStackStatus: 'confirmed|partial|unknown',\nvendorStackNotes: '<public-safe summary>',\nvendors: [\n  { department: 'audio', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'lighting', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'video_led', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'staging', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'rigging', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'site_ops', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'power', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n  { department: 'other', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' }\n],\nvendorSources: [\n  { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n]"
+    ],
+    "c7": [
+      "javascript",
+      "{\n  id: '<event-id>',\n  eventStatus: 'confirmed|postponed|cancelled|tbd',\n  eventDates: { loadInStart: 'YYYY-MM-DD', showDates: 'YYYY-MM-DD to YYYY-MM-DD', strikeEnd: 'YYYY-MM-DD', totalDaysOnSite: <number> },\n  lastVerified: 'YYYY-MM-DD',\n  lodgingStatus: 'confirmed|possible|unknown|unlikely|not_applicable',\n  lodgingNotes: '<public-safe summary>',\n  lodgingSources: [\n    { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n  ],\n  travelStatus: 'confirmed|possible|unknown|unlikely|not_applicable',\n  travelNotes: '<public-safe summary>',\n  travelSources: [\n    { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n  ],\n  laborRouteStatus: 'confirmed|possible|unknown',\n  laborRouteNotes: '<public-safe summary>',\n  iatseJurisdictionNote: 'verify applicable IATSE/local jurisdiction for <city or site> (research local number before outreach)',\n  nonUnionRouteNotes: '<public-safe non-union route notes or unknown publicly>',\n  laborSources: [\n    { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n  ],\n  vendorStackStatus: 'confirmed|partial|unknown',\n  vendorStackNotes: '<public-safe summary>',\n  vendors: [\n    { department: 'audio', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'lighting', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'video_led', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'staging', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'rigging', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'site_ops', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'power', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' },\n    { department: 'other', company: '<public company name>', status: 'confirmed|possible', source: '<source URL or unknown>' }\n  ],\n  vendorSources: [\n    { label: '<source label>', url: '<source URL>', evidenceLevel: 'event-specific|producer-pattern|industry-standard' }\n  ],\n  unknownsList: [\n    '<what still needs human verification>'\n  ],\n  publicSafetyNotes: 'No private contacts, pay rates, lodging details, or rumor-only claims included.'\n}"
+    ],
+    "c8": [
+      "text",
+      "Ready to research an event or producer batch whenever you name one."
+    ],
+    "c9": [
+      "text",
+      "Ready to research an event or producer batch whenever you name one."
+    ],
+    "c10": [
+      "eventstatus",
+      "eventDates\nlastVerified\nnot_applicable\npossible-decision rubric\nevidenceLevel\nunknownsList\nhuman verification protocol\nscoring methodology"
+    ],
+    "c11": [
+      "eventstatus",
+      "eventDates\nlastVerified\nnot_applicable\npossible-decision rubric\nevidenceLevel\nunknownsList\nhuman verification protocol\nscoring methodology"
+    ],
+    "c12": [
+      "event-specific",
+      "producer-pattern\nindustry-standard"
+    ],
+    "c13": [
+      "event-specific",
+      "producer-pattern\nindustry-standard"
+    ],
+    "c14": [
+      "text",
+      "(Unchanged from original — see original Section 7)\n(Unchanged from original — see original Section 8)"
+    ],
+    "c15": [
+      "text",
+      "(Unchanged from original — see original Section 7)\n(Unchanged from original — see original Section 8)"
+    ],
+    "c16": [
+      "text",
+      "Copy this exactly. Paste into data/packages/opportunities-2026.js and run npm run validate:all before pushing."
+    ],
+    "c17": [
+      "text",
+      "Copy this exactly. Paste into data/packages/opportunities-2026.js and run npm run validate:all before pushing."
+    ],
+    "c18": [
+      "text",
+      "Return this as a data-ready research block. Do not edit the repository directly unless explicitly assigned. The database maintainer will review, sanitize, convert, and apply the update."
+    ],
+    "c19": [
+      "text",
+      "Return this as a data-ready research block. Do not edit the repository directly unless explicitly assigned. The database maintainer will review, sanitize, convert, and apply the update."
+    ],
+    "c20": [
+      "text",
+      "eventDates: {\n  loadInStart,\n  showDates,\n  strikeEnd,\n  totalDaysOnSite\n}"
+    ],
+    "c21": [
+      "text",
+      "eventDates: {\n  loadInStart,\n  showDates,\n  strikeEnd,\n  totalDaysOnSite\n}"
+    ],
+    "c22": [
+      "text",
+      "eventDates: {\n  loadInStart: 'unknown',\n  showDates: 'YYYY-MM-DD to YYYY-MM-DD',\n  strikeEnd: 'unknown',\n  totalDaysOnSite: 'unknown'\n}"
+    ],
+    "c23": [
+      "text",
+      "eventDates: {\n  loadInStart: 'unknown',\n  showDates: 'YYYY-MM-DD to YYYY-MM-DD',\n  strikeEnd: 'unknown',\n  totalDaysOnSite: 'unknown'\n}"
+    ],
+    "c24": [
+      "text",
+      "Do not infer load-in or strike dates unless publicly confirmed. If only show dates are public, leave loadInStart and strikeEnd as unknown."
+    ],
+    "c25": [
+      "text",
+      "Do not infer load-in or strike dates unless publicly confirmed. If only show dates are public, leave loadInStart and strikeEnd as unknown."
+    ],
+    "c26": [
+      "text",
+      "not_applicable when the event structure makes the question irrelevant, e.g., single-day urban event with no overnight crew"
+    ],
+    "c27": [
+      "text",
+      "not_applicable when the event structure makes the question irrelevant, e.g., single-day urban event with no overnight crew"
+    ],
+    "c28": [
+      "text",
+      "Use not_applicable only when the field truly does not apply to the event type or record type. Do not use not_applicable simply because lodging or travel seems unlikely."
+    ],
+    "c29": [
+      "text",
+      "Use not_applicable only when the field truly does not apply to the event type or record type. Do not use not_applicable simply because lodging or travel seems unlikely."
+    ],
+    "c30": [
+      "text",
+      "Industry standard: major multi-day camping festivals typically provide production camping."
+    ],
+    "c31": [
+      "text",
+      "Industry standard: major multi-day camping festivals typically provide production camping."
+    ],
+    "c32": [
+      "text",
+      "Industry-standard evidence can support a possible label only when combined with event structure, venue conditions, or producer/vendor evidence. It cannot alone confirm a claim."
+    ],
+    "c33": [
+      "text",
+      "Industry-standard evidence can support a possible label only when combined with event structure, venue conditions, or producer/vendor evidence. It cannot alone confirm a claim."
+    ],
+    "c34": [
+      "text",
+      "Contact the producer's public careers email..."
+    ],
+    "c35": [
+      "text",
+      "Contact the producer's public careers email..."
+    ],
+    "c36": [
+      "text",
+      "The outside researcher should not contact producers, venues, vendors, or unions unless explicitly instructed. Instead, list the public channel that the maintainer could use for verification."
+    ],
+    "c37": [
+      "text",
+      "The outside researcher should not contact producers, venues, vendors, or unions unless explicitly instructed. Instead, list the public channel that the maintainer could use for verification."
+    ],
+    "c38": [
+      "dates",
+      "event status\npublic producer route\npublic vendor credits\npublic IATSE/local verification language\nofficial source URLs"
+    ],
+    "c39": [
+      "dates",
+      "event status\npublic producer route\npublic vendor credits\npublic IATSE/local verification language\nofficial source URLs"
+    ],
+    "c40": [
+      "text",
+      "who actually hires\ncrew camping realities\ntravel/per diem realities\nvendor labor practices\ndispatch routes"
+    ],
+    "c41": [
+      "text",
+      "who actually hires\ncrew camping realities\ntravel/per diem realities\nvendor labor practices\ndispatch routes"
+    ],
+    "c42": [
+      "text",
+      "1. Replace “unchanged from original” placeholders with full content.\n2. Remove direct “paste into opportunities-2026.js” instruction.\n3. Allow unknown load-in/strike dates.\n4. Tighten not_applicable rules.\n5. Tighten industry-standard possible rules.\n6. Clarify outside researchers should not perform outreach unless explicitly instructed.\n7. Add a note that hidden human intelligence belongs in Airtable intake, not public research output."
+    ],
+    "c43": [
+      "text",
+      "1. Replace “unchanged from original” placeholders with full content.\n2. Remove direct “paste into opportunities-2026.js” instruction.\n3. Allow unknown load-in/strike dates.\n4. Tighten not_applicable rules.\n5. Tighten industry-standard possible rules.\n6. Clarify outside researchers should not perform outreach unless explicitly instructed.\n7. Add a note that hidden human intelligence belongs in Airtable intake, not public research output."
+    ],
+    "c44": [
+      "text",
+      "research/notebooklm-public-research/012-bonnaroo-vendor-stack-evidence-map.md"
+    ],
+    "c45": [
+      "text",
+      "research/notebooklm-public-research/012-bonnaroo-vendor-stack-evidence-map.md"
+    ],
+    "c46": [
+      "text",
+      "2be802cd3b8ad32ae0f8b17c6e1cdc435321aed1\nCapture Bonnaroo vendor stack evidence map"
+    ],
+    "c47": [
+      "text",
+      "2be802cd3b8ad32ae0f8b17c6e1cdc435321aed1\nCapture Bonnaroo vendor stack evidence map"
+    ],
+    "c48": [
+      "text",
+      "research/notebooklm-public-research/013-dwp-producer-event-pattern-evidence-map.md"
+    ],
+    "c49": [
+      "text",
+      "research/notebooklm-public-research/013-dwp-producer-event-pattern-evidence-map.md"
+    ],
+    "c50": [
+      "text",
+      "1baa664699e895e2d00cac15430d6afccfca36cf\nCapture DWP producer event pattern evidence map"
+    ],
+    "c51": [
+      "text",
+      "1baa664699e895e2d00cac15430d6afccfca36cf\nCapture DWP producer event pattern evidence map"
+    ],
+    "c52": [
+      "text",
+      "research/notebooklm-public-research/014-louder-than-life-event-evidence-map.md"
+    ],
+    "c53": [
+      "text",
+      "research/notebooklm-public-research/014-louder-than-life-event-evidence-map.md"
+    ],
+    "c54": [
+      "text",
+      "766e58035917ea2176da3df478acac63582e7df6\nCapture Louder Than Life event evidence map"
+    ],
+    "c55": [
+      "text",
+      "766e58035917ea2176da3df478acac63582e7df6\nCapture Louder Than Life event evidence map"
+    ],
+    "c56": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-019-chatgpt-bonnaroo-dwp-ltl-evidence-maps.md"
+    ],
+    "c57": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-019-chatgpt-bonnaroo-dwp-ltl-evidence-maps.md"
+    ],
+    "c58": [
+      "text",
+      "6bacde467ad0b7581b94873559e5a719d7e06338\nAdd Bonnaroo DWP LTL evidence map log"
+    ],
+    "c59": [
+      "text",
+      "6bacde467ad0b7581b94873559e5a719d7e06338\nAdd Bonnaroo DWP LTL evidence map log"
+    ],
+    "c60": [
+      "text",
+      "ai-communication/2026-06-24-chatgpt-to-claude-notebooklm-research-handoff.md"
+    ],
+    "c61": [
+      "text",
+      "ai-communication/2026-06-24-chatgpt-to-claude-notebooklm-research-handoff.md"
+    ],
+    "c62": [
+      "text",
+      "12dd0d930dd7a50011dd3a06568ceeae0335bbf7\nAdd Claude handoff for NotebookLM research captures"
+    ],
+    "c63": [
+      "text",
+      "12dd0d930dd7a50011dd3a06568ceeae0335bbf7\nAdd Claude handoff for NotebookLM research captures"
+    ],
+    "c64": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-020-chatgpt-claude-notebooklm-research-handoff.md"
+    ],
+    "c65": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-020-chatgpt-claude-notebooklm-research-handoff.md"
+    ],
+    "c66": [
+      "text",
+      "107b010d1ed92c25f31960b488a82149d2a176cd\nAdd Claude handoff collaboration log"
+    ],
+    "c67": [
+      "text",
+      "107b010d1ed92c25f31960b488a82149d2a176cd\nAdd Claude handoff collaboration log"
+    ],
+    "c68": [
+      "text",
+      "NotebookLM capture files 001–014\nclean URL queue file 010\nGoldenvoice / AEG source leads\nDWP source leads\nC3 / Bonnaroo source leads\nwhy current captures are not app-ready yet\nnext safe source-extraction workflow\npublic-safety rules\ndo-not-update-app-data warning"
+    ],
+    "c69": [
+      "text",
+      "NotebookLM capture files 001–014\nclean URL queue file 010\nGoldenvoice / AEG source leads\nDWP source leads\nC3 / Bonnaroo source leads\nwhy current captures are not app-ready yet\nnext safe source-extraction workflow\npublic-safety rules\ndo-not-update-app-data warning"
+    ]
+  },
+  "tokenStats": {
+    "rawChatTokens": 5408,
+    "compressedTokens": 3695,
+    "reductionPercent": 32,
+    "note": "Reduced from ~5,408 to ~3,695 tokens (32% reduction)"
+  },
+  "chatTitle": "Production Atlas - Live-event Labor Mapping",
+  "_context": "=== LLM MEMORY EXPORT ===\nSource: chatgpt | 19 messages\nExported: 2026-07-05\n\nINSTRUCTIONS FOR AI: This file contains a compressed export of a prior\nconversation. Please read the notes and context below, then resume\nnaturally as if continuing from where we left off.\n\n--- CONVERSATION FOLLOWS ---"
+}

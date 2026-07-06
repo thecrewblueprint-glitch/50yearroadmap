@@ -1,0 +1,41 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__feedback.html__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/feedback.html",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 2796,
+  "source_sha256": "c3c0e50edb0dcdcc9bd103c2eb67b009b70d819978b44fd5710379c787a6da99",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Production Atlas — Feedback</title>
+  <link rel="stylesheet" href="assets/atlas.css?v=atlas7"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0c1219"><link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <style>
+    .form-embed-shell{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:18px 0 0;background:#0c1219}
+    .form-embed-shell iframe{display:block;width:100%;border:none}
+    .form-fallback{margin:12px 0 0;color:var(--muted);font-size:.92rem}
+  </style>
+<meta name="description" content="Report an error, flag a data issue, or share a suggestion about the Production Atlas app."><meta property="og:title" content="Production Atlas — App Feedback"><meta property="og:description" content="Spotted an error, have a suggestion, or want to flag something on a specific page? The research team reads all submissions."><meta property="og:url" content="https://atlas.thecrewblueprint.com/feedback.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Production Atlas"><link rel="canonical" href="https://atlas.thecrewblueprint.com/feedback.html"></head>
+<body data-page="feedback">
+  <header class="hero"><div class="wrap"><div class="eyebrow">Production Atlas</div><h1>App Feedback</h1><p>Spotted an error, have a suggestion, or want to flag something on a specific page? The research team reads all submissions.</p></div></header>
+  <nav class="nav"><div class="wrap"><div class="navInner"><a href="index.html">Home</a><a href="opportunities.html">Opportunities</a><a href="calendar.html">Calendar</a><a href="map.html">Map</a><a href="employers.html">Employers</a><a href="iatse.html">IATSE</a><a href="contribute.html">Contribute</a></div></div></nav>
+  <main class="wrap page">
+    <p class="lead">Use this form to report data errors, flag broken links, or send suggestions. For field research and hiring signal submissions, use the <a href="contribute.html">Contribute page</a> instead.</p>
+    <div class="form-embed-shell">
+      <iframe src="https://airtable.com/embed/appw5bN1XEGAD7Ga9/pag6bQCAeBcuTiXR7/form" height="680" title="Share App Feedback"></iframe>
+    </div>
+    <p class="form-fallback">If the embedded form does not load on your device, <a class="btn" href="https://airtable.com/embed/appw5bN1XEGAD7Ga9/pag6bQCAeBcuTiXR7/form" target="_blank" rel="noopener">open the app feedback form in a new tab</a>.</p>
+  </main>
+  <footer class="wrap"></footer>
+  <script src="assets/site-footer.js?v=footer14"></script><script src="assets/icons.js?v=icons1"></script>
+</body></html>

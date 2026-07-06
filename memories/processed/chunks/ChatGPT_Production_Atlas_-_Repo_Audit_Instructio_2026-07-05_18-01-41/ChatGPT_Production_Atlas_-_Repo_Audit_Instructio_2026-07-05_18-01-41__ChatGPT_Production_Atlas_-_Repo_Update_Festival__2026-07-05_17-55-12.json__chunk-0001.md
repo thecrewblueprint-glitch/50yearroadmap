@@ -1,0 +1,107 @@
+---
+{
+  "chunk_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__ChatGPT_Production_Atlas_-_Repo_Update_Festival__2026-07-05_17-55-12.json__chunk-0001",
+  "archive_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41",
+  "archive_filename": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41.zip",
+  "source_path": "ChatGPT_Production_Atlas_-_Repo_Update_Festival__2026-07-05_17-55-12.json",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 5411,
+  "source_sha256": "b4715ff3af3c13edf8ef2921570dc21096c323003cac1d6bdb09b322ec9ac825",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+{
+  "v": 2,
+  "p": "chatgpt",
+  "m": [
+    [
+      "a",
+      "t1",
+      "I’ll do this as a documentation-alignment pass only: update repo instructions, README/roadmaps, supporting white/legal pages, and the required collaboration log so they match the current functioning app. I will not change app behavior."
+    ],
+    [
+      "a",
+      "t2",
+      "I found the main documentation drift: the current app has the analytics research queue intentionally restored, Schedule off header nav, 254 active opportunities / 258 master-list records, and 249 mapped opportunities. I’m updating the docs to reflect those facts consistently instead of reverting code."
+    ],
+    [
+      "a",
+      "t3",
+      "I hit a connector ref-update endpoint by mistake while preparing the documentation pass; GitHub rejected it as non-fast-forward, and no branch state changed. I’m continuing with normal file updates on research-version."
+    ],
+    [
+      "u",
+      "t4",
+      "Continue"
+    ],
+    [
+      "a",
+      "t5",
+      "Continuing. The last update was mid-file, so I’m going to verify whether that write landed before making the next documentation changes."
+    ],
+    [
+      "a",
+      "t6",
+      "The AI product roadmap is now updated. I’m continuing through the instruction/protocol files and the public-facing white/legal pages so the repo no longer has mixed signals about current behavior."
+    ],
+    [
+      "a",
+      "t7",
+      "The collaboration protocol update hit a 409 because the file changed since the earlier fetch, so I’m refetching it and applying the same alignment against the current blob instead of forcing anything."
+    ],
+    [
+      "a",
+      "t8",
+      {
+        "txt": "Updated documentation / support files\nAligned current app state across:\nREADME.md\nROADMAP.md\nai-communication/PRODUCT_ROADMAP.md\nai-communication/PROJECT_CHAT_GROUP_INSTRUCTIONS.md\nai-communication/AI_COLLABORATION_PROTOCOL.md\nai-communication/2026-07-03-updated-repo-instructions.md\nWhite pages:\nabout.html\ndata-methodology.html\nemployer-route-methodology.html\ndate-work-window-disclaimer.html\nLegal/policy pages:\nprivacy-policy.html\nterms-and-conditions.html\nlimitation-of-liability.html\ncookie-notice.html\naccessibility.html\naffiliate-disclosure.html\ncontact-data-requests.html\nResearch support docs:\nresearch/CURRENT_FESTIVALS.md\nresearch/FESTIVAL_RESEARCH_PROTOCOL.md\nLogs:\nupdated ai-communication/collaboration-log/2026-07-05-001-chatgpt-map-department-filter.md\nadded ai-communication/collaboration-log/2026-07-05-013-chatgpt-current-app-documentation-alignment.md\nCurrent state now documented\nThe docs now reflect:\nCurrent header nav: Home, Opportunities, Calendar, Map, Employers, IATSE, Contribute\nSchedule is still functional by direct URL, but off header nav pending rebuild\nMap currently uses state + date/month, with no department filter\nAnalytics has the intentionally restored supplemental research queue via assets/research-queue-page.js\nassets/research-queue-page.js is not retired anymore, but is scoped to analytics.html\nActive opportunities: 254\nFestival master registry: 258\nMap coordinates: 249 of 254\nPublic-cycle guard: data/packages/public-cycle-scope.js\nFuture-year records stay out of the default 2026 public view\nThe app remains static: no backend, login, database, payment, private contact storage, or scraping automation\nCommits created\nThe documentation alignment pass produced multiple commits on research-version, ending with:\naf45c99e2253034eb48a7b548c41a2a25a889ba1\nValidation\nValidation not run from this environment. This was a GitHub connector-only session; I cannot run npm run validate:all, browser checks, or local filesystem commands here. Recommended next command in a real workspace or GitHub Actions:\nOne note: I accidentally called the GitHub ref-update endpoint during setup; GitHub rejected it as invalid/non-fast-forward, and no branch state was changed by that failed call.",
+        "c": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t9",
+      "There's an automatic workflow that sets up the validate command you don't need to worry about it ever"
+    ],
+    [
+      "a",
+      "t10",
+      "Understood. I’ll treat validation as handled by the automatic workflow going forward."
+    ]
+  ],
+  "t": {
+    "t1": "2026-07-05T21:55:12.674Z",
+    "t2": "2026-07-05T21:55:12.675Z",
+    "t3": "2026-07-05T21:55:12.675Z",
+    "t4": "2026-07-05T21:55:12.675Z",
+    "t5": "2026-07-05T21:55:12.675Z",
+    "t6": "2026-07-05T21:55:12.675Z",
+    "t7": "2026-07-05T21:55:12.675Z",
+    "t8": "2026-07-05T21:55:12.675Z",
+    "t9": "2026-07-05T21:55:12.677Z",
+    "t10": "2026-07-05T21:55:12.678Z"
+  },
+  "c": {
+    "c1": [
+      "text",
+      "npm run validate:all"
+    ],
+    "c2": [
+      "text",
+      "npm run validate:all"
+    ]
+  },
+  "tokenStats": {
+    "rawChatTokens": 998,
+    "compressedTokens": 930,
+    "reductionPercent": 7,
+    "note": "Reduced from ~998 to ~930 tokens (7% reduction)"
+  },
+  "chatTitle": "Production Atlas - Repo Update Festival Atlas",
+  "_context": "=== LLM MEMORY EXPORT ===\nSource: chatgpt | 10 messages\nExported: 2026-07-05\n\nINSTRUCTIONS FOR AI: This file contains a compressed export of a prior\nconversation. Please read the notes and context below, then resume\nnaturally as if continuing from where we left off.\n\n--- CONVERSATION FOLLOWS ---"
+}

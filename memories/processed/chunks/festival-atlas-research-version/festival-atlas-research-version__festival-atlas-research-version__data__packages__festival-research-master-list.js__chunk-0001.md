@@ -1,0 +1,86 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__data__packages__festival-research-master-list.js__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/data/packages/festival-research-master-list.js",
+  "chunk_index": 1,
+  "chunk_count_for_source": 12,
+  "char_start": 0,
+  "char_end": 11911,
+  "source_sha256": "b04ff82a84b70d3edba84e2546b1b20895cd2ba163b67674a01a66e14cf29992",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+window.PRODUCTION_ATLAS_FESTIVAL_RESEARCH_MASTER_LIST = {
+  assetId: 'festival-research-master-list',
+  assetType: 'research-intake-master-list',
+  createdAt: '2026-06-29',
+  updatedAt: '2026-07-05',
+  status: 'batch-verification-complete',
+  sourceContext: 'Music Festival Wizard camping festival research expansion intake, reconciled from uploaded AI research packets and corrected screenshot-derived ordering.',
+  purpose: 'Active repo asset for pulling future festival candidates into Production Atlas after public-source verification and public-safety review.',
+  publicSafety: {
+    displayRule: 'Do not display as active public opportunities until each record is verified from public sources.',
+    unknownLanguage: 'Unknown publicly. Human verification needed.',
+    sourceLinkRule: 'Source URLs belong on sources.html or a source-audit package, not in opportunity popups, map popups, calendar cards, or employer cards.',
+    prohibitedFields: [
+      'private contacts',
+      'phone numbers',
+      'personal emails',
+      'pay rates',
+      'hotel or lodging details',
+      'crew rumors',
+      'private referrals',
+      'private field notes',
+      'NDA information',
+      'client-sensitive information',
+      'non-public vendor lists'
+    ]
+  },
+  schema: {
+    sequence: 'Corrected master-list order number.',
+    name: 'Festival or event name as used in the intake list.',
+    year: 'Target research year from the intake list.',
+    batch: 'Research batch number. Batches 1-8 (seq 1-161) are the original 20-record staged-verification intake. Batches 9-13 (seq 162-258) are the 2026-07-05 registry reconciliation — active opportunities that already existed in opportunities-2026.js and were added so this list is a complete festival registry.',
+    researchStatus: 'Current verification status. Values: unverified-intake | public-verified | flagged-needs-human-review | removed-invalid-year.',
+    verifiedWebsite: 'Official public website URL confirmed from public sources.',
+    verifiedCity: 'City confirmed from public sources.',
+    verifiedState: 'State or territory confirmed from public sources.',
+    verifiedDates: 'Date range confirmed from public sources.',
+    verificationNotes: 'Notes from batch verification process including import status and flags.',
+    opportunityId: 'ID of the corresponding record in opportunities-2026.js, if imported.',
+    publicSafeNotes: 'Note governing public display rules for this record.'
+  },
+  reconciliationNotes: [
+    'Cascade Equinox Festival 2026 appeared twice in uploaded packet versions; the duplicate at intake position 140 was removed.',
+    'Gem and Jam 2027 was restored to sequence 140 in the corrected baseline.',
+    'Cascade Equinox Festival 2027 is retained at sequence 160 from the corrected baseline.',
+    "Dean Claire's may refer to Eaux Claires; verify official naming before import.",
+    'Ambiguous entries such as Wootick Festival, Summer Apex, Yahn Dawn, Nocturnal Valley, Valley of the Seven Stars, Showcation, and similar records require human verification before any display upgrade.',
+    'Outside-AI confidence labels from uploaded packets are not carried forward as verified confidence.',
+    'All 8 batches (161 records) verified 2026-06-29. Status updates applied from public-source batch research.',
+    'Cascade Equinox Festival 2026 (sequence 101) confirmed invalid for 2026 — rescheduled to 2027. 2027 edition imported as cascade-equinox-2027.',
+    'Desert Hearts Festival 2026 (sequence 5) flagged for human review — conflicting public reports of hiatus or cancellation.',
+    'Suwannee Amp Jam 2027 (sequence 141) flagged for human review — sources found for earlier cycle only, not confirmed 2027 page.',
+    'Secret Dreams Festival (sequence 86): DATE DISCREPANCY — batch research shows Sep 3-6 2026; existing opportunity record has Nov 4-8 2026 at The Cardinal, Marengo OH. Verify from official site before relying on either date.',
+    'FloydFest (seq 36), Newport Folk Festival (seq 37), Hinterland (seq 45), Rocklahoma (seq 84), Louder Than Life (seq 103), and Suwannee Hulaween (seq 137) were pre-existing in opportunities-2026.js before batch verification — left blank in batch research, status set to public-verified from pre-existing import.',
+    'REGISTRY RECONCILIATION 2026-07-05: the list was expanded from 161 to 258 records. Batches 9-13 (sequences 162-258) add the 97 active opportunities that lived in opportunities-2026.js but had no master-list entry — the original tentpole festivals (Coachella-tier), the Breakaway and Country Thunder tour markets, and the deep-research expansion set (jazz festivals, state fairs, regional festivals). Each was reconciled directly from its verified opportunity record (name/city/state/dates/source URL). The list now serves as the complete active-festival registry, not only the camping-festival research intake.'
+  ],
+  records: [
+    { sequence: 1, name: 'APOG', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://apog.life', verifiedCity: 'Darrington', verifiedState: 'WA', verifiedDates: 'Jul 3–5 2026', verificationNotes: 'APOG = Any Patch of Grass. Imported as apog-2026.', opportunityId: 'apog-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 2, name: 'Great Blue Heron Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://greatblueheron.com', verifiedCity: 'Sherman', verifiedState: 'NY', verifiedDates: 'Jul 2–5 2026', verificationNotes: 'Imported as great-blue-heron-2026.', opportunityId: 'great-blue-heron-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 3, name: 'High Sierra Music Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.highsierramusic.com/home', verifiedCity: 'Grass Valley', verifiedState: 'CA', verifiedDates: 'Jul 2–5 2026', verificationNotes: 'Already in opportunities as high-sierra-2026 (pre-existing). New venue: Nevada County Fairgrounds in Grass Valley.', opportunityId: 'high-sierra-2026', publicSafeNotes: 'Pre-existing verified opportunity. Venue update noted.' },
+    { sequence: 4, name: 'Roostertail Music Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedCity: 'Madison', verifiedState: 'IN', verifiedDates: 'Jul 2–5 2026 (exact start date varies by source)', verificationNotes: 'Public sources confirm 2026 edition and Madison Regatta tie-in. No official website confirmed. Imported as roostertail-2026.', opportunityId: 'roostertail-2026', publicSafeNotes: 'Verified and imported. Confirm exact start date and attach official URL.' },
+    { sequence: 5, name: 'Desert Hearts Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://desertheartsfestival.us/', verifiedCity: 'Flagstaff', verifiedState: 'AZ', verifiedDates: 'Jul 2–6 2026', verificationNotes: 'Confirmed active for 2026 via official site (desertheartsfestival.us) and ticketing (Tixr): 21+ one-stage house/techno camping festival at Playa Ponderosa near Flagstaff AZ. Official homepage is anti-bot-protected (401 to automated checks). Imported as desert-hearts-2026.', opportunityId: 'desert-hearts-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 6, name: 'Calling All Magical People', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.callingallmagicalpeople.com', verifiedCity: 'Darlington', verifiedState: 'MD', verifiedDates: 'Jul 3–7 2026', verificationNotes: 'CAMP branding. Imported as calling-all-magical-people-2026.', opportunityId: 'calling-all-magical-people-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 7, name: 'Briggs Farm Blues Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.briggsfarm.com', verifiedCity: 'Briggsville', verifiedState: 'PA', verifiedDates: 'Jul 9–11 2026', verificationNotes: 'Imported as briggs-farm-blues-2026.', opportunityId: 'briggs-farm-blues-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 8, name: 'Country Boom', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://countryboom.com/', verifiedCity: 'West Salem', verifiedState: 'WI', verifiedDates: 'Jul 9–11 2026', verificationNotes: 'Maple Grove Venues, West Salem WI (La Crosse area). Imported as country-boom-2026.', opportunityId: 'country-boom-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 9, name: 'Country Concert', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedCity: 'Fort Loramie', verifiedState: 'OH', verifiedDates: 'Jul 9–11 2026', verificationNotes: 'Public 2026 lineup announcement confirms event and dates. No official website confirmed in batch. Imported as country-concert-2026.', opportunityId: 'country-concert-2026', publicSafeNotes: 'Verified and imported. Attach official URL when found.' },
+    { sequence: 10, name: 'ND Country Fest', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.ndcountryfest.com/', verifiedCity: 'New Salem', verifiedState: 'ND', verifiedDates: 'Jul 8–11 2026', verificationNotes: 'Morton County Fairgrounds, New Salem ND. Imported as nd-country-fest-2026.', opportunityId: 'nd-country-fest-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 11, name: 'Pendleton Whisky Music Fest', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.pendletonwhiskymusicfest.com/', verifiedCity: 'Pendleton', verifiedState: 'OR', verifiedDates: 'Jul 11 2026 (Jul 10 kickoff)', verificationNotes: 'Pendleton Round-Up Stadium, Pendleton OR. Single main day (Jul 11) plus a Jul 10 downtown kickoff. Imported as pendleton-whisky-music-fest-2026.', opportunityId: 'pendleton-whisky-music-fest-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 12, name: "Vicki's Camp N Country Jam", year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://vickiscampncountryjam.com/', verifiedCity: 'Redwood Falls', verifiedState: 'MN', verifiedDates: 'Jul 9–11 2026', verificationNotes: 'Intake listed Iowa; actual location is Redwood Falls, MN. Imported as vickis-camp-n-country-jam-2026.', opportunityId: 'vickis-camp-n-country-jam-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 13, name: 'Dead of Summer Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://deadofsummerfest.com/', verifiedCity: 'Manchester', verifiedState: 'VT', verifiedDates: 'Jul 9–12 2026', verificationNotes: 'Hunter Park, Manchester VT (jam-scene festival). Imported as dead-of-summer-2026.', opportunityId: 'dead-of-summer-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 14, name: 'Hodag Country Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.hodag.com/country-music/', verifiedCity: 'Rhinelander', verifiedState: 'WI', verifiedDates: 'Jul 9–12 2026', verificationNotes: 'Hodag Festival Grounds, Rhinelander WI. Imported as hodag-country-2026.', opportunityId: 'hodag-country-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },
+    { sequence: 15, name: 'North Atlantic Blues Festival', year: 2026, batch: 1, researchStatus: 'public-verified', verifiedWebsite: 'https://www.northatlanticbluesfestival.com/', verifiedCity: 'Rockland', verifiedState: 'ME', verifiedDates: 'Jul 11–12 2026', verificationNotes: 'Public Landing waterfront, Rockland ME. Imported as north-atlantic-blues-2026.', opportunityId: 'north-atlantic-blues-2026', publicSafeNotes: 'Verified and imported as active opportunity.' },

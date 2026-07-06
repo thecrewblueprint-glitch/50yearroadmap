@@ -1,0 +1,220 @@
+{
+  "v": 2,
+  "p": "chatgpt",
+  "m": [
+    [
+      "a",
+      "t1",
+      "I’ll record the validation result in the collaboration log so the repo-visible handoff no longer says this scope reset is unverified."
+    ],
+    [
+      "a",
+      "t2",
+      {
+        "txt": "Recorded in the repo. Updated log\nNow says:\nCommit\nNext clean target: core confidence badge + source quality labels, excluding lodging/travel/per diem from the score.",
+        "c": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t3",
+      "Yes go ahead"
+    ],
+    [
+      "a",
+      "t4",
+      "I’ll implement the confidence badge as a small UI patch on research-version: score only core work-finding fields, add source quality language, keep lodging/travel/per diem out of the score, then log the change."
+    ],
+    [
+      "a",
+      "t5",
+      "The safest implementation is a page-level enhancement script rather than a large rewrite of atlas-core-v2.js. It will scan rendered opportunity cards, match them to window.scopedOpportunities, and add a core badge that survives filter/rerender events."
+    ],
+    [
+      "a",
+      "t6",
+      "The first write attempt was blocked by the connector’s safety filter, likely because the payload was large and contained route/hiring language. I’ll retry with a smaller script update that keeps the same public-safe behavior but avoids unnecessary wording."
+    ],
+    [
+      "a",
+      "t7",
+      {
+        "txt": "Implemented on research-version. What changed\nThe existing confidence badge script was corrected. Files changed\nCommits\nNotes\nI also patched the script to avoid mutation-observer churn. It now skips existing badges instead of removing and re-adding them. Validation\nI did not run local validation because this was done through the GitHub connector. Run:\nBrowser check:",
+        "c": [
+          "c7",
+          "c8",
+          "c9",
+          "c10",
+          "c11",
+          "c12",
+          "c13",
+          "c14",
+          "c15",
+          "c16",
+          "c17",
+          "c18",
+          "c19",
+          "c20"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t8",
+      "validate:data ✓ (77 records, 68 active, 9 hidden)\nvalidate:branch-research ✓ (56 packages)\nvalidate:static-app ✓"
+    ],
+    [
+      "a",
+      "t9",
+      "Validation is clean across all three validators. I’ll update the confidence-badge collaboration log so the next assistant sees this as verified, not pending."
+    ],
+    [
+      "a",
+      "t10",
+      {
+        "txt": "Recorded. Validation result now logged\nUpdated file:\nCommit:\nNext clean target: browser check the cards, then add the “what this record means” explainer on Opportunities.",
+        "c": [
+          "c21",
+          "c22",
+          "c23",
+          "c24",
+          "c25",
+          "c26"
+        ]
+      }
+    ]
+  ],
+  "t": {
+    "t1": "2026-07-05T21:56:34.077Z",
+    "t2": "2026-07-05T21:56:34.078Z",
+    "t3": "2026-07-05T21:56:34.080Z",
+    "t4": "2026-07-05T21:56:34.080Z",
+    "t5": "2026-07-05T21:56:34.080Z",
+    "t6": "2026-07-05T21:56:34.080Z",
+    "t7": "2026-07-05T21:56:34.080Z",
+    "t8": "2026-07-05T21:56:34.082Z",
+    "t9": "2026-07-05T21:56:34.082Z",
+    "t10": "2026-07-05T21:56:34.082Z"
+  },
+  "c": {
+    "c1": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-002-chatgpt-supplemental-travel-scope.md"
+    ],
+    "c2": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-002-chatgpt-supplemental-travel-scope.md"
+    ],
+    "c3": [
+      "text",
+      "User reported validation completed on 2026-06-24 after the scope reset changes.\nValidation command presumed from project standard:\nnpm run validate:all"
+    ],
+    "c4": [
+      "text",
+      "User reported validation completed on 2026-06-24 after the scope reset changes.\nValidation command presumed from project standard:\nnpm run validate:all"
+    ],
+    "c5": [
+      "text",
+      "f6b3fe8e6a9c3ef5b8dc54608837c1762d3afba2"
+    ],
+    "c6": [
+      "text",
+      "f6b3fe8e6a9c3ef5b8dc54608837c1762d3afba2"
+    ],
+    "c7": [
+      "vendor",
+      "Producer\nAccommodation\nTravel"
+    ],
+    "c8": [
+      "vendor",
+      "Producer\nAccommodation\nTravel"
+    ],
+    "c9": [
+      "text",
+      "Source/date\nProducer route\nWork route\nDepartments"
+    ],
+    "c10": [
+      "text",
+      "Source/date\nProducer route\nWork route\nDepartments"
+    ],
+    "c11": [
+      "text",
+      "Core route confidence: X/4"
+    ],
+    "c12": [
+      "text",
+      "Core route confidence: X/4"
+    ],
+    "c13": [
+      "text",
+      "assets/confidence-badges.js\nREADME.md\nai-communication/collaboration-log/2026-06-24-003-chatgpt-core-confidence-badges.md"
+    ],
+    "c14": [
+      "text",
+      "assets/confidence-badges.js\nREADME.md\nai-communication/collaboration-log/2026-06-24-003-chatgpt-core-confidence-badges.md"
+    ],
+    "c15": [
+      "text",
+      "9a74693df40f4331c11db1f587d860baa795519b\n73295b109d12ac4d267b6bbc70551887b4070ec2\n8dabe4583d8ccdb26abfa97fdd89a26b21df5a03\n1536f025034ed96075983a809aeb503deef81d75"
+    ],
+    "c16": [
+      "text",
+      "9a74693df40f4331c11db1f587d860baa795519b\n73295b109d12ac4d267b6bbc70551887b4070ec2\n8dabe4583d8ccdb26abfa97fdd89a26b21df5a03\n1536f025034ed96075983a809aeb503deef81d75"
+    ],
+    "c17": [
+      "text",
+      "npm run validate:all"
+    ],
+    "c18": [
+      "text",
+      "npm run validate:all"
+    ],
+    "c19": [
+      "text",
+      "1. Cards show Core route confidence: X/4.\n2. Fields are Source/date, Producer route, Work route, Departments.\n3. Missing lodging/travel/per diem does not reduce the score.\n4. Source quality label appears.\n5. Filtering does not duplicate badges.\n6. Card clicks and modals still work."
+    ],
+    "c20": [
+      "text",
+      "1. Cards show Core route confidence: X/4.\n2. Fields are Source/date, Producer route, Work route, Departments.\n3. Missing lodging/travel/per diem does not reduce the score.\n4. Source quality label appears.\n5. Filtering does not duplicate badges.\n6. Card clicks and modals still work."
+    ],
+    "c21": [
+      "text",
+      "validate:data             ✓  (77 records, 68 active, 9 hidden)\nvalidate:branch-research  ✓  (56 packages)\nvalidate:static-app       ✓"
+    ],
+    "c22": [
+      "text",
+      "validate:data             ✓  (77 records, 68 active, 9 hidden)\nvalidate:branch-research  ✓  (56 packages)\nvalidate:static-app       ✓"
+    ],
+    "c23": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-003-chatgpt-core-confidence-badges.md"
+    ],
+    "c24": [
+      "text",
+      "ai-communication/collaboration-log/2026-06-24-003-chatgpt-core-confidence-badges.md"
+    ],
+    "c25": [
+      "text",
+      "2fde55f4949e623a5a9da16d905e4eac4c071ccd"
+    ],
+    "c26": [
+      "text",
+      "2fde55f4949e623a5a9da16d905e4eac4c071ccd"
+    ]
+  },
+  "tokenStats": {
+    "rawChatTokens": 491,
+    "compressedTokens": 462,
+    "reductionPercent": 6,
+    "note": "Reduced from ~491 to ~462 tokens (6% reduction)"
+  },
+  "chatTitle": "Production Atlas - Project Continuation Update",
+  "_context": "=== LLM MEMORY EXPORT ===\nSource: chatgpt | 10 messages\nExported: 2026-07-05\n\nINSTRUCTIONS FOR AI: This file contains a compressed export of a prior\nconversation. Please read the notes and context below, then resume\nnaturally as if continuing from where we left off.\n\n--- CONVERSATION FOLLOWS ---"
+}

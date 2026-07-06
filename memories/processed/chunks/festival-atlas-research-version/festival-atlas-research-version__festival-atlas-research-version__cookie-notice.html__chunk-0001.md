@@ -1,0 +1,30 @@
+---
+{
+  "chunk_id": "festival-atlas-research-version__festival-atlas-research-version__cookie-notice.html__chunk-0001",
+  "archive_id": "festival-atlas-research-version",
+  "archive_filename": "festival-atlas-research-version.zip",
+  "source_path": "festival-atlas-research-version/cookie-notice.html",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 2821,
+  "source_sha256": "3bff7834809602e0cce52a790bf6111d4c0b6f11d13b585965191f66c68cc6a9",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Production Atlas — Cookie Notice</title><link rel="stylesheet" href="assets/atlas.css?v=atlas7"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0c1219"><link rel="apple-touch-icon" href="assets/icons/icon-192.png"><meta name="description" content="Cookie Notice for Production Atlas and its local browser storage features."><link rel="canonical" href="https://atlas.thecrewblueprint.com/cookie-notice.html"></head>
+<body data-page="cookie-notice">
+<header class="hero"><div class="wrap"><div class="eyebrow">Production Atlas • Legal</div><h1>Cookie Notice</h1><p>Cookie and local browser storage information for the Production Atlas public website.</p></div></header>
+<nav class="nav"><div class="wrap"><div class="navInner"><a href="./index.html">Home</a><a href="./opportunities.html">Opportunities</a><a href="./calendar.html">Calendar</a><a href="./map.html">Map</a><a href="./employers.html">Employers</a><a href="./iatse.html">IATSE</a><a href="./contribute.html">Contribute</a></div></div></nav>
+<main class="wrap page">
+<section class="card"><h2>Cookies</h2><p>Production Atlas does not intentionally set advertising cookies, tracking cookies, account cookies, payment cookies, or login cookies in the public static app.</p></section>
+<section class="card" style="margin-top:16px"><h2>Local storage</h2><p>Some planning features may use local browser storage to remember selections on the same device, including saved opportunities and the local Schedule page. This storage stays in the visitor’s browser and is not submitted to a Production Atlas backend.</p></section>
+<section class="card" style="margin-top:16px"><h2>Static supplemental views</h2><p>Map, Calendar, Employers, IATSE, Sources, and Analytics display static public-safe data from the repository. They do not require a visitor account or a Production Atlas backend session.</p></section>
+<section class="card" style="margin-top:16px"><h2>Third-party websites and forms</h2><p>External websites or embedded third-party forms linked from Production Atlas may use their own cookies or tracking technologies. Review each third-party site’s cookie and privacy notices before submitting information there.</p></section>
+<section class="card" style="margin-top:16px"><h2>Browser controls</h2><p>Visitors can clear cookies or local storage through their browser settings. Clearing local storage may remove saved opportunity or Schedule selections on that device.</p></section>
+</main>
+<footer class="wrap"></footer><script src="assets/site-footer.js?v=footer14"></script><script src="assets/icons.js?v=icons1"></script>
+</body></html>

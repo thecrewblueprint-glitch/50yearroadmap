@@ -1,0 +1,303 @@
+---
+{
+  "chunk_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__ChatGPT_Production_Atlas_-_Repo_update_status_2026-07-05_17-55-39.json__chunk-0001",
+  "archive_id": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41",
+  "archive_filename": "ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41.zip",
+  "source_path": "ChatGPT_Production_Atlas_-_Repo_update_status_2026-07-05_17-55-39.json",
+  "chunk_index": 1,
+  "chunk_count_for_source": 1,
+  "char_start": 0,
+  "char_end": 9898,
+  "source_sha256": "43a6568007f0303302c3b9cc1c41c060dd29e89b415e6de4260e700c91554b8c",
+  "test_or_generated_note": "Generated from archived memory source. Original archive remains unchanged."
+}
+---
+
+{
+  "v": 2,
+  "p": "chatgpt",
+  "m": [
+    [
+      "u",
+      "t1",
+      "These pop ups need to be cleaned up still. Make sure than anything clickable only populates useful information to the public facing page"
+    ],
+    [
+      "u",
+      "t3",
+      "ok lets start inside this red box"
+    ],
+    [
+      "u",
+      "t4",
+      "These stat bubbles"
+    ],
+    [
+      "u",
+      "t5",
+      "First it shouldn't read by branch it should say department. And second it should not link a name to a festival in this manner unless it is confirmed that they hire and have a labor contract within that festival"
+    ],
+    [
+      "u",
+      "t7",
+      "Doesn't show the United States"
+    ],
+    [
+      "u",
+      "t8",
+      "Don't need the notes meant for me and you"
+    ],
+    [
+      "u",
+      "t9",
+      "Claude fixed the issues\nLet's move to calendar page. The spprox mark on the blue bar should read at the front and back of the blue bar and now lay over anything in the show days bar"
+    ],
+    [
+      "u",
+      "t10",
+      "Make the departments a search drop down. Not these buttons. Also remove the stats at the top"
+    ],
+    [
+      "u",
+      "t14",
+      "Pasted text.txtDocument"
+    ],
+    [
+      "u",
+      "t15",
+      "Pasted markdown.mdFile"
+    ],
+    [
+      "u",
+      "t16",
+      "Pasted markdown.mdFile"
+    ],
+    [
+      "u",
+      "t17",
+      "Pasted markdown.mdFile"
+    ],
+    [
+      "u",
+      "t18",
+      "Pasted markdown.mdFile"
+    ],
+    [
+      "u",
+      "t19",
+      "Pasted text.txtDocument"
+    ],
+    [
+      "u",
+      "t20",
+      "Remove sources from the header nav bar it should only be in the footer... Between the nav bar and the first card.. remove it from the nav bar it should be in the footer and present on the home page at the top only.. not inside the hero."
+    ],
+    [
+      "u",
+      "t21",
+      "All iatse cards have this written on them\n.that isn't useful information for my users."
+    ],
+    [
+      "u",
+      "t22",
+      "Review the employer page and write professional copy for the pop ups, the pop ups look kind of bare. It is supposed to have website information, known social media channels, company information, whatever else is needed for a user seeking employment to get a quick understanding of that company."
+    ],
+    [
+      "u",
+      "t23",
+      "Clean up this section of the employers pop ups, it isn't totally necessary to say everything the way it is said"
+    ],
+    [
+      "u",
+      "t24",
+      "Festival Atlas.mhtFileCheck this out and give me feedback on it."
+    ],
+    [
+      "u",
+      "t25",
+      "add pagination on the web and mobile versions both"
+    ],
+    [
+      "a",
+      "t26",
+      "I’ll add pagination to the Map page opportunity cards so desktop and mobile don’t render the full festival list in one long scroll. I’ll keep the map visible, then paginate the cards below it."
+    ],
+    [
+      "a",
+      "t27",
+      "I found the long list is rendered by assets/map-page-static.js. I’m adding page state and controls there, then bumping the map.html script version so the browser loads it."
+    ],
+    [
+      "a",
+      "t28",
+      {
+        "txt": "Changed\nUpdated:\nAdded:\nWhat changed on Map\nThe map page now has pagination for the festival cards:\nMobile behavior:\nThe map markers still all show on the U.S. map for route context, but the huge card list below the map is now paginated. Validation not run from this environment.",
+        "c": [
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6",
+          "c7",
+          "c8",
+          "c9",
+          "c10"
+        ]
+      }
+    ],
+    [
+      "u",
+      "t30",
+      "I'm not sure how the thing works but it is the github funding thing. I don't know if i need to connect my bank or what"
+    ],
+    [
+      "a",
+      "t31",
+      "Add a low-pressure “support the free Atlas” placement that does not feel like a popup or hard ask. For the GitHub funding part: GitHub’s repo sponsor button uses .github/FUNDING.ymlbut receiving money through GitHub Sponsors requires setting up a Sponsors profile, tiers, bank or fiscal-host payout info, tax info, and 2FA. GitHub’s docs say the sponsor button is configured with a FUNDING.yml file, and GitHub Sponsors setup includes payout/bank or fiscal-host and tax steps. I’ll add the site UI now, but keep the wording soft: free resource first, optional support second."
+    ],
+    [
+      "a",
+      "t32",
+      "I added the low-pressure support placement and removed the visual numbered badges from the IATSE guide cards through the global site UI layer. I’m adding the GitHub funding metadata file now so the repo can show a Sponsor button once GitHub Sponsors is configured."
+    ],
+    [
+      "a",
+      "t33",
+      {
+        "txt": "on research-version. They now keep the useful info, but no longer look like numbered step cards. Support placement\nAdded a low-pressure support card in the footer, not the hero and not a popup. GitHub funding setup\nI added:\nto:\nThat prepares the repo for GitHub’s Sponsor button system. You still need to set up GitHub Sponsors separately before money can be received. GitHub Sponsors setup generally requires:\nValidation not run from this environment. Refresh the site and check the footer and IATSE page.",
+        "c": [
+          "c11",
+          "c12",
+          "c13",
+          "c14",
+          "c15",
+          "c16",
+          "c17",
+          "c18",
+          "c19",
+          "c20"
+        ]
+      }
+    ]
+  ],
+  "t": {
+    "t1": "2026-07-05T21:55:39.300Z",
+    "t3": "2026-07-05T21:55:39.301Z",
+    "t4": "2026-07-05T21:55:39.302Z",
+    "t5": "2026-07-05T21:55:39.302Z",
+    "t7": "2026-07-05T21:55:39.302Z",
+    "t8": "2026-07-05T21:55:39.303Z",
+    "t9": "2026-07-05T21:55:39.303Z",
+    "t10": "2026-07-05T21:55:39.303Z",
+    "t14": "2026-07-05T21:55:39.305Z",
+    "t15": "2026-07-05T21:55:39.305Z",
+    "t16": "2026-07-05T21:55:39.306Z",
+    "t17": "2026-07-05T21:55:39.306Z",
+    "t18": "2026-07-05T21:55:39.307Z",
+    "t19": "2026-07-05T21:55:39.307Z",
+    "t20": "2026-07-05T21:55:39.308Z",
+    "t21": "2026-07-05T21:55:39.308Z",
+    "t22": "2026-07-05T21:55:39.308Z",
+    "t23": "2026-07-05T21:55:39.308Z",
+    "t24": "2026-07-05T21:55:39.309Z",
+    "t25": "2026-07-05T21:55:39.310Z",
+    "t26": "2026-07-05T21:55:39.311Z",
+    "t27": "2026-07-05T21:55:39.311Z",
+    "t28": "2026-07-05T21:55:39.311Z",
+    "t30": "2026-07-05T21:55:39.321Z",
+    "t31": "2026-07-05T21:55:39.321Z",
+    "t32": "2026-07-05T21:55:39.321Z",
+    "t33": "2026-07-05T21:55:39.322Z"
+  },
+  "c": {
+    "c1": [
+      "text",
+      "assets/map-page-static.js\nmap.html"
+    ],
+    "c2": [
+      "text",
+      "assets/map-page-static.js\nmap.html"
+    ],
+    "c3": [
+      "text",
+      "ai-communication/collaboration-log/2026-07-03-004-chatgpt-map-pagination.md"
+    ],
+    "c4": [
+      "text",
+      "ai-communication/collaboration-log/2026-07-03-004-chatgpt-map-pagination.md"
+    ],
+    "c5": [
+      "text",
+      "12 records per page\nPrev / Next buttons\nnumbered page buttons\nresult count: Showing X–Y of Z\npagination above and below the cards\nfilters reset back to page 1"
+    ],
+    "c6": [
+      "text",
+      "12 records per page\nPrev / Next buttons\nnumbered page buttons\nresult count: Showing X–Y of Z\npagination above and below the cards\nfilters reset back to page 1"
+    ],
+    "c7": [
+      "text",
+      "pagination controls are mobile-friendly\nPrev / Next go full width\npage numbers wrap cleanly\npagination sticks near the top while scrolling the long list"
+    ],
+    "c8": [
+      "text",
+      "pagination controls are mobile-friendly\nPrev / Next go full width\npage numbers wrap cleanly\npagination sticks near the top while scrolling the long list"
+    ],
+    "c9": [
+      "text",
+      "mapstatic6 → mapstatic7"
+    ],
+    "c10": [
+      "text",
+      "mapstatic6 → mapstatic7"
+    ],
+    "c11": [
+      "text",
+      "assets/site-footer.js\n.github/FUNDING.yml"
+    ],
+    "c12": [
+      "text",
+      "assets/site-footer.js\n.github/FUNDING.yml"
+    ],
+    "c13": [
+      "text",
+      "ai-communication/collaboration-log/2026-07-03-005-chatgpt-support-footer-and-iatse-number-cleanup.md"
+    ],
+    "c14": [
+      "text",
+      "ai-communication/collaboration-log/2026-07-03-005-chatgpt-support-footer-and-iatse-number-cleanup.md"
+    ],
+    "c15": [
+      "text",
+      "Support Production Atlas\n\nProduction Atlas stays free. Optional support helps keep public sources che:contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}ures moving.\n\nOptional support ↗"
+    ],
+    "c16": [
+      "text",
+      "Support Production Atlas\n\nProduction Atlas stays free. Optional support helps keep public sources che:contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}ures moving.\n\nOptional support ↗"
+    ],
+    "c17": [
+      "text",
+      "github: [thecrewblueprint-glitch]"
+    ],
+    "c18": [
+      "text",
+      "github: [thecrewblueprint-glitch]"
+    ],
+    "c19": [
+      "text",
+      "Sponsors profile\none-time or monthly tiers\nbank payout or fiscal host\ntax info\n2FA\nGitHub approval"
+    ],
+    "c20": [
+      "text",
+      "Sponsors profile\none-time or monthly tiers\nbank payout or fiscal host\ntax info\n2FA\nGitHub approval"
+    ]
+  },
+  "tokenStats": {
+    "rawChatTokens": 1184,
+    "compressedTokens": 965,
+    "reductionPercent": 18,
+    "note": "Reduced from ~1,184 to ~965 tokens (18% reduction)"
+  },
+  "chatTitle": "Production Atlas - Repo update status",
+  "_context": "=== LLM MEMORY EXPORT ===\nSource: chatgpt | 27 messages\nExported: 2026-07-05\n\nINSTRUCTIONS FOR AI: This file contains a compressed export of a prior\nconversation. Please read the notes and context below, then resume\nnaturally as if continuing from where we left off.\n\n--- CONVERSATION FOLLOWS ---"
+}
