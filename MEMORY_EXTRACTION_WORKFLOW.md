@@ -2,7 +2,20 @@
 
 ## How to Feed Memory Chunks into the Roadmap
 
-### Three-Step Process
+### Input Categories
+
+Use two separate categories:
+
+| Category | Location | Purpose |
+|---|---|---|
+| Operational digests | `data/raw-reports/` | Watcher-ready project, task, blocker, and decision extraction |
+| Roadmap deep context | `data/roadmap-deep-context/` | Roadmap meaning, values, mission context, long-range intent, and emotionally important roadmap discussion |
+
+Gemini roadmap conversations that primarily discuss the 50-year roadmap, Homes for Hands, Homestead Network, life architecture, values, or long-range purpose should go into `data/roadmap-deep-context/` first.
+
+Only convert them into `data/raw-reports/` when there is a concrete, public-safe roadmap item, blocker, decision, or operating principle to extract.
+
+### Three-Step Process for Operational Digests
 
 ```text
 MEMORY CHUNKS
@@ -47,9 +60,35 @@ MEMORY CHUNKS
 
 ---
 
+## Roadmap Deep-Context Workflow
+
+Use this path for files that are mostly about roadmap purpose and meaning rather than immediate implementation.
+
+```text
+GEMINI ROADMAP DEEP-CONTEXT EXPORT
+  │
+  ├─→ Store in:
+  │     data/roadmap-deep-context/YYYY-MM-DD-source-topic-deep-context.md
+  │
+  ├─→ Preserve:
+  │     - core meaning
+  │     - mission context
+  │     - values and operating principles
+  │     - projects affected
+  │     - unresolved tensions
+  │     - public/private boundary notes
+  │
+  └─→ Convert only actionable items into:
+        data/raw-reports/YYYY-MM-DD-{source}-digest.md
+```
+
+Deep-context files may influence the roadmap without becoming immediate tasks. Treat them as source-of-truth context for why the roadmap exists and how the work should be shaped.
+
+---
+
 ## Digest Format Contract
 
-The watcher expects digest files in `data/raw-reports/*-digest.md`.
+The watcher expects operational digest files in `data/raw-reports/*-digest.md`.
 
 Use this structure:
 
@@ -109,11 +148,13 @@ The watcher now reads multi-line blocker entries and preserves their pillar mapp
 | `pillar-3` | Production Atlas | active |
 | `pillar-4` | Contractor Tools | active |
 | `pillar-5` | Land Acquisition | future |
-| `pillar-6` | Homestead Network | future, but digest claims may still be tracked |
+| `pillar-6` | Homestead Network / Homes for Hands | future, but digest claims may still be tracked |
 | `pillar-7` | Personal Operations | active |
 | `pillar-8` | Skills & Certifications | active |
 
 Production Atlas is active because the July 2026 digests show active repository, research, and app-architecture work.
+
+Homes for Hands belongs under `pillar-6` as a nonprofit homestead/respite project for stagehands and travelers who need rest between gigs, with a possible permanent landing space for those who need one.
 
 ---
 
@@ -140,7 +181,7 @@ python scripts/validate-roadmap.py
 python scripts/build-roadmap.py
 
 # 7. Commit
-git add data/raw-reports data/roadmap docs scripts MEMORY_EXTRACTION_WORKFLOW.md
+git add data/raw-reports data/roadmap data/roadmap-deep-context docs scripts MEMORY_EXTRACTION_WORKFLOW.md
 git commit -m "Update roadmap from memory digests"
 git push
 ```
@@ -182,6 +223,12 @@ Processed digest coverage exists for:
 8. ChatGPT context export
 9. Production Atlas workstream sub-archive
 
+Roadmap deep-context storage now exists at:
+
+```text
+data/roadmap-deep-context/
+```
+
 The corrected watcher frontier is currently **Production Atlas** because that is where the highest volume of active, blocked, and recently modified work exists.
 
 ---
@@ -195,17 +242,18 @@ The corrected watcher frontier is currently **Production Atlas** because that is
 ✅ **Vendor/market patterns** — from research  
 ✅ **Technical decisions** — from code reviews  
 ✅ **Business insights** — from planning conversations  
-✅ **Roadmap navigation constraints** — primary path, “you are now here,” move-later handling
+✅ **Roadmap navigation constraints** — primary path, “you are now here,” move-later handling  
+✅ **Deep-context themes** — mission, identity, meaning, values, and long-range purpose when stored in `data/roadmap-deep-context/`
 
 ❌ **Not extracted into public roadmap output:**
 
-- personal addresses or phone numbers
-- private email/account details
+- private contact details
 - financial account details
-- hotel/travel booking details
+- lodging/travel booking details
 - private jobsite logistics
-- unverified private third-party names/contact details
-- medical or mental-health details
+- unverified third-party details
+- private health details
+- intimate detail that is not needed for roadmap execution
 - unverified claims presented as fact
 
 ---
@@ -213,9 +261,10 @@ The corrected watcher frontier is currently **Production Atlas** because that is
 ## Keys to Success
 
 1. Create digests, not raw dumps.
-2. Put `Status`, `Pillar`, and `Evidence` on every meaningful claim.
-3. Preserve blockers under their true pillar.
-4. Keep Production Atlas active while repo/research work is current.
-5. Run watcher validation after every watcher/proposal change.
-6. Keep private or sensitive context out of public roadmap output.
-7. Move side quests later instead of deleting them.
+2. Put `Status`, `Pillar`, and `Evidence` on every meaningful operational claim.
+3. Preserve deep-context files separately before converting them into tasks.
+4. Preserve blockers under their true pillar.
+5. Keep Production Atlas active while repo/research work is current.
+6. Run watcher validation after every watcher/proposal change.
+7. Keep private or sensitive context out of public roadmap output.
+8. Move side quests later instead of deleting them.
