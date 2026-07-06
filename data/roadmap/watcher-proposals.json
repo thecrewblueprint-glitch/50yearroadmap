@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:11:50.464870",
+  "generated_at": "2026-07-06T17:24:18.000000",
   "frontier": {
     "pillar_id": "pillar-2",
     "pillar_title": "The Crew Blueprint",
@@ -69,6 +69,62 @@
         "status": "blocked",
         "pillar_id": "pillar-7",
         "evidence": "From 2026-07-06-festival-atlas digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-7",
+        "title": "Crew Blueprint authority and safety trust are unresolved",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-8",
+        "title": "Crew Blueprint platform shell/LMS instability blocks content expansion",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-9",
+        "title": "Laravel/back-end work risks overbuilding before validation",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-10",
+        "title": "Invoice parser/PDF architecture must not drift",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-11",
+        "title": "Production-focused festival feed needs source-quality gates",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-12",
+        "title": "Command center can become too dense without detail/review separation",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-13",
+        "title": "Business documents still require finalization before operational use",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-perplexity-batch digest",
         "action": "REQUIRES DECISION: Resolve or defer?"
       }
     ],
