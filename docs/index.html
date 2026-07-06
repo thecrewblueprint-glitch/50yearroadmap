@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Operations Command Center</h1>
+        <p>A repo-backed roadmap, memory, evidence, and project-state dashboard.</p>
+        <button id="jump-to-now">You Are Now Here</button>
+        <div class="metrics"></div>
+    </header>
+
+    <main>
+        <section id="frontier-section">
+            <h2>You Are Now Here</h2>
+            <div id="frontier-container"></div>
+        </section>
+
+        <section id="pillars-section">
+            <h2>Roadmap Pillars</h2>
+            <div id="pillars-grid" class="grid"></div>
+        </section>
+
+        <section id="later-section">
+            <h2>Moved Later</h2>
+            <div id="later-list" class="grid"></div>
+        </section>
+
+        <section id="completed-section">
+            <h2>Completed</h2>
+            <div id="completed-list" class="grid"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
