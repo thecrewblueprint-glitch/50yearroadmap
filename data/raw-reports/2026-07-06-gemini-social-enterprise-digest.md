@@ -2,6 +2,8 @@
 
 Extracted from the Gemini social-enterprise export. This archive is mission and governance context for the future Homestead / Homes for Hands layer. It is not code or implementation work.
 
+**Clarification added 2026-07-06:** Homes for Hands is the nonprofit homestead project inside the broader Homestead Network pillar. Its purpose is to serve stagehands and travelers who need respite during travel along the road between gigs, with the possibility of a permanent space when needed.
+
 ---
 
 ## Active Projects & Decisions
@@ -12,6 +14,13 @@ Extracted from the Gemini social-enterprise export. This archive is mission and 
 **Decision:** The future homestead concept should be grounded in direct communication, mutual respect, individuality, freedom of expression, and open issue-resolution so resentment does not accumulate.  
 **Pillar:** pillar-6 (Homestead Network)  
 **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46.json__chunk-0001.md` lines 23-34.
+
+### Homes for Hands Nonprofit Respite Project
+**Status:** active  
+**Project:** Homes for Hands / Homestead Network nonprofit layer  
+**Decision:** Homes for Hands should be tracked as a nonprofit homestead project for stagehands and travelers who need respite along the road between gigs. It should also preserve the possibility of a permanent space for people who need a stable landing point rather than only short-term rest.  
+**Pillar:** pillar-6 (Homestead Network)  
+**Evidence:** User clarification on 2026-07-06 during roadmap cleanup conversation.
 
 ### Homestead as Refuge for Outliers
 **Status:** active  
@@ -55,7 +64,12 @@ Extracted from the Gemini social-enterprise export. This archive is mission and 
    **Pillar:** pillar-6 (Homestead Network)  
    Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46.json__chunk-0001.md` lines 101-151.
 
-3. **Roadmap context must stay operational** — Future roadmap agents must distinguish mission context from implementation structure so the roadmap becomes actionable rather than only aspirational.  
+3. **Homes for Hands service model needs definition** — The nonprofit concept needs an operational model for respite stays, eligibility, traveler/stagehand intake, length-of-stay expectations, permanent-space criteria, stewardship responsibilities, and boundaries between temporary rest and long-term placement.  
+   **Status:** blocked  
+   **Pillar:** pillar-6 (Homestead Network)  
+   Evidence: User clarification on 2026-07-06 during roadmap cleanup conversation.
+
+4. **Roadmap context must stay operational** — Future roadmap agents must distinguish mission context from implementation structure so the roadmap becomes actionable rather than only aspirational.  
    **Status:** blocked  
    **Pillar:** pillar-7 (Personal Operations)  
    Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46.json__chunk-0001.md` lines 113-124.
@@ -70,6 +84,6 @@ No code or repo implementation work is contained in this archive.
 
 ## Sample Coverage
 
-Reviewed both chunks from the Gemini export.
+Reviewed both chunks from the Gemini export. Added user clarification on 2026-07-06 to distinguish Homes for Hands as the nonprofit respite/permanent-space homestead project for stagehands and travelers.
 
 **Public-safe:** Yes — digest preserves governance and mission context while excluding unnecessary personal detail.
