@@ -2,6 +2,11 @@
 
 A repo-backed, AI-assisted roadmap, memory, evidence, and project-state system.
 
+## Dashboard
+View the GitHub Pages dashboard here:
+
+https://thecrewblueprint-glitch.github.io/50yearroadmap/
+
 ## Purpose
 Organize businesses, apps, goals, daily reports, completed work, future plans, and long-term vision into one interactive visual command center.
 
@@ -23,7 +28,7 @@ Organize businesses, apps, goals, daily reports, completed work, future plans, a
 2. Run the ingestion agent (or manual update) to extract claims.
 3. Validate changes in `/data/roadmap`.
 4. Run `python scripts/build-roadmap.py` to compile `/docs/roadmap.json`.
-5. View the dashboard at `https://<your-user>.github.io/<repo>/`.
+5. View the dashboard at `https://thecrewblueprint-glitch.github.io/50yearroadmap/`.
 
 ## Agent Rules
 See `AGENTS.md` for strict rules on how AI agents must interact with this repo.
