@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:00:48.738566",
+  "generated_at": "2026-07-06T17:11:50.464870",
   "frontier": {
     "pillar_id": "pillar-2",
     "pillar_title": "The Crew Blueprint",
@@ -29,6 +29,46 @@
         "status": "blocked",
         "pillar_id": "pillar-7",
         "evidence": "From 2026-07-06-claude-batch digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-2",
+        "title": "Production Atlas validation cannot be confirmed in connector-only environments",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-festival-atlas digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-3",
+        "title": "Accommodation and travel intelligence remains largely unfilled",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-festival-atlas digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-4",
+        "title": "Multi-market records require market-level split verification",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-festival-atlas digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-5",
+        "title": "Producer/vendor evidence often lacks URL-level extraction",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-festival-atlas digest",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-6",
+        "title": "Schedule remains off public header navigation",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "From 2026-07-06-festival-atlas digest",
         "action": "REQUIRES DECISION: Resolve or defer?"
       }
     ],
