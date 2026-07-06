@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-07-06T16:42:50.923652",
+  "frontier": {
+    "pillar_id": "pillar-1",
+    "pillar_title": "Deadhang Labor LLC",
+    "priority": "critical",
+    "score": 10,
+    "active_work": 1,
+    "blockers": 0,
+    "reasoning": "Critical priority + 1 active items"
+  },
+  "proposals": {
+    "projects": [
+      {
+        "id": "project-0",
+        "title": "Deadhang website SSL/security implementation",
+        "status": "active",
+        "priority": "high",
+        "pillar_id": "pillar-1",
+        "evidence": "only remaining cPanel issue"
+      },
+      {
+        "id": "project-1",
+        "title": "Crew Blueprint course content creation (83-lesson outline)",
+        "status": "active",
+        "priority": "high",
+        "pillar_id": "pillar-2",
+        "evidence": "lesson structure defined, JSON workflow"
+      },
+      {
+        "id": "project-2",
+        "title": "Production Atlas deep research (festivals, vendors, logistics)",
+        "status": "active",
+        "priority": "medium",
+        "pillar_id": "pillar-3",
+        "evidence": "6 research batches in progress"
+      },
+      {
+        "id": "project-3",
+        "title": "Android-only invoice app",
+        "status": "active",
+        "priority": "medium",
+        "pillar_id": "pillar-4",
+        "evidence": "framework discussed, needs build"
+      },
+      {
+        "id": "project-4",
+        "title": "365-day Google Calendar integration",
+        "status": "active",
+        "priority": "medium",
+        "pillar_id": "pillar-4",
+        "evidence": "framework discussed, needs build"
+      },
+      {
+        "id": "project-5",
+        "title": "Private task tracking with AI backend",
+        "status": "active",
+        "priority": "medium",
+        "pillar_id": "pillar-4",
+        "evidence": "framework discussed, needs build"
+      }
+    ],
+    "tasks": [],
+    "completed": [],
+    "moved_later": [],
+    "blockers": [
+      {
+        "id": "blocker-0",
+        "title": "insurance provider selection",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "active items",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-1",
+        "title": "OSHA training/provider selection",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "active items",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-2",
+        "title": "invoice app/system finalization",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "active items",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      },
+      {
+        "id": "blocker-3",
+        "title": "tax debt/monthly tax payment reminders",
+        "status": "blocked",
+        "pillar_id": "pillar-7",
+        "evidence": "active items",
+        "action": "REQUIRES DECISION: Resolve or defer?"
+      }
+    ],
+    "conflicts": []
+  }
+}
