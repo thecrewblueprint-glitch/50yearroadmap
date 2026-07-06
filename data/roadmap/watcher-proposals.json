@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T18:45:00.000000",
+  "generated_at": "2026-07-06T18:55:00.000000",
   "frontier": {
     "pillar_id": "pillar-3",
     "pillar_title": "Production Atlas",
@@ -38,7 +38,8 @@
       {"id":"project-24","title":"Roadmap Navigation Requirement","status":"active","priority":"critical","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest"},
       {"id":"project-25","title":"Private Task App Direction","status":"active","priority":"critical","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest"},
       {"id":"project-26","title":"Homestead Cultural Foundation","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"},
-      {"id":"project-27","title":"Steward-Led Property Governance","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"}
+      {"id":"project-27","title":"Homes for Hands Nonprofit Respite Project","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest; user clarification on 2026-07-06"},
+      {"id":"project-28","title":"Steward-Led Property Governance","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"}
     ],
     "tasks": [],
     "completed": [
@@ -77,10 +78,11 @@
       {"id":"blocker-19","title":"Calendar automation depends on reliable authorization renewal","status":"blocked","pillar_id":"pillar-4","evidence":"From 2026-07-06-kimi-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-20","title":"Homestead governance escalation rule is unresolved","status":"blocked","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-21","title":"Values need operational translation","status":"blocked","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-22","title":"Roadmap framework needs anti-sprawl controls","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-23","title":"Sensitive export data must not be committed raw","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-24","title":"Command center can become too dense without detail/review separation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-25","title":"Roadmap context must stay operational","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"}
+      {"id":"blocker-22","title":"Homes for Hands service model needs definition","status":"blocked","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest; user clarification on 2026-07-06","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-23","title":"Roadmap framework needs anti-sprawl controls","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-24","title":"Sensitive export data must not be committed raw","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-25","title":"Command center can become too dense without detail/review separation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-26","title":"Roadmap context must stay operational","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"}
     ],
     "conflicts": []
   }
