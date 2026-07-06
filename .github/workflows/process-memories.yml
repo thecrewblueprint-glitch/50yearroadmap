@@ -1,0 +1,42 @@
+name: Process Memories
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'memories/*.zip'
+      - 'memories/*.json'
+      - 'scripts/process-memories.py'
+      - '.github/workflows/process-memories.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  process-memories:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Process memory archives
+        run: python scripts/process-memories.py
+
+      - name: Commit processed memory output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add memories/processed
+          if git diff --cached --quiet; then
+            echo "No processed memory changes to commit."
+          else
+            git commit -m "Generate processed AI memory chunks"
+            git push
+          fi
