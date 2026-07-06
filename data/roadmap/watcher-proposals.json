@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:24:18.000000",
+  "generated_at": "2026-07-06T17:49:03.000000",
   "frontier": {
     "pillar_id": "pillar-2",
     "pillar_title": "The Crew Blueprint",
@@ -15,118 +15,24 @@
     "completed": [],
     "moved_later": [],
     "blockers": [
-      {
-        "id": "blocker-0",
-        "title": "Crew Blueprint MVP",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-claude-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-1",
-        "title": "Portfolio curation",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-claude-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-2",
-        "title": "Production Atlas validation cannot be confirmed in connector-only environments",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-festival-atlas digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-3",
-        "title": "Accommodation and travel intelligence remains largely unfilled",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-festival-atlas digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-4",
-        "title": "Multi-market records require market-level split verification",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-festival-atlas digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-5",
-        "title": "Producer/vendor evidence often lacks URL-level extraction",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-festival-atlas digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-6",
-        "title": "Schedule remains off public header navigation",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-festival-atlas digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-7",
-        "title": "Crew Blueprint authority and safety trust are unresolved",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-8",
-        "title": "Crew Blueprint platform shell/LMS instability blocks content expansion",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-9",
-        "title": "Laravel/back-end work risks overbuilding before validation",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-10",
-        "title": "Invoice parser/PDF architecture must not drift",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-11",
-        "title": "Production-focused festival feed needs source-quality gates",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-12",
-        "title": "Command center can become too dense without detail/review separation",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      },
-      {
-        "id": "blocker-13",
-        "title": "Business documents still require finalization before operational use",
-        "status": "blocked",
-        "pillar_id": "pillar-7",
-        "evidence": "From 2026-07-06-perplexity-batch digest",
-        "action": "REQUIRES DECISION: Resolve or defer?"
-      }
+      {"id":"blocker-0","title":"Crew Blueprint MVP","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-claude-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-1","title":"Portfolio curation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-claude-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-2","title":"Production Atlas validation cannot be confirmed in connector-only environments","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-festival-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-3","title":"Accommodation and travel intelligence remains largely unfilled","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-festival-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-4","title":"Multi-market records require market-level split verification","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-festival-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-5","title":"Producer/vendor evidence often lacks URL-level extraction","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-festival-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-6","title":"Schedule remains off public header navigation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-festival-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-7","title":"Crew Blueprint authority and safety trust are unresolved","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-8","title":"Crew Blueprint platform shell/LMS instability blocks content expansion","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-9","title":"Laravel/back-end work risks overbuilding before validation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-10","title":"Invoice parser/PDF architecture must not drift","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-11","title":"Production-focused festival feed needs source-quality gates","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-12","title":"Command center can become too dense without detail/review separation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-13","title":"Business documents still require finalization before operational use","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-14","title":"Atlas source cleanup is incomplete","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-15","title":"Atlas handoff files are missing","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-16","title":"Atlas cycle ownership needs cleanup","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-17","title":"Repo context retrieval needs a map","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"}
     ],
     "conflicts": []
   }
