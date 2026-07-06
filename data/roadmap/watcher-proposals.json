@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T18:55:00.000000",
+  "generated_at": "2026-07-06T19:10:00.000000",
   "frontier": {
     "pillar_id": "pillar-3",
     "pillar_title": "Production Atlas",
@@ -39,7 +39,18 @@
       {"id":"project-25","title":"Private Task App Direction","status":"active","priority":"critical","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest"},
       {"id":"project-26","title":"Homestead Cultural Foundation","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"},
       {"id":"project-27","title":"Homes for Hands Nonprofit Respite Project","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest; user clarification on 2026-07-06"},
-      {"id":"project-28","title":"Steward-Led Property Governance","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"}
+      {"id":"project-28","title":"Steward-Led Property Governance","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-social-enterprise digest"},
+      {"id":"project-29","title":"Homes for Hands Way-Station Model","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-30","title":"Homes for Hands Resident Categories","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-31","title":"Homes for Hands Shared-Care Standard","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-32","title":"Homes for Hands Teach-First Boundary Model","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-33","title":"Homes for Hands Guardrails Over Forced Belief","status":"active","priority":"low","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-34","title":"Deadhang Field-to-Homestead Signal","status":"active","priority":"critical","pillar_id":"pillar-1","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-35","title":"Roadmap Time-Layer Milestone System","status":"active","priority":"critical","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-36","title":"Tier 1 Build-What-Is-Possible-Now Principle","status":"active","priority":"critical","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-37","title":"Roadmap DNA vs. Crew Blueprint Toolkit Boundary","status":"active","priority":"high","pillar_id":"pillar-2","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-38","title":"Crew Blueprint Technical Scope Boundary","status":"active","priority":"high","pillar_id":"pillar-2","evidence":"From 2026-07-06-gemini-tribe-fit digest"},
+      {"id":"project-39","title":"Crew Blueprint Discipline Pathway Map","status":"active","priority":"high","pillar_id":"pillar-2","evidence":"From 2026-07-06-gemini-tribe-fit digest"}
     ],
     "tasks": [],
     "completed": [
@@ -82,7 +93,12 @@
       {"id":"blocker-23","title":"Roadmap framework needs anti-sprawl controls","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-24","title":"Sensitive export data must not be committed raw","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-25","title":"Command center can become too dense without detail/review separation","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-perplexity-batch digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-26","title":"Roadmap context must stay operational","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"}
+      {"id":"blocker-26","title":"Roadmap context must stay operational","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-social-enterprise digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-27","title":"Homes for Hands service model still needs operating definitions","status":"blocked","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-28","title":"Homes for Hands stewardship and selection model remains unresolved","status":"blocked","pillar_id":"pillar-6","evidence":"From 2026-07-06-gemini-tribe-fit digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-29","title":"Roadmap time-layer needs concrete near-term milestones","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-gemini-tribe-fit digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-30","title":"Crew Blueprint repository structure needs granular discipline/pathway map","status":"blocked","pillar_id":"pillar-2","evidence":"From 2026-07-06-gemini-tribe-fit digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-31","title":"Roadmap philosophy must stay out of Crew Blueprint curriculum","status":"blocked","pillar_id":"pillar-2","evidence":"From 2026-07-06-gemini-tribe-fit digest","action":"REQUIRES DECISION: Resolve or defer?"}
     ],
     "conflicts": []
   }
