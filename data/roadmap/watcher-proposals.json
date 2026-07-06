@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:49:03.000000",
+  "generated_at": "2026-07-06T18:13:44.000000",
   "frontier": {
     "pillar_id": "pillar-2",
     "pillar_title": "The Crew Blueprint",
@@ -32,7 +32,12 @@
       {"id":"blocker-14","title":"Atlas source cleanup is incomplete","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-15","title":"Atlas handoff files are missing","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
       {"id":"blocker-16","title":"Atlas cycle ownership needs cleanup","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
-      {"id":"blocker-17","title":"Repo context retrieval needs a map","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"}
+      {"id":"blocker-17","title":"Repo context retrieval needs a map","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-atlas digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-18","title":"Deadhang admin items remain open","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-19","title":"Crew Blueprint LMS remains paused","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-20","title":"Production Atlas public research has verification gaps","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-21","title":"Roadmap framework needs anti-sprawl controls","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"},
+      {"id":"blocker-22","title":"Sensitive export data must not be committed raw","status":"blocked","pillar_id":"pillar-7","evidence":"From 2026-07-06-chatgpt-context-export digest","action":"REQUIRES DECISION: Resolve or defer?"}
     ],
     "conflicts": []
   }
