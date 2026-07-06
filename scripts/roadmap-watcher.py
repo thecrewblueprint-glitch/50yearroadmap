@@ -142,6 +142,109 @@ class RoadmapWatcher:
             print(f"❌ Failed to load memory index: {e}")
             return False
 
+    def extract_claims_from_digest_files(self) -> List[Dict]:
+        """Extract claims from raw report digest files (markdown format)."""
+        claims = []
+        digest_dir = DATA_DIR / "raw-reports"
+
+        if not digest_dir.exists():
+            return claims
+
+        # Read all digest files (format: YYYY-MM-DD-{source}-digest.md)
+        for digest_file in sorted(digest_dir.glob("*-digest.md")):
+            try:
+                with open(digest_file) as f:
+                    content = f.read()
+
+                source_name = digest_file.stem.replace("-digest", "")
+
+                # Extract projects from "Active Projects & Decisions" section
+                # Match from ## Active Projects to next ## that's NOT followed by #
+                projects_section = re.search(
+                    r"## Active Projects[\s\S]*?(?=\n## [^#]|\Z)",
+                    content,
+                    re.IGNORECASE
+                )
+                if projects_section:
+                    # Parse each project (identified by ### headers with bold titles)
+                    project_lines = projects_section.group(0).split('\n')
+                    i = 0
+                    while i < len(project_lines):
+                        line = project_lines[i]
+                        # Look for ### Project Title pattern
+                        if line.startswith('###'):
+                            title = line.replace('###', '').strip()
+                            i += 1
+                            # Collect following lines until next ### or ##
+                            block_text = []
+                            while i < len(project_lines) and not project_lines[i].startswith(('#')):
+                                block_text.append(project_lines[i])
+                                i += 1
+
+                            block = '\n'.join(block_text)
+
+                            # Extract pillar mapping
+                            pillar_match = re.search(r"\*\*Pillar:\*\*\s*(pillar-\d+)", block)
+                            pillar = pillar_match.group(1) if pillar_match else "pillar-1"
+
+                            # Extract status
+                            status_match = re.search(r"\*\*Status:\*\*\s*(.+?)(?:\n|$)", block)
+                            status = "active"
+                            if status_match:
+                                status_text = status_match.group(1).lower()
+                                if "completed" in status_text or "done" in status_text:
+                                    status = "completed"
+                                elif "blocked" in status_text or "blocked on" in status_text:
+                                    status = "blocked"
+                                elif "deferred" in status_text or "deferred" in status_text:
+                                    status = "moved_later"
+
+                            claims.append({
+                                "type": "project",
+                                "description": title,
+                                "pillar": pillar,
+                                "source": source_name,
+                                "status": status,
+                                "evidence": f"From {source_name} digest",
+                                "priority": "high"
+                            })
+                        else:
+                            i += 1
+
+                # Extract blockers with pillar mapping
+                blockers_section = re.search(
+                    r"## Blockers?[\s\S]*?(?=\n## [^#]|\Z)",
+                    content,
+                    re.IGNORECASE
+                )
+                if blockers_section:
+                    # Parse numbered list items
+                    blocker_lines = blockers_section.group(0).split('\n')
+                    for line in blocker_lines:
+                        # Match pattern: "1. **Title** — Evidence: ..."
+                        blocker_match = re.match(r"^\s*\d+\.\s*\*\*(.+?)\*\*", line)
+                        if blocker_match:
+                            blocker_title = blocker_match.group(1).strip()
+                            # Try to extract evidence
+                            evidence_text = line.replace(blocker_match.group(0), '').strip()
+
+                            claims.append({
+                                "type": "blocker",
+                                "description": blocker_title,
+                                "pillar": "pillar-7",  # Blockers typically in Personal Operations
+                                "source": source_name,
+                                "status": "blocked",
+                                "evidence": f"From {source_name} digest"
+                            })
+
+            except Exception as e:
+                print(f"  ⚠️  Could not parse {digest_file.name}: {e}")
+
+        if claims:
+            print(f"✓ Extracted {len(claims)} claims from digest files")
+
+        return claims
+
     def extract_claims_from_context(self) -> bool:
         """Extract actionable claims from memory chunks."""
         # Key context files that contain work/project info
@@ -156,16 +259,20 @@ class RoadmapWatcher:
 
         print("🔍 Extracting claims from memories...")
 
+        # First try to extract from digest files (easy to create manually)
+        digest_claims = self.extract_claims_from_digest_files()
+
         # Read the actual context files from the chatgpt export
         context_dir = ROOT / "memories" / "processed" / "_extracted_raw" / "chatgpt-export-2026-07-05" / "aaron_bowman_context_export_md"
 
+        claims = digest_claims.copy()
+
         if not context_dir.exists():
-            print("⚠️  Context files not yet extracted. This is OK - using structured approach.")
-            return self.extract_from_pillars()
+            print("⚠️  Context files not yet extracted. This is OK - using digest approach.")
+            self.claims = claims
+            return self.extract_from_pillars() if not claims else True
 
-        claims = []
-
-        # Extract from each key file
+        # Extract from each key file if context available
         for file_pattern in key_files:
             for md_file in context_dir.glob(f"*{file_pattern}*.md"):
                 try:
@@ -188,7 +295,9 @@ class RoadmapWatcher:
                     print(f"  ⚠️  Skipped {md_file.name}: {e}")
 
         self.claims = claims
-        print(f"✓ Extracted {len(claims)} actionable claims")
+        total = len(claims)
+        from_digest = len(digest_claims)
+        print(f"✓ Extracted {total} actionable claims ({from_digest} from digests, {total - from_digest} from context)")
         return True
 
     def extract_work_log(self, content: str, source: str) -> List[Dict]:
