@@ -1,91 +1,90 @@
 {
   "vision": {
-    "id": "vision-50yr",
-    "title": "50-Year Vision",
-    "summary": "Build a legacy of independence, land ownership, and community support for live-event workers.",
-    "time_horizon": "fifty_year",
-    "created_at": "2024-01-01T00:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z"
+    "id": "test-vision",
+    "title": "TEST DATA — Operations Vision",
+    "summary": "Lorem ipsum placeholder data for GitHub Pages dashboard testing only.",
+    "time_horizon": "test",
+    "created_at": "2026-07-06T00:00:00Z",
+    "updated_at": "2026-07-06T00:00:00Z",
+    "test_data": true
   },
   "pillars": [
     {
-      "id": "pillar-1",
-      "title": "Deadhang Labor LLC",
-      "purpose": "Business entity for 1099 contracting and freelance production labor.",
+      "id": "test-pillar-1",
+      "title": "Lorem Operations",
+      "purpose": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "status": "active",
       "priority": "critical",
       "sequence_order": 1,
-      "progression_track": "business_operations"
+      "progression_track": "primary_path"
     },
     {
-      "id": "pillar-2",
-      "title": "The Crew Blueprint",
-      "purpose": "Training and education platform for live-event workers.",
+      "id": "test-pillar-2",
+      "title": "Ipsum Platform",
+      "purpose": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "status": "active",
       "priority": "high",
       "sequence_order": 2,
       "progression_track": "content_platform"
     },
     {
-      "id": "pillar-3",
-      "title": "Production Atlas",
-      "purpose": "Scouting and opportunity dashboard for production workers.",
+      "id": "test-pillar-3",
+      "title": "Dolor Future Systems",
+      "purpose": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
       "status": "future",
       "priority": "medium",
       "sequence_order": 3,
       "progression_track": "software_projects"
-    },
-    {
-      "id": "pillar-4",
-      "title": "Contractor Tools",
-      "purpose": "Internal tools for invoices, docs, and admin workflows.",
-      "status": "active",
-      "priority": "high",
-      "sequence_order": 4,
-      "progression_track": "software_projects"
-    },
-    {
-      "id": "pillar-5",
-      "title": "Land Acquisition",
-      "purpose": "Own festival-capable grounds with infrastructure.",
-      "status": "future",
-      "priority": "medium",
-      "sequence_order": 5,
-      "progression_track": "land_and_legacy"
-    },
-    {
-      "id": "pillar-6",
-      "title": "Homestead Network",
-      "purpose": "Safe rest/recovery locations for traveling crew.",
-      "status": "future",
-      "priority": "low",
-      "sequence_order": 6,
-      "progression_track": "land_and_legacy"
-    },
-    {
-      "id": "pillar-7",
-      "title": "Personal Operations",
-      "purpose": "Taxes, insurance, legal, and financial stability.",
-      "status": "active",
-      "priority": "critical",
-      "sequence_order": 7,
-      "progression_track": "personal_admin"
-    },
-    {
-      "id": "pillar-8",
-      "title": "Skills & Certifications",
-      "purpose": "Professional growth and industry credibility.",
-      "status": "active",
-      "priority": "high",
-      "sequence_order": 8,
-      "progression_track": "skills_progression"
     }
   ],
   "programs": [],
-  "projects": [],
+  "projects": [
+    {
+      "id": "test-project-1",
+      "title": "Lorem Active Project",
+      "purpose": "Placeholder active project for dashboard testing.",
+      "summary": "This project exists only to test the GitHub Pages display.",
+      "status": "active",
+      "priority": "critical",
+      "progression_track": "primary_path"
+    },
+    {
+      "id": "test-project-2",
+      "title": "Ipsum Secondary Project",
+      "purpose": "Second placeholder project.",
+      "summary": "Used to test active project counts.",
+      "status": "active",
+      "priority": "high",
+      "progression_track": "software_projects"
+    }
+  ],
   "milestones": [],
-  "tasks": [],
-  "movedLater": [],
+  "tasks": [
+    {
+      "id": "test-task-1",
+      "title": "Validate populated dashboard",
+      "summary": "First active primary-path task. This should appear under YOU ARE NOW HERE.",
+      "status": "active",
+      "priority": "critical",
+      "progression_track": "primary_path"
+    },
+    {
+      "id": "test-task-2",
+      "title": "Completed placeholder task",
+      "summary": "Completed task used to test completed-card rendering.",
+      "status": "completed",
+      "priority": "medium",
+      "progression_track": "primary_path"
+    }
+  ],
+  "movedLater": [
+    {
+      "id": "test-later-1",
+      "title": "Deferred placeholder idea",
+      "status": "moved_later",
+      "moved_later_date": "2026-07-06"
+    }
+  ],
   "looseThreads": [],
   "conflicts": []
 }
