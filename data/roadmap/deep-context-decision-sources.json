@@ -1,0 +1,20 @@
+{
+  "policy": "Roadmap deep-context files are decision context for the watcher. They must be consulted before changing frontier, sequencing, pillar priority, project boundaries, or public-safe summaries. They must not be published raw into public roadmap output.",
+  "source_directory": "data/roadmap-deep-context/",
+  "sources": [
+    {
+      "path": "data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md",
+      "title": "Deep Context Digest — 2026-07-06 — Gemini Tribe Fit: Truth vs. Transgression",
+      "pillars": ["pillar-1", "pillar-2", "pillar-3", "pillar-6", "pillar-7"],
+      "decision_use": "Consult before changing Homes for Hands direction, Crew Blueprint scope, Deadhang-to-Homestead relationship, milestone sequencing, or roadmap DNA/toolkit boundaries.",
+      "raw_publication_allowed": false
+    },
+    {
+      "path": "data/roadmap-deep-context/README.md",
+      "title": "Roadmap Deep Context Category Rules",
+      "pillars": ["pillar-6", "pillar-7"],
+      "decision_use": "Consult for how deep-context files should be stored, summarized, converted, and protected from raw public exposure.",
+      "raw_publication_allowed": false
+    }
+  ]
+}
