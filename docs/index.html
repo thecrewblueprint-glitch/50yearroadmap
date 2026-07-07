@@ -11,7 +11,11 @@
         <p class="eyebrow">50-Year Roadmap</p>
         <h1>Operations Command Center</h1>
         <p>A repo-backed roadmap, memory, evidence, and project-state dashboard.</p>
-        <button id="jump-to-now">You Are Now Here</button>
+        <div class="header-actions">
+            <button id="jump-to-now">You Are Now Here</button>
+            <button id="collapse-all" class="secondary-button">Collapse All</button>
+            <button id="expand-critical" class="secondary-button">Expand Critical</button>
+        </div>
         <div class="metrics"></div>
     </header>
 
@@ -24,6 +28,19 @@
         <section id="decision-context-section">
             <h2>Decision Context</h2>
             <div id="decision-context-container"></div>
+        </section>
+
+        <section id="controls-section" class="toolbar">
+            <label for="roadmap-search">Search roadmap</label>
+            <input id="roadmap-search" type="search" placeholder="Search pillars, blockers, completed items...">
+            <label for="status-filter">View</label>
+            <select id="status-filter">
+                <option value="all">All</option>
+                <option value="active">Active pillars</option>
+                <option value="blocked">Blockers</option>
+                <option value="moved_later">Moved later</option>
+                <option value="completed">Completed</option>
+            </select>
         </section>
 
         <section id="pillars-section">
@@ -46,6 +63,13 @@
             <div id="completed-list" class="grid"></div>
         </section>
     </main>
+
+    <aside id="detail-panel" class="detail-panel" aria-hidden="true">
+        <div class="detail-panel-inner">
+            <button id="close-detail" class="close-button" aria-label="Close detail panel">×</button>
+            <div id="detail-content"></div>
+        </div>
+    </aside>
 
     <script src="app.js"></script>
 </body>
