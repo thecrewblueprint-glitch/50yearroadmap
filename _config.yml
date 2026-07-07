@@ -1,0 +1,11 @@
+# GitHub Pages configuration for 50-year roadmap dashboard
+
+# Tell GitHub Pages to serve from the docs folder
+theme: null
+plugins: []
+
+# Set the site title (appears in browser tab)
+title: 50-Year Roadmap — Operations Command Center
+
+# Markdown processor
+markdown: kramdown
