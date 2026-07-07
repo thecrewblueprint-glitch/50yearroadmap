@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operations Command Center</title>
+    <title>50-Year Roadmap Command Center</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <p class="eyebrow">50-Year Roadmap</p>
         <h1>Operations Command Center</h1>
         <p>A repo-backed roadmap, memory, evidence, and project-state dashboard.</p>
         <button id="jump-to-now">You Are Now Here</button>
@@ -20,9 +21,19 @@
             <div id="frontier-container"></div>
         </section>
 
+        <section id="decision-context-section">
+            <h2>Decision Context</h2>
+            <div id="decision-context-container"></div>
+        </section>
+
         <section id="pillars-section">
             <h2>Roadmap Pillars</h2>
             <div id="pillars-grid" class="grid"></div>
+        </section>
+
+        <section id="blocked-section">
+            <h2>Blockers</h2>
+            <div id="blocked-list" class="grid"></div>
         </section>
 
         <section id="later-section">
