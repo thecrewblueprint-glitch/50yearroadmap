@@ -2,14 +2,16 @@
 """
 Roadmap Watcher: AI agent that thinks like Aaron.
 
-Reads memory digests and context files, extracts actionable claims, maps them to pillars,
-validates for public-safe roadmap use, and proposes roadmap updates.
+Reads memory digests, raw fallback context, and roadmap deep-context files;
+extracts actionable claims; maps them to pillars; validates for public-safe
+roadmap use; and proposes roadmap updates.
 
 Key operating rules:
 - Evidence-based: every proposal points back to a digest/context source.
 - Linear: preserve the main path and move side quests later instead of losing them.
 - Public-safe: do not promote private/contact/financial/travel details into public roadmap output.
 - Practical: blockers and frontier should reflect the work that is actually active now.
+- Deep-context aware: roadmap-deep-context files are directional source material and must be consulted before changing frontier, pillar priority, sequencing, or project boundaries. They are not published raw.
 """
 
 import json
@@ -21,6 +23,7 @@ from typing import Dict, List, Any, Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
+DEEP_CONTEXT_DIR = DATA_DIR / "roadmap-deep-context"
 
 # The 8 Pillars - Aaron's operating tracks.
 # Production Atlas is active because the July 2026 digests show current repository/research work.
@@ -56,13 +59,13 @@ PILLARS = {
         "status": "future",
     },
     "pillar-6": {
-        "title": "Homestead Network",
+        "title": "Homestead Network / Homes for Hands",
         "track": "land_and_legacy",
         "priority": "low",
         "status": "future",
     },
     "pillar-7": {
-        "title": "Personal Operations",
+        "title": "Personal Operations / Roadmap System",
         "track": "personal_admin",
         "priority": "critical",
         "status": "active",
@@ -100,10 +103,11 @@ PROJECT_TYPES = {"project", "active", "pivot", "pillar_baseline"}
 
 
 class RoadmapWatcher:
-    """Aaron's roadmap watcher - direct, evidence-linked, and anti-sprawl."""
+    """Aaron's roadmap watcher - direct, evidence-linked, anti-sprawl, and deep-context aware."""
 
     def __init__(self):
         self.memory_sources: Dict[str, Dict[str, Any]] = {}
+        self.deep_context_sources: List[Dict[str, Any]] = []
         self.claims: List[Dict[str, Any]] = []
         self.proposals: Dict[str, List[Dict[str, Any]]] = {
             "projects": [],
@@ -157,6 +161,71 @@ class RoadmapWatcher:
         except Exception as exc:
             print(f"⚠️  Failed to load memory index: {exc}. Continuing with digest files.")
             return False
+
+    def extract_section_text(self, content: str, heading: str) -> str:
+        pattern = rf"##\s+{re.escape(heading)}\s*\n([\s\S]*?)(?=\n##\s+|\Z)"
+        match = re.search(pattern, content, re.IGNORECASE)
+        if not match:
+            return ""
+        return re.sub(r"\s+", " ", match.group(1)).strip()
+
+    def infer_deep_context_pillars(self, content: str) -> List[str]:
+        lowered = content.lower()
+        pillars = []
+        checks = {
+            "pillar-1": ["deadhang", "labor llc", "field-to-homestead"],
+            "pillar-2": ["crew blueprint", "technical education", "stagehand", "rigging", "av"],
+            "pillar-3": ["production atlas", "resource infrastructure", "nomadic resource"],
+            "pillar-4": ["contractor tools", "invoice", "laravel", "automation"],
+            "pillar-5": ["land acquisition"],
+            "pillar-6": ["homes for hands", "homestead", "sanctuary", "respite", "steward"],
+            "pillar-7": ["roadmap", "time layer", "milestone", "personal operations", "anti-sprawl"],
+            "pillar-8": ["skills", "certifications", "osha"],
+        }
+        for pillar, terms in checks.items():
+            if any(term in lowered for term in terms):
+                pillars.append(pillar)
+        return pillars or ["pillar-7"]
+
+    def load_deep_context_sources(self) -> List[Dict[str, Any]]:
+        """
+        Load roadmap-deep-context files as directional decision context.
+
+        These files are intentionally not treated as raw public roadmap output.
+        They influence frontier/priority/boundary decisions and should be cited
+        whenever the watcher changes roadmap direction, sequencing, or scope.
+        """
+        sources: List[Dict[str, Any]] = []
+        if not DEEP_CONTEXT_DIR.exists():
+            print("ℹ️  No roadmap deep-context directory found.")
+            self.deep_context_sources = []
+            return sources
+
+        for path in sorted(DEEP_CONTEXT_DIR.glob("*.md")):
+            if path.name.lower() == "readme.md":
+                continue
+            try:
+                content = path.read_text(encoding="utf-8")
+                title_match = re.search(r"^#\s+(.+?)\s*$", content, re.MULTILINE)
+                title = title_match.group(1).strip() if title_match else path.stem
+                core_meaning = self.extract_section_text(content, "Core Meaning")
+                public_summary = self.extract_section_text(content, "Public-Safe Summary")
+                sources.append(
+                    {
+                        "path": str(path.relative_to(ROOT)),
+                        "title": title,
+                        "pillars": self.infer_deep_context_pillars(content),
+                        "decision_use": "Consult before changing frontier, sequencing, pillar priority, project boundaries, or public-safe summaries.",
+                        "summary": (public_summary or core_meaning)[:900],
+                        "raw_publication_allowed": False,
+                    }
+                )
+            except Exception as exc:
+                print(f"  ⚠️  Could not load deep context {path.name}: {exc}")
+
+        self.deep_context_sources = sources
+        print(f"✓ Loaded {len(sources)} roadmap deep-context decision sources")
+        return sources
 
     def make_claim(
         self,
@@ -273,9 +342,10 @@ class RoadmapWatcher:
         return claims
 
     def extract_claims_from_context(self) -> bool:
-        """Extract actionable claims, preferring curated digest files."""
+        """Extract actionable claims and load deep-context decision sources."""
         print("🔍 Extracting claims from memories...")
         claims = self.extract_claims_from_digest_files()
+        self.load_deep_context_sources()
 
         context_dir = (
             ROOT
@@ -373,6 +443,11 @@ class RoadmapWatcher:
         """Calculate the 'You Are Now Here' frontier."""
         print("🎯 Calculating next priority...")
         candidates: List[Dict[str, Any]] = []
+        deep_context_pillars = {
+            pillar
+            for source in self.deep_context_sources
+            for pillar in source.get("pillars", [])
+        }
 
         for pillar_id, pillar in PILLARS.items():
             claims = projects_by_pillar.get(pillar_id, [])
@@ -398,6 +473,7 @@ class RoadmapWatcher:
                     "score": score,
                     "active_work": len(active_claims),
                     "blockers": len(blockers),
+                    "deep_context_referenced": pillar_id in deep_context_pillars,
                 }
             )
 
@@ -412,6 +488,8 @@ class RoadmapWatcher:
             f"{frontier['active_work']} active items + "
             f"{frontier['blockers']} blockers"
         )
+        if frontier.get("deep_context_referenced"):
+            frontier["reasoning"] += " + deep-context alignment check required"
         return frontier
 
     def add_project_proposal(self, claim: Dict[str, Any]) -> None:
@@ -500,10 +578,23 @@ class RoadmapWatcher:
                     f"  Priority: {self.frontier['priority'].upper()}",
                     f"  Active work: {self.frontier['active_work']} items",
                     f"  Blockers: {self.frontier['blockers']}",
+                    f"  Deep context referenced: {self.frontier.get('deep_context_referenced', False)}",
                     f"  Reasoning: {self.frontier['reasoning']}",
                     "",
                 ]
             )
+
+        lines.extend(
+            [
+                "📚 DEEP-CONTEXT DECISION SOURCES:",
+                f"  Loaded: {len(self.deep_context_sources)} files",
+            ]
+        )
+        for source in self.deep_context_sources[:10]:
+            lines.append(f"  - {source['path']} → {', '.join(source.get('pillars', []))}")
+        if len(self.deep_context_sources) > 10:
+            lines.append(f"  ... {len(self.deep_context_sources) - 10} more deep-context files")
+        lines.append("")
 
         lines.extend(
             [
@@ -531,8 +622,9 @@ class RoadmapWatcher:
             [
                 "✅ NEXT STEPS:",
                 "  1. Review watcher-proposals.json.",
-                "  2. Resolve or move later the highest-impact blockers.",
-                "  3. Keep the primary path linear; do not let side projects erase active work.",
+                "  2. Check deep-context decision sources before changing direction or priority.",
+                "  3. Resolve or move later the highest-impact blockers.",
+                "  4. Keep the primary path linear; do not let side projects erase active work.",
                 "═" * 70,
             ]
         )
@@ -549,6 +641,10 @@ class RoadmapWatcher:
                     {
                         "generated_at": datetime.now().isoformat(),
                         "frontier": self.frontier,
+                        "decision_context": {
+                            "deep_context_policy": "Consult these files before changing frontier, sequencing, pillar priority, project boundaries, or public-safe summaries. Do not publish raw deep-context material.",
+                            "sources": self.deep_context_sources,
+                        },
                         "proposals": self.proposals,
                     },
                     f,
@@ -563,7 +659,7 @@ class RoadmapWatcher:
     def run(self) -> bool:
         """Run the complete watcher workflow."""
         print("\n🤖 ROADMAP WATCHER STARTING")
-        print("   Mode: Evidence-based, public-safe extraction")
+        print("   Mode: Evidence-based, public-safe extraction + deep-context decision awareness")
         print()
 
         self.load_memory_index()
@@ -576,6 +672,7 @@ class RoadmapWatcher:
         print(self.report())
         print("\n💡 RECOMMENDATION:")
         print("   These proposals are auditable, evidence-linked, and public-safe.")
+        print("   Deep-context files are decision context, not raw public output.")
         print("   Review the blockers; they are the gating items.")
         print("   Move side quests later instead of losing them.")
         print()
