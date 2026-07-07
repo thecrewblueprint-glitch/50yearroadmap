@@ -1,90 +1,96 @@
 {
-  "vision": {
-    "id": "test-vision",
-    "title": "TEST DATA — Operations Vision",
-    "summary": "Lorem ipsum placeholder data for GitHub Pages dashboard testing only.",
-    "time_horizon": "test",
-    "created_at": "2026-07-06T00:00:00Z",
-    "updated_at": "2026-07-06T00:00:00Z",
-    "test_data": true
+  "generated_at": "2026-07-06T19:25:00.000000",
+  "source": "data/roadmap/watcher-proposals.json",
+  "status": "built_from_current_data",
+  "frontier": {
+    "pillar_id": "pillar-3",
+    "pillar_title": "Production Atlas",
+    "priority": "high",
+    "score": 20.0,
+    "active_work": 34,
+    "blockers": 19,
+    "reasoning": "High priority + 34 active items + 19 blockers"
+  },
+  "decision_context": {
+    "policy": "Roadmap deep-context files are decision context for the watcher. They must be consulted before changing frontier, sequencing, pillar priority, project boundaries, or public-safe summaries. They must not be published raw into public roadmap output.",
+    "index": "data/roadmap/deep-context-decision-sources.json",
+    "source_directory": "data/roadmap-deep-context/"
+  },
+  "summary": {
+    "project_count": 40,
+    "task_count": 41,
+    "blocked_count": 32,
+    "completed_count": 6,
+    "moved_later_count": 3
+  },
+  "data_files": {
+    "projects": "data/roadmap/projects.json",
+    "tasks": "data/roadmap/tasks.json",
+    "watcher_proposals": "data/roadmap/watcher-proposals.json",
+    "deep_context": "data/roadmap-deep-context/",
+    "deep_context_decision_sources": "data/roadmap/deep-context-decision-sources.json"
   },
   "pillars": [
-    {
-      "id": "test-pillar-1",
-      "title": "Lorem Operations",
-      "purpose": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "status": "active",
-      "priority": "critical",
-      "sequence_order": 1,
-      "progression_track": "primary_path"
-    },
-    {
-      "id": "test-pillar-2",
-      "title": "Ipsum Platform",
-      "purpose": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "status": "active",
-      "priority": "high",
-      "sequence_order": 2,
-      "progression_track": "content_platform"
-    },
-    {
-      "id": "test-pillar-3",
-      "title": "Dolor Future Systems",
-      "purpose": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      "status": "future",
-      "priority": "medium",
-      "sequence_order": 3,
-      "progression_track": "software_projects"
-    }
+    {"id":"pillar-1","title":"Deadhang Labor LLC","status":"active","priority":"critical","active_projects":["Deadhang Labor LLC Operating Context","Deadhang Active Website Scope","Deadhang Field-to-Homestead Signal"]},
+    {"id":"pillar-2","title":"The Crew Blueprint","status":"active","priority":"high","active_projects":["Crew Blueprint Content-First Pause","Crew Blueprint Course and Safety Positioning","Crew Blueprint Brand System","Roadmap DNA vs. Crew Blueprint Toolkit Boundary","Crew Blueprint Technical Scope Boundary","Crew Blueprint Discipline Pathway Map"]},
+    {"id":"pillar-3","title":"Production Atlas","status":"active","priority":"high","active_projects":["Production Atlas Public-Safe Research Boundary","Production Atlas Research Handoff Improvement Set","Production Atlas Repo Operating Rules","Source URL Cleanup Phase","Public Cycle / 2027 Rollover Data Pathway","Employer Source Retrieval Pathway","Production Atlas Research Handoff V2","Production Atlas Research Strategy Shift","Production Atlas Batch 1/2 Research State","Production Atlas Repo Operating Branch Discipline","Production Labor Branch Taxonomy","Opportunity Calendar Scope Expansion","Structured Data Packages","Public / Field-Intel Separation","AI Collaboration Handoff System"]},
+    {"id":"pillar-4","title":"Contractor Tools","status":"active","priority":"high","active_projects":["Deadhang Invoice Direction","Calendar Affirmation Scheduler Reliability","Laravel Backend Backbone for Growth"]},
+    {"id":"pillar-5","title":"Land Acquisition","status":"future","priority":"normal","active_projects":[]},
+    {"id":"pillar-6","title":"Homestead Network / Homes for Hands","status":"future_tracked","priority":"low","active_projects":["Homestead Cultural Foundation","Homes for Hands Nonprofit Respite Project","Steward-Led Property Governance","Homes for Hands Way-Station Model","Homes for Hands Resident Categories","Homes for Hands Shared-Care Standard","Homes for Hands Teach-First Boundary Model","Homes for Hands Guardrails Over Forced Belief"]},
+    {"id":"pillar-7","title":"Personal Operations / Roadmap System","status":"active","priority":"critical","active_projects":["Roadmap Builder Role Separation","Roadmap Navigation Requirement","Private Task App Direction","Roadmap Time-Layer Milestone System","Tier 1 Build-What-Is-Possible-Now Principle"]},
+    {"id":"pillar-8","title":"Skills & Certifications","status":"active","priority":"normal","active_projects":[]}
   ],
-  "programs": [],
-  "projects": [
-    {
-      "id": "test-project-1",
-      "title": "Lorem Active Project",
-      "purpose": "Placeholder active project for dashboard testing.",
-      "summary": "This project exists only to test the GitHub Pages display.",
-      "status": "active",
-      "priority": "critical",
-      "progression_track": "primary_path"
-    },
-    {
-      "id": "test-project-2",
-      "title": "Ipsum Secondary Project",
-      "purpose": "Second placeholder project.",
-      "summary": "Used to test active project counts.",
-      "status": "active",
-      "priority": "high",
-      "progression_track": "software_projects"
-    }
+  "blocked_items": [
+    "Deadhang admin items remain open",
+    "Crew Blueprint LMS remains paused",
+    "Crew Blueprint authority and safety trust are unresolved",
+    "Crew Blueprint platform shell/LMS instability blocks content expansion",
+    "Production Atlas public research has verification gaps",
+    "Source URL cleanup remains incomplete",
+    "Claude handoff files are missing from expected branches",
+    "Public-cycle helper / owner-file boundary remains a risk",
+    "Production Atlas research cannot rely on public sources alone for crew logistics",
+    "Production Atlas needs human-verification assistance mechanism",
+    "Scenic batch 001 paired report is missing",
+    "Repository needs comprehensive audit before more research batches",
+    "Public vendor staffing relationships remain mostly unverified",
+    "2026 active status source URLs are incomplete",
+    "Data structure still needs continued normalization and UI work",
+    "Production-focused festival feed needs source-quality gates",
+    "Laravel/back-end work risks overbuilding before validation",
+    "Invoice parser/PDF architecture must not drift",
+    "Invoice generator enterprise plan is overbuilt for current MVP",
+    "Calendar automation depends on reliable authorization renewal",
+    "Homestead governance escalation rule is unresolved",
+    "Values need operational translation",
+    "Homes for Hands service model needs definition",
+    "Roadmap framework needs anti-sprawl controls",
+    "Sensitive export data must not be committed raw",
+    "Command center can become too dense without detail/review separation",
+    "Roadmap context must stay operational",
+    "Homes for Hands service model still needs operating definitions",
+    "Homes for Hands stewardship and selection model remains unresolved",
+    "Roadmap time-layer needs concrete near-term milestones",
+    "Crew Blueprint repository structure needs granular discipline/pathway map",
+    "Roadmap philosophy must stay out of Crew Blueprint curriculum"
   ],
-  "milestones": [],
-  "tasks": [
-    {
-      "id": "test-task-1",
-      "title": "Validate populated dashboard",
-      "summary": "First active primary-path task. This should appear under YOU ARE NOW HERE.",
-      "status": "active",
-      "priority": "critical",
-      "progression_track": "primary_path"
-    },
-    {
-      "id": "test-task-2",
-      "title": "Completed placeholder task",
-      "summary": "Completed task used to test completed-card rendering.",
-      "status": "completed",
-      "priority": "medium",
-      "progression_track": "primary_path"
-    }
+  "completed_items": [
+    "Validator Drift Fix",
+    "Documentation Alignment Pass",
+    "Map Department Filter Fix",
+    "Research-Version Code Cleanup",
+    "GitHub Connector Limitation Context",
+    "Code Review Framework / Missing Payload Guardrail"
   ],
-  "movedLater": [
-    {
-      "id": "test-later-1",
-      "title": "Deferred placeholder idea",
-      "status": "moved_later",
-      "moved_later_date": "2026-07-06"
-    }
+  "moved_later_items": [
+    "Repo Knowledge Graph Proposal",
+    "Invoice Generator Scope Divergence",
+    "Contentrepo Placeholder Repository"
   ],
-  "looseThreads": [],
-  "conflicts": []
+  "notes": [
+    "Deep-context files remain in data/roadmap-deep-context and are not exposed raw in this live roadmap snapshot.",
+    "The watcher must consult data/roadmap/deep-context-decision-sources.json before changing direction, sequencing, priority, or project boundaries.",
+    "This snapshot was built from current watcher proposals; new data can be processed later.",
+    "The current frontier remains Production Atlas because it has the highest active/blocker load in the current data."
+  ]
 }
