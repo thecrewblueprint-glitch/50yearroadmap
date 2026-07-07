@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>50-Year Roadmap — Operations Command Center</title>
-    <meta http-equiv="refresh" content="0;url=docs/index.html" />
-    <link rel="canonical" href="https://thecrewblueprint-glitch.github.io/50yearroadmap/docs/" />
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a1a; color: #fff; margin: 0; padding: 2rem; text-align: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .container { max-width: 600px; }
-        h1 { margin: 0 0 1rem 0; font-size: 2.5rem; }
-        p { margin: 0.5rem 0; font-size: 1.1rem; color: #aaa; }
-        a { color: #0066cc; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <title>50-Year Roadmap Command Center</title>
+    <link rel="stylesheet" href="docs/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>50-Year Roadmap</h1>
-        <p>Operations Command Center</p>
-        <p style="margin-top: 2rem;">Redirecting to dashboard...</p>
-        <p><a href="docs/index.html">Click here if not redirected automatically</a></p>
-        <p style="margin-top: 3rem; font-size: 0.9rem; color: #666;">
-            A repo-backed roadmap, memory, evidence, and project-state dashboard.
-        </p>
-    </div>
+    <header>
+        <p class="eyebrow">50-Year Roadmap</p>
+        <h1>Operations Command Center</h1>
+        <p>A repo-backed roadmap, memory, evidence, and project-state dashboard.</p>
+        <button id="jump-to-now">You Are Now Here</button>
+        <div class="metrics"></div>
+    </header>
+
+    <main>
+        <section id="frontier-section">
+            <h2>You Are Now Here</h2>
+            <div id="frontier-container"></div>
+        </section>
+
+        <section id="decision-context-section">
+            <h2>Decision Context</h2>
+            <div id="decision-context-container"></div>
+        </section>
+
+        <section id="pillars-section">
+            <h2>Roadmap Pillars</h2>
+            <div id="pillars-grid" class="grid"></div>
+        </section>
+
+        <section id="blocked-section">
+            <h2>Blockers</h2>
+            <div id="blocked-list" class="grid"></div>
+        </section>
+
+        <section id="later-section">
+            <h2>Moved Later</h2>
+            <div id="later-list" class="grid"></div>
+        </section>
+
+        <section id="completed-section">
+            <h2>Completed</h2>
+            <div id="completed-list" class="grid"></div>
+        </section>
+    </main>
+
+    <script src="docs/app.js"></script>
 </body>
 </html>
