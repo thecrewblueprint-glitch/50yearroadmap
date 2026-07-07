@@ -1,0 +1,322 @@
+[
+  {
+    "id": "project-0",
+    "title": "Deadhang Labor LLC Operating Context",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-1",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-1",
+    "title": "Deadhang Active Website Scope",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-1",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-2",
+    "title": "Crew Blueprint Content-First Pause",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-3",
+    "title": "Crew Blueprint Course and Safety Positioning",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-4",
+    "title": "Crew Blueprint Brand System",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-5",
+    "title": "Production Atlas Public-Safe Research Boundary",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-6",
+    "title": "Production Atlas Research Handoff Improvement Set",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-7",
+    "title": "Production Atlas Repo Operating Rules",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-atlas digest"
+  },
+  {
+    "id": "project-8",
+    "title": "Source URL Cleanup Phase",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-atlas digest"
+  },
+  {
+    "id": "project-9",
+    "title": "Public Cycle / 2027 Rollover Data Pathway",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-atlas digest"
+  },
+  {
+    "id": "project-10",
+    "title": "Employer Source Retrieval Pathway",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-chatgpt-atlas digest"
+  },
+  {
+    "id": "project-11",
+    "title": "Production Atlas Research Handoff V2",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-kimi-batch digest"
+  },
+  {
+    "id": "project-12",
+    "title": "Production Atlas Research Strategy Shift",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-kimi-batch digest"
+  },
+  {
+    "id": "project-13",
+    "title": "Production Atlas Batch 1/2 Research State",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-kimi-batch digest"
+  },
+  {
+    "id": "project-14",
+    "title": "Production Atlas Repo Operating Branch Discipline",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-15",
+    "title": "Production Labor Branch Taxonomy",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-16",
+    "title": "Opportunity Calendar Scope Expansion",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-17",
+    "title": "Structured Data Packages",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-18",
+    "title": "Public / Field-Intel Separation",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-19",
+    "title": "AI Collaboration Handoff System",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-3",
+    "evidence": "From 2026-07-06-production-atlas-workstream digest"
+  },
+  {
+    "id": "project-20",
+    "title": "Deadhang Invoice Direction",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-4",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-21",
+    "title": "Calendar Affirmation Scheduler Reliability",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-4",
+    "evidence": "From 2026-07-06-kimi-batch digest"
+  },
+  {
+    "id": "project-22",
+    "title": "Laravel Backend Backbone for Growth",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-4",
+    "evidence": "From 2026-07-06-perplexity-batch digest"
+  },
+  {
+    "id": "project-23",
+    "title": "Roadmap Builder Role Separation",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-7",
+    "evidence": "From 2026-07-06-gemini-social-enterprise digest"
+  },
+  {
+    "id": "project-24",
+    "title": "Roadmap Navigation Requirement",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-7",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-25",
+    "title": "Private Task App Direction",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-7",
+    "evidence": "From 2026-07-06-chatgpt-context-export digest"
+  },
+  {
+    "id": "project-26",
+    "title": "Homestead Cultural Foundation",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-social-enterprise digest"
+  },
+  {
+    "id": "project-27",
+    "title": "Homes for Hands Nonprofit Respite Project",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-social-enterprise digest; user clarification on 2026-07-06"
+  },
+  {
+    "id": "project-28",
+    "title": "Steward-Led Property Governance",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-social-enterprise digest"
+  },
+  {
+    "id": "project-29",
+    "title": "Homes for Hands Way-Station Model",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-30",
+    "title": "Homes for Hands Resident Categories",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-31",
+    "title": "Homes for Hands Shared-Care Standard",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-32",
+    "title": "Homes for Hands Teach-First Boundary Model",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-33",
+    "title": "Homes for Hands Guardrails Over Forced Belief",
+    "status": "active",
+    "priority": "low",
+    "pillar_id": "pillar-6",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-34",
+    "title": "Deadhang Field-to-Homestead Signal",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-1",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-35",
+    "title": "Roadmap Time-Layer Milestone System",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-7",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-36",
+    "title": "Tier 1 Build-What-Is-Possible-Now Principle",
+    "status": "active",
+    "priority": "critical",
+    "pillar_id": "pillar-7",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-37",
+    "title": "Roadmap DNA vs. Crew Blueprint Toolkit Boundary",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-38",
+    "title": "Crew Blueprint Technical Scope Boundary",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  },
+  {
+    "id": "project-39",
+    "title": "Crew Blueprint Discipline Pathway Map",
+    "status": "active",
+    "priority": "high",
+    "pillar_id": "pillar-2",
+    "evidence": "From 2026-07-06-gemini-tribe-fit digest"
+  }
+]
