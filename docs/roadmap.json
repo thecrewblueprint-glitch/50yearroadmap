@@ -11,6 +11,11 @@
     "blockers": 19,
     "reasoning": "High priority + 34 active items + 19 blockers"
   },
+  "decision_context": {
+    "policy": "Roadmap deep-context files are decision context for the watcher. They must be consulted before changing frontier, sequencing, pillar priority, project boundaries, or public-safe summaries. They must not be published raw into public roadmap output.",
+    "index": "data/roadmap/deep-context-decision-sources.json",
+    "source_directory": "data/roadmap-deep-context/"
+  },
   "summary": {
     "project_count": 40,
     "task_count": 41,
@@ -22,7 +27,8 @@
     "projects": "data/roadmap/projects.json",
     "tasks": "data/roadmap/tasks.json",
     "watcher_proposals": "data/roadmap/watcher-proposals.json",
-    "deep_context": "data/roadmap-deep-context/"
+    "deep_context": "data/roadmap-deep-context/",
+    "deep_context_decision_sources": "data/roadmap/deep-context-decision-sources.json"
   },
   "pillars": [
     {"id":"pillar-1","title":"Deadhang Labor LLC","status":"active","priority":"critical","active_projects":["Deadhang Labor LLC Operating Context","Deadhang Active Website Scope","Deadhang Field-to-Homestead Signal"]},
@@ -83,6 +89,7 @@
   ],
   "notes": [
     "Deep-context files remain in data/roadmap-deep-context and are not exposed raw in this live roadmap snapshot.",
+    "The watcher must consult data/roadmap/deep-context-decision-sources.json before changing direction, sequencing, priority, or project boundaries.",
     "This snapshot was built from current watcher proposals; new data can be processed later.",
     "The current frontier remains Production Atlas because it has the highest active/blocker load in the current data."
   ]
