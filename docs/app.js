@@ -259,6 +259,7 @@ function renderCompleted() {
 }
 
 function setupEventListeners() {
+    // Blocker filters
     const searchInput = document.getElementById('search-blockers');
     const filterPillar = document.getElementById('filter-pillar');
     const filterType = document.getElementById('filter-type');
@@ -273,6 +274,50 @@ function setupEventListeners() {
     if (jumpToNow) {
         jumpToNow.addEventListener('click', () => {
             document.getElementById('frontier-section').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // Global search (future implementation - placeholder)
+    const roadmapSearch = document.getElementById('roadmap-search');
+    if (roadmapSearch) {
+        roadmapSearch.addEventListener('input', (e) => {
+            // TODO: Implement global search across pillars, projects, blockers
+        });
+    }
+
+    // Status filter (future implementation - placeholder)
+    const statusFilter = document.getElementById('status-filter');
+    if (statusFilter) {
+        statusFilter.addEventListener('change', (e) => {
+            // TODO: Implement status-based filtering
+        });
+    }
+
+    // Detail panel close button
+    const closeDetail = document.getElementById('close-detail');
+    if (closeDetail) {
+        closeDetail.addEventListener('click', () => {
+            const detailPanel = document.getElementById('detail-panel');
+            if (detailPanel) {
+                detailPanel.classList.remove('open');
+                detailPanel.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+
+    // Collapse all button (placeholder)
+    const collapseAll = document.getElementById('collapse-all');
+    if (collapseAll) {
+        collapseAll.addEventListener('click', () => {
+            // TODO: Collapse all expandable sections
+        });
+    }
+
+    // Expand critical button (placeholder)
+    const expandCritical = document.getElementById('expand-critical');
+    if (expandCritical) {
+        expandCritical.addEventListener('click', () => {
+            // TODO: Expand only CRITICAL severity blockers
         });
     }
 
