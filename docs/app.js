@@ -1,6 +1,7 @@
 let roadmapData = {};
 let activeFilter = 'all';
 let searchQuery = '';
+let controlsBound = false;
 
 async function loadRoadmap() {
     try {
@@ -21,11 +22,12 @@ async function loadRoadmap() {
         }
 
         roadmapData = await response.json();
+        ensureInteractiveShell();
         renderDashboard();
         bindControls();
     } catch (error) {
-        console.error('Failed to load roadmap.json', error);
-        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap.json</h1><p>Check that docs/roadmap.json exists and is valid JSON.</p><p class="meta">Debug: ' + escapeHtml(error.message) + '</p></main>';
+        console.error('Failed to load roadmap dashboard', error);
+        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap dashboard</h1><p>The roadmap data or dashboard shell failed to load.</p><p class="meta">Debug: ' + escapeHtml(error.message) + '</p></main>';
     }
 }
 
@@ -42,10 +44,6 @@ function normalizeList(value) {
     return Array.isArray(value) ? value : [];
 }
 
-function slugify(value) {
-    return String(value || 'item').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-
 function normalizeSearch(value) {
     return String(value || '').toLowerCase();
 }
@@ -53,6 +51,86 @@ function normalizeSearch(value) {
 function textMatches(...values) {
     if (!searchQuery) return true;
     return values.some(value => normalizeSearch(value).includes(searchQuery));
+}
+
+function getById(id) {
+    return document.getElementById(id);
+}
+
+function addListener(id, eventName, handler) {
+    const element = getById(id);
+    if (element) element.addEventListener(eventName, handler);
+}
+
+function ensureInteractiveShell() {
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+
+    if (header && !getById('collapse-all')) {
+        const actions = document.createElement('div');
+        actions.className = 'header-actions';
+        actions.innerHTML = `
+            <button id="collapse-all" class="secondary-button">Collapse All</button>
+            <button id="expand-critical" class="secondary-button">Expand Critical</button>
+        `;
+        const jump = getById('jump-to-now');
+        if (jump && jump.parentElement) {
+            jump.parentElement.classList.add('header-actions');
+            jump.parentElement.append(...actions.children);
+        } else {
+            header.appendChild(actions);
+        }
+    }
+
+    if (main && !getById('controls-section')) {
+        const controls = document.createElement('section');
+        controls.id = 'controls-section';
+        controls.className = 'toolbar';
+        controls.innerHTML = `
+            <label for="roadmap-search">Search roadmap</label>
+            <input id="roadmap-search" type="search" placeholder="Search pillars, blockers, completed items...">
+            <label for="status-filter">View</label>
+            <select id="status-filter">
+                <option value="all">All</option>
+                <option value="active">Active pillars</option>
+                <option value="blocked">Blockers</option>
+                <option value="moved_later">Moved later</option>
+                <option value="completed">Completed</option>
+            </select>
+        `;
+        const pillarsSection = getById('pillars-section');
+        main.insertBefore(controls, pillarsSection || main.firstChild);
+    }
+
+    const requiredSections = [
+        ['decision-context-section', 'Decision Context', 'decision-context-container'],
+        ['blocked-section', 'Blockers', 'blocked-list'],
+        ['later-section', 'Moved Later', 'later-list'],
+        ['completed-section', 'Completed', 'completed-list']
+    ];
+
+    requiredSections.forEach(([sectionId, title, containerId]) => {
+        if (main && !getById(sectionId)) {
+            const section = document.createElement('section');
+            section.id = sectionId;
+            section.innerHTML = `<h2>${title}</h2><div id="${containerId}" class="grid"></div>`;
+            main.appendChild(section);
+        }
+    });
+
+    if (!getById('detail-panel')) {
+        const panel = document.createElement('aside');
+        panel.id = 'detail-panel';
+        panel.className = 'detail-panel';
+        panel.setAttribute('aria-hidden', 'true');
+        panel.innerHTML = `
+            <div class="detail-panel-inner">
+                <button id="close-detail" class="close-button" aria-label="Close detail panel">×</button>
+                <div id="detail-content"></div>
+            </div>
+        `;
+        document.body.appendChild(panel);
+    }
 }
 
 function renderDashboard() {
@@ -66,35 +144,40 @@ function renderDashboard() {
 }
 
 function bindControls() {
-    const search = document.getElementById('roadmap-search');
-    const filter = document.getElementById('status-filter');
-    const collapseAll = document.getElementById('collapse-all');
-    const expandCritical = document.getElementById('expand-critical');
-    const closeDetail = document.getElementById('close-detail');
-    const detailPanel = document.getElementById('detail-panel');
+    if (controlsBound) return;
+    controlsBound = true;
 
-    search.addEventListener('input', event => {
+    addListener('roadmap-search', 'input', event => {
         searchQuery = event.target.value.trim().toLowerCase();
         renderDashboard();
     });
 
-    filter.addEventListener('change', event => {
+    addListener('status-filter', 'change', event => {
         activeFilter = event.target.value;
         renderDashboard();
     });
 
-    collapseAll.addEventListener('click', () => {
+    addListener('collapse-all', 'click', () => {
         document.querySelectorAll('details').forEach(detail => detail.open = false);
         closeDetailPanel();
     });
 
-    expandCritical.addEventListener('click', () => {
+    addListener('expand-critical', 'click', () => {
         document.querySelectorAll('details[data-priority="critical"], details[data-status="blocked"]').forEach(detail => detail.open = true);
     });
 
-    closeDetail.addEventListener('click', closeDetailPanel);
-    detailPanel.addEventListener('click', event => {
-        if (event.target === detailPanel) closeDetailPanel();
+    addListener('close-detail', 'click', closeDetailPanel);
+
+    const detailPanel = getById('detail-panel');
+    if (detailPanel) {
+        detailPanel.addEventListener('click', event => {
+            if (event.target === detailPanel) closeDetailPanel();
+        });
+    }
+
+    addListener('jump-to-now', 'click', () => {
+        const frontier = getById('frontier-section');
+        if (frontier) frontier.scrollIntoView({ behavior: 'smooth' });
     });
 
     document.addEventListener('keydown', event => {
@@ -103,8 +186,11 @@ function bindControls() {
 }
 
 function renderMetrics() {
+    const metrics = document.querySelector('.metrics');
+    if (!metrics) return;
+
     const summary = roadmapData.summary || {};
-    document.querySelector('.metrics').innerHTML = `
+    metrics.innerHTML = `
         <button class="metric-pill" data-filter="all">Projects: ${summary.project_count ?? 0}</button>
         <button class="metric-pill" data-filter="all">Task Records: ${summary.task_count ?? 0}</button>
         <button class="metric-pill" data-filter="blocked">Blockers: ${summary.blocked_count ?? 0}</button>
@@ -112,10 +198,11 @@ function renderMetrics() {
         <button class="metric-pill" data-filter="moved_later">Moved Later: ${summary.moved_later_count ?? 0}</button>
     `;
 
-    document.querySelectorAll('.metric-pill').forEach(button => {
+    metrics.querySelectorAll('.metric-pill').forEach(button => {
         button.addEventListener('click', () => {
             activeFilter = button.dataset.filter;
-            document.getElementById('status-filter').value = activeFilter;
+            const filter = getById('status-filter');
+            if (filter) filter.value = activeFilter;
             renderDashboard();
         });
     });
@@ -123,7 +210,8 @@ function renderMetrics() {
 
 function renderFrontier() {
     const frontier = roadmapData.frontier;
-    const container = document.getElementById('frontier-container');
+    const container = getById('frontier-container');
+    if (!container) return;
 
     if (!frontier) {
         container.innerHTML = '<div class="card"><h3>No frontier calculated</h3><p class="meta">Run the watcher/build process.</p></div>';
@@ -140,12 +228,13 @@ function renderFrontier() {
         </article>
     `;
 
-    container.querySelector('[data-kind="frontier"]').addEventListener('click', () => openDetailPanel('frontier', frontier));
+    const card = container.querySelector('[data-kind="frontier"]');
+    if (card) card.addEventListener('click', () => openDetailPanel('frontier', frontier));
 }
 
 function renderDecisionContext() {
     const context = roadmapData.decision_context;
-    const container = document.getElementById('decision-context-container');
+    const container = getById('decision-context-container');
     if (!container) return;
 
     if (!context || (activeFilter !== 'all' && activeFilter !== 'active')) {
@@ -171,14 +260,15 @@ function renderDecisionContext() {
 }
 
 function renderPillars() {
-    const grid = document.getElementById('pillars-grid');
+    const grid = getById('pillars-grid');
+    if (!grid) return;
+
     const pillars = normalizeList(roadmapData.pillars)
         .filter(pillar => activeFilter === 'all' || activeFilter === 'active')
         .filter(pillar => textMatches(pillar.title, pillar.id, pillar.status, pillar.priority, normalizeList(pillar.active_projects).join(' ')));
 
     grid.innerHTML = pillars.map((pillar) => {
         const activeProjects = normalizeList(pillar.active_projects);
-        const slug = slugify(pillar.id);
         return `
             <details class="card pillar-card" data-priority="${escapeHtml(pillar.priority)}" data-status="${escapeHtml(pillar.status)}">
                 <summary>
@@ -202,7 +292,7 @@ function renderPillars() {
     grid.querySelectorAll('.inline-task').forEach(button => {
         button.addEventListener('click', event => {
             event.preventDefault();
-            const pillar = roadmapData.pillars.find(item => item.id === button.dataset.pillar);
+            const pillar = normalizeList(roadmapData.pillars).find(item => item.id === button.dataset.pillar);
             openDetailPanel('project', {
                 title: button.dataset.title,
                 pillar,
@@ -214,14 +304,14 @@ function renderPillars() {
     grid.querySelectorAll('.open-panel').forEach(button => {
         button.addEventListener('click', event => {
             event.preventDefault();
-            const pillar = roadmapData.pillars.find(item => item.id === button.dataset.pillarId);
+            const pillar = normalizeList(roadmapData.pillars).find(item => item.id === button.dataset.pillarId);
             openDetailPanel('pillar', pillar);
         });
     });
 }
 
 function renderBlockedItems() {
-    const list = document.getElementById('blocked-list');
+    const list = getById('blocked-list');
     if (!list) return;
 
     const blockers = normalizeList(roadmapData.blocked_items)
@@ -250,7 +340,9 @@ function renderBlockedItems() {
 }
 
 function renderLaterQueue() {
-    const list = document.getElementById('later-list');
+    const list = getById('later-list');
+    if (!list) return;
+
     const items = normalizeList(roadmapData.moved_later_items)
         .filter(item => activeFilter === 'all' || activeFilter === 'moved_later')
         .filter(item => textMatches(item));
@@ -277,7 +369,9 @@ function renderLaterQueue() {
 }
 
 function renderCompleted() {
-    const list = document.getElementById('completed-list');
+    const list = getById('completed-list');
+    if (!list) return;
+
     const items = normalizeList(roadmapData.completed_items)
         .filter(item => activeFilter === 'all' || activeFilter === 'completed')
         .filter(item => textMatches(item));
@@ -382,18 +476,21 @@ function stepsFor(kind, title) {
 }
 
 function openDetailPanel(kind, payload) {
-    const panel = document.getElementById('detail-panel');
-    const content = document.getElementById('detail-content');
-    const title = payload?.title || payload?.pillar_title || payload?.title || String(payload || 'Roadmap Item');
+    const panel = getById('detail-panel');
+    const content = getById('detail-content');
+    if (!panel || !content) return;
+
+    const safePayload = payload || {};
+    const title = safePayload.title || safePayload.pillar_title || String(payload || 'Roadmap Item');
     let meta = '';
     let steps = stepsFor(kind, title);
 
     if (kind === 'pillar') {
-        const projects = normalizeList(payload.active_projects);
-        meta = `${payload.id} · ${payload.status} · ${payload.priority}`;
+        const projects = normalizeList(safePayload.active_projects);
+        meta = `${safePayload.id || 'pillar'} · ${safePayload.status || 'unknown'} · ${safePayload.priority || 'unknown'}`;
         content.innerHTML = `
             <p class="eyebrow">Pillar Detail</p>
-            <h2>${escapeHtml(payload.title)}</h2>
+            <h2>${escapeHtml(safePayload.title || 'Pillar')}</h2>
             <p class="meta">${escapeHtml(meta)}</p>
             <details open>
                 <summary>Active projects</summary>
@@ -401,15 +498,15 @@ function openDetailPanel(kind, payload) {
             </details>
             <details open>
                 <summary>Recommended next steps</summary>
-                <ol class="step-list">${stepsFor('pillar', payload.title).map(step => `<li>${escapeHtml(step)}</li>`).join('')}</ol>
+                <ol class="step-list">${stepsFor('pillar', safePayload.title).map(step => `<li>${escapeHtml(step)}</li>`).join('')}</ol>
             </details>
         `;
     } else if (kind === 'project') {
-        meta = `${payload.pillar?.id || 'unknown pillar'} · ${payload.pillar?.title || ''}`;
+        meta = `${safePayload.pillar?.id || 'unknown pillar'} · ${safePayload.pillar?.title || ''}`;
         content.innerHTML = detailTemplate('Project', title, meta, stepsFor('project', title));
     } else if (kind === 'frontier') {
-        meta = `${payload.priority} priority · ${payload.active_work} active · ${payload.blockers} blockers`;
-        content.innerHTML = detailTemplate('Current Frontier', payload.pillar_title, meta, stepsFor('frontier', payload.pillar_title), payload.reasoning);
+        meta = `${safePayload.priority || 'unknown'} priority · ${safePayload.active_work ?? 0} active · ${safePayload.blockers ?? 0} blockers`;
+        content.innerHTML = detailTemplate('Current Frontier', safePayload.pillar_title || 'Current Frontier', meta, stepsFor('frontier', safePayload.pillar_title), safePayload.reasoning);
     } else {
         content.innerHTML = detailTemplate(kind.replace('_', ' '), title, 'Generated from current roadmap snapshot', steps);
     }
@@ -440,13 +537,10 @@ function detailTemplate(label, title, meta, steps, description = '') {
 }
 
 function closeDetailPanel() {
-    const panel = document.getElementById('detail-panel');
+    const panel = getById('detail-panel');
+    if (!panel) return;
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
 }
-
-document.getElementById('jump-to-now').addEventListener('click', () => {
-    document.getElementById('frontier-section').scrollIntoView({ behavior: 'smooth' });
-});
 
 loadRoadmap();
