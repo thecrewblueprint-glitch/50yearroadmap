@@ -254,6 +254,47 @@ details[open] { border-color: rgba(245,180,0,0.38); }
     margin: 8px 0;
     color: var(--text);
 }
+
+.detail-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+}
+
+.detail-section h4 {
+    margin: 0 0 10px 0;
+    color: var(--accent);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-section p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.detail-section ol {
+    margin: 8px 0;
+    padding-left: 20px;
+    color: var(--text);
+}
+
+.detail-section ol li {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.detail-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 20px 0;
+}
 .completed-card { border-color: rgba(98,211,148,0.3); opacity: 0.9; }
 .moved-card { opacity: 0.9; }
 

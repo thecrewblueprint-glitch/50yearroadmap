@@ -199,6 +199,107 @@ function getTypeLabel(type) {
     return labels[type] || type;
 }
 
+function getNextSteps(blocker) {
+    const steps = [];
+
+    if (blocker.type === 'NEEDS_DECISION') {
+        steps.push('Assemble decision-makers');
+        steps.push('Review context and options');
+        steps.push('Document decision and reasoning');
+    } else if (blocker.type === 'BLOCKED_ON') {
+        if (blocker.blocked_by) {
+            steps.push(`First resolve: blocker-${blocker.blocked_by}`);
+        }
+        steps.push('Track upstream dependency');
+        steps.push('Follow up on blocking item');
+    } else if (blocker.type === 'RESOURCE_CONSTRAINT') {
+        steps.push('Identify resource gap');
+        steps.push('Propose solution (hire, buy, rescope)');
+        steps.push('Validate feasibility');
+    }
+
+    return steps;
+}
+
+function showBlockerDetail(blockerId) {
+    const blocker = filteredBlockers.find(b => b.id === blockerId);
+    if (!blocker) return;
+
+    const pillars = normalizeList(roadmapData.pillars);
+    const pillarMap = Object.fromEntries(pillars.map(p => [p.id, p.title]));
+    const createdDate = new Date(blocker.created_date);
+    const daysOpen = Math.floor((new Date() - createdDate) / (1000 * 60 * 60 * 24));
+    const nextSteps = getNextSteps(blocker);
+
+    const detailHTML = `
+        <h3>${escapeHtml(blocker.title)}</h3>
+
+        <div class="detail-badges">
+            <span class="badge type-badge">${getTypeLabel(blocker.type)}</span>
+            <span class="badge severity-badge" style="background: ${getSeverityColor(blocker.severity)}">${getSeverityIcon(blocker.severity)} ${blocker.severity}</span>
+            <span class="badge age-badge">Open ${daysOpen}d</span>
+        </div>
+
+        <section class="detail-section">
+            <h4>Pillar</h4>
+            <p>${escapeHtml(pillarMap[blocker.pillar_id] || 'Unknown')}</p>
+        </section>
+
+        <section class="detail-section">
+            <h4>What's Needed</h4>
+            <p>${escapeHtml(blocker.resolution)}</p>
+        </section>
+
+        <section class="detail-section">
+            <h4>Next Steps</h4>
+            <ol>
+                ${nextSteps.map(step => `<li>${escapeHtml(step)}</li>`).join('')}
+            </ol>
+        </section>
+
+        ${blocker.blocked_by ? `
+            <section class="detail-section">
+                <h4>Blocked By</h4>
+                <p class="meta">blocker-${blocker.blocked_by}</p>
+            </section>
+        ` : ''}
+
+        ${blocker.gates && blocker.gates.length > 0 ? `
+            <section class="detail-section">
+                <h4>Gates</h4>
+                <p class="meta">Resolving this unblocks: ${blocker.gates.join(', ')}</p>
+            </section>
+        ` : ''}
+
+        <section class="detail-section">
+            <h4>Timeline</h4>
+            <p>Created: ${blocker.created_date}</p>
+            <p>Open for: ${daysOpen} days</p>
+        </section>
+    `;
+
+    const detailContent = document.getElementById('detail-content');
+    if (detailContent) {
+        detailContent.innerHTML = detailHTML;
+    }
+
+    const detailPanel = document.getElementById('detail-panel');
+    if (detailPanel) {
+        detailPanel.classList.add('open');
+        detailPanel.setAttribute('aria-hidden', 'false');
+    }
+}
+
+function getSeverityColor(severity) {
+    const colors = {
+        CRITICAL: '#ff6b6b',
+        HIGH: '#ff9c3d',
+        MEDIUM: '#f5b400',
+        LOW: '#62d394'
+    };
+    return colors[severity] || '#b7bec6';
+}
+
 function renderBlockedItems() {
     const list = document.getElementById('blocked-list');
     if (!list) return;
@@ -216,7 +317,7 @@ function renderBlockedItems() {
         const daysOpen = Math.floor((new Date() - createdDate) / (1000 * 60 * 60 * 24));
 
         return `
-            <article class="card blocker-card" data-blocker-id="${blocker.id}">
+            <article class="card blocker-card clickable" data-blocker-id="${blocker.id}">
                 <div class="blocker-header">
                     <h4>${escapeHtml(blocker.title)}</h4>
                     <span class="severity-badge">${getSeverityIcon(blocker.severity)} ${blocker.severity}</span>
@@ -229,9 +330,18 @@ function renderBlockedItems() {
                 <p class="resolution">${escapeHtml(blocker.resolution)}</p>
                 ${blocker.blocked_by ? `<p class="meta">Blocked by: blocker-${blocker.blocked_by}</p>` : ''}
                 ${blocker.gates ? `<p class="meta">Gates: ${blocker.gates.join(', ')}</p>` : ''}
+                <p class="meta" style="margin-top: 12px; color: var(--accent); cursor: pointer;">→ View details</p>
             </article>
         `;
     }).join('');
+
+    // Add click handlers to blocker cards
+    document.querySelectorAll('.blocker-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const blockerId = card.getAttribute('data-blocker-id');
+            showBlockerDetail(blockerId);
+        });
+    });
 }
 
 function renderLaterQueue() {
