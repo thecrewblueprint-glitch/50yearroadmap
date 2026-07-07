@@ -2,12 +2,29 @@ let roadmapData = {};
 
 async function loadRoadmap() {
     try {
-        const response = await fetch('roadmap.json', { cache: 'no-store' });
+        // Try to load from docs/ folder first (when served from docs/)
+        // If that fails, try root (when served from root with redirect to docs/roadmap.json)
+        const paths = ['roadmap.json', 'docs/roadmap.json'];
+        let response;
+
+        for (const path of paths) {
+            try {
+                response = await fetch(path, { cache: 'no-store' });
+                if (response.ok) break;
+            } catch (e) {
+                // Try next path
+            }
+        }
+
+        if (!response || !response.ok) {
+            throw new Error('Could not load roadmap.json from any path');
+        }
+
         roadmapData = await response.json();
         renderDashboard();
     } catch (error) {
         console.error('Failed to load roadmap.json', error);
-        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap.json</h1><p>Check that docs/roadmap.json exists and is valid JSON.</p></main>';
+        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap.json</h1><p>Check that docs/roadmap.json exists and is valid JSON.</p><p style="color: #666; font-size: 0.9rem;">Debug: ' + error.message + '</p></main>';
     }
 }
 
