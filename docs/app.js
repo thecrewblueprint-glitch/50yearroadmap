@@ -1,6 +1,10 @@
 let roadmapData = {};
 let currentView = 'this-week';
 let selectedBranch = null;
+let branchesCurrentPage = 0;
+let branchesItemsPerPage = 3;
+let workItemsCurrentPage = 0;
+let workItemsItemsPerPage = 3;
 
 async function loadRoadmap() {
     try {
@@ -87,7 +91,13 @@ function renderBranches() {
     const container = document.getElementById('branches-grid');
     const branches = roadmapData.branches || [];
 
-    container.innerHTML = branches.map(branch => `
+    // Pagination logic
+    const totalPages = Math.ceil(branches.length / branchesItemsPerPage);
+    const startIndex = branchesCurrentPage * branchesItemsPerPage;
+    const endIndex = startIndex + branchesItemsPerPage;
+    const pageItems = branches.slice(startIndex, endIndex);
+
+    container.innerHTML = pageItems.map(branch => `
         <div class="branch-card clickable" data-branch-id="${branch.id}">
             <div class="branch-header">
                 <div>
@@ -113,6 +123,9 @@ function renderBranches() {
         </div>
     `).join('');
 
+    // Update pagination UI
+    updateBranchesPaginationUI(branchesCurrentPage, totalPages);
+
     // Add click listeners
     document.querySelectorAll('.branch-card.clickable').forEach(card => {
         card.addEventListener('click', () => {
@@ -127,6 +140,7 @@ function showBranchDetail(branchId) {
     if (!branch) return;
 
     selectedBranch = branchId;
+    workItemsCurrentPage = 0;
 
     // Populate detail section
     document.getElementById('branch-detail-title').textContent = branch.name;
@@ -139,9 +153,25 @@ function showBranchDetail(branchId) {
     const blockersList = document.getElementById('branch-blockers');
     blockersList.innerHTML = (branch.blockers || []).map(b => `<li>${escapeHtml(b)}</li>`).join('');
 
-    // Work items
+    // Work items with pagination
+    renderWorkItems(branch);
+
+    // Show detail section
+    document.getElementById('branch-detail-section').style.display = 'block';
+    document.getElementById('branch-detail-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+function renderWorkItems(branch) {
     const workItemsList = document.getElementById('branch-work-items');
-    workItemsList.innerHTML = (branch.work_items || []).map(item => `
+    const items = branch.work_items || [];
+
+    // Pagination logic
+    const totalPages = Math.ceil(items.length / workItemsItemsPerPage);
+    const startIndex = workItemsCurrentPage * workItemsItemsPerPage;
+    const endIndex = startIndex + workItemsItemsPerPage;
+    const pageItems = items.slice(startIndex, endIndex);
+
+    workItemsList.innerHTML = pageItems.map(item => `
         <div class="work-item">
             <div class="work-item-info">
                 <div class="work-item-title">${escapeHtml(item.task)}</div>
@@ -151,9 +181,8 @@ function showBranchDetail(branchId) {
         </div>
     `).join('');
 
-    // Show detail section
-    document.getElementById('branch-detail-section').style.display = 'block';
-    document.getElementById('branch-detail-section').scrollIntoView({ behavior: 'smooth' });
+    // Update pagination UI
+    updateWorkItemsPaginationUI(workItemsCurrentPage, totalPages);
 }
 
 function renderEcosystem() {
@@ -177,6 +206,32 @@ function renderEcosystem() {
 
 function escapeHtml(value) {
     return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+}
+
+function updateBranchesPaginationUI(currentPage, totalPages) {
+    const prevBtn = document.getElementById('branches-prev');
+    const nextBtn = document.getElementById('branches-next');
+    const pageSpan = document.getElementById('branches-page');
+    const totalSpan = document.getElementById('branches-total');
+
+    if (pageSpan) pageSpan.textContent = currentPage + 1;
+    if (totalSpan) totalSpan.textContent = totalPages;
+
+    if (prevBtn) prevBtn.disabled = currentPage === 0;
+    if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
+}
+
+function updateWorkItemsPaginationUI(currentPage, totalPages) {
+    const prevBtn = document.getElementById('work-items-prev');
+    const nextBtn = document.getElementById('work-items-next');
+    const pageSpan = document.getElementById('work-items-page');
+    const totalSpan = document.getElementById('work-items-total');
+
+    if (pageSpan) pageSpan.textContent = currentPage + 1;
+    if (totalSpan) totalSpan.textContent = totalPages;
+
+    if (prevBtn) prevBtn.disabled = currentPage === 0;
+    if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
 }
 
 function setupEventListeners() {
@@ -207,6 +262,54 @@ function setupEventListeners() {
         closeDetailButton.addEventListener('click', () => {
             document.getElementById('branch-detail-section').style.display = 'none';
             selectedBranch = null;
+        });
+    }
+
+    // Branches pagination
+    const branchesPrevBtn = document.getElementById('branches-prev');
+    const branchesNextBtn = document.getElementById('branches-next');
+    if (branchesPrevBtn) {
+        branchesPrevBtn.addEventListener('click', () => {
+            if (branchesCurrentPage > 0) {
+                branchesCurrentPage--;
+                renderBranches();
+            }
+        });
+    }
+    if (branchesNextBtn) {
+        branchesNextBtn.addEventListener('click', () => {
+            const branches = roadmapData.branches || [];
+            const totalPages = Math.ceil(branches.length / branchesItemsPerPage);
+            if (branchesCurrentPage < totalPages - 1) {
+                branchesCurrentPage++;
+                renderBranches();
+            }
+        });
+    }
+
+    // Work items pagination
+    const workItemsPrevBtn = document.getElementById('work-items-prev');
+    const workItemsNextBtn = document.getElementById('work-items-next');
+    if (workItemsPrevBtn) {
+        workItemsPrevBtn.addEventListener('click', () => {
+            if (workItemsCurrentPage > 0) {
+                workItemsCurrentPage--;
+                const branch = roadmapData.branches.find(b => b.id === selectedBranch);
+                if (branch) renderWorkItems(branch);
+            }
+        });
+    }
+    if (workItemsNextBtn) {
+        workItemsNextBtn.addEventListener('click', () => {
+            const branch = roadmapData.branches.find(b => b.id === selectedBranch);
+            if (branch) {
+                const items = branch.work_items || [];
+                const totalPages = Math.ceil(items.length / workItemsItemsPerPage);
+                if (workItemsCurrentPage < totalPages - 1) {
+                    workItemsCurrentPage++;
+                    renderWorkItems(branch);
+                }
+            }
         });
     }
 
