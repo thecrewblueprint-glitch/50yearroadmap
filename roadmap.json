@@ -404,5 +404,134 @@
         "homestead"
       ]
     }
-  ]
+  ],
+  "journey": {
+    "you_are_here": "m1",
+    "start_label": "Where you are now: a solo contractor earning through Deadhang Labor LLC, building the rest on the side.",
+    "milestones": [
+      {
+        "id": "m1",
+        "order": 1,
+        "title": "Solidify Deadhang's foundation",
+        "area_branch_id": "deadhang-labor",
+        "state": "current",
+        "summary": "Get the business itself in order — legal structure, compliance, and a repeatable way to track gigs — so everything else is built on solid ground.",
+        "outcome": "Deadhang is legally sound and every gig is tracked.",
+        "step_ids": [
+          "dh-1",
+          "dh-2",
+          "po-1"
+        ],
+        "leads_to": "A stable base you can safely scale from."
+      },
+      {
+        "id": "m2",
+        "order": 2,
+        "title": "Get paid reliably",
+        "area_branch_id": "contractor-tools",
+        "state": "upcoming",
+        "summary": "Stand up the day-to-day tools — invoicing, payment tracking, and dependable scheduling — so money and time are never the bottleneck.",
+        "outcome": "Invoices, payments, and calendar run without friction.",
+        "step_ids": [
+          "ct-1",
+          "ct-2",
+          "ct-3",
+          "ct-4"
+        ],
+        "leads_to": "Operations that hold up as volume grows."
+      },
+      {
+        "id": "m3",
+        "order": 3,
+        "title": "Find the work (Production Atlas)",
+        "area_branch_id": "production-atlas",
+        "state": "upcoming",
+        "summary": "Build the job-discovery engine that shows where work is and connects contractors straight to the companies hiring for it.",
+        "outcome": "A trustworthy map of opportunities contractors can act on.",
+        "step_ids": [
+          "pa-1",
+          "pa-2",
+          "pa-4",
+          "pa-5",
+          "pa-3"
+        ],
+        "leads_to": "A steady inflow of work to feed people into."
+      },
+      {
+        "id": "m4",
+        "order": 4,
+        "title": "Teach the skills (The Crew Blueprint)",
+        "area_branch_id": "crew-blueprint",
+        "state": "upcoming",
+        "summary": "Launch the training resource: a stable platform and a visual, workflow-based way for stagehands to learn the craft and how it fits the bigger picture.",
+        "outcome": "People can level up their stagehand skills through the Blueprint.",
+        "step_ids": [
+          "cb-3",
+          "cb-1",
+          "cb-2",
+          "cb-4"
+        ],
+        "leads_to": "A pipeline of better-prepared workers."
+      },
+      {
+        "id": "m5",
+        "order": 5,
+        "title": "Build teams & win bigger contracts",
+        "area_branch_id": "deadhang-labor",
+        "state": "upcoming",
+        "summary": "Grow Deadhang from solo work to leading crews — recruit a contractor network and the coordination to deploy teams on larger contracts.",
+        "outcome": "Deadhang can staff and lead multi-person jobs.",
+        "step_ids": [
+          "dh-3",
+          "dh-4"
+        ],
+        "leads_to": "The labor engine that powers the whole system."
+      },
+      {
+        "id": "m6",
+        "order": 6,
+        "title": "Close the loop — the engine sustains itself",
+        "area_branch_id": "personal-operations",
+        "state": "upcoming",
+        "summary": "Connect labor, training, and jobs into one self-reinforcing flywheel: work is sourced, people are trained, teams are deployed, and revenue recycles back in.",
+        "outcome": "Labor → Training → Jobs runs as a self-sustaining loop.",
+        "step_ids": [
+          "po-2",
+          "po-3",
+          "po-4",
+          "po-5"
+        ],
+        "leads_to": "Enough stability and revenue to reach for the Homestead."
+      },
+      {
+        "id": "m7",
+        "order": 7,
+        "title": "Acquire the land",
+        "area_branch_id": "land-acquisition",
+        "state": "upcoming",
+        "summary": "With the engine self-sustaining, secure the ground the Homestead will be built on.",
+        "outcome": "Land is secured for the community home base.",
+        "step_ids": [
+          "la-1",
+          "la-2"
+        ],
+        "leads_to": "A place to build the destination."
+      },
+      {
+        "id": "m8",
+        "order": 8,
+        "title": "Build the Homestead",
+        "area_branch_id": "homestead",
+        "state": "upcoming",
+        "summary": "Stand up the community home base: a way-station where traveling stagehands rest between gigs, find resources, get trained, and connect to work — with a path for permanent residents who help care for it.",
+        "outcome": "The Homestead is open and serving the community.",
+        "step_ids": [
+          "hs-1",
+          "hs-2",
+          "hs-3"
+        ],
+        "leads_to": "The movement and the Homestead — the destination."
+      }
+    ]
+  }
 }

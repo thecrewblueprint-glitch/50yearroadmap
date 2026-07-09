@@ -3,99 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Dashboard - 50-Year Roadmap</title>
+    <title>The Path to the Homestead — 50-Year Roadmap</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <p class="eyebrow">50-Year Roadmap</p>
-        <h1>Work Dashboard</h1>
+        <h1>The Path to the Homestead</h1>
         <div class="ultimate-goal">
             <p id="ultimate-goal-text"></p>
         </div>
-        <div class="header-actions">
-            <button id="view-all-work">View All Work</button>
-            <button id="view-this-week" class="active">This Week</button>
-        </div>
+        <nav class="view-nav" aria-label="Views">
+            <button id="nav-timeline" class="view-tab active">Timeline</button>
+            <button id="nav-dashboard" class="view-tab">Dashboard</button>
+            <a href="present.html" class="view-tab present-tab" target="_blank" rel="noopener">Present ↗</a>
+        </nav>
     </header>
 
     <main>
-        <!-- Phase & Status -->
-        <section id="phase-section" class="phase-banner">
-            <div class="phase-content">
-                <h2 id="phase-title"></h2>
-                <p id="phase-description"></p>
-            </div>
-        </section>
+        <!-- ============ TIMELINE VIEW ============ -->
+        <div id="timeline-view">
+            <section id="timeline-section">
+                <h2>Your Path — Now to the Homestead</h2>
+                <p class="section-intro" id="timeline-start-label"></p>
+                <div id="timeline" class="timeline"></div>
+            </section>
+        </div>
 
-        <!-- The End Goal & how to reach it -->
-        <section id="end-goal-section">
-            <h2>The End Goal</h2>
-            <p class="section-intro">Where this is all headed — and the path to get there</p>
-            <div class="end-goal-card">
-                <p class="eyebrow">Destination</p>
-                <h3 id="end-goal-destination"></h3>
-                <p id="end-goal-what"></p>
-            </div>
-            <h3 class="path-title">How We Get There</h3>
-            <div id="phases-path" class="phases-path"></div>
-        </section>
+        <!-- ============ DASHBOARD VIEW ============ -->
+        <div id="dashboard-view" style="display: none;">
+            <!-- Phase & Status -->
+            <section id="phase-section" class="phase-banner">
+                <div class="phase-content">
+                    <h2 id="phase-title"></h2>
+                    <p id="phase-description"></p>
+                </div>
+            </section>
 
-        <!-- This Week's Focus -->
-        <section id="this-week-section" class="focus-section">
-            <h2 id="focus-heading">Your Focus This Week</h2>
-            <div id="this-week-tasks" class="tasks-grid"></div>
-        </section>
+            <!-- The End Goal & how to reach it -->
+            <section id="end-goal-section">
+                <h2>The End Goal</h2>
+                <p class="section-intro">Where this is all headed — and the path to get there</p>
+                <div class="end-goal-card">
+                    <p class="eyebrow">Destination</p>
+                    <h3 id="end-goal-destination"></h3>
+                    <p id="end-goal-what"></p>
+                </div>
+                <h3 class="path-title">How We Get There</h3>
+                <div id="phases-path" class="phases-path"></div>
+            </section>
 
-        <!-- Branches, grouped by phase -->
-        <section id="branches-section">
-            <h2 id="branches-heading">The Branches</h2>
-            <p class="section-intro">Every branch that builds toward the Homestead — grouped by phase</p>
-            <div id="branches-by-phase"></div>
-        </section>
-
-        <!-- Branch Detail Panel -->
-        <section id="branch-detail-section" class="detail-section" style="display: none;">
-            <h2 id="branch-detail-title"></h2>
-            <div class="detail-content">
-                <div class="detail-col">
-                    <div class="detail-box">
-                        <h3>Ultimate Goal</h3>
-                        <p id="branch-goal"></p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Current State</h3>
-                        <p id="branch-current"></p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Timeline</h3>
-                        <p id="branch-timeline"></p>
+            <!-- This Week's Focus -->
+            <section id="this-week-section" class="focus-section">
+                <div class="focus-header">
+                    <h2 id="focus-heading">Your Focus This Week</h2>
+                    <div class="header-actions">
+                        <button id="view-all-work">View All Work</button>
+                        <button id="view-this-week" class="active">This Week</button>
                     </div>
                 </div>
-                <div class="detail-col">
-                    <div class="detail-box">
-                        <h3>Critical Blockers</h3>
-                        <ul id="branch-blockers"></ul>
+                <div id="this-week-tasks" class="tasks-grid"></div>
+            </section>
+
+            <!-- Branches, grouped by phase -->
+            <section id="branches-section">
+                <h2 id="branches-heading">The Branches</h2>
+                <p class="section-intro">Every branch that builds toward the Homestead — grouped by phase</p>
+                <div id="branches-by-phase"></div>
+            </section>
+
+            <!-- Branch Detail Panel -->
+            <section id="branch-detail-section" class="detail-section" style="display: none;">
+                <h2 id="branch-detail-title"></h2>
+                <div class="detail-content">
+                    <div class="detail-col">
+                        <div class="detail-box">
+                            <h3>Ultimate Goal</h3>
+                            <p id="branch-goal"></p>
+                        </div>
+                        <div class="detail-box">
+                            <h3>Current State</h3>
+                            <p id="branch-current"></p>
+                        </div>
+                        <div class="detail-box">
+                            <h3>Timeline</h3>
+                            <p id="branch-timeline"></p>
+                        </div>
+                    </div>
+                    <div class="detail-col">
+                        <div class="detail-box">
+                            <h3>Critical Blockers</h3>
+                            <ul id="branch-blockers"></ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="work-items-section">
-                <h3>Work Items</h3>
-                <div id="branch-work-items" class="work-items-list"></div>
-                <div id="work-items-pagination" class="pagination pagination-bottom">
-                    <button class="pagination-btn" id="work-items-prev" aria-label="Previous work items page">←</button>
-                    <span class="pagination-info"><span id="work-items-page">1</span> / <span id="work-items-total">1</span></span>
-                    <button class="pagination-btn" id="work-items-next" aria-label="Next work items page">→</button>
+                <div class="work-items-section">
+                    <h3>Work Items</h3>
+                    <div id="branch-work-items" class="work-items-list"></div>
+                    <div id="work-items-pagination" class="pagination pagination-bottom">
+                        <button class="pagination-btn" id="work-items-prev" aria-label="Previous work items page">←</button>
+                        <span class="pagination-info"><span id="work-items-page">1</span> / <span id="work-items-total">1</span></span>
+                        <button class="pagination-btn" id="work-items-next" aria-label="Next work items page">→</button>
+                    </div>
                 </div>
-            </div>
-            <button id="close-detail" class="close-button">← Back to Dashboard</button>
-        </section>
+                <button id="close-detail" class="close-button">← Back to Dashboard</button>
+            </section>
 
-        <!-- Ecosystem Flow -->
-        <section id="ecosystem-section">
-            <h2>How It All Connects</h2>
-            <div class="ecosystem-flow" id="ecosystem-flow"></div>
-        </section>
+            <!-- Ecosystem Flow -->
+            <section id="ecosystem-section">
+                <h2>How It All Connects</h2>
+                <div class="ecosystem-flow" id="ecosystem-flow"></div>
+            </section>
+        </div>
     </main>
 
     <script src="app.js"></script>

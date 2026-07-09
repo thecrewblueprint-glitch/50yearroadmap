@@ -20,10 +20,138 @@ function renderDashboard() {
     renderUltimateGoal();
     renderPhase();
     renderEndGoal();
+    renderTimeline();
     renderThisWeek();
     renderBranches();
     renderEcosystem();
     setupEventListeners();
+}
+
+// ---- Views --------------------------------------------------------------
+function switchView(view) {
+    const timelineView = document.getElementById('timeline-view');
+    const dashboardView = document.getElementById('dashboard-view');
+    const navTimeline = document.getElementById('nav-timeline');
+    const navDashboard = document.getElementById('nav-dashboard');
+    const showTimeline = view === 'timeline';
+
+    if (timelineView) timelineView.style.display = showTimeline ? 'block' : 'none';
+    if (dashboardView) dashboardView.style.display = showTimeline ? 'none' : 'block';
+    if (navTimeline) navTimeline.classList.toggle('active', showTimeline);
+    if (navDashboard) navDashboard.classList.toggle('active', !showTimeline);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ---- Timeline (linear progression) -------------------------------------
+function workItemsById() {
+    const map = {};
+    (roadmapData.branches || []).forEach(b => {
+        (b.work_items || []).forEach(w => { map[w.id] = { ...w, branch_name: b.name, branch_id: b.id }; });
+    });
+    return map;
+}
+
+function renderTimeline() {
+    const journey = roadmapData.journey || {};
+    const milestones = journey.milestones || [];
+    const container = document.getElementById('timeline');
+    const startLabel = document.getElementById('timeline-start-label');
+
+    if (startLabel) startLabel.textContent = journey.start_label || '';
+    if (!container) return;
+
+    if (!milestones.length) {
+        container.innerHTML = '<p class="meta">No milestones defined yet</p>';
+        return;
+    }
+
+    const items = workItemsById();
+    const branchesById = Object.fromEntries((roadmapData.branches || []).map(b => [b.id, b]));
+    const hereId = journey.you_are_here;
+    const total = milestones.length;
+
+    container.innerHTML = milestones.map((m, i) => {
+        const state = m.state || 'upcoming';
+        const isHere = m.id === hereId;
+        const marker = state === 'done' ? '✓' : (m.order ?? i + 1);
+        const branch = branchesById[m.area_branch_id] || {};
+        const stepsHTML = (m.step_ids || []).map(id => {
+            const w = items[id];
+            if (!w) return '';
+            const st = w.status || 'not_started';
+            return `
+                <div class="tl-step">
+                    <span class="tl-step-dot ${st}"></span>
+                    <div class="tl-step-body">
+                        <div class="tl-step-task">${escapeHtml(w.task)}</div>
+                        <div class="tl-step-why">${escapeHtml(w.why || '')}</div>
+                    </div>
+                    <span class="work-item-status ${st}">${escapeHtml(st.replace(/_/g, ' '))}</span>
+                </div>`;
+        }).join('');
+
+        return `
+        <div class="tl-node ${state} ${isHere ? 'here' : ''}" data-milestone-id="${m.id}">
+            <div class="tl-rail"><div class="tl-marker">${marker}</div></div>
+            <div class="tl-content">
+                <button class="tl-head" aria-expanded="${isHere}">
+                    <div class="tl-head-main">
+                        <div class="tl-meta">
+                            <span class="tl-order">Step ${m.order ?? i + 1} of ${total}</span>
+                            ${branch.name ? `<span class="tl-area">${escapeHtml(branch.name)}</span>` : ''}
+                            ${isHere ? '<span class="tl-here-badge">You are here</span>' : ''}
+                        </div>
+                        <h3 class="tl-title">${escapeHtml(m.title)}</h3>
+                    </div>
+                    <span class="tl-state-badge ${state}">${state === 'done' ? 'Done' : state === 'current' ? 'In progress' : 'Upcoming'}</span>
+                </button>
+                <div class="tl-body" ${isHere ? '' : 'hidden'}>
+                    <p class="tl-summary">${escapeHtml(m.summary || '')}</p>
+                    ${m.outcome ? `<p class="tl-outcome"><strong>Outcome:</strong> ${escapeHtml(m.outcome)}</p>` : ''}
+                    ${stepsHTML ? `<div class="tl-steps"><h4>The steps</h4>${stepsHTML}</div>` : ''}
+                    ${m.leads_to ? `<p class="tl-leads">↳ ${escapeHtml(m.leads_to)}</p>` : ''}
+                    ${branch.id ? `<button class="tl-open-branch" data-branch-id="${branch.id}">Open the ${escapeHtml(branch.name)} branch →</button>` : ''}
+                </div>
+            </div>
+        </div>`;
+    }).join('') + `
+        <div class="tl-node destination">
+            <div class="tl-rail"><div class="tl-marker">★</div></div>
+            <div class="tl-content">
+                <div class="tl-head static">
+                    <div class="tl-head-main">
+                        <div class="tl-meta"><span class="tl-order">Destination</span></div>
+                        <h3 class="tl-title">${escapeHtml(roadmapData.end_goal?.destination || 'The Homestead')}</h3>
+                    </div>
+                    <span class="tl-state-badge destination">Goal</span>
+                </div>
+                <div class="tl-body">
+                    <p class="tl-summary">${escapeHtml(roadmapData.north_star || '')}</p>
+                </div>
+            </div>
+        </div>`;
+
+    wireTimelineInteractions();
+}
+
+function wireTimelineInteractions() {
+    // Expand/collapse milestone bodies
+    document.querySelectorAll('#timeline .tl-head:not(.static)').forEach(head => {
+        head.addEventListener('click', () => {
+            const body = head.parentElement.querySelector('.tl-body');
+            const expanded = head.getAttribute('aria-expanded') === 'true';
+            head.setAttribute('aria-expanded', String(!expanded));
+            if (body) body.hidden = expanded;
+        });
+    });
+    // "Open the X branch" jumps to the dashboard view and opens that branch
+    document.querySelectorAll('#timeline .tl-open-branch').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            switchView('dashboard');
+            showBranchDetail(btn.getAttribute('data-branch-id'));
+        });
+    });
 }
 
 function renderEndGoal() {
@@ -359,6 +487,12 @@ function setupEventListeners() {
     const viewAllButton = document.getElementById('view-all-work');
     const viewThisWeekButton = document.getElementById('view-this-week');
     const closeDetailButton = document.getElementById('close-detail');
+
+    // Primary view switcher: Timeline vs Dashboard
+    const navTimeline = document.getElementById('nav-timeline');
+    const navDashboard = document.getElementById('nav-dashboard');
+    if (navTimeline) navTimeline.addEventListener('click', () => switchView('timeline'));
+    if (navDashboard) navDashboard.addEventListener('click', () => switchView('dashboard'));
 
     if (viewAllButton) {
         viewAllButton.addEventListener('click', () => {

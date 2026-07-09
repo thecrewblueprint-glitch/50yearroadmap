@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Path to the Homestead — Vision & Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .present-wrap { max-width: 960px; margin: 0 auto; }
+        .present-hero {
+            text-align: center;
+            padding: 48px 20px 40px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .present-hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 8px 0 20px; }
+        .present-northstar {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .present-section { margin: 0 auto 52px; }
+        .present-section > h2 {
+            border: none;
+            font-size: 1.6rem;
+            margin: 0 0 6px;
+        }
+        .present-lede { color: var(--muted); margin: 0 0 24px; font-size: 1.05rem; }
+
+        .destination-block {
+            background: linear-gradient(135deg, rgba(245,180,0,0.1), rgba(59,130,246,0.06));
+            border: 1px solid rgba(245,180,0,0.3);
+            border-radius: 16px;
+            padding: 28px;
+        }
+        .destination-block h3 { color: var(--text); font-size: 1.5rem; margin: 6px 0 14px; }
+        .destination-block p { margin: 0; line-height: 1.7; font-size: 1.08rem; color: var(--text); }
+
+        .path-list { counter-reset: step; display: flex; flex-direction: column; gap: 16px; }
+        .path-item {
+            display: flex;
+            gap: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 22px 24px;
+        }
+        .path-item.future { border-left-color: var(--secondary); }
+        .path-num {
+            flex-shrink: 0;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.15rem;
+            background: var(--accent-soft); color: var(--accent);
+        }
+        .path-item.future .path-num { background: rgba(6,182,212,0.14); color: var(--secondary); }
+        .path-item-body { flex: 1; min-width: 0; }
+        .path-item-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .path-item-head h3 { margin: 0; font-size: 1.2rem; color: var(--text); }
+        .path-item-area { font-size: 0.75rem; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; }
+        .path-item p { margin: 0 0 8px; line-height: 1.6; color: var(--muted); }
+        .path-item .outcome { color: var(--text); }
+        .path-item .outcome strong { color: var(--success); }
+
+        .present-destination-final {
+            display: flex; gap: 20px; align-items: center;
+            background: linear-gradient(135deg, rgba(245,180,0,0.12), rgba(255,255,255,0.02));
+            border: 1px solid rgba(245,180,0,0.4);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .present-destination-final .path-num { background: rgba(245,180,0,0.18); color: #f5b400; }
+        .present-destination-final h3 { color: var(--text); margin: 0 0 6px; font-size: 1.3rem; }
+        .present-destination-final p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+        .blocks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+        .block-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+        .block-card h3 { color: var(--accent); margin: 0 0 4px; font-size: 1.1rem; }
+        .block-role { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+        .block-goal { font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+        .phase-heading { display: flex; align-items: center; gap: 12px; margin: 28px 0 16px; }
+        .phase-heading h3 { margin: 0; font-size: 1.2rem; }
+
+        .present-footer { text-align: center; color: var(--muted); padding: 30px 20px 50px; border-top: 1px solid var(--border); }
+        .present-footer a { color: var(--accent); }
+        .back-link { display: inline-block; margin: 24px 0 0; color: var(--secondary); text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <div class="present-wrap">
+        <div class="present-hero">
+            <p class="eyebrow">The Crew Blueprint · 50-Year Vision</p>
+            <h1>The Path to the Homestead</h1>
+            <p class="present-northstar" id="p-northstar"></p>
+        </div>
+
+        <main>
+            <section class="present-section">
+                <h2>Where We're Headed</h2>
+                <p class="present-lede">The destination this whole plan is built to reach.</p>
+                <div class="destination-block">
+                    <p class="eyebrow">The Destination</p>
+                    <h3 id="p-destination"></h3>
+                    <p id="p-what"></p>
+                </div>
+            </section>
+
+            <section class="present-section">
+                <h2>The Path</h2>
+                <p class="present-lede" id="p-start"></p>
+                <div class="path-list" id="p-path"></div>
+            </section>
+
+            <section class="present-section">
+                <h2>The Building Blocks</h2>
+                <p class="present-lede">The branches of work that power the journey.</p>
+                <div id="p-blocks"></div>
+            </section>
+
+            <div style="text-align:center;">
+                <a class="back-link" href="index.html">← Back to the working dashboard</a>
+            </div>
+        </main>
+
+        <footer class="present-footer">
+            <p id="p-generated"></p>
+        </footer>
+    </div>
+
+    <script>
+        function esc(v){return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');}
+
+        async function load() {
+            let data;
+            try {
+                const res = await fetch('roadmap.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('load failed');
+                data = await res.json();
+            } catch (e) {
+                document.querySelector('.present-wrap').innerHTML =
+                    '<div class="error"><h1>Could not load the plan</h1><p>roadmap.json is missing or invalid.</p></div>';
+                return;
+            }
+            render(data);
+        }
+
+        function render(data) {
+            document.getElementById('p-northstar').textContent = data.north_star || data.ultimate_goal || '';
+            const eg = data.end_goal || {};
+            document.getElementById('p-destination').textContent = eg.destination || 'The Homestead';
+            document.getElementById('p-what').textContent = eg.what_it_is || '';
+
+            const journey = data.journey || {};
+            document.getElementById('p-start').textContent = journey.start_label || '';
+
+            // Resolve work items for step counts / context
+            const itemsById = {};
+            (data.branches || []).forEach(b => (b.work_items || []).forEach(w => { itemsById[w.id] = w; }));
+            const branchesById = Object.fromEntries((data.branches || []).map(b => [b.id, b]));
+
+            const milestones = journey.milestones || [];
+            const pathHTML = milestones.map((m, i) => {
+                const branch = branchesById[m.area_branch_id] || {};
+                const future = branch.lifecycle === 'future';
+                return `
+                    <div class="path-item ${future ? 'future' : ''}">
+                        <div class="path-num">${m.order ?? i + 1}</div>
+                        <div class="path-item-body">
+                            <div class="path-item-head">
+                                <h3>${esc(m.title)}</h3>
+                                ${branch.name ? `<span class="path-item-area">${esc(branch.name)}</span>` : ''}
+                            </div>
+                            <p>${esc(m.summary || '')}</p>
+                            ${m.outcome ? `<p class="outcome"><strong>Outcome:</strong> ${esc(m.outcome)}</p>` : ''}
+                        </div>
+                    </div>`;
+            }).join('');
+
+            const dest = `
+                <div class="present-destination-final">
+                    <div class="path-num">★</div>
+                    <div>
+                        <h3>${esc(eg.destination || 'The Homestead')}</h3>
+                        <p>${esc(data.north_star || '')}</p>
+                    </div>
+                </div>`;
+            document.getElementById('p-path').innerHTML = pathHTML + dest;
+
+            // Building blocks grouped by phase
+            const phases = data.phases || [];
+            const branches = data.branches || [];
+            const byId = Object.fromEntries(branches.map(b => [b.id, b]));
+            let blocksHTML = '';
+            if (phases.length) {
+                phases.forEach(phase => {
+                    const items = (phase.branch_ids || []).map(id => byId[id]).filter(Boolean);
+                    if (!items.length) return;
+                    const active = phase.status === 'active';
+                    blocksHTML += `
+                        <div class="phase-heading">
+                            <h3>Phase ${phase.number ?? ''} — ${esc(phase.name)}</h3>
+                            <span class="phase-badge ${active ? 'active' : 'future'}">${active ? 'In progress' : 'Future'}</span>
+                        </div>
+                        <div class="blocks-grid">${items.map(blockCard).join('')}</div>`;
+                });
+            } else {
+                blocksHTML = `<div class="blocks-grid">${branches.map(blockCard).join('')}</div>`;
+            }
+            document.getElementById('p-blocks').innerHTML = blocksHTML;
+
+            const gen = data.generated_at ? new Date(data.generated_at) : null;
+            document.getElementById('p-generated').textContent =
+                'Vision & plan snapshot' + (gen ? ' · ' + gen.toISOString().slice(0, 10) : '');
+        }
+
+        function blockCard(b) {
+            return `
+                <div class="block-card">
+                    <h3>${esc(b.name)}</h3>
+                    <p class="block-role">${esc(b.role || '')}</p>
+                    <p class="block-goal">${esc(b.ultimate_goal || '')}</p>
+                </div>`;
+        }
+
+        load();
+    </script>
+</body>
+</html>
