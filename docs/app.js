@@ -87,6 +87,32 @@ function renderThisWeek() {
     `).join('');
 }
 
+function renderAllWork() {
+    const container = document.getElementById('this-week-tasks');
+    const allBranches = roadmapData.branches || [];
+
+    // Collect all work items from all branches
+    const allItems = [];
+    allBranches.forEach(branch => {
+        (branch.work_items || []).forEach(item => {
+            allItems.push({ ...item, branch_name: branch.name, branch_id: branch.id });
+        });
+    });
+
+    // Sort by priority: CRITICAL, HIGH, MEDIUM, LOW
+    const priorityOrder = { CRITICAL: 0, HIGH: 1, MEDIUM: 2, LOW: 3 };
+    allItems.sort((a, b) => (priorityOrder[a.priority] || 99) - (priorityOrder[b.priority] || 99));
+
+    container.innerHTML = allItems.map(item => `
+        <div class="task-card" data-task-id="${item.id}" data-branch-id="${item.branch_id}">
+            <div class="task-priority ${item.priority.toLowerCase()}">${item.priority}</div>
+            <div class="task-title">${escapeHtml(item.task)}</div>
+            <div class="task-why">${escapeHtml(item.why)}</div>
+            <div class="task-branch">→ ${escapeHtml(item.branch_name)}</div>
+        </div>
+    `).join('');
+}
+
 function renderBranches() {
     const container = document.getElementById('branches-grid');
     const branches = roadmapData.branches || [];
@@ -244,8 +270,7 @@ function setupEventListeners() {
             currentView = 'all';
             viewAllButton.classList.add('active');
             viewThisWeekButton.classList.remove('active');
-            // TODO: Implement all work view
-            alert('View all work coming soon');
+            renderAllWork();
         });
     }
 
