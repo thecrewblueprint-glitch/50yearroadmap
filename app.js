@@ -144,12 +144,12 @@ function wireTimelineInteractions() {
             if (body) body.hidden = expanded;
         });
     });
-    // "Open the X branch" jumps to the dashboard view and opens that branch
+    // "Open the X branch" opens that branch's own page
     document.querySelectorAll('#timeline .tl-open-branch').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            switchView('dashboard');
-            showBranchDetail(btn.getAttribute('data-branch-id'));
+            const id = btn.getAttribute('data-branch-id');
+            window.location.href = 'branch.html?branch=' + encodeURIComponent(id);
         });
     });
 }
