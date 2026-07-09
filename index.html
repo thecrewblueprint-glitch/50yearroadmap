@@ -3,81 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>50-Year Roadmap Command Center</title>
+    <title>Work Dashboard - 50-Year Roadmap</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <p class="eyebrow">50-Year Roadmap</p>
-        <h1>Operations Command Center</h1>
-        <p>A repo-backed roadmap, memory, evidence, and project-state dashboard.</p>
-        <div class="header-actions">
-            <button id="jump-to-now">You Are Now Here</button>
-            <button id="collapse-all" class="secondary-button">Collapse All</button>
-            <button id="expand-critical" class="secondary-button">Expand Critical</button>
+        <h1>Work Dashboard</h1>
+        <div class="ultimate-goal">
+            <p id="ultimate-goal-text"></p>
         </div>
-        <div class="metrics"></div>
+        <div class="header-actions">
+            <button id="view-all-work">View All Work</button>
+            <button id="view-this-week" class="active">This Week</button>
+        </div>
     </header>
 
     <main>
-        <section id="timeframe-section">
-            <h2>Milestone Lens</h2>
-            <p class="section-intro">Zoom the same roadmap between immediate work and the 50-year vision.</p>
-            <div id="timeframe-nav" class="timeframe-nav" aria-label="Milestone timeframe navigation"></div>
-            <div id="timeframe-lens"></div>
+        <!-- Phase & Status -->
+        <section id="phase-section" class="phase-banner">
+            <div class="phase-content">
+                <h2 id="phase-title"></h2>
+                <p id="phase-description"></p>
+            </div>
         </section>
 
-        <section id="frontier-section">
-            <h2>You Are Now Here</h2>
-            <div id="frontier-container"></div>
+        <!-- This Week's Focus -->
+        <section id="this-week-section" class="focus-section">
+            <h2>Your Focus This Week</h2>
+            <div id="this-week-tasks" class="tasks-grid"></div>
         </section>
 
-        <section id="decision-context-section">
-            <h2>Decision Context</h2>
-            <div id="decision-context-container"></div>
+        <!-- The 6 Branches -->
+        <section id="branches-section">
+            <h2>The 6 Branches</h2>
+            <p class="section-intro">What needs to be built to reach your ultimate goal</p>
+            <div id="branches-grid" class="branches-grid"></div>
         </section>
 
-        <section id="controls-section" class="toolbar">
-            <label for="roadmap-search">Search roadmap</label>
-            <input id="roadmap-search" type="search" placeholder="Search pillars, blockers, completed items...">
-            <label for="status-filter">View</label>
-            <select id="status-filter">
-                <option value="all">All</option>
-                <option value="active">Active pillars</option>
-                <option value="blocked">Blockers</option>
-                <option value="moved_later">Moved later</option>
-                <option value="completed">Completed</option>
-            </select>
+        <!-- Branch Detail Panel -->
+        <section id="branch-detail-section" class="detail-section" style="display: none;">
+            <h2 id="branch-detail-title"></h2>
+            <div class="detail-content">
+                <div class="detail-col">
+                    <div class="detail-box">
+                        <h3>Ultimate Goal</h3>
+                        <p id="branch-goal"></p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>Current State</h3>
+                        <p id="branch-current"></p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>Timeline for Phase 1</h3>
+                        <p id="branch-timeline"></p>
+                    </div>
+                </div>
+                <div class="detail-col">
+                    <div class="detail-box">
+                        <h3>Critical Blockers</h3>
+                        <ul id="branch-blockers"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="work-items-section">
+                <h3>Work Items</h3>
+                <div id="branch-work-items" class="work-items-list"></div>
+            </div>
+            <button id="close-detail" class="close-button">← Back to Dashboard</button>
         </section>
 
-        <section id="pillars-section">
-            <h2>Roadmap Pillars</h2>
-            <div id="pillars-grid" class="grid"></div>
-        </section>
-
-        <section id="blocked-section">
-            <h2>Blockers</h2>
-            <div id="blocker-controls"></div>
-            <div id="blocked-list" class="grid"></div>
-        </section>
-
-        <section id="later-section">
-            <h2>Moved Later</h2>
-            <div id="later-list" class="grid"></div>
-        </section>
-
-        <section id="completed-section">
-            <h2>Completed</h2>
-            <div id="completed-list" class="grid"></div>
+        <!-- Ecosystem Flow -->
+        <section id="ecosystem-section">
+            <h2>How It All Connects</h2>
+            <div class="ecosystem-flow" id="ecosystem-flow"></div>
         </section>
     </main>
-
-    <aside id="detail-panel" class="detail-panel" aria-hidden="true">
-        <div class="detail-panel-inner">
-            <button id="close-detail" class="close-button" aria-label="Close detail panel">×</button>
-            <div id="detail-content"></div>
-        </div>
-    </aside>
 
     <script src="app.js"></script>
 </body>

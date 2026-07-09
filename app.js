@@ -1,6 +1,6 @@
 let roadmapData = {};
-let filteredBlockers = [];
-let currentFilters = { pillar: 'all', type: 'all', severity: 'all', search: '' };
+let currentView = 'this-week';
+let selectedBranch = null;
 
 async function loadRoadmap() {
     try {
@@ -23,416 +23,200 @@ async function loadRoadmap() {
     }
 }
 
+function renderDashboard() {
+    renderUltimateGoal();
+    renderPhase();
+    renderThisWeek();
+    renderBranches();
+    renderEcosystem();
+    setupEventListeners();
+}
+
+function renderUltimateGoal() {
+    const goal = document.getElementById('ultimate-goal-text');
+    if (goal) {
+        goal.textContent = roadmapData.ultimate_goal || '';
+    }
+}
+
+function renderPhase() {
+    document.getElementById('phase-title').textContent = roadmapData.phase || '';
+    document.getElementById('phase-description').textContent = roadmapData.phase_description || '';
+}
+
+function renderThisWeek() {
+    const container = document.getElementById('this-week-tasks');
+    const focus = roadmapData.this_week_focus || {};
+    const allBranches = roadmapData.branches || [];
+
+    if (!focus.priority_1) {
+        container.innerHTML = '<p class="meta">No focus items defined yet</p>';
+        return;
+    }
+
+    // Parse task IDs from priority_1, priority_2, etc
+    const taskIds = [];
+    ['priority_1', 'priority_2', 'priority_3'].forEach(key => {
+        if (focus[key]) {
+            const ids = focus[key].split(',').map(s => s.trim());
+            taskIds.push(...ids);
+        }
+    });
+
+    // Find work items matching these IDs
+    const focusItems = [];
+    allBranches.forEach(branch => {
+        (branch.work_items || []).forEach(item => {
+            if (taskIds.includes(item.id)) {
+                focusItems.push({ ...item, branch_name: branch.name, branch_id: branch.id });
+            }
+        });
+    });
+
+    container.innerHTML = focusItems.map(item => `
+        <div class="task-card" data-task-id="${item.id}" data-branch-id="${item.branch_id}">
+            <div class="task-priority ${item.priority.toLowerCase()}">${item.priority}</div>
+            <div class="task-title">${escapeHtml(item.task)}</div>
+            <div class="task-why">${escapeHtml(item.why)}</div>
+            <div class="task-branch">→ ${escapeHtml(item.branch_name)}</div>
+        </div>
+    `).join('');
+}
+
+function renderBranches() {
+    const container = document.getElementById('branches-grid');
+    const branches = roadmapData.branches || [];
+
+    container.innerHTML = branches.map(branch => `
+        <div class="branch-card clickable" data-branch-id="${branch.id}">
+            <div class="branch-header">
+                <div>
+                    <h3 class="branch-name">${escapeHtml(branch.name)}</h3>
+                    <p class="branch-role">${escapeHtml(branch.role)}</p>
+                </div>
+                <div class="branch-status">${branch.status_percentage}%</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: ${branch.status_percentage}%"></div>
+            </div>
+
+            <p style="margin: 12px 0 0 0; font-size: 0.9rem; line-height: 1.5;">
+                ${escapeHtml(branch.ultimate_goal)}
+            </p>
+
+            ${branch.critical_blocker ? `
+                <div class="blocker-badge">
+                    🚫 ${escapeHtml(branch.critical_blocker)}
+                </div>
+            ` : ''}
+        </div>
+    `).join('');
+
+    // Add click listeners
+    document.querySelectorAll('.branch-card.clickable').forEach(card => {
+        card.addEventListener('click', () => {
+            const branchId = card.getAttribute('data-branch-id');
+            showBranchDetail(branchId);
+        });
+    });
+}
+
+function showBranchDetail(branchId) {
+    const branch = roadmapData.branches.find(b => b.id === branchId);
+    if (!branch) return;
+
+    selectedBranch = branchId;
+
+    // Populate detail section
+    document.getElementById('branch-detail-title').textContent = branch.name;
+    document.getElementById('branch-goal').textContent = branch.ultimate_goal;
+    document.getElementById('branch-current').textContent = branch.current_state;
+    document.getElementById('branch-timeline').textContent =
+        `${branch.timeline.phase_1_ready}: ${branch.timeline.description}`;
+
+    // Blockers
+    const blockersList = document.getElementById('branch-blockers');
+    blockersList.innerHTML = (branch.blockers || []).map(b => `<li>${escapeHtml(b)}</li>`).join('');
+
+    // Work items
+    const workItemsList = document.getElementById('branch-work-items');
+    workItemsList.innerHTML = (branch.work_items || []).map(item => `
+        <div class="work-item">
+            <div class="work-item-info">
+                <div class="work-item-title">${escapeHtml(item.task)}</div>
+                <div class="work-item-why">${escapeHtml(item.why)}</div>
+            </div>
+            <div class="work-item-status ${item.status}">${item.status.replace('_', ' ')}</div>
+        </div>
+    `).join('');
+
+    // Show detail section
+    document.getElementById('branch-detail-section').style.display = 'block';
+    document.getElementById('branch-detail-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+function renderEcosystem() {
+    const container = document.getElementById('ecosystem-flow');
+    const flow = roadmapData.ecosystem_flow || {};
+
+    if (!flow.flow || flow.flow.length === 0) {
+        container.innerHTML = '<p class="meta">Ecosystem flow not defined</p>';
+        return;
+    }
+
+    const items = flow.flow || [];
+    container.innerHTML = items.map((item, i) => `
+        <div class="flow-step">
+            <span style="color: var(--accent); font-weight: 700; min-width: 20px;">${i + 1}</span>
+            <span style="margin-left: 12px;">${escapeHtml(item)}</span>
+            ${i < items.length - 1 ? '<span class="flow-arrow" style="margin-left: auto;">→</span>' : ''}
+        </div>
+    `).join('');
+}
+
 function escapeHtml(value) {
     return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 }
 
-function normalizeList(value) {
-    return Array.isArray(value) ? value : [];
-}
-
-function renderDashboard() {
-    renderMetrics();
-    renderFrontier();
-    renderDecisionContext();
-    renderPillars();
-    renderBlockerControls();
-    renderBlockedItems();
-    renderLaterQueue();
-    renderCompleted();
-    setupEventListeners();
-}
-
-function renderMetrics() {
-    const summary = roadmapData.summary || {};
-    document.querySelector('.metrics').innerHTML = `
-        <span>Projects: ${summary.project_count ?? 0}</span>
-        <span>Task Records: ${summary.task_count ?? 0}</span>
-        <span>Blockers: ${summary.blocked_count ?? 0}</span>
-        <span>Completed: ${summary.completed_count ?? 0}</span>
-        <span>Moved Later: ${summary.moved_later_count ?? 0}</span>
-    `;
-}
-
-function renderFrontier() {
-    const frontier = roadmapData.frontier;
-    const container = document.getElementById('frontier-container');
-
-    if (!frontier) {
-        container.innerHTML = '<div class="card"><h3>No frontier calculated</h3></div>';
-        return;
-    }
-
-    container.innerHTML = `
-        <div class="card frontier-card">
-            <span class="frontier-badge">YOU ARE NOW HERE</span>
-            <h3>${escapeHtml(frontier.pillar_title)}</h3>
-            <p>${escapeHtml(frontier.reasoning)}</p>
-            <div class="meta">Priority: ${escapeHtml(frontier.priority)} · Active: ${escapeHtml(frontier.active_work)} · Blockers: ${escapeHtml(frontier.blockers)}</div>
-        </div>
-    `;
-}
-
-function renderDecisionContext() {
-    const context = roadmapData.decision_context;
-    const container = document.getElementById('decision-context-container');
-    if (!container) return;
-
-    if (!context) {
-        container.innerHTML = '<div class="card"><h3>No deep-context policy registered</h3></div>';
-        return;
-    }
-
-    container.innerHTML = `
-        <div class="card context-card">
-            <h3>Deep-Context Decision Policy</h3>
-            <p>${escapeHtml(context.policy)}</p>
-            <div class="meta">Index: ${escapeHtml(context.index)}</div>
-        </div>
-    `;
-}
-
-function renderPillars() {
-    const grid = document.getElementById('pillars-grid');
-    const pillars = normalizeList(roadmapData.pillars);
-
-    grid.innerHTML = pillars.map((pillar) => {
-        const activeProjects = normalizeList(pillar.active_projects);
-        return `
-            <article class="card pillar-card" data-pillar-id="${pillar.id}">
-                <h3>${escapeHtml(pillar.title)}</h3>
-                <div class="meta">${escapeHtml(pillar.status)} · ${escapeHtml(pillar.priority)}</div>
-                <p><strong>${activeProjects.length} active project${activeProjects.length === 1 ? '' : 's'}</strong></p>
-                <ul>
-                    ${activeProjects.slice(0, 5).map(p => `<li>${escapeHtml(p)}</li>`).join('')}
-                </ul>
-                ${activeProjects.length > 5 ? `<p class="meta">+ ${activeProjects.length - 5} more</p>` : ''}
-            </article>
-        `;
-    }).join('');
-}
-
-function renderBlockerControls() {
-    const blockers = normalizeList(roadmapData.blocked_items);
-    const pillars = normalizeList(roadmapData.pillars);
-
-    const pillarOptions = ['<option value="all">All Pillars</option>'] + pillars.map(p => `<option value="${p.id}">${p.title}</option>`).join('');
-
-    const container = document.getElementById('blocker-controls');
-    if (!container) return;
-
-    container.innerHTML = `
-        <div class="filter-controls">
-            <input type="text" id="search-blockers" placeholder="Search blockers..." class="search-input">
-            <select id="filter-pillar" class="filter-select">
-                ${pillarOptions}
-            </select>
-            <select id="filter-type" class="filter-select">
-                <option value="all">All Types</option>
-                <option value="NEEDS_DECISION">Needs Decision</option>
-                <option value="BLOCKED_ON">Blocked On</option>
-                <option value="RESOURCE_CONSTRAINT">Resource Constraint</option>
-            </select>
-            <select id="filter-severity" class="filter-select">
-                <option value="all">All Severities</option>
-                <option value="CRITICAL">🔴 Critical</option>
-                <option value="HIGH">🟠 High</option>
-                <option value="MEDIUM">🟡 Medium</option>
-                <option value="LOW">🟢 Low</option>
-            </select>
-            <div class="filter-status" id="filter-status"></div>
-        </div>
-    `;
-}
-
-function applyFilters() {
-    currentFilters.search = document.getElementById('search-blockers')?.value?.toLowerCase() || '';
-    currentFilters.pillar = document.getElementById('filter-pillar')?.value || 'all';
-    currentFilters.type = document.getElementById('filter-type')?.value || 'all';
-    currentFilters.severity = document.getElementById('filter-severity')?.value || 'all';
-
-    const blockers = normalizeList(roadmapData.blocked_items);
-
-    filteredBlockers = blockers.filter(blocker => {
-        const matchSearch = !currentFilters.search || blocker.title.toLowerCase().includes(currentFilters.search);
-        const matchPillar = currentFilters.pillar === 'all' || blocker.pillar_id === currentFilters.pillar;
-        const matchType = currentFilters.type === 'all' || blocker.type === currentFilters.type;
-        const matchSeverity = currentFilters.severity === 'all' || blocker.severity === currentFilters.severity;
-
-        return matchSearch && matchPillar && matchType && matchSeverity;
-    });
-
-    // Sort by severity then by date
-    const severityOrder = { CRITICAL: 0, HIGH: 1, MEDIUM: 2, LOW: 3 };
-    filteredBlockers.sort((a, b) => {
-        if (severityOrder[a.severity] !== severityOrder[b.severity]) {
-            return severityOrder[a.severity] - severityOrder[b.severity];
-        }
-        return new Date(a.created_date) - new Date(b.created_date);
-    });
-
-    renderBlockedItems();
-    updateFilterStatus();
-}
-
-function updateFilterStatus() {
-    const status = document.getElementById('filter-status');
-    if (status) {
-        const total = normalizeList(roadmapData.blocked_items).length;
-        const shown = filteredBlockers.length;
-        status.textContent = `${shown}/${total} blockers`;
-        if (shown !== total) status.style.color = '#f5b400';
-    }
-}
-
-function getSeverityIcon(severity) {
-    const icons = { CRITICAL: '🔴', HIGH: '🟠', MEDIUM: '🟡', LOW: '🟢' };
-    return icons[severity] || '⚪';
-}
-
-function getTypeLabel(type) {
-    const labels = {
-        NEEDS_DECISION: '⚠️ Decision Needed',
-        BLOCKED_ON: '⏸️ Blocked On',
-        RESOURCE_CONSTRAINT: '📦 Resource'
-    };
-    return labels[type] || type;
-}
-
-function getNextSteps(blocker) {
-    const steps = [];
-
-    if (blocker.type === 'NEEDS_DECISION') {
-        steps.push('Assemble decision-makers');
-        steps.push('Review context and options');
-        steps.push('Document decision and reasoning');
-    } else if (blocker.type === 'BLOCKED_ON') {
-        if (blocker.blocked_by) {
-            steps.push(`First resolve: blocker-${blocker.blocked_by}`);
-        }
-        steps.push('Track upstream dependency');
-        steps.push('Follow up on blocking item');
-    } else if (blocker.type === 'RESOURCE_CONSTRAINT') {
-        steps.push('Identify resource gap');
-        steps.push('Propose solution (hire, buy, rescope)');
-        steps.push('Validate feasibility');
-    }
-
-    return steps;
-}
-
-function showBlockerDetail(blockerId) {
-    const blocker = filteredBlockers.find(b => b.id === blockerId);
-    if (!blocker) return;
-
-    const pillars = normalizeList(roadmapData.pillars);
-    const pillarMap = Object.fromEntries(pillars.map(p => [p.id, p.title]));
-    const createdDate = new Date(blocker.created_date);
-    const daysOpen = Math.floor((new Date() - createdDate) / (1000 * 60 * 60 * 24));
-    const nextSteps = getNextSteps(blocker);
-
-    const detailHTML = `
-        <h3>${escapeHtml(blocker.title)}</h3>
-
-        <div class="detail-badges">
-            <span class="badge type-badge">${getTypeLabel(blocker.type)}</span>
-            <span class="badge severity-badge" style="background: ${getSeverityColor(blocker.severity)}">${getSeverityIcon(blocker.severity)} ${blocker.severity}</span>
-            <span class="badge age-badge">Open ${daysOpen}d</span>
-        </div>
-
-        <section class="detail-section">
-            <h4>Pillar</h4>
-            <p>${escapeHtml(pillarMap[blocker.pillar_id] || 'Unknown')}</p>
-        </section>
-
-        <section class="detail-section">
-            <h4>What's Needed</h4>
-            <p>${escapeHtml(blocker.resolution)}</p>
-        </section>
-
-        <section class="detail-section">
-            <h4>Next Steps</h4>
-            <ol>
-                ${nextSteps.map(step => `<li>${escapeHtml(step)}</li>`).join('')}
-            </ol>
-        </section>
-
-        ${blocker.blocked_by ? `
-            <section class="detail-section">
-                <h4>Blocked By</h4>
-                <p class="meta">blocker-${blocker.blocked_by}</p>
-            </section>
-        ` : ''}
-
-        ${blocker.gates && blocker.gates.length > 0 ? `
-            <section class="detail-section">
-                <h4>Gates</h4>
-                <p class="meta">Resolving this unblocks: ${blocker.gates.join(', ')}</p>
-            </section>
-        ` : ''}
-
-        <section class="detail-section">
-            <h4>Timeline</h4>
-            <p>Created: ${blocker.created_date}</p>
-            <p>Open for: ${daysOpen} days</p>
-        </section>
-    `;
-
-    const detailContent = document.getElementById('detail-content');
-    if (detailContent) {
-        detailContent.innerHTML = detailHTML;
-    }
-
-    const detailPanel = document.getElementById('detail-panel');
-    if (detailPanel) {
-        detailPanel.classList.add('open');
-        detailPanel.setAttribute('aria-hidden', 'false');
-    }
-}
-
-function getSeverityColor(severity) {
-    const colors = {
-        CRITICAL: '#ff6b6b',
-        HIGH: '#ff9c3d',
-        MEDIUM: '#f5b400',
-        LOW: '#62d394'
-    };
-    return colors[severity] || '#b7bec6';
-}
-
-function renderBlockedItems() {
-    const list = document.getElementById('blocked-list');
-    if (!list) return;
-
-    if (filteredBlockers.length === 0) {
-        list.innerHTML = '<div class="card"><p class="meta">No blockers match filters</p></div>';
-        return;
-    }
-
-    const pillars = normalizeList(roadmapData.pillars);
-    const pillarMap = Object.fromEntries(pillars.map(p => [p.id, p.title]));
-
-    list.innerHTML = filteredBlockers.map((blocker) => {
-        const createdDate = new Date(blocker.created_date);
-        const daysOpen = Math.floor((new Date() - createdDate) / (1000 * 60 * 60 * 24));
-
-        return `
-            <article class="card blocker-card clickable" data-blocker-id="${blocker.id}">
-                <div class="blocker-header">
-                    <h4>${escapeHtml(blocker.title)}</h4>
-                    <span class="severity-badge">${getSeverityIcon(blocker.severity)} ${blocker.severity}</span>
-                </div>
-                <div class="blocker-meta">
-                    <span class="badge type-badge">${getTypeLabel(blocker.type)}</span>
-                    <span class="badge pillar-badge">${escapeHtml(pillarMap[blocker.pillar_id] || 'Unknown')}</span>
-                    <span class="badge age-badge">Open ${daysOpen}d</span>
-                </div>
-                <p class="resolution">${escapeHtml(blocker.resolution)}</p>
-                ${blocker.blocked_by ? `<p class="meta">Blocked by: blocker-${blocker.blocked_by}</p>` : ''}
-                ${blocker.gates ? `<p class="meta">Gates: ${blocker.gates.join(', ')}</p>` : ''}
-                <p class="meta" style="margin-top: 12px; color: var(--accent); cursor: pointer;">→ View details</p>
-            </article>
-        `;
-    }).join('');
-
-    // Add click handlers to blocker cards
-    document.querySelectorAll('.blocker-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const blockerId = card.getAttribute('data-blocker-id');
-            showBlockerDetail(blockerId);
-        });
-    });
-}
-
-function renderLaterQueue() {
-    const list = document.getElementById('later-list');
-    const items = normalizeList(roadmapData.moved_later_items);
-
-    list.innerHTML = items.map((item) => `
-        <article class="card">
-            <h4>${escapeHtml(item)}</h4>
-            <p class="meta">Moved later · preserved, not deleted</p>
-        </article>
-    `).join('');
-}
-
-function renderCompleted() {
-    const list = document.getElementById('completed-list');
-    const items = normalizeList(roadmapData.completed_items);
-
-    list.innerHTML = items.map((item) => `
-        <article class="card completed-card">
-            <h4>${escapeHtml(item)}</h4>
-            <p class="meta">Completed</p>
-        </article>
-    `).join('');
-}
-
 function setupEventListeners() {
-    // Blocker filters
-    const searchInput = document.getElementById('search-blockers');
-    const filterPillar = document.getElementById('filter-pillar');
-    const filterType = document.getElementById('filter-type');
-    const filterSeverity = document.getElementById('filter-severity');
-    const jumpToNow = document.getElementById('jump-to-now');
+    const viewAllButton = document.getElementById('view-all-work');
+    const viewThisWeekButton = document.getElementById('view-this-week');
+    const closeDetailButton = document.getElementById('close-detail');
 
-    if (searchInput) searchInput.addEventListener('input', applyFilters);
-    if (filterPillar) filterPillar.addEventListener('change', applyFilters);
-    if (filterType) filterType.addEventListener('change', applyFilters);
-    if (filterSeverity) filterSeverity.addEventListener('change', applyFilters);
-
-    if (jumpToNow) {
-        jumpToNow.addEventListener('click', () => {
-            document.getElementById('frontier-section').scrollIntoView({ behavior: 'smooth' });
+    if (viewAllButton) {
+        viewAllButton.addEventListener('click', () => {
+            currentView = 'all';
+            viewAllButton.classList.add('active');
+            viewThisWeekButton.classList.remove('active');
+            // TODO: Implement all work view
+            alert('View all work coming soon');
         });
     }
 
-    // Global search (future implementation - placeholder)
-    const roadmapSearch = document.getElementById('roadmap-search');
-    if (roadmapSearch) {
-        roadmapSearch.addEventListener('input', (e) => {
-            // TODO: Implement global search across pillars, projects, blockers
+    if (viewThisWeekButton) {
+        viewThisWeekButton.addEventListener('click', () => {
+            currentView = 'this-week';
+            viewThisWeekButton.classList.add('active');
+            viewAllButton.classList.remove('active');
+            renderThisWeek();
         });
     }
 
-    // Status filter (future implementation - placeholder)
-    const statusFilter = document.getElementById('status-filter');
-    if (statusFilter) {
-        statusFilter.addEventListener('change', (e) => {
-            // TODO: Implement status-based filtering
+    if (closeDetailButton) {
+        closeDetailButton.addEventListener('click', () => {
+            document.getElementById('branch-detail-section').style.display = 'none';
+            selectedBranch = null;
         });
     }
 
-    // Detail panel close button
-    const closeDetail = document.getElementById('close-detail');
-    if (closeDetail) {
-        closeDetail.addEventListener('click', () => {
-            const detailPanel = document.getElementById('detail-panel');
-            if (detailPanel) {
-                detailPanel.classList.remove('open');
-                detailPanel.setAttribute('aria-hidden', 'true');
-            }
+    // Task card clicks
+    document.querySelectorAll('.task-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const branchId = card.getAttribute('data-branch-id');
+            showBranchDetail(branchId);
         });
-    }
-
-    // Collapse all button (placeholder)
-    const collapseAll = document.getElementById('collapse-all');
-    if (collapseAll) {
-        collapseAll.addEventListener('click', () => {
-            // TODO: Collapse all expandable sections
-        });
-    }
-
-    // Expand critical button (placeholder)
-    const expandCritical = document.getElementById('expand-critical');
-    if (expandCritical) {
-        expandCritical.addEventListener('click', () => {
-            // TODO: Expand only CRITICAL severity blockers
-        });
-    }
-
-    // Initialize filters
-    applyFilters();
+    });
 }
 
 loadRoadmap();
