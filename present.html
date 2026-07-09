@@ -86,6 +86,22 @@
         .phase-heading { display: flex; align-items: center; gap: 12px; margin: 28px 0 16px; }
         .phase-heading h3 { margin: 0; font-size: 1.2rem; }
 
+        /* Detailed steps under each pathway milestone */
+        .path-steps { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+        .path-steps-title { margin: 0 0 10px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); }
+        .path-step { display: flex; gap: 12px; padding: 7px 0; }
+        .path-step-dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 7px; }
+        .path-item.future .path-step-dot { background: var(--secondary); }
+        .path-step-task { font-weight: 600; color: var(--text); }
+        .path-step-why { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+        .path-leads { margin: 14px 0 0; color: var(--secondary); font-weight: 600; }
+
+        /* How it all connects — flow */
+        .flow-list { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+        .flow-row { display: flex; align-items: flex-start; gap: 14px; padding: 9px 0; line-height: 1.55; }
+        .flow-row:not(:last-child) { border-bottom: 1px solid var(--border); }
+        .flow-dot { flex-shrink: 0; width: 12px; height: 12px; border-radius: 50%; margin-top: 5px; background: linear-gradient(135deg, var(--accent), var(--secondary)); }
+
         .present-footer { text-align: center; color: var(--muted); padding: 30px 20px 50px; border-top: 1px solid var(--border); }
         .present-footer a { color: var(--accent); }
         .back-link { display: inline-block; margin: 24px 0 0; color: var(--secondary); text-decoration: none; font-weight: 700; }
@@ -111,15 +127,21 @@
             </section>
 
             <section class="present-section">
-                <h2>The Path</h2>
-                <p class="present-lede" id="p-start"></p>
-                <div class="path-list" id="p-path"></div>
+                <h2>The Structure</h2>
+                <p class="present-lede">The branches of work that make it real, grouped by phase.</p>
+                <div id="p-blocks"></div>
             </section>
 
             <section class="present-section">
-                <h2>The Building Blocks</h2>
-                <p class="present-lede">The branches of work that power the journey.</p>
-                <div id="p-blocks"></div>
+                <h2>How It All Connects</h2>
+                <p class="present-lede">The engine — how the branches feed each other in a self-sustaining loop.</p>
+                <div class="flow-list" id="p-flow"></div>
+            </section>
+
+            <section class="present-section">
+                <h2>The Pathway — Now to the Homestead</h2>
+                <p class="present-lede" id="p-start"></p>
+                <div class="path-list" id="p-path"></div>
             </section>
 
             <div style="text-align:center;">
@@ -167,6 +189,19 @@
             const pathHTML = milestones.map((m, i) => {
                 const branch = branchesById[m.area_branch_id] || {};
                 const future = branch.lifecycle === 'future';
+                const steps = (m.step_ids || []).map(id => itemsById[id]).filter(Boolean);
+                const stepsHTML = steps.length ? `
+                    <div class="path-steps">
+                        <p class="path-steps-title">The steps</p>
+                        ${steps.map(w => `
+                            <div class="path-step">
+                                <span class="path-step-dot"></span>
+                                <div>
+                                    <div class="path-step-task">${esc(w.task)}</div>
+                                    <div class="path-step-why">${esc(w.why || '')}</div>
+                                </div>
+                            </div>`).join('')}
+                    </div>` : '';
                 return `
                     <div class="path-item ${future ? 'future' : ''}">
                         <div class="path-num">${m.order ?? i + 1}</div>
@@ -177,6 +212,8 @@
                             </div>
                             <p>${esc(m.summary || '')}</p>
                             ${m.outcome ? `<p class="outcome"><strong>Outcome:</strong> ${esc(m.outcome)}</p>` : ''}
+                            ${stepsHTML}
+                            ${m.leads_to ? `<p class="path-leads">↳ ${esc(m.leads_to)}</p>` : ''}
                         </div>
                     </div>`;
             }).join('');
@@ -212,6 +249,15 @@
                 blocksHTML = `<div class="blocks-grid">${branches.map(blockCard).join('')}</div>`;
             }
             document.getElementById('p-blocks').innerHTML = blocksHTML;
+
+            // How it all connects — the ecosystem flow
+            const flow = (data.ecosystem_flow && data.ecosystem_flow.flow) || [];
+            document.getElementById('p-flow').innerHTML = flow.length
+                ? flow.map(step => {
+                    const text = String(step).replace(/^\d+\.\s*/, '');
+                    return `<div class="flow-row"><span class="flow-dot"></span><span>${esc(text)}</span></div>`;
+                  }).join('')
+                : '<p class="present-lede">Flow not defined yet.</p>';
 
             const gen = data.generated_at ? new Date(data.generated_at) : null;
             document.getElementById('p-generated').textContent =
