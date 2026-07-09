@@ -214,38 +214,6 @@
       ]
     },
     {
-      "id": "skills-training",
-      "name": "Skills & Certifications",
-      "role": "Formal credential and advanced skill development",
-      "status_percentage": 10,
-      "ultimate_goal": "Develop formal training pathways and certifications for specialized stagehand skills (lighting, sound, rigging, etc.).",
-      "current_state": "Framework defined. Integrated with Crew Blueprint. Deferred pending core platform establishment. Discipline pathways identified.",
-      "critical_blocker": "Crew Blueprint platform must be stable before scaling formal training systems",
-      "timeline": {
-        "phase_1_ready": "Q3 2027",
-        "description": "Map skill certifications to market opportunities, develop assessment criteria"
-      },
-      "blockers": [
-        "Dependent on Crew Blueprint platform stabilization and LMS deployment"
-      ],
-      "work_items": [
-        {
-          "id": "st-1",
-          "task": "Map specialized skill certifications to market demand",
-          "why": "Ensure training pathways align with actual job market needs",
-          "priority": "MEDIUM",
-          "status": "not_started"
-        },
-        {
-          "id": "st-2",
-          "task": "Define assessment and verification criteria",
-          "why": "Create standards for skill validation and credential issuance",
-          "priority": "MEDIUM",
-          "status": "not_started"
-        }
-      ]
-    },
-    {
       "id": "personal-operations",
       "name": "Personal Operations / Roadmap System",
       "role": "Decision framework and execution system for the entire initiative",
@@ -307,11 +275,10 @@
     "flow": [
       "1. Deadhang Labor LLC secures contracts and generates revenue",
       "2. Production Atlas discovers and surfaces job opportunities",
-      "3. The Crew Blueprint trains stagehands in required skills",
+      "3. The Crew Blueprint trains stagehands in the required skills",
       "4. Contractor Tools manage scheduling, communication, and payments",
       "5. Contractors complete gigs through Deadhang deployment",
-      "6. Skills & Certifications validate expertise and market readiness",
-      "7. Repeat: System learns from gigs, improves training, expands opportunities"
+      "6. Repeat: System learns from gigs, improves training, expands opportunities"
     ]
   }
 }

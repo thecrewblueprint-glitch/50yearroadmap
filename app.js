@@ -115,6 +115,14 @@ function renderBranches() {
     const container = document.getElementById('branches-grid');
     const branches = roadmapData.branches || [];
 
+    // Keep the heading count in sync with the data
+    const heading = document.getElementById('branches-heading');
+    if (heading) {
+        heading.textContent = branches.length === 1
+            ? 'The 1 Branch'
+            : `The ${branches.length} Branches`;
+    }
+
     // Pagination logic
     const totalPages = Math.ceil(branches.length / branchesItemsPerPage);
     const startIndex = branchesCurrentPage * branchesItemsPerPage;
@@ -241,11 +249,15 @@ function escapeHtml(value) {
     return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 }
 
-function updateBranchesPaginationUI(currentPage, totalPages) {
-    const prevBtn = document.getElementById('branches-prev');
-    const nextBtn = document.getElementById('branches-next');
-    const pageSpan = document.getElementById('branches-page');
-    const totalSpan = document.getElementById('branches-total');
+function updatePaginationUI(prefix, currentPage, totalPages) {
+    const container = document.getElementById(`${prefix}-pagination`);
+    const prevBtn = document.getElementById(`${prefix}-prev`);
+    const nextBtn = document.getElementById(`${prefix}-next`);
+    const pageSpan = document.getElementById(`${prefix}-page`);
+    const totalSpan = document.getElementById(`${prefix}-total`);
+
+    // Hide the control entirely when everything fits on one page
+    if (container) container.style.display = totalPages <= 1 ? 'none' : 'flex';
 
     if (pageSpan) pageSpan.textContent = currentPage + 1;
     if (totalSpan) totalSpan.textContent = totalPages;
@@ -254,17 +266,12 @@ function updateBranchesPaginationUI(currentPage, totalPages) {
     if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
 }
 
+function updateBranchesPaginationUI(currentPage, totalPages) {
+    updatePaginationUI('branches', currentPage, totalPages);
+}
+
 function updateWorkItemsPaginationUI(currentPage, totalPages) {
-    const prevBtn = document.getElementById('work-items-prev');
-    const nextBtn = document.getElementById('work-items-next');
-    const pageSpan = document.getElementById('work-items-page');
-    const totalSpan = document.getElementById('work-items-total');
-
-    if (pageSpan) pageSpan.textContent = currentPage + 1;
-    if (totalSpan) totalSpan.textContent = totalPages;
-
-    if (prevBtn) prevBtn.disabled = currentPage === 0;
-    if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
+    updatePaginationUI('work-items', currentPage, totalPages);
 }
 
 function setupEventListeners() {

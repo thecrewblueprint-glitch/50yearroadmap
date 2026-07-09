@@ -34,20 +34,16 @@
             <div id="this-week-tasks" class="tasks-grid"></div>
         </section>
 
-        <!-- The 6 Branches -->
+        <!-- Branches -->
         <section id="branches-section">
-            <div class="section-header">
-                <div>
-                    <h2>The 6 Branches</h2>
-                    <p class="section-intro">What needs to be built to reach your ultimate goal</p>
-                </div>
-                <div id="branches-pagination" class="pagination">
-                    <button class="pagination-btn" id="branches-prev" aria-label="Previous branches page">←</button>
-                    <span class="pagination-info"><span id="branches-page">1</span> / <span id="branches-total">2</span></span>
-                    <button class="pagination-btn" id="branches-next" aria-label="Next branches page">→</button>
-                </div>
-            </div>
+            <h2 id="branches-heading">The Branches</h2>
+            <p class="section-intro">What needs to be built to reach your ultimate goal</p>
             <div id="branches-grid" class="branches-grid"></div>
+            <div id="branches-pagination" class="pagination pagination-bottom">
+                <button class="pagination-btn" id="branches-prev" aria-label="Previous branches page">←</button>
+                <span class="pagination-info"><span id="branches-page">1</span> / <span id="branches-total">2</span></span>
+                <button class="pagination-btn" id="branches-next" aria-label="Next branches page">→</button>
+            </div>
         </section>
 
         <!-- Branch Detail Panel -->
@@ -76,15 +72,13 @@
                 </div>
             </div>
             <div class="work-items-section">
-                <div class="work-items-header">
-                    <h3>Work Items</h3>
-                    <div id="work-items-pagination" class="pagination" style="gap: 8px;">
-                        <button class="pagination-btn" id="work-items-prev" aria-label="Previous work items page">←</button>
-                        <span class="pagination-info"><span id="work-items-page">1</span> / <span id="work-items-total">1</span></span>
-                        <button class="pagination-btn" id="work-items-next" aria-label="Next work items page">→</button>
-                    </div>
-                </div>
+                <h3>Work Items</h3>
                 <div id="branch-work-items" class="work-items-list"></div>
+                <div id="work-items-pagination" class="pagination pagination-bottom">
+                    <button class="pagination-btn" id="work-items-prev" aria-label="Previous work items page">←</button>
+                    <span class="pagination-info"><span id="work-items-page">1</span> / <span id="work-items-total">1</span></span>
+                    <button class="pagination-btn" id="work-items-next" aria-label="Next work items page">→</button>
+                </div>
             </div>
             <button id="close-detail" class="close-button">← Back to Dashboard</button>
         </section>
