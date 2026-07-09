@@ -121,6 +121,132 @@ button.active {
 
 .section-intro { color: var(--muted); margin-top: -4px; }
 
+/* ---- The End Goal & path ---- */
+#end-goal-section { margin-bottom: 40px; }
+
+.end-goal-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(6,182,212,0.08));
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 14px;
+    padding: 22px;
+    margin: 16px 0 28px;
+}
+
+.end-goal-card h3 {
+    color: var(--text);
+    font-size: 1.35rem;
+    margin: 4px 0 12px;
+}
+
+.end-goal-card p:last-child {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.path-title {
+    color: var(--text);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 16px;
+}
+
+.phases-path {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.path-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--muted);
+    border-radius: 10px;
+    padding: 16px 18px;
+}
+
+.path-step.active { border-left-color: var(--accent); }
+.path-step.future { border-left-color: var(--secondary); opacity: 0.92; }
+.path-step.destination {
+    border-left-color: #f5b400;
+    background: linear-gradient(135deg, rgba(245,180,0,0.1), rgba(255,255,255,0.02));
+}
+
+.path-step-marker {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 1.1rem;
+    background: rgba(59,130,246,0.15);
+    color: var(--accent);
+}
+
+.path-step.future .path-step-marker { background: rgba(6,182,212,0.15); color: var(--secondary); }
+.path-step.destination .path-step-marker { background: rgba(245,180,0,0.18); color: #f5b400; }
+
+.path-step-body { flex: 1; }
+
+.path-step-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.path-step-name { font-weight: 700; font-size: 1.05rem; }
+.path-step-goal { margin: 0; color: var(--muted); line-height: 1.55; }
+
+/* ---- Phase badges ---- */
+.phase-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.phase-badge.active { background: rgba(16,185,129,0.16); color: var(--success); }
+.phase-badge.future { background: rgba(6,182,212,0.16); color: var(--secondary); }
+.phase-badge.destination { background: rgba(245,180,0,0.18); color: #f5b400; }
+
+/* ---- Phase groups in the branches section ---- */
+.phase-group { margin-bottom: 32px; }
+
+.phase-group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.phase-group-title {
+    color: var(--text);
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.phase-group-goal {
+    color: var(--muted);
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.branch-card.future { opacity: 0.9; }
+.branch-card.future .branch-status { color: var(--secondary); }
+
 .phase-banner {
     background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(6,182,212,0.06));
     border: 1px solid rgba(59,130,246,0.2);

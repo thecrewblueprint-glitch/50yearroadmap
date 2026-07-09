@@ -56,7 +56,9 @@
           "priority": "MEDIUM",
           "status": "not_started"
         }
-      ]
+      ],
+      "phase": 1,
+      "lifecycle": "active"
     },
     {
       "id": "crew-blueprint",
@@ -105,7 +107,9 @@
           "priority": "MEDIUM",
           "status": "not_started"
         }
-      ]
+      ],
+      "phase": 1,
+      "lifecycle": "active"
     },
     {
       "id": "production-atlas",
@@ -162,7 +166,9 @@
           "priority": "MEDIUM",
           "status": "not_started"
         }
-      ]
+      ],
+      "phase": 1,
+      "lifecycle": "active"
     },
     {
       "id": "contractor-tools",
@@ -211,7 +217,9 @@
           "priority": "MEDIUM",
           "status": "not_started"
         }
-      ]
+      ],
+      "phase": 1,
+      "lifecycle": "active"
     },
     {
       "id": "personal-operations",
@@ -268,6 +276,86 @@
           "priority": "MEDIUM",
           "status": "not_started"
         }
+      ],
+      "phase": 1,
+      "lifecycle": "active"
+    },
+    {
+      "id": "land-acquisition",
+      "name": "Land Acquisition",
+      "role": "Securing the ground the Homestead is built on",
+      "phase": 2,
+      "lifecycle": "future",
+      "status_percentage": 0,
+      "ultimate_goal": "Acquire and hold suitable land as the physical foundation for the Homestead community.",
+      "current_state": "Future phase. Not started. Depends on the Phase 1 engine generating enough stability and revenue to support a land purchase.",
+      "critical_blocker": "Requires a self-sustaining Phase 1 engine before land can responsibly be acquired",
+      "timeline": {
+        "phase_1_ready": "Phase 2",
+        "description": "Begins once the Labor to Training to Jobs engine is self-sustaining"
+      },
+      "blockers": [
+        "Depends on Phase 1 revenue and stability",
+        "Location, financing, and use requirements not yet defined"
+      ],
+      "work_items": [
+        {
+          "id": "la-1",
+          "task": "Define location, size, and use requirements for the Homestead land",
+          "why": "Know what to look for before committing capital",
+          "priority": "LOW",
+          "status": "not_started"
+        },
+        {
+          "id": "la-2",
+          "task": "Outline financing path for acquisition",
+          "why": "Understand how a purchase gets funded from Phase 1 revenue",
+          "priority": "LOW",
+          "status": "not_started"
+        }
+      ]
+    },
+    {
+      "id": "homestead",
+      "name": "The Homestead / Homes for Hands",
+      "role": "The destination - a community home base for traveling stagehands",
+      "phase": 2,
+      "lifecycle": "future",
+      "status_percentage": 0,
+      "ultimate_goal": "A centralized place where stagehands and traveling workers rest between gigs, find resources, get trained, and connect with contractors to source work - staying for a nominal fee, with a path for permanent residents who help care for the community.",
+      "current_state": "Vision stage and the ultimate destination. Deferred until the Phase 1 engine runs and land is secured. Housing is added later, on top of the labor / training / job-placement flow.",
+      "critical_blocker": "Requires the Phase 1 foundation and acquired land before it can begin",
+      "timeline": {
+        "phase_1_ready": "Phase 2",
+        "description": "Begins after the engine is self-sustaining and land is secured"
+      },
+      "blockers": [
+        "Depends on the Phase 1 Labor to Training to Jobs engine",
+        "Depends on Land Acquisition",
+        "Operating model (stays, fees, resident stewardship) not yet defined"
+      ],
+      "work_items": [
+        {
+          "id": "hs-1",
+          "task": "Define the Homestead operating model: stays, nominal fees, and resident stewardship",
+          "why": "Turn the vision into concrete rules for how the place runs",
+          "priority": "LOW",
+          "status": "not_started"
+        },
+        {
+          "id": "hs-2",
+          "task": "Define the way-station experience: rest, resources, and gig connections for visiting contractors",
+          "why": "This is the core service the Homestead provides between gigs",
+          "priority": "LOW",
+          "status": "not_started"
+        },
+        {
+          "id": "hs-3",
+          "task": "Define the permanent-resident / community-care standard",
+          "why": "Set expectations for people who stay and help keep the community running",
+          "priority": "LOW",
+          "status": "not_started"
+        }
       ]
     }
   ],
@@ -280,5 +368,41 @@
       "5. Contractors complete gigs through Deadhang deployment",
       "6. Repeat: System learns from gigs, improves training, expands opportunities"
     ]
-  }
+  },
+  "north_star": "Build the movement and the Homestead: a community home base where traveling stagehands rest between gigs, find resources, get trained, and connect to work — powered by a self-sustaining Labor to Training to Jobs engine.",
+  "end_goal": {
+    "destination": "The Homestead + the movement around it",
+    "what_it_is": "A centralized place where stagehands and traveling workers stop and rest between gigs, find resources, get trained, and connect with contractors to source work. People stay for a nominal fee that keeps the doors open; those who want to stay permanently can, so long as they help care for the community.",
+    "how_to_reach_it": [
+      "Phase 1 - Build the engine: make Deadhang Labor, The Crew Blueprint, Production Atlas, and Contractor Tools into a working Labor to Training to Jobs flow that earns revenue and grows a community of contractors.",
+      "Phase 2 - Acquire the ground: secure land once the Phase 1 engine is self-sustaining.",
+      "Phase 2 - Build the Homestead: stand up the physical home base and the way-station / stewardship model on that land.",
+      "Ongoing - Grow the movement: the engine keeps feeding people, training, and work into the Homestead community."
+    ]
+  },
+  "phases": [
+    {
+      "number": 1,
+      "name": "Foundation - Labor, Training, Jobs",
+      "status": "active",
+      "goal": "Stand up a self-sustaining engine: reliable labor, skill-building, and job discovery that earn revenue and build a contractor community.",
+      "branch_ids": [
+        "deadhang-labor",
+        "crew-blueprint",
+        "production-atlas",
+        "contractor-tools",
+        "personal-operations"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "The Homestead - The Destination",
+      "status": "future",
+      "goal": "Acquire land and build the physical community home base once the Phase 1 engine can support it.",
+      "branch_ids": [
+        "land-acquisition",
+        "homestead"
+      ]
+    }
+  ]
 }

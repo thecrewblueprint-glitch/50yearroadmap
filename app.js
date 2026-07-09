@@ -1,8 +1,6 @@
 let roadmapData = {};
 let currentView = 'this-week';
 let selectedBranch = null;
-let branchesCurrentPage = 0;
-let branchesItemsPerPage = 3;
 let workItemsCurrentPage = 0;
 let workItemsItemsPerPage = 3;
 
@@ -21,10 +19,60 @@ async function loadRoadmap() {
 function renderDashboard() {
     renderUltimateGoal();
     renderPhase();
+    renderEndGoal();
     renderThisWeek();
     renderBranches();
     renderEcosystem();
     setupEventListeners();
+}
+
+function renderEndGoal() {
+    const endGoal = roadmapData.end_goal || {};
+    const destEl = document.getElementById('end-goal-destination');
+    const whatEl = document.getElementById('end-goal-what');
+    if (destEl) destEl.textContent = endGoal.destination || roadmapData.north_star || '';
+    if (whatEl) whatEl.textContent = endGoal.what_it_is || '';
+
+    const pathContainer = document.getElementById('phases-path');
+    if (!pathContainer) return;
+
+    const phases = roadmapData.phases || [];
+    const steps = endGoal.how_to_reach_it || [];
+
+    // Prefer the explicit phase model; fall back to the how_to_reach list.
+    if (phases.length) {
+        pathContainer.innerHTML = phases.map((p, i) => `
+            <div class="path-step ${p.status === 'active' ? 'active' : 'future'}">
+                <div class="path-step-marker">${p.number ?? i + 1}</div>
+                <div class="path-step-body">
+                    <div class="path-step-head">
+                        <span class="path-step-name">${escapeHtml(p.name)}</span>
+                        <span class="phase-badge ${p.status === 'active' ? 'active' : 'future'}">${p.status === 'active' ? 'In progress' : 'Future'}</span>
+                    </div>
+                    <p class="path-step-goal">${escapeHtml(p.goal || '')}</p>
+                </div>
+            </div>
+        `).join('') + `
+            <div class="path-step destination">
+                <div class="path-step-marker">★</div>
+                <div class="path-step-body">
+                    <div class="path-step-head">
+                        <span class="path-step-name">${escapeHtml(roadmapData.end_goal?.destination || 'The Homestead')}</span>
+                        <span class="phase-badge destination">Destination</span>
+                    </div>
+                    <p class="path-step-goal">${escapeHtml(roadmapData.north_star || '')}</p>
+                </div>
+            </div>`;
+    } else if (steps.length) {
+        pathContainer.innerHTML = steps.map((s, i) => `
+            <div class="path-step">
+                <div class="path-step-marker">${i + 1}</div>
+                <div class="path-step-body"><p class="path-step-goal">${escapeHtml(s)}</p></div>
+            </div>
+        `).join('');
+    } else {
+        pathContainer.innerHTML = '<p class="meta">Path not defined yet</p>';
+    }
 }
 
 function renderUltimateGoal() {
@@ -111,36 +159,21 @@ function setFocusHeading(text) {
     if (heading) heading.textContent = text;
 }
 
-function renderBranches() {
-    const container = document.getElementById('branches-grid');
-    const branches = roadmapData.branches || [];
-
-    // Keep the heading count in sync with the data
-    const heading = document.getElementById('branches-heading');
-    if (heading) {
-        heading.textContent = branches.length === 1
-            ? 'The 1 Branch'
-            : `The ${branches.length} Branches`;
-    }
-
-    // Pagination logic
-    const totalPages = Math.ceil(branches.length / branchesItemsPerPage);
-    const startIndex = branchesCurrentPage * branchesItemsPerPage;
-    const endIndex = startIndex + branchesItemsPerPage;
-    const pageItems = branches.slice(startIndex, endIndex);
-
-    container.innerHTML = pageItems.map(branch => `
-        <div class="branch-card clickable" role="button" tabindex="0" data-branch-id="${branch.id}">
+function branchCardHTML(branch) {
+    const pct = Number(branch.status_percentage) || 0;
+    const isFuture = branch.lifecycle === 'future';
+    return `
+        <div class="branch-card clickable ${isFuture ? 'future' : ''}" role="button" tabindex="0" data-branch-id="${branch.id}">
             <div class="branch-header">
                 <div>
                     <h3 class="branch-name">${escapeHtml(branch.name)}</h3>
                     <p class="branch-role">${escapeHtml(branch.role)}</p>
                 </div>
-                <div class="branch-status">${Number(branch.status_percentage) || 0}%</div>
+                <div class="branch-status">${pct}%</div>
             </div>
 
             <div class="progress-bar">
-                <div class="progress-fill" style="width: ${Number(branch.status_percentage) || 0}%"></div>
+                <div class="progress-fill" style="width: ${pct}%"></div>
             </div>
 
             <p style="margin: 12px 0 0 0; font-size: 0.9rem; line-height: 1.5;">
@@ -153,10 +186,48 @@ function renderBranches() {
                 </div>
             ` : ''}
         </div>
-    `).join('');
+    `;
+}
 
-    // Update pagination UI
-    updateBranchesPaginationUI(branchesCurrentPage, totalPages);
+function renderBranches() {
+    const container = document.getElementById('branches-by-phase');
+    const branches = roadmapData.branches || [];
+    const phases = roadmapData.phases || [];
+
+    // Keep the heading count in sync with the data
+    const heading = document.getElementById('branches-heading');
+    if (heading) {
+        heading.textContent = branches.length === 1
+            ? 'The 1 Branch'
+            : `The ${branches.length} Branches`;
+    }
+
+    const byId = Object.fromEntries(branches.map(b => [b.id, b]));
+
+    // Group by the declared phase model; fall back to a single group.
+    let groupsHTML;
+    if (phases.length) {
+        const claimed = new Set();
+        groupsHTML = phases.map(phase => {
+            const items = (phase.branch_ids || [])
+                .map(id => byId[id])
+                .filter(Boolean);
+            items.forEach(b => claimed.add(b.id));
+            if (!items.length) return '';
+            return phaseGroupHTML(phase, items);
+        }).join('');
+
+        // Any branch not listed in a phase still shows, so nothing hides.
+        const orphans = branches.filter(b => !claimed.has(b.id));
+        if (orphans.length) {
+            groupsHTML += phaseGroupHTML(
+                { name: 'Other', status: 'active', goal: '' }, orphans);
+        }
+    } else {
+        groupsHTML = `<div class="branches-grid">${branches.map(branchCardHTML).join('')}</div>`;
+    }
+
+    container.innerHTML = groupsHTML;
 
     // Add click + keyboard listeners
     document.querySelectorAll('.branch-card.clickable').forEach(card => {
@@ -169,6 +240,20 @@ function renderBranches() {
             }
         });
     });
+}
+
+function phaseGroupHTML(phase, items) {
+    const active = phase.status === 'active';
+    return `
+        <div class="phase-group ${active ? 'active' : 'future'}">
+            <div class="phase-group-header">
+                <h3 class="phase-group-title">Phase ${phase.number ?? ''} — ${escapeHtml(phase.name)}</h3>
+                <span class="phase-badge ${active ? 'active' : 'future'}">${active ? 'In progress' : 'Future'}</span>
+            </div>
+            ${phase.goal ? `<p class="phase-group-goal">${escapeHtml(phase.goal)}</p>` : ''}
+            <div class="branches-grid">${items.map(branchCardHTML).join('')}</div>
+        </div>
+    `;
 }
 
 function showBranchDetail(branchId) {
@@ -266,10 +351,6 @@ function updatePaginationUI(prefix, currentPage, totalPages) {
     if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
 }
 
-function updateBranchesPaginationUI(currentPage, totalPages) {
-    updatePaginationUI('branches', currentPage, totalPages);
-}
-
 function updateWorkItemsPaginationUI(currentPage, totalPages) {
     updatePaginationUI('work-items', currentPage, totalPages);
 }
@@ -301,28 +382,6 @@ function setupEventListeners() {
         closeDetailButton.addEventListener('click', () => {
             document.getElementById('branch-detail-section').style.display = 'none';
             selectedBranch = null;
-        });
-    }
-
-    // Branches pagination
-    const branchesPrevBtn = document.getElementById('branches-prev');
-    const branchesNextBtn = document.getElementById('branches-next');
-    if (branchesPrevBtn) {
-        branchesPrevBtn.addEventListener('click', () => {
-            if (branchesCurrentPage > 0) {
-                branchesCurrentPage--;
-                renderBranches();
-            }
-        });
-    }
-    if (branchesNextBtn) {
-        branchesNextBtn.addEventListener('click', () => {
-            const branches = roadmapData.branches || [];
-            const totalPages = Math.ceil(branches.length / branchesItemsPerPage);
-            if (branchesCurrentPage < totalPages - 1) {
-                branchesCurrentPage++;
-                renderBranches();
-            }
         });
     }
 
