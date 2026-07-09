@@ -21,17 +21,19 @@ You are an AI agent operating inside the Operations Command Center.
 3. `/data/roadmap-deep-context` — special high-meaning roadmap context that influences direction.
 4. `/data/raw-reports` — curated watcher-ready operational digests.
 5. `/data/roadmap` — approved state and decision indexes.
-6. `/docs` — live GitHub Pages dashboard output.
+6. Repository root (`index.html`, `app.js`, `styles.css`, `roadmap.json`) — live GitHub Pages dashboard output.
 
 ## Ingestion Workflow
 
-1. Preserve new raw archives in `/memories`.
-2. Run or trigger memory processing to create `/memories/processed` chunks and indexes.
-3. Review relevant chunks and create curated digest files in `/data/raw-reports`.
-4. Store mission/identity/values-heavy roadmap material in `/data/roadmap-deep-context`.
-5. Run the watcher to propose updates to `/data/roadmap/watcher-proposals.json`.
-6. Promote approved data into `/data/roadmap/projects.json`, `/data/roadmap/tasks.json`, and `/roadmap.json`.
-7. Validate and summarize changes for user review.
+Automated (✅) vs. manual/planned (⏳):
+
+1. ✅ Preserve new raw archives in `/memories`.
+2. ✅ Run or trigger memory processing (`scripts/process-memories.py`, also wired to a GitHub Action) to create `/memories/processed` chunks and indexes.
+3. ⏳ Review relevant chunks and create curated digest files in `/data/raw-reports`.
+4. ⏳ Store mission/identity/values-heavy roadmap material in `/data/roadmap-deep-context` (directory not yet committed).
+5. ⏳ Watcher step — planned. There is no watcher script yet; proposals are made by hand.
+6. ⏳ Promote approved data into the live root `roadmap.json` (branch model: `branches`, `this_week_focus`, `ecosystem_flow`).
+7. ⏳ Validate and summarize changes for user review.
 
 ## Status Definitions
 

@@ -68,14 +68,22 @@ function renderThisWeek() {
         });
     });
 
-    container.innerHTML = focusItems.map(item => `
-        <div class="task-card" data-task-id="${item.id}" data-branch-id="${item.branch_id}">
-            <div class="task-priority ${item.priority.toLowerCase()}">${item.priority}</div>
+    setFocusHeading('Your Focus This Week');
+    container.innerHTML = focusItems.map(taskCardHTML).join('');
+}
+
+// Single source of truth for a task card. Guards missing fields so a work
+// item without a priority/branch does not throw.
+function taskCardHTML(item) {
+    const priority = item.priority || 'MEDIUM';
+    return `
+        <div class="task-card" role="button" tabindex="0" data-task-id="${item.id}" data-branch-id="${item.branch_id}">
+            <div class="task-priority ${priority.toLowerCase()}">${escapeHtml(priority)}</div>
             <div class="task-title">${escapeHtml(item.task)}</div>
             <div class="task-why">${escapeHtml(item.why)}</div>
             <div class="task-branch">→ ${escapeHtml(item.branch_name)}</div>
         </div>
-    `).join('');
+    `;
 }
 
 function renderAllWork() {
@@ -94,14 +102,13 @@ function renderAllWork() {
     const priorityOrder = { CRITICAL: 0, HIGH: 1, MEDIUM: 2, LOW: 3 };
     allItems.sort((a, b) => (priorityOrder[a.priority] || 99) - (priorityOrder[b.priority] || 99));
 
-    container.innerHTML = allItems.map(item => `
-        <div class="task-card" data-task-id="${item.id}" data-branch-id="${item.branch_id}">
-            <div class="task-priority ${item.priority.toLowerCase()}">${item.priority}</div>
-            <div class="task-title">${escapeHtml(item.task)}</div>
-            <div class="task-why">${escapeHtml(item.why)}</div>
-            <div class="task-branch">→ ${escapeHtml(item.branch_name)}</div>
-        </div>
-    `).join('');
+    setFocusHeading(`All Work (${allItems.length} items)`);
+    container.innerHTML = allItems.map(taskCardHTML).join('');
+}
+
+function setFocusHeading(text) {
+    const heading = document.getElementById('focus-heading');
+    if (heading) heading.textContent = text;
 }
 
 function renderBranches() {
@@ -115,17 +122,17 @@ function renderBranches() {
     const pageItems = branches.slice(startIndex, endIndex);
 
     container.innerHTML = pageItems.map(branch => `
-        <div class="branch-card clickable" data-branch-id="${branch.id}">
+        <div class="branch-card clickable" role="button" tabindex="0" data-branch-id="${branch.id}">
             <div class="branch-header">
                 <div>
                     <h3 class="branch-name">${escapeHtml(branch.name)}</h3>
                     <p class="branch-role">${escapeHtml(branch.role)}</p>
                 </div>
-                <div class="branch-status">${branch.status_percentage}%</div>
+                <div class="branch-status">${Number(branch.status_percentage) || 0}%</div>
             </div>
 
             <div class="progress-bar">
-                <div class="progress-fill" style="width: ${branch.status_percentage}%"></div>
+                <div class="progress-fill" style="width: ${Number(branch.status_percentage) || 0}%"></div>
             </div>
 
             <p style="margin: 12px 0 0 0; font-size: 0.9rem; line-height: 1.5;">
@@ -143,11 +150,15 @@ function renderBranches() {
     // Update pagination UI
     updateBranchesPaginationUI(branchesCurrentPage, totalPages);
 
-    // Add click listeners
+    // Add click + keyboard listeners
     document.querySelectorAll('.branch-card.clickable').forEach(card => {
-        card.addEventListener('click', () => {
-            const branchId = card.getAttribute('data-branch-id');
-            showBranchDetail(branchId);
+        const open = () => showBranchDetail(card.getAttribute('data-branch-id'));
+        card.addEventListener('click', open);
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                open();
+            }
         });
     });
 }
@@ -161,10 +172,12 @@ function showBranchDetail(branchId) {
 
     // Populate detail section
     document.getElementById('branch-detail-title').textContent = branch.name;
-    document.getElementById('branch-goal').textContent = branch.ultimate_goal;
-    document.getElementById('branch-current').textContent = branch.current_state;
-    document.getElementById('branch-timeline').textContent =
-        `${branch.timeline.phase_1_ready}: ${branch.timeline.description}`;
+    document.getElementById('branch-goal').textContent = branch.ultimate_goal || '';
+    document.getElementById('branch-current').textContent = branch.current_state || '';
+    const timeline = branch.timeline || {};
+    document.getElementById('branch-timeline').textContent = timeline.phase_1_ready
+        ? `${timeline.phase_1_ready}: ${timeline.description || ''}`
+        : 'Not scheduled yet';
 
     // Blockers
     const blockersList = document.getElementById('branch-blockers');
@@ -188,15 +201,18 @@ function renderWorkItems(branch) {
     const endIndex = startIndex + workItemsItemsPerPage;
     const pageItems = items.slice(startIndex, endIndex);
 
-    workItemsList.innerHTML = pageItems.map(item => `
+    workItemsList.innerHTML = pageItems.map(item => {
+        const status = item.status || 'not_started';
+        return `
         <div class="work-item">
             <div class="work-item-info">
                 <div class="work-item-title">${escapeHtml(item.task)}</div>
                 <div class="work-item-why">${escapeHtml(item.why)}</div>
             </div>
-            <div class="work-item-status ${item.status}">${item.status.replace('_', ' ')}</div>
+            <div class="work-item-status ${status}">${escapeHtml(status.replace(/_/g, ' '))}</div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 
     // Update pagination UI
     updateWorkItemsPaginationUI(workItemsCurrentPage, totalPages);
@@ -329,14 +345,21 @@ function setupEventListeners() {
         });
     }
 
-    // Task card clicks — delegated to the container so cards stay clickable
-    // after re-renders (view toggles regenerate the cards).
+    // Task card clicks + keyboard — delegated to the container so cards stay
+    // interactive after re-renders (view toggles regenerate the cards).
     const tasksContainer = document.getElementById('this-week-tasks');
     if (tasksContainer) {
-        tasksContainer.addEventListener('click', (e) => {
+        const openFromEvent = (e) => {
             const card = e.target.closest('.task-card');
-            if (card) {
-                showBranchDetail(card.getAttribute('data-branch-id'));
+            if (card) showBranchDetail(card.getAttribute('data-branch-id'));
+        };
+        tasksContainer.addEventListener('click', openFromEvent);
+        tasksContainer.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (e.target.closest('.task-card')) {
+                    e.preventDefault();
+                    openFromEvent(e);
+                }
             }
         });
     }
