@@ -34,62 +34,60 @@
         .sitemap-back:hover { text-decoration: underline; }
         .sitemap-nav { display: flex; flex-direction: column; gap: 4px; }
         .sitemap-top-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 12px;
-            border-radius: 8px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
+            display: flex; align-items: center; gap: 8px;
+            padding: 9px 12px; border-radius: 8px;
+            color: var(--text); text-decoration: none;
+            font-weight: 700; font-size: 0.95rem;
         }
         .sitemap-top-link:hover { background: var(--card); }
         .sitemap-phase {
-            margin: 16px 0 6px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--muted);
-            padding: 0 12px;
+            margin: 16px 0 6px; font-size: 0.7rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            color: var(--muted); padding: 0 12px;
         }
         .sitemap-link {
-            display: block;
-            padding: 9px 12px;
-            border-radius: 8px;
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.92rem;
+            display: block; padding: 9px 12px; border-radius: 8px;
+            color: var(--muted); text-decoration: none; font-size: 0.92rem;
             border-left: 3px solid transparent;
         }
         .sitemap-link:hover { background: var(--card); color: var(--text); }
         .sitemap-link.active {
-            background: var(--accent-soft);
-            color: var(--accent);
-            border-left-color: var(--accent);
-            font-weight: 700;
+            background: var(--accent-soft); color: var(--accent);
+            border-left-color: var(--accent); font-weight: 700;
         }
 
-        /* ---- Branch detail ---- */
+        /* ---- Branch content ---- */
         .branch-main { min-width: 0; }
         .branch-eyebrow { color: var(--accent); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.8rem; margin: 0 0 6px; }
         .branch-title { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 6px; letter-spacing: -0.02em; }
         .branch-role-lg { color: var(--muted); font-size: 1.05rem; margin: 0 0 20px; }
 
-        .branch-progress { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+        .branch-progress { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
         .branch-progress .progress-bar { flex: 1; margin: 0; height: 10px; }
         .branch-progress-pct { font-weight: 800; font-size: 1.1rem; color: var(--text); min-width: 48px; text-align: right; }
 
-        .branch-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 28px; }
+        .explore-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 30px 0 14px; }
+        .branch-nav-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+        .branch-nav-card {
+            display: flex; flex-direction: column; gap: 4px;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 18px; text-decoration: none;
+            transition: all 180ms ease;
+        }
+        .branch-nav-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(59,130,246,0.12); }
+        .nav-card-count { font-size: 1.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
+        .nav-card-label { font-weight: 700; color: var(--text); }
+        .nav-card-sub { font-size: 0.85rem; color: var(--muted); }
+
+        .subview-back { display: inline-block; margin-bottom: 14px; color: var(--secondary); text-decoration: none; font-weight: 700; }
+        .subview-back:hover { text-decoration: underline; }
+
         .branch-back-bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
         .branch-back-bottom a { color: var(--secondary); text-decoration: none; font-weight: 700; }
 
-        /* Mobile: menu on top, single column */
         @media (max-width: 820px) {
             .branch-layout { grid-template-columns: 1fr; gap: 20px; }
             .sitemap { position: static; }
-            .branch-detail-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -108,8 +106,9 @@
     <script>
         function esc(v){return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');}
 
-        function getBranchId() {
-            return new URLSearchParams(window.location.search).get('branch');
+        function params() {
+            const p = new URLSearchParams(window.location.search);
+            return { id: p.get('branch'), view: p.get('view') || 'overview' };
         }
 
         async function load() {
@@ -130,30 +129,90 @@
             const branches = data.branches || [];
             const phases = data.phases || [];
             const byId = Object.fromEntries(branches.map(b => [b.id, b]));
-            const currentId = getBranchId();
-            const current = byId[currentId];
+            const { id, view } = params();
+            const branch = byId[id];
 
-            renderSitemap(data, branches, phases, currentId);
+            renderSitemap(data, branches, phases, id);
 
             const main = document.getElementById('branch-main');
-            if (!current) {
+            if (!branch) {
                 main.innerHTML = `
                     <p class="branch-eyebrow">Deadhang Labor · Branches</p>
                     <h1 class="branch-title">Pick a branch</h1>
-                    <p class="branch-role-lg">Choose a branch from the menu to see its full detail.</p>`;
+                    <p class="branch-role-lg">Choose a branch from the menu to see its detail.</p>`;
                 return;
             }
 
-            document.title = current.name + ' — Deadhang Labor';
-            const pct = Number(current.status_percentage) || 0;
-            const isFuture = current.lifecycle === 'future';
-            const phaseNum = current.phase ? `Phase ${current.phase}` : '';
-            const timeline = current.timeline || {};
+            if (view === 'work') { renderWork(branch); return; }
+            if (view === 'blockers') { renderBlockers(branch); return; }
+            if (view === 'details') { renderDetails(branch); return; }
+            renderOverview(branch);
+        }
 
-            const blockers = (current.blockers || []).map(b => `<li>${esc(b)}</li>`).join('')
-                || '<li class="meta">None recorded</li>';
+        function branchHref(branch, view) {
+            const base = 'branch.html?branch=' + encodeURIComponent(branch.id);
+            return view ? base + '&view=' + view : base;
+        }
 
-            const workItems = (current.work_items || []).map(w => {
+        // ---- Overview: only the important things + links out ----
+        function renderOverview(branch) {
+            document.title = branch.name + ' — Deadhang Labor';
+            const pct = Number(branch.status_percentage) || 0;
+            const isFuture = branch.lifecycle === 'future';
+            const phaseNum = branch.phase ? `Phase ${branch.phase}` : '';
+            const workCount = (branch.work_items || []).length;
+            const blockerCount = (branch.blockers || []).length;
+
+            document.getElementById('branch-main').innerHTML = `
+                <p class="branch-eyebrow">${esc([phaseNum, isFuture ? 'Future' : 'Active'].filter(Boolean).join(' · '))}</p>
+                <h1 class="branch-title">${esc(branch.name)}</h1>
+                <p class="branch-role-lg">${esc(branch.role || '')}</p>
+
+                <div class="branch-progress">
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                    <span class="branch-progress-pct">${pct}%</span>
+                </div>
+
+                <div class="detail-box">
+                    <h3>Why this branch exists</h3>
+                    <p>${esc(branch.ultimate_goal || '')}</p>
+                </div>
+
+                ${branch.critical_blocker ? `<div class="blocker-badge" style="margin-top:16px;">🚫 ${esc(branch.critical_blocker)}</div>` : ''}
+
+                <h3 class="explore-title">Explore this branch</h3>
+                <div class="branch-nav-cards">
+                    <a class="branch-nav-card" href="${branchHref(branch, 'work')}">
+                        <span class="nav-card-count">${workCount}</span>
+                        <span class="nav-card-label">Work Items</span>
+                        <span class="nav-card-sub">What needs doing →</span>
+                    </a>
+                    <a class="branch-nav-card" href="${branchHref(branch, 'blockers')}">
+                        <span class="nav-card-count">${blockerCount}</span>
+                        <span class="nav-card-label">Blockers</span>
+                        <span class="nav-card-sub">What's in the way →</span>
+                    </a>
+                    <a class="branch-nav-card" href="${branchHref(branch, 'details')}">
+                        <span class="nav-card-count">›</span>
+                        <span class="nav-card-label">Details &amp; Timeline</span>
+                        <span class="nav-card-sub">Current state &amp; plan →</span>
+                    </a>
+                </div>
+
+                <div class="branch-back-bottom"><a href="index.html">← Back to Timeline</a></div>`;
+            window.scrollTo({ top: 0 });
+        }
+
+        function subviewHeader(branch, label) {
+            return `
+                <a class="subview-back" href="${branchHref(branch)}">← ${esc(branch.name)}</a>
+                <p class="branch-eyebrow">${esc(branch.name)}</p>
+                <h1 class="branch-title">${esc(label)}</h1>`;
+        }
+
+        function renderWork(branch) {
+            document.title = branch.name + ' · Work Items';
+            const items = (branch.work_items || []).map(w => {
                 const st = w.status || 'not_started';
                 return `
                     <div class="work-item">
@@ -165,45 +224,30 @@
                     </div>`;
             }).join('') || '<p class="meta">No work items yet.</p>';
 
-            main.innerHTML = `
-                <p class="branch-eyebrow">${esc([phaseNum, isFuture ? 'Future' : 'Active'].filter(Boolean).join(' · '))}</p>
-                <h1 class="branch-title">${esc(current.name)}</h1>
-                <p class="branch-role-lg">${esc(current.role || '')}</p>
+            document.getElementById('branch-main').innerHTML =
+                subviewHeader(branch, 'Work Items') +
+                `<div class="work-items-list" style="margin-top:16px;">${items}</div>`;
+            window.scrollTo({ top: 0 });
+        }
 
-                <div class="branch-progress">
-                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-                    <span class="branch-progress-pct">${pct}%</span>
-                </div>
+        function renderBlockers(branch) {
+            document.title = branch.name + ' · Blockers';
+            const list = (branch.blockers || []).map(b => `<li>${esc(b)}</li>`).join('')
+                || '<li class="meta">None recorded</li>';
+            document.getElementById('branch-main').innerHTML =
+                subviewHeader(branch, 'Blockers') +
+                (branch.critical_blocker ? `<div class="blocker-badge" style="margin:8px 0 18px;">🚫 ${esc(branch.critical_blocker)}</div>` : '') +
+                `<div class="detail-box"><h3>What's blocking progress</h3><ul>${list}</ul></div>`;
+            window.scrollTo({ top: 0 });
+        }
 
-                ${current.critical_blocker ? `<div class="blocker-badge">🚫 ${esc(current.critical_blocker)}</div>` : ''}
-
-                <div class="branch-detail-grid" style="margin-top:24px;">
-                    <div class="detail-box">
-                        <h3>Ultimate Goal</h3>
-                        <p>${esc(current.ultimate_goal || '')}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Current State</h3>
-                        <p>${esc(current.current_state || '')}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Timeline</h3>
-                        <p>${timeline.phase_1_ready ? esc(timeline.phase_1_ready + ': ' + (timeline.description || '')) : 'Not scheduled yet'}</p>
-                    </div>
-                    <div class="detail-box">
-                        <h3>Critical Blockers</h3>
-                        <ul>${blockers}</ul>
-                    </div>
-                </div>
-
-                <div class="work-items-section">
-                    <h3>Work Items</h3>
-                    <div class="work-items-list">${workItems}</div>
-                </div>
-
-                <div class="branch-back-bottom">
-                    <a href="index.html">← Back to Timeline</a>
-                </div>`;
+        function renderDetails(branch) {
+            document.title = branch.name + ' · Details';
+            const t = branch.timeline || {};
+            document.getElementById('branch-main').innerHTML =
+                subviewHeader(branch, 'Details & Timeline') +
+                `<div class="detail-box" style="margin-top:16px;"><h3>Current State</h3><p>${esc(branch.current_state || '')}</p></div>
+                 <div class="detail-box" style="margin-top:16px;"><h3>Timeline</h3><p>${t.phase_1_ready ? esc(t.phase_1_ready + ': ' + (t.description || '')) : 'Not scheduled yet'}</p></div>`;
             window.scrollTo({ top: 0 });
         }
 
@@ -227,13 +271,10 @@
                     html += items.map(linkFor).join('');
                 });
                 const orphans = branches.filter(b => !claimed.has(b.id));
-                if (orphans.length) {
-                    html += `<p class="sitemap-phase">Other</p>` + orphans.map(linkFor).join('');
-                }
+                if (orphans.length) html += `<p class="sitemap-phase">Other</p>` + orphans.map(linkFor).join('');
             } else {
                 html += `<p class="sitemap-phase">Branches</p>` + branches.map(linkFor).join('');
             }
-
             nav.innerHTML = html;
         }
 
