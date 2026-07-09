@@ -99,8 +99,16 @@ Before committing a `roadmap.json` change, confirm:
 - Every id in `this_week_focus` matches a real work-item id.
 - No duplicate work-item ids.
 
-(A validator script for this model is planned but not yet built — until then,
-check by hand or with a quick script and record the result in the CHANGELOG.)
+Run the validator instead of checking by hand:
+
+```bash
+python3 scripts/validate-roadmap.py
+```
+
+It enforces every rule above plus enum/range checks and a public-safety scan
+(no email/phone/SSN/card/address/HTML). Exit code 0 = pass, 1 = errors. Run it
+before committing any `roadmap.json` change; a failing validation must be fixed,
+not committed.
 
 ---
 
@@ -150,7 +158,8 @@ When you start:
 2. Read this file and the relevant source files.
 
 When you work:
-3. Make focused changes on `main`. Validate `roadmap.json` if touched (§4).
+3. Make focused changes on `main`. If you touched `roadmap.json`, run
+   `python3 scripts/validate-roadmap.py` and fix any errors before committing.
 4. Verify the live pages still render (open them / do a headless check).
 
 When you finish:

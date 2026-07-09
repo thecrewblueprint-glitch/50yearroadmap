@@ -18,9 +18,7 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
   `claude/repository-review-yvxvn5` but targets the retired pillar model and
   was never merged. Rebuilding it for the current branch/journey model is a
   planned project (pairs with the future database migration).
-- **No automated `roadmap.json` validator yet.** Integrity is checked by hand
-  against the rules in `AGENTS.md` §4. A validator for the current model is a
-  natural next step (the watcher already does the reference-resolution work).
+_(No open threads at the moment.)_
 - **No automated `roadmap.json` validator yet.** Integrity is checked by hand
   against the rules in `AGENTS.md` §4. A validator for the current model is
   planned.
@@ -28,6 +26,18 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 ---
 
 ## Entries
+
+### 2026-07-09 — roadmap.json validator
+- Added `scripts/validate-roadmap.py` for the current model. Enforces the
+  AGENTS.md §4 integrity rules (all step/branch/phase/focus refs resolve, no
+  duplicate ids, every branch in exactly one phase, valid `you_are_here`) plus
+  enum/range checks (priority, status, lifecycle, phase status, milestone state,
+  status_percentage 0-100) and a public-safety scan (email/phone/SSN/card/real
+  street address/HTML = error; owner personal name = warning).
+- Exit code 0 = pass, 1 = errors, so it can gate commits/CI. Verified: the live
+  roadmap PASSes with no warnings; a copy with 11 planted violations FAILs and
+  each violation is reported.
+- Wired into AGENTS.md §4 and the coordination checklist as the pre-commit step.
 
 ### 2026-07-09 — New watcher (branch/journey model)
 - Built `scripts/roadmap-watcher.py` for the current model, using the retired
