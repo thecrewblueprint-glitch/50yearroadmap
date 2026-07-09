@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Roadmap Public Safety Schema",
+  "description": "Strict schema for roadmap data. All fields exposed to GitHub Pages must pass this validation.",
+  "type": "object",
+  "definitions": {
+    "safeString": {
+      "type": "string",
+      "maxLength": 500,
+      "pattern": "^[^<>]*$",
+      "description": "String safe for public display. No HTML, no phone numbers, no emails, no addresses."
+    },
+    "statusEnum": {
+      "type": "string",
+      "enum": ["active", "completed", "moved_later", "blocked", "loose_thread", "conflict", "rejected", "future"]
+    },
+    "priorityEnum": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"]
+    },
+    "progressionTrack": {
+      "type": "string",
+      "enum": [
+        "primary_path",
+        "business_operations",
+        "content_platform",
+        "software_projects",
+        "land_and_legacy",
+        "personal_admin",
+        "skills_progression"
+      ]
+    }
+  },
+  "properties": {
+    "vision": {
+      "type": "object",
+      "required": ["id", "title", "summary", "time_horizon"],
+      "properties": {
+        "id": { "$ref": "#/definitions/safeString" },
+        "title": { "$ref": "#/definitions/safeString" },
+        "summary": { "$ref": "#/definitions/safeString" },
+        "time_horizon": { "type": "string" }
+      }
+    },
+    "pillars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "purpose", "status", "priority"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "purpose": { "$ref": "#/definitions/safeString" },
+          "status": { "$ref": "#/definitions/statusEnum" },
+          "priority": { "$ref": "#/definitions/priorityEnum" },
+          "sequence_order": { "type": "integer", "minimum": 1 },
+          "progression_track": { "$ref": "#/definitions/progressionTrack" }
+        }
+      }
+    },
+    "programs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "purpose": { "$ref": "#/definitions/safeString" },
+          "status": { "$ref": "#/definitions/statusEnum" },
+          "priority": { "$ref": "#/definitions/priorityEnum" },
+          "progression_track": { "$ref": "#/definitions/progressionTrack" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "purpose": { "$ref": "#/definitions/safeString" },
+          "summary": { "$ref": "#/definitions/safeString" },
+          "status": { "$ref": "#/definitions/statusEnum" },
+          "priority": { "$ref": "#/definitions/priorityEnum" },
+          "progression_track": { "$ref": "#/definitions/progressionTrack" },
+          "pillar_id": { "type": "string" }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "summary": { "$ref": "#/definitions/safeString" },
+          "status": { "$ref": "#/definitions/statusEnum" },
+          "priority": { "$ref": "#/definitions/priorityEnum" },
+          "progression_track": { "$ref": "#/definitions/progressionTrack" },
+          "project_id": { "type": "string" },
+          "blocked_by": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "movedLater": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "reason": { "$ref": "#/definitions/safeString" },
+          "moved_later_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "looseThreads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "notes": { "$ref": "#/definitions/safeString" }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "sources"],
+        "properties": {
+          "id": { "$ref": "#/definitions/safeString" },
+          "title": { "$ref": "#/definitions/safeString" },
+          "sources": { "type": "array", "items": { "type": "string" } },
+          "status": { "$ref": "#/definitions/statusEnum" }
+        }
+      }
+    }
+  },
+  "forbidden_patterns": {
+    "description": "Patterns that must NEVER appear in public roadmap data",
+    "phone_number": "\\+?1?\\s*\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}",
+    "email_address": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+    "street_address": "\\d+\\s+[A-Za-z\\s]+(?:St|Ave|Rd|Blvd|Way|Drive|Court|Lane|Parkway)",
+    "person_name_with_context": "(?:Aaron|Bowman|Mesa|Arizona|LLC)",
+    "credit_card": "\\b(?:\\d{4}[-\\s]?){3}\\d{4}\\b",
+    "ssn": "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+    "bank_account": "(?:account|routing|swift)\\s*(?:number|code)",
+    "api_key": "(?:api[_-]?key|secret|token|password)\\s*[:=]"
+  }
+}

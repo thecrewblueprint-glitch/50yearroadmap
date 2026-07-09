@@ -18,15 +18,9 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
   `claude/repository-review-yvxvn5` but targets the retired pillar model and
   was never merged. Rebuilding it for the current branch/journey model is a
   planned project (pairs with the future database migration).
-- **Deep-context files missing from `main`.**
-  `data/roadmap/deep-context-decision-sources.json` references files under
-  `data/roadmap-deep-context/` that currently live only on
-  `claude/repository-review-yvxvn5`. Decide what to bring over (see the
-  2026-07-09 branch audit).
-- **Useful unmerged content on `claude/repository-review-yvxvn5`.** Curated
-  digests, governance docs (`DATA_SAFETY_POLICY.md`, `data/schema/`), workflow
-  docs, and raw memory archives are on that branch only. Awaiting owner
-  decision on what to port to `main`.
+- **Watcher rebuild in progress.** The old pillar-model watcher is being
+  replaced by a new branch/journey-model watcher built directly on `main`
+  (owner decision 2026-07-09: only the new version lives in the repo).
 - **No automated `roadmap.json` validator yet.** Integrity is checked by hand
   against the rules in `AGENTS.md` §4. A validator for the current model is
   planned.
@@ -34,6 +28,17 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 ---
 
 ## Entries
+
+### 2026-07-09 — Port useful content from feature branch to main
+- Brought over from `claude/repository-review-yvxvn5` (owner-approved):
+  `data/roadmap-deep-context/` (2 files — resolves the dangling reference in
+  `deep-context-decision-sources.json`), `data/raw-reports/` (10 curated
+  digests), `DATA_SAFETY_POLICY.md`, and `data/schema/roadmap-public-safety.json`.
+- Did **not** port the 7 root `.zip` archives — `main` already has them under
+  `memories/` (correct location) and already processed. The feature-branch
+  copies at repo root were misplaced duplicates.
+- Did **not** port the old `docs/` dashboard copy (superseded) or the
+  old-model watcher (being rebuilt instead).
 
 ### 2026-07-09 — Collaboration system + branch audit
 - Rewrote `AGENTS.md` into a multi-agent operating guide: commit-to-`main` /
