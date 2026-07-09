@@ -338,13 +338,17 @@ function setupEventListeners() {
         });
     }
 
-    // Task card clicks
-    document.querySelectorAll('.task-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const branchId = card.getAttribute('data-branch-id');
-            showBranchDetail(branchId);
+    // Task card clicks — delegated to the container so cards stay clickable
+    // after re-renders (view toggles regenerate the cards).
+    const tasksContainer = document.getElementById('this-week-tasks');
+    if (tasksContainer) {
+        tasksContainer.addEventListener('click', (e) => {
+            const card = e.target.closest('.task-card');
+            if (card) {
+                showBranchDetail(card.getAttribute('data-branch-id'));
+            }
         });
-    });
+    }
 }
 
 loadRoadmap();
