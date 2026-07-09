@@ -18,9 +18,9 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
   `claude/repository-review-yvxvn5` but targets the retired pillar model and
   was never merged. Rebuilding it for the current branch/journey model is a
   planned project (pairs with the future database migration).
-- **Watcher rebuild in progress.** The old pillar-model watcher is being
-  replaced by a new branch/journey-model watcher built directly on `main`
-  (owner decision 2026-07-09: only the new version lives in the repo).
+- **No automated `roadmap.json` validator yet.** Integrity is checked by hand
+  against the rules in `AGENTS.md` §4. A validator for the current model is a
+  natural next step (the watcher already does the reference-resolution work).
 - **No automated `roadmap.json` validator yet.** Integrity is checked by hand
   against the rules in `AGENTS.md` §4. A validator for the current model is
   planned.
@@ -28,6 +28,22 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 ---
 
 ## Entries
+
+### 2026-07-09 — New watcher (branch/journey model)
+- Built `scripts/roadmap-watcher.py` for the current model, using the retired
+  pillar-model watcher only as reference (the old code was not merged).
+- It loads current branches from `roadmap.json`, extracts work-item/blocker
+  candidates from `data/raw-reports/*-digest.md`, maps them to branches,
+  applies public-safe filtering (`data/schema/roadmap-public-safety.json`),
+  de-dupes against the existing roadmap, and writes **proposals only** to
+  `data/roadmap/watcher-proposals.json`. It never edits `roadmap.json`.
+- First run: 133 claims → 114 new suggestions, 10 already-tracked, 9 unmapped,
+  0 unsafe. Verified deterministic and that `roadmap.json` is untouched.
+- Fixed a false-positive in the street-address safety check (the schema regex
+  matched "way" inside words like "Pathway"); the watcher now uses a stricter,
+  word-boundaried, case-sensitive address detector.
+- Added `WATCHER_GUIDE.md`; updated `AGENTS.md` §5 (watcher now available as a
+  proposal generator, run manually).
 
 ### 2026-07-09 — Port useful content from feature branch to main
 - Brought over from `claude/repository-review-yvxvn5` (owner-approved):

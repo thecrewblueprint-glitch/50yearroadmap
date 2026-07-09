@@ -111,10 +111,12 @@ check by hand or with a quick script and record the result in the CHANGELOG.)
   `/memories/processed`. This is safe to re-run; it rebuilds its output.
 - ⏳ **Curation → roadmap** — done by hand. Read chunks, distill into
   `/data/raw-reports`, then update `roadmap.json`.
-- ⏳ **Watcher** — a watcher that proposes roadmap updates from evidence
-  existed for the old pillar model but is not active and is not wired to the
-  current data model. Rebuilding it for the branch/journey model is a planned
-  project. Do not claim the watcher is running.
+- 🟡 **Watcher (proposals only)** — `scripts/roadmap-watcher.py` reads the
+  curated digests, maps candidate work items / blockers to the current
+  branches, filters for public-safety, de-dupes against the existing roadmap,
+  and writes **proposals** to `data/roadmap/watcher-proposals.json`. It does
+  **not** edit `roadmap.json` — a human promotes approved proposals by hand.
+  See `WATCHER_GUIDE.md`. (Running it is manual, not wired into CI.)
 
 ---
 
