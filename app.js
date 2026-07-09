@@ -8,22 +8,13 @@ let workItemsItemsPerPage = 3;
 
 async function loadRoadmap() {
     try {
-        const paths = ['roadmap.json', 'docs/roadmap.json'];
-        let response;
-
-        for (const path of paths) {
-            try {
-                response = await fetch(path, { cache: 'no-store' });
-                if (response.ok) break;
-            } catch (e) {}
-        }
-
-        if (!response || !response.ok) throw new Error('Could not load roadmap.json');
+        const response = await fetch('roadmap.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Could not load roadmap.json');
         roadmapData = await response.json();
         renderDashboard();
     } catch (error) {
         console.error('Failed to load roadmap.json', error);
-        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap.json</h1><p>Check that docs/roadmap.json exists and is valid JSON.</p></main>';
+        document.body.innerHTML = '<main class="error"><h1>Error loading roadmap.json</h1><p>Check that roadmap.json exists and is valid JSON.</p></main>';
     }
 }
 

@@ -48,7 +48,7 @@ roadmap watcher proposals
   ↓
 approved /data/roadmap state
   ↓
-/docs/roadmap.json dashboard snapshot
+/roadmap.json dashboard snapshot
 ```
 
 Deep-context files follow a parallel route:
@@ -66,7 +66,7 @@ watcher decision context for priority, sequencing, frontier, and project boundar
 The live dashboard reads:
 
 ```text
-docs/roadmap.json
+roadmap.json
 ```
 
 That snapshot is currently built from the watcher-processed roadmap data and includes:

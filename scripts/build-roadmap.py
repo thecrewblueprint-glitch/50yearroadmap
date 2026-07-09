@@ -20,10 +20,9 @@ def build():
         "conflicts": load_json('data/roadmap/conflicts.json')
     }
     
-    os.makedirs('docs', exist_ok=True)
-    with open('docs/roadmap.json', 'w') as f:
+    with open('roadmap.json', 'w') as f:
         json.dump(roadmap, f, indent=2)
-    print("✅ Roadmap compiled to docs/roadmap.json")
+    print("✅ Roadmap compiled to roadmap.json")
 
 if __name__ == "__main__":
     build()

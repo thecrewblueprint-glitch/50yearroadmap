@@ -1,10 +1,8 @@
 # GitHub Pages configuration for 50-year roadmap dashboard
 #
-# NOTE: The published site is served from the repository ROOT
-# (index.html, app.js, styles.css, roadmap.json live at the root).
-# The Pages source folder is set in repo Settings > Pages, not here.
-# The docs/ copies are a development mirror — keep them in sync with
-# root, or the live site (served from root) will not reflect changes.
+# The site is served from the repository ROOT: index.html, app.js,
+# styles.css, and roadmap.json all live at the top level. The Pages
+# source folder is set in repo Settings > Pages, not here.
 theme: null
 plugins: []
 
