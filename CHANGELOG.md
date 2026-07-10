@@ -27,6 +27,24 @@ _(No open threads at the moment.)_
 
 ## Entries
 
+### 2026-07-09 — End-to-end flow audit + watcher accuracy fixes
+- Audited the full pipeline (process-memories → watcher → validator → dashboard).
+  Findings: memory processing is deterministic (8 archives → 518 sources → 880
+  chunks, committed output accurate); validator passes on live and catches all
+  planted violations; dashboard renders; watcher never writes `roadmap.json`.
+- Watcher accuracy: confident mappings are correct (it rightly routes
+  invoice→Contractor Tools and market-research→Production Atlas despite
+  misleading titles). Found several clearly-mappable items being left unmapped
+  because the keyword index ignored branch blockers.
+- Fix: `branch_keyword_index` now also draws from each branch's `blockers` and
+  `critical_blocker`. Result: unmapped 9 → 2 (the 2 left are genuinely
+  ambiguous), already-tracked recognition 10 → 14, no new mis-maps.
+- Polished the proposal `detail` field (stripped markdown bold / empty labels).
+- Known/accepted: 1 of 124 mapped items is a borderline route (a "roadmap
+  milestones" note whose sentence references Homes for Hands scored Homestead
+  8 vs Personal-Ops 7). Left as-is — it's what human review catches, and
+  title-weighting to fix it would regress the correctly-overridden titles.
+
 ### 2026-07-09 — roadmap.json validator
 - Added `scripts/validate-roadmap.py` for the current model. Enforces the
   AGENTS.md §4 integrity rules (all step/branch/phase/focus refs resolve, no

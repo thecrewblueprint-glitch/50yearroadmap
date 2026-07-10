@@ -113,8 +113,12 @@ def branch_name_tokens(branch: dict) -> set[str]:
 
 
 def branch_keyword_index(branch: dict) -> set[str]:
+    # Draw keywords from every curated field that describes the branch's scope,
+    # including its blockers — incoming blocker claims often echo the wording of
+    # blockers the branch already tracks, which improves mapping accuracy.
     parts = [branch.get("name", ""), branch.get("role", ""),
-             branch.get("ultimate_goal", "")]
+             branch.get("ultimate_goal", ""), branch.get("critical_blocker", "")]
+    parts.extend(branch.get("blockers", []) or [])
     for w in branch.get("work_items", []):
         parts.append(w.get("task", ""))
     return tokens(" ".join(parts))
@@ -267,9 +271,12 @@ def main() -> int:
         already = any(jaccard(title_toks, ex) >= DEDUP_JACCARD
                       for ex in meta[best_id]["existing"])
 
+        detail = re.sub(r"\*\*", "", claim["desc"])          # drop markdown bold
+        detail = re.sub(r"\s+", " ", detail).strip()          # collapse whitespace
+        detail = re.sub(r"\s*Evidence:\s*$", "", detail)      # drop empty trailing label
         entry = {
             "suggestion": claim["title"],
-            "detail": claim["desc"][:500],
+            "detail": detail[:500],
             "evidence": claim["evidence"],
             "confidence": "high" if best_score >= NAME_TOKEN_WEIGHT else "medium",
             "already_in_roadmap": already,

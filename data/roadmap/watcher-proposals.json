@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T23:33:15+00:00",
+  "generated_at": "2026-07-10T00:54:43+00:00",
   "generator": "scripts/roadmap-watcher.py",
   "model": "branch-journey",
   "note": "Proposals for human review. Nothing here is applied to roadmap.json automatically. Promote approved items by hand.",
@@ -24,9 +24,9 @@
   "summary": {
     "branches": 7,
     "claims_extracted": 133,
-    "new_suggestions": 114,
-    "already_in_roadmap": 10,
-    "unmapped": 9,
+    "new_suggestions": 117,
+    "already_in_roadmap": 14,
+    "unmapped": 2,
     "flagged_unsafe": 0
   },
   "proposals_by_branch": {
@@ -35,42 +35,42 @@
       "work_item_candidates": [
         {
           "suggestion": "Deadhang Labor LLC Operating Context",
-          "detail": "**Status:** active **Project:** Deadhang Labor LLC business operations **Decision:** Deadhang Labor LLC should be treated as Aaron’s live-event labor and production support business. Applications and work inquiries should present the LLC as the applying entity where appropriate and Aaron as owner/operator or primary contact. Work history must stay accurate and not imply direct contracting/employment where only field-adjacent work occurred. **Pillar:** pillar-1 (Deadhang Labor LLC) **Evidence:** ",
+          "detail": "Status: active Project: Deadhang Labor LLC business operations Decision: Deadhang Labor LLC should be treated as Aaron’s live-event labor and production support business. Applications and work inquiries should present the LLC as the applying entity where appropriate and Aaron as owner/operator or primary contact. Work history must stay accurate and not imply direct contracting/employment where only field-adjacent work occurred. Pillar: pillar-1 (Deadhang Labor LLC) Evidence: `memories/processed/",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Deadhang Active Website Scope",
-          "detail": "**Status:** active **Project:** Deadhang website/cPanel cleanup **Decision:** The Deadhang website is live. Remaining active website/cPanel focus is SSL/security. Portfolio cleanup, image/caption organization, sitemap/page updates, and email setup were deprioritized unless reopened. **Pillar:** pillar-1 (Deadhang Labor LLC) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__03_DEADHANG_LABOR_LLC.md__chunk-0001.md` lines 6",
+          "detail": "Status: active Project: Deadhang website/cPanel cleanup Decision: The Deadhang website is live. Remaining active website/cPanel focus is SSL/security. Portfolio cleanup, image/caption organization, sitemap/page updates, and email setup were deprioritized unless reopened. Pillar: pillar-1 (Deadhang Labor LLC) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__03_DEADHANG_LABOR_LLC.md__chunk-0001.md` lines 63-72; `memories/proc",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Deadhang Invoice Direction",
-          "detail": "**Status:** active **Project:** Invoice app/system **Decision:** Current invoice direction favors a narrow offline/static invoice workflow: fixed layout, fixed positions, pasted text mapped into invoice fields, PDF output, no drag/click invoice builder, and complete handoff/package delivery rather than scattered snippets. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__03_DEADHAN",
+          "detail": "Status: active Project: Invoice app/system Decision: Current invoice direction favors a narrow offline/static invoice workflow: fixed layout, fixed positions, pasted text mapped into invoice fields, PDF output, no drag/click invoice builder, and complete handoff/package delivery rather than scattered snippets. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__03_DEADHANG_LABOR_LLC.md__chun",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Website Portfolio",
-          "detail": "**Status:** Planning phase (blocked on MVP) **Project:** Deadhang Labor LLC website redesign + portfolio **Decision:** Build Deadhang website with: - About section (personality-driven) - Portfolio (best work photography curated for business value) - Integration links to/from Crew Blueprint - Phase 1: Learn user voice - Phase 2: Extract personality profile - Phase 3: Portfolio review (image curation) - Phase 4: Site architecture - Phase 5: Code build **Pillar:** pillar-1 (Deadhang Labor LLC) **Ev",
+          "detail": "Status: Planning phase (blocked on MVP) Project: Deadhang Labor LLC website redesign + portfolio Decision: Build Deadhang website with: - About section (personality-driven) - Portfolio (best work photography curated for business value) - Integration links to/from Crew Blueprint - Phase 1: Learn user voice - Phase 2: Extract personality profile - Phase 3: Portfolio review (image curation) - Phase 4: Site architecture - Phase 5: Code build Pillar: pillar-1 (Deadhang Labor LLC) Evidence: Business w",
           "evidence": "data/raw-reports/2026-07-06-claude-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Deadhang First-Year Business Document System",
-          "detail": "**Status:** active **Project:** Business operations documentation **Decision:** Prioritize first-year business documents: business plan, formation/EIN records, operating agreement, customer contract/terms, invoice template, expense tracker, profit-and-loss statement, website privacy/terms, SOPs, content calendar, marketing tracker, and policy set. **Pillar:** pillar-1 (Deadhang Labor LLC) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity",
+          "detail": "Status: active Project: Business operations documentation Decision: Prioritize first-year business documents: business plan, formation/EIN records, operating agreement, customer contract/terms, invoice template, expense tracker, profit-and-loss statement, website privacy/terms, SOPs, content calendar, marketing tracker, and policy set. Pillar: pillar-1 (Deadhang Labor LLC) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-what_are_key_busine",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Deadhang MSA / Client Agreement Selection",
-          "detail": "**Status:** active **Project:** Client contract framework **Decision:** Prefer the stronger Deadhang client MSA draft as the default because it has clearer project-authorization workflow, broader legal/operational coverage, mutual indemnification, and better payment detail. Add missing clauses before final use where needed, such as dispute resolution/venue, force majeure, notice method, non-solicitation, and intellectual-property ownership if relevant. **Pillar:** pillar-1 (Deadhang Labor LLC) *",
+          "detail": "Status: active Project: Client contract framework Decision: Prefer the stronger Deadhang client MSA draft as the default because it has clearer project-authorization workflow, broader legal/operational coverage, mutual indemnification, and better payment detail. Add missing clauses before final use where needed, such as dispute resolution/venue, force majeure, notice method, non-solicitation, and intellectual-property ownership if relevant. Pillar: pillar-1 (Deadhang Labor LLC) Evidence: `memori",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -104,6 +104,13 @@
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
+        },
+        {
+          "suggestion": "Repository needs comprehensive audit before more research batches",
+          "detail": "The handoff explicitly says to run a comprehensive code audit and cleanup of `research-version` before continuing research.",
+          "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
+          "confidence": "medium",
+          "already_in_roadmap": false
         }
       ]
     },
@@ -112,84 +119,77 @@
       "work_item_candidates": [
         {
           "suggestion": "Crew Blueprint Content-First Pause",
-          "detail": "**Status:** active **Project:** Crew Blueprint LMS/course workflow **Decision:** The LMS was disabled on 2026-06-11 because the display/transfer pattern did not preserve the written course packet flow. Robust LMS rebuild is paused; priority is creating and storing course packets first, then building a simpler MVP display later. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__04",
+          "detail": "Status: active Project: Crew Blueprint LMS/course workflow Decision: The LMS was disabled on 2026-06-11 because the display/transfer pattern did not preserve the written course packet flow. Robust LMS rebuild is paused; priority is creating and storing course packets first, then building a simpler MVP display later. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__04_THE_CREW_BLUEPRINT.",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Course and Safety Positioning",
-          "detail": "**Status:** active **Project:** Crew Blueprint training content **Decision:** Crew Blueprint is a job-readiness training platform for stagehands/live-event workers. Course 1 is Stagehand Fundamentals, with modules, quizzes, 80% pass threshold, retakes, and a canonical lesson structure. The platform must avoid unauthorized certification claims and consistently position training as orientation/job-readiness unless certification is actually authorized. **Pillar:** pillar-2 (The Crew Blueprint) **Ev",
+          "detail": "Status: active Project: Crew Blueprint training content Decision: Crew Blueprint is a job-readiness training platform for stagehands/live-event workers. Course 1 is Stagehand Fundamentals, with modules, quizzes, 80% pass threshold, retakes, and a canonical lesson structure. The platform must avoid unauthorized certification claims and consistently position training as orientation/job-readiness unless certification is actually authorized. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Brand System",
-          "detail": "**Status:** active **Project:** Crew Blueprint brand/design **Decision:** Approved brand direction is dark industrial, with charcoal/near-black surfaces, industrial gold/amber accents, off-white text, muted gray secondary text, mobile-first layout, and avoidance of generic school, white-page, neon, gaming, cluttered, or tiny-text designs. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_ex",
+          "detail": "Status: active Project: Crew Blueprint brand/design Decision: Approved brand direction is dark industrial, with charcoal/near-black surfaces, industrial gold/amber accents, off-white text, muted gray secondary text, mobile-first layout, and avoidance of generic school, white-page, neon, gaming, cluttered, or tiny-text designs. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__04_THE_CREW",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint — MVP First Priority",
-          "detail": "**Status:** Critical priority (blocks Deadhang site linking) **Decision:** Crew Blueprint must reach MVP state 100% before cross-linking **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** User explicitly deprioritized Deadhang site work until Blueprint MVP complete ---",
+          "detail": "Status: Critical priority (blocks Deadhang site linking) Decision: Crew Blueprint must reach MVP state 100% before cross-linking Pillar: pillar-2 (The Crew Blueprint) Evidence: User explicitly deprioritized Deadhang site work until Blueprint MVP complete ---",
           "evidence": "data/raw-reports/2026-07-06-claude-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Roadmap DNA vs. Crew Blueprint Toolkit Boundary",
-          "detail": "**Status:** active **Project:** 50-year roadmap / The Crew Blueprint boundary **Decision:** Frequency, principles, Watch/Do/Teach philosophy, and deeper why belong in the 50-year roadmap repository, not inside The Crew Blueprint curriculum. The Crew Blueprint should remain a professional technical education hub. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: 50-year roadmap / The Crew Blueprint boundary Decision: Frequency, principles, Watch/Do/Teach philosophy, and deeper why belong in the 50-year roadmap repository, not inside The Crew Blueprint curriculum. The Crew Blueprint should remain a professional technical education hub. Pillar: pillar-2 (The Crew Blueprint) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Technical Scope Boundary",
-          "detail": "**Status:** active **Project:** The Crew Blueprint **Decision:** The Crew Blueprint should focus on stagehand, rigging, AV, and live-event production industry materials. It should not become the full Homes for Hands philosophy vault or a broad general-lifestyle platform. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: The Crew Blueprint Decision: The Crew Blueprint should focus on stagehand, rigging, AV, and live-event production industry materials. It should not become the full Homes for Hands philosophy vault or a broad general-lifestyle platform. Pillar: pillar-2 (The Crew Blueprint) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Discipline Pathway Map",
-          "detail": "**Status:** active **Project:** The Crew Blueprint repository structure **Decision:** The Crew Blueprint should include granular pathways for specific jobs in the field, not only broad categories. Stagehand/Ground Labor must be represented as its own discipline because ground labor is a large share of the workforce. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`. ---",
+          "detail": "Status: active Project: The Crew Blueprint repository structure Decision: The Crew Blueprint should include granular pathways for specific jobs in the field, not only broad categories. Stagehand/Ground Labor must be represented as its own discipline because ground labor is a large share of the workforce. Pillar: pillar-2 (The Crew Blueprint) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`. ---",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Authority-First Positioning",
-          "detail": "**Status:** active **Project:** Crew Blueprint positioning and business model **Decision:** Shift The Crew Blueprint away from vague “digital ecosystem” / “digital real estate” language and toward career progression, safety, certification guidance, and practical field tools for production technicians. The strongest strategic angle is career progression for production technicians, not generic education or passive content volume. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/pr",
+          "detail": "Status: active Project: Crew Blueprint positioning and business model Decision: Shift The Crew Blueprint away from vague “digital ecosystem” / “digital real estate” language and toward career progression, safety, certification guidance, and practical field tools for production technicians. The strongest strategic angle is career progression for production technicians, not generic education or passive content volume. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/Perpl",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Product Asset Focus",
-          "detail": "**Status:** active **Project:** Crew Blueprint first products/resources **Decision:** De-emphasize stock textures, generic graphics, and broad digital assets. Prioritize practical job tools: safety checklists, load sheets, inspection templates, prep guides, SOPs, job trackers, and field-document-style resources. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-I_am_going_to_give_you_a_business_p",
+          "detail": "Status: active Project: Crew Blueprint first products/resources Decision: De-emphasize stock textures, generic graphics, and broad digital assets. Prioritize practical job tools: safety checklists, load sheets, inspection templates, prep guides, SOPs, job trackers, and field-document-style resources. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-I_am_going_to_give_you_a_business_plan_and_I_would_like",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint WordPress / Gutenberg Direction",
-          "detail": "**Status:** active **Project:** Public website and editable WordPress foundation **Decision:** Use WordPress-native Block Editor / Gutenberg over Elementor or heavy page builders for the current Crew Blueprint site because the platform is content-heavy, SEO-driven, and should remain easy to edit and maintain. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-I_am_going_to_give_you_a_business_plan",
+          "detail": "Status: active Project: Public website and editable WordPress foundation Decision: Use WordPress-native Block Editor / Gutenberg over Elementor or heavy page builders for the current Crew Blueprint site because the platform is content-heavy, SEO-driven, and should remain easy to edit and maintain. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-I_am_going_to_give_you_a_business_plan_and_I_would_like_yo",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Crew Blueprint Platform Stabilization Order",
-          "detail": "**Status:** active **Project:** WordPress/LMS platform stabilization **Decision:** The immediate technical path is platform stabilization before expansion: Core, Site Shell, LMS, JSON importer, Resource Hub, safety notices, and theme/plugin responsibility boundaries. The next developer should not start by rewriting content; the platform shell and LMS foundation must stabilize first. **Pillar:** pillar-2 (The Crew Blueprint) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Per",
-          "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
-          "confidence": "high",
-          "already_in_roadmap": false
-        },
-        {
-          "suggestion": "Laravel Backend Backbone for Growth",
-          "detail": "**Status:** active **Project:** Deadhang / future Crew Blueprint backend architecture **Decision:** Begin learning/building Laravel for secure backend foundations while using WordPress for public content publishing. Laravel should handle authentication, roles, permissions, admin workflows, database models, review/publishing workflows, validation, audit logging, and long-term business logic. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-",
+          "detail": "Status: active Project: WordPress/LMS platform stabilization Decision: The immediate technical path is platform stabilization before expansion: Core, Site Shell, LMS, JSON importer, Resource Hub, safety notices, and theme/plugin responsibility boundaries. The next developer should not start by rewriting content; the platform shell and LMS foundation must stabilize first. Pillar: pillar-2 (The Crew Blueprint) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-0",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -252,315 +252,315 @@
       "work_item_candidates": [
         {
           "suggestion": "Production Atlas Repo Operating Rules",
-          "detail": "**Status:** active **Project:** Production Atlas repo operation **Decision:** Treat `thecrewblueprint-glitch/festival-atlas` on `research-version` as the active working state. `main` is not the active source unless explicitly requested. The app remains a static GitHub Pages research dashboard; default scope excludes backend, login, database, payment, private contact storage, and scraping automation. Repo docs and collaboration protocols are source of truth. **Pillar:** pillar-3 (Production Atlas",
+          "detail": "Status: active Project: Production Atlas repo operation Decision: Treat `thecrewblueprint-glitch/festival-atlas` on `research-version` as the active working state. `main` is not the active source unless explicitly requested. The app remains a static GitHub Pages research dashboard; default scope excludes backend, login, database, payment, private contact storage, and scraping automation. Repo docs and collaboration protocols are source of truth. Pillar: pillar-3 (Production Atlas) Evidence: `mem",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Validator Drift Fix",
-          "detail": "**Status:** completed **Project:** Static app validation coverage **Decision:** The repo had a validator drift issue: README listed 12 active pages, including `map.html` and `schedule.html`, but the static validator checked only 10. The validator was patched on `research-version` so `map.html` and `schedule.html` are included. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_At",
+          "detail": "Status: completed Project: Static app validation coverage Decision: The repo had a validator drift issue: README listed 12 active pages, including `map.html` and `schedule.html`, but the static validator checked only 10. The validator was patched on `research-version` so `map.html` and `schedule.html` are included. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Ins",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Missing Claude Handoff Documentation Gap",
-          "detail": "**Status:** active **Project:** Collaboration handoff continuity **Decision:** Expected Claude stage/source-cleanup handoffs were not found on `research-version` or the known Claude PR branch. Treat this as a repo-visible documentation gap. Continue from actual current files, not from assumed uncommitted handoffs. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Au",
+          "detail": "Status: active Project: Collaboration handoff continuity Decision: Expected Claude stage/source-cleanup handoffs were not found on `research-version` or the known Claude PR branch. Treat this as a repo-visible documentation gap. Continue from actual current files, not from assumed uncommitted handoffs. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Source URL Cleanup Phase",
-          "detail": "**Status:** active **Project:** Production Atlas source verification cleanup **Decision:** Claude had been gathering source URLs when usage limits interrupted the work. The next work should resume source URL gathering in small batches, not jump into broad cleanup. Records should be handled 5–10 at a time, with official/public URLs only, and backlog files should track missing official 2026/2027 sources, date verification, venue verification, and weak source issues. **Pillar:** pillar-3 (Productio",
+          "detail": "Status: active Project: Production Atlas source verification cleanup Decision: Claude had been gathering source URLs when usage limits interrupted the work. The next work should resume source URL gathering in small batches, not jump into broad cleanup. Records should be handled 5–10 at a time, with official/public URLs only, and backlog files should track missing official 2026/2027 sources, date verification, venue verification, and weak source issues. Pillar: pillar-3 (Production Atlas) Evidenc",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Documentation Alignment Pass",
-          "detail": "**Status:** completed **Project:** Production Atlas repo documentation alignment **Decision:** A documentation-alignment pass updated README, roadmap, chat instructions, collaboration protocol, public white pages, legal/policy pages, research support docs, and collaboration logs so they match the current functioning static app. Docs now reflect active nav, Schedule direct-URL status, Analytics queue scope, active opportunity counts, master registry count, coordinate coverage, public-cycle guard,",
+          "detail": "Status: completed Project: Production Atlas repo documentation alignment Decision: A documentation-alignment pass updated README, roadmap, chat instructions, collaboration protocol, public white pages, legal/policy pages, research support docs, and collaboration logs so they match the current functioning static app. Docs now reflect active nav, Schedule direct-URL status, Analytics queue scope, active opportunity counts, master registry count, coordinate coverage, public-cycle guard, and static-",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Automatic Validation Workflow Assumption",
-          "detail": "**Status:** active **Project:** Validation workflow **Decision:** The user clarified that an automatic workflow sets up/runs validation, so future repo agents should treat validation as handled by workflow rather than repeatedly blocking on inability to run local validation in connector-only sessions. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructi",
+          "detail": "Status: active Project: Validation workflow Decision: The user clarified that an automatic workflow sets up/runs validation, so future repo agents should treat validation as handled by workflow rather than repeatedly blocking on inability to run local validation in connector-only sessions. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-4",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Map Department Filter Fix",
-          "detail": "**Status:** completed **Project:** Map page filter parity **Decision:** A safe repo fix added the missing Department filter to `map.html`, matching support already present in `assets/map-page-static.js`. This fixed a page/UI mismatch without touching the large core renderer. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__Chat",
+          "detail": "Status: completed Project: Map page filter parity Decision: A safe repo fix added the missing Department filter to `map.html`, matching support already present in `assets/map-page-static.js`. This fixed a page/UI mismatch without touching the large core renderer. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__ChatGPT_Production_Atlas",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Public Cycle / 2027 Rollover Data Pathway",
-          "detail": "**Status:** active **Project:** Opportunity rollover and active planning scope **Decision:** Festivals whose 2026 windows were in the past should not remain active as 2026 planning targets. Verified 2027 records were added through a rollover package for early-year events such as Coachella, Ultra Miami, EDC Las Vegas, Welcome to Rockville, Beyond Wonderland SoCal, BottleRock Napa, plus missed records like CRSSD and Sick New World. Records without verified 2027 dates should be hidden from active p",
+          "detail": "Status: active Project: Opportunity rollover and active planning scope Decision: Festivals whose 2026 windows were in the past should not remain active as 2026 planning targets. Verified 2027 records were added through a rollover package for early-year events such as Coachella, Ultra Miami, EDC Las Vegas, Welcome to Rockville, Beyond Wonderland SoCal, BottleRock Napa, plus missed records like CRSSD and Sick New World. Records without verified 2027 dates should be hidden from active planning unti",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Employer Source Retrieval Pathway",
-          "detail": "**Status:** active **Project:** Sources page employer/careers routes **Decision:** The Sources page had a retrieval gap: it showed opportunity and branch sources but not public employer, careers, contact, or route links central to the app. A new employer-route sources section was added to `sources.html`, pulling public employer route data and respecting filters where relevant. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_I",
+          "detail": "Status: active Project: Sources page employer/careers routes Decision: The Sources page had a retrieval gap: it showed opportunity and branch sources but not public employer, careers, contact, or route links central to the app. A new employer-route sources section was added to `sources.html`, pulling public employer route data and respecting filters where relevant. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Repo Knowledge Graph Proposal",
-          "detail": "**Status:** deferred **Project:** AI retrieval and repo-context compression **Decision:** Adding a lightweight static repo graph would reduce context-window bloat, improve file targeting, and reduce patch-layer mistakes. The first step should be a repo-visible graph spec/document, not a heavy database. Candidate graph tracks files, roles, owners, loaded-by, depends-on, validates-with, documents-behavior-of, public-safety constraints, and do-not-edit-casually files. **Pillar:** pillar-4 (Contract",
+          "detail": "Status: deferred Project: AI retrieval and repo-context compression Decision: Adding a lightweight static repo graph would reduce context-window bloat, improve file targeting, and reduce patch-layer mistakes. The first step should be a repo-visible graph spec/document, not a heavy database. Candidate graph tracks files, roles, owners, loaded-by, depends-on, validates-with, documents-behavior-of, public-safety constraints, and do-not-edit-casually files. Pillar: pillar-4 (Contractor Tools) Eviden",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "App-Usable Labor Market Research Prompt",
-          "detail": "**Status:** active **Project:** Production Atlas research prompt framework **Decision:** The app needs research prompts designed for app-usable data, not generic articles. Required research dimensions include labor market maps, opportunity types, labor routes, department demand, job market keywords, confidence scoring, app fields, seasonal planning, public-safe source strategy, next actions, and dashboard language. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/",
+          "detail": "Status: active Project: Production Atlas research prompt framework Decision: The app needs research prompts designed for app-usable data, not generic articles. Required research dimensions include labor market maps, opportunity types, labor routes, department demand, job market keywords, confidence scoring, app fields, seasonal planning, public-safe source strategy, next actions, and dashboard language. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_A",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Public-Safe Research Boundary",
-          "detail": "**Status:** active **Project:** Production Atlas / Festival Atlas **Decision:** Production Atlas is a public-safe scouting dashboard for live-event production workers and traveling contractors. It should help identify events, venues, producers, public application paths, vendor routes, rough timing, and research next actions while avoiding private contacts, pay rates, lodging details, rumors, login-only information, and copied scraped text. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `m",
+          "detail": "Status: active Project: Production Atlas / Festival Atlas Decision: Production Atlas is a public-safe scouting dashboard for live-event production workers and traveling contractors. It should help identify events, venues, producers, public application paths, vendor routes, rough timing, and research next actions while avoiding private contacts, pay rates, lodging details, rumors, login-only information, and copied scraped text. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/ch",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Research Handoff Improvement Set",
-          "detail": "**Status:** active **Project:** Production Atlas research protocol **Decision:** Research handoff improvements include event status, event timing fields, per-event verification date, `not_applicable`, a rubric for `possible`, source evidence levels, separated site ops/power, an `other` vendor department, advanced search operators, unknowns list, human-verification protocol, scoring methodology, and positive public-safe source definitions. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `me",
+          "detail": "Status: active Project: Production Atlas research protocol Decision: Research handoff improvements include event status, event timing fields, per-event verification date, `not_applicable`, a rubric for `possible`, source evidence levels, separated site ops/power, an `other` vendor department, advanced search operators, unknowns list, human-verification protocol, scoring methodology, and positive public-safe source definitions. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chu",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Search/UI Decision",
-          "detail": "**Status:** active **Project:** Production Atlas public search/filter UI **Decision:** Public search/filter UI should be limited to date and producer where practical. Other public search dimensions should be removed/hidden unless reopened. Future schedule-planning should let users enter availability, see where events fit across the year, link to the map, and show projected travel distances/times. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/chatgpt-export-2026",
+          "detail": "Status: active Project: Production Atlas public search/filter UI Decision: Public search/filter UI should be limited to date and producer where practical. Other public search dimensions should be removed/hidden unless reopened. Future schedule-planning should let users enter availability, see where events fit across the year, link to the map, and show projected travel distances/times. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-expor",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Public Research Dashboard",
-          "detail": "**Status:** active **Project:** Production Atlas static public-safe work research dashboard **Decision:** Keep Production Atlas as a static GitHub Pages research dashboard with no backend, login, private contact storage, payment system, scraping automation, or private pay/lodging field-note publication. Current worker-facing questions are where the work is, when it happens, who publicly produces/routes it, which public employer/vendor/labor-route leads are relevant, and what public source/planni",
+          "detail": "Status: active Project: Production Atlas static public-safe work research dashboard Decision: Keep Production Atlas as a static GitHub Pages research dashboard with no backend, login, private contact storage, payment system, scraping automation, or private pay/lodging field-note publication. Current worker-facing questions are where the work is, when it happens, who publicly produces/routes it, which public employer/vendor/labor-route leads are relevant, and what public source/planning page shou",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Research-Version Deployment and Scope Control",
-          "detail": "**Status:** active **Project:** Production Atlas deployment/source-of-truth control **Decision:** Treat `research-version` as the working/live branch for the Festival Atlas app; do not patch `main` as a shortcut. If live output is stale, fix deployment, validation, or source drift instead. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/festival-atlas-research-version/festival-atlas-research-version__festival-atlas-research-version__ROADMAP.md__chunk-0001.md` lin",
+          "detail": "Status: active Project: Production Atlas deployment/source-of-truth control Decision: Treat `research-version` as the working/live branch for the Festival Atlas app; do not patch `main` as a shortcut. If live output is stale, fix deployment, validation, or source drift instead. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival-atlas-research-version/festival-atlas-research-version__festival-atlas-research-version__ROADMAP.md__chunk-0001.md` lines 28-35; `memories/",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Public-Safe Opportunity Data Model",
-          "detail": "**Status:** active **Project:** Opportunity record schema and validator-backed data quality **Decision:** Use generalized opportunity records rather than festival-only records. Records must include public location/date/source fields, department presets, lodging/travel/per-diem fields, long-term value score, next research actions, and relationship arrays. Confirmed vendors require specific public evidence; candidate arrays remain unconfirmed leads. **Pillar:** pillar-3 (Production Atlas) **Eviden",
+          "detail": "Status: active Project: Opportunity record schema and validator-backed data quality Decision: Use generalized opportunity records rather than festival-only records. Records must include public location/date/source fields, department presets, lodging/travel/per-diem fields, long-term value score, next research actions, and relationship arrays. Confirmed vendors require specific public evidence; candidate arrays remain unconfirmed leads. Pillar: pillar-3 (Production Atlas) Evidence: `memories/proc",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Lodging, Travel, and Long-Term Work Value Analysis",
-          "detail": "**Status:** active **Project:** Accommodation/travel/per-diem research layer **Decision:** Score opportunities by work-year usefulness, not event popularity. Lodging, extended work windows, travel reimbursement, per diem, repeat annual cycle, route clarity, and application route increase value. Accommodation/travel fields should remain unknown unless public evidence or reliable verified source review supports stronger labels. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/proces",
+          "detail": "Status: active Project: Accommodation/travel/per-diem research layer Decision: Score opportunities by work-year usefulness, not event popularity. Lodging, extended work windows, travel reimbursement, per diem, repeat annual cycle, route clarity, and application route increase value. Accommodation/travel fields should remain unknown unless public evidence or reliable verified source review supports stronger labels. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival-",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Vendor and Employer Route Intelligence",
-          "detail": "**Status:** active **Project:** Employer/vendor/labor-route mapping by department and market **Decision:** Do not treat the festival brand as the employer. Map the actual route ecosystem: promoter, venue/site owner, production management, labor companies, IATSE/local jurisdiction, staging, rigging, lighting, audio, video/LED, power, site operations, logistics, scenic, backline, stage management, and production office channels. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/proce",
+          "detail": "Status: active Project: Employer/vendor/labor-route mapping by department and market Decision: Do not treat the festival brand as the employer. Map the actual route ecosystem: promoter, venue/site owner, production management, labor companies, IATSE/local jurisdiction, staging, rigging, lighting, audio, video/LED, power, site operations, logistics, scenic, backline, stage management, and production office channels. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Multi-Market Record Splitting",
-          "detail": "**Status:** active **Project:** Breakaway and Country Thunder per-market records **Decision:** Multi-market records need per-market handling before route, lodging, labor, vendor, and jurisdiction conclusions can be trusted. Broad placeholders should not be used as precise outreach justification until dates, venues, market-specific labor routes, vendor stacks, and IATSE/local jurisdiction are verified. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/festival-atlas",
+          "detail": "Status: active Project: Breakaway and Country Thunder per-market records Decision: Multi-market records need per-market handling before route, lodging, labor, vendor, and jurisdiction conclusions can be trusted. Broad placeholders should not be used as precise outreach justification until dates, venues, market-specific labor routes, vendor stacks, and IATSE/local jurisdiction are verified. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival-atlas-research-version/fe",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Source Verification and Data Quality Backlog",
-          "detail": "**Status:** active **Project:** Production Atlas source verification and cleanup queue **Decision:** All active records reached source-attached verification in the June 24 pass, but remaining work includes per-market records, fall CRSSD handling, producer verification, accommodation/travel fill for top-scoring records, and route-lead wording review so unverified leads are not presented as confirmed work relationships. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chun",
+          "detail": "Status: active Project: Production Atlas source verification and cleanup queue Decision: All active records reached source-attached verification in the June 24 pass, but remaining work includes per-market records, fall CRSSD handling, producer verification, accommodation/travel fill for top-scoring records, and route-lead wording review so unverified leads are not presented as confirmed work relationships. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival-atlas-re",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Public Worker UI Scope",
-          "detail": "**Status:** active **Project:** Page-specific public filtering and navigation scope **Decision:** Do not revert the app to date/promoter-only filtering. Keep current page-specific controls: Opportunities supports text, state, department, producer/promoter, and date/month; Calendar supports date/month; Map supports state and date/month; Employers supports text, department, state, and employer type; Sources supports festival, department, and employer route. Keep Schedule off header navigation unti",
+          "detail": "Status: active Project: Page-specific public filtering and navigation scope Decision: Do not revert the app to date/promoter-only filtering. Keep current page-specific controls: Opportunities supports text, state, department, producer/promoter, and date/month; Calendar supports date/month; Map supports state and date/month; Employers supports text, department, state, and employer type; Sources supports festival, department, and employer route. Keep Schedule off header navigation until mobile usa",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Future Unified Planning Workspace",
-          "detail": "**Status:** deferred **Project:** Schedule/map/travel planning layer **Decision:** Defer the full planning workspace until Schedule is mobile-usable. Longer-term direction is a selected-opportunity workspace showing map location, public show dates, approximate work window, add/remove schedule controls, and later travel distance/time comparisons after scope and source rules are approved. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/festival-atlas-research-versi",
+          "detail": "Status: deferred Project: Schedule/map/travel planning layer Decision: Defer the full planning workspace until Schedule is mobile-usable. Longer-term direction is a selected-opportunity workspace showing map location, public show dates, approximate work window, add/remove schedule controls, and later travel distance/time comparisons after scope and source rules are approved. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/festival-atlas-research-version/festival-atlas-re",
           "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Research Handoff V2",
-          "detail": "**Status:** active **Project:** Production Atlas public-safe research protocol **Decision:** The research handoff needs stronger structure before continuing large research batches. V2 adds event status, load-in/show/strike timing, freshness tracking, a clearer `possible` rubric, evidence-level separation, split site-ops and power vendor categories, unknowns tracking, public-safe source definitions, and a human-verification protocol. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories",
+          "detail": "Status: active Project: Production Atlas public-safe research protocol Decision: The research handoff needs stronger structure before continuing large research batches. V2 adds event status, load-in/show/strike timing, freshness tracking, a clearer `possible` rubric, evidence-level separation, split site-ops and power vendor categories, unknowns tracking, public-safe source definitions, and a human-verification protocol. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ki",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Research Strategy Shift",
-          "detail": "**Status:** active **Project:** Public research execution strategy **Decision:** Broad public research across many festival records creates high unknown rates because crew logistics, worker support, labor routes, vendor stacks, and local-jurisdiction confirmations are rarely public. The better strategy is targeted and hybrid: prioritize public vendor case studies, active local labor web presence, producer career pages, industry publications, Tier 1 events, and remote/lodging-sensitive events; us",
+          "detail": "Status: active Project: Public research execution strategy Decision: Broad public research across many festival records creates high unknown rates because crew logistics, worker support, labor routes, vendor stacks, and local-jurisdiction confirmations are rarely public. The better strategy is targeted and hybrid: prioritize public vendor case studies, active local labor web presence, producer career pages, industry publications, Tier 1 events, and remote/lodging-sensitive events; use assisted v",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas Batch 1/2 Research State",
-          "detail": "**Status:** active **Project:** Production Atlas research packet backlog **Decision:** Batch 1 DWP research was compiled as complete with six events, producer-level summary, audio-vendor evidence, and documented public sources. Batch 2 Goldenvoice/AEG remained partial with limited public production information and many unknown fields. Use compiled research as queue/context for the new research plan, not as final app-ready data. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/proc",
+          "detail": "Status: active Project: Production Atlas research packet backlog Decision: Batch 1 DWP research was compiled as complete with six events, producer-level summary, audio-vendor evidence, and documented public sources. Batch 2 Goldenvoice/AEG remained partial with limited public production information and many unknown fields. Use compiled research as queue/context for the new research plan, not as final app-ready data. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/kimi-ba",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production-Focused Festival RSS / Intelligence Feed",
-          "detail": "**Status:** active **Project:** Production Atlas RSS/feed expansion **Decision:** Build a production-focused festival feed for U.S. music and arts festivals that need hands with production knowledge. The feed should use source discovery, production-intent scoring, normalization, deduplication, review/approval, and RSS output. Generic festival listings should be excluded unless they show production relevance. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/Perplex",
+          "detail": "Status: active Project: Production Atlas RSS/feed expansion Decision: Build a production-focused festival feed for U.S. music and arts festivals that need hands with production knowledge. The feed should use source discovery, production-intent scoring, normalization, deduplication, review/approval, and RSS output. Generic festival listings should be excluded unless they show production relevance. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production-Focused Festival Feed Coding-Agent Framework",
-          "detail": "**Status:** active **Project:** GitHub/Laravel build framework for feed app **Decision:** Use GitHub as source control/issue/CI layer and Laravel as runtime backend for ingestion, normalization, scoring, deduplication, feed rendering, public directory pages, admin review tools, scheduled refresh, and tests. MVP should include one Laravel app, one RSS feed, three source types, one keyword scoring engine, one admin approval screen, daily ingestion, and tests. **Pillar:** pillar-3 (Production Atlas",
+          "detail": "Status: active Project: GitHub/Laravel build framework for feed app Decision: Use GitHub as source control/issue/CI layer and Laravel as runtime backend for ingestion, normalization, scoring, deduplication, feed rendering, public directory pages, admin review tools, scheduled refresh, and tests. MVP should include one Laravel app, one RSS feed, three source types, one keyword scoring engine, one admin approval screen, daily ingestion, and tests. Pillar: pillar-3 (Production Atlas) Evidence: `mem",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Live-Music Employer Source Map",
-          "detail": "**Status:** active **Project:** Employer intelligence for Production Atlas / job research **Decision:** Maintain employer research by category: major promoters, production vendors, venue operators, staffing/labor channels, city hiring footprints, and department targets. High-value employer categories include promoters, production vendors, venue operators, and staffing agencies. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity",
+          "detail": "Status: active Project: Employer intelligence for Production Atlas / job research Decision: Maintain employer research by category: major promoters, production vendors, venue operators, staffing/labor channels, city hiring footprints, and department targets. High-value employer categories include promoters, production vendors, venue operators, and staffing agencies. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__P",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Festival Atlas Renamed as Production Atlas",
-          "detail": "**Status:** active **Project:** Production Atlas app identity **Decision:** The visible app should be named **Production Atlas** even though the GitHub repository may remain `festival-atlas`. The project should be framed as a resource scouting database for long-term production work opportunities, not just a music festival list. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_A",
+          "detail": "Status: active Project: Production Atlas app identity Decision: The visible app should be named Production Atlas even though the GitHub repository may remain `festival-atlas`. The project should be framed as a resource scouting database for long-term production work opportunities, not just a music festival list. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instru",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Two-Track Branch Strategy",
-          "detail": "**Status:** completed **Project:** Production Atlas repository branching **Decision:** Two branches were created from the same baseline: one for a market-research-specific version and one for production-ready app development. Research work should happen on `research-version`; production-readiness work belongs in a separate production branch. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGP",
+          "detail": "Status: completed Project: Production Atlas repository branching Decision: Two branches were created from the same baseline: one for a market-research-specific version and one for production-ready app development. Research work should happen on `research-version`; production-readiness work belongs in a separate production branch. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Research-Version Branch Only for Current Adjustments",
-          "detail": "**Status:** active **Project:** Production Atlas branch discipline **Decision:** Recent adjustments were targeted to `thecrewblueprint-glitch/festival-atlas` on `research-version`. `main` and the production branch should not be edited for research-version changes unless explicitly requested. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-",
+          "detail": "Status: active Project: Production Atlas branch discipline Decision: Recent adjustments were targeted to `thecrewblueprint-glitch/festival-atlas` on `research-version`. `main` and the production branch should not be edited for research-version changes unless explicitly requested. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41__ChatGPT",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Production Labor Branch Taxonomy",
-          "detail": "**Status:** active **Project:** Production Atlas data taxonomy **Decision:** The app should focus on staging labor and production-core job branches: staging/structures, rigging, lighting, audio, video/LED, power/electrical distribution, site ops/build crew, logistics/equipment movement, scenic/carpentry/fabrication, backline/stage tech support, stage management/deck operations, and production office/PA work. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT",
+          "detail": "Status: active Project: Production Atlas data taxonomy Decision: The app should focus on staging labor and production-core job branches: staging/structures, rigging, lighting, audio, video/LED, power/electrical distribution, site ops/build crew, logistics/equipment movement, scenic/carpentry/fabrication, backline/stage tech support, stage management/deck operations, and production office/PA work. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Key Research Questions Per Opportunity",
-          "detail": "**Status:** active **Project:** Production Atlas research workflow **Decision:** Each opportunity should eventually answer who builds the stage, supplies rigging, lighting, audio, video/LED, site ops, power, which IATSE local applies, which nonunion labor companies staff it, and who coordinates production. These should not be guessed; they require source-backed or human-verified data. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo",
+          "detail": "Status: active Project: Production Atlas research workflow Decision: Each opportunity should eventually answer who builds the stage, supplies rigging, lighting, audio, video/LED, site ops, power, which IATSE local applies, which nonunion labor companies staff it, and who coordinates production. These should not be guessed; they require source-backed or human-verified data. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_20",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Master Data Source Cleanup",
-          "detail": "**Status:** completed **Project:** Production Atlas data-source cleanup **Decision:** Older research/data files should remain in the repo as archive, but the visible Pages app should read from one clean active master data source instead of a messy compiled set. Later this evolved again into structured packages, but the decision to avoid deleting old research remains active. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Inst",
+          "detail": "Status: completed Project: Production Atlas data-source cleanup Decision: Older research/data files should remain in the repo as archive, but the visible Pages app should read from one clean active master data source instead of a messy compiled set. Later this evolved again into structured packages, but the decision to avoid deleting old research remains active. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "U.S.-Only Employer Leads",
-          "detail": "**Status:** active **Project:** Production Atlas employer matrix **Decision:** The active app should show United States employer leads only. Multinational companies may remain only when represented as U.S. operations or U.S. hiring leads. Broad global employer categories should not be shown in the active matrix. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audi",
+          "detail": "Status: active Project: Production Atlas employer matrix Decision: The active app should show United States employer leads only. Multinational companies may remain only when represented as U.S. operations or U.S. hiring leads. Broad global employer categories should not be shown in the active matrix. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Employer Link Rule",
-          "detail": "**Status:** active **Project:** Employer matrix link behavior **Decision:** Employer matrix links should point to verified career/apply pages where available. If no clear career/apply page exists, link to the company homepage instead, while retaining an internal status distinction between career links and homepage fallbacks. The empty homepage fallback tag was later removed from the visible card UI. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Producti",
+          "detail": "Status: active Project: Employer matrix link behavior Decision: Employer matrix links should point to verified career/apply pages where available. If no clear career/apply page exists, link to the company homepage instead, while retaining an internal status distinction between career links and homepage fallbacks. The empty homepage fallback tag was later removed from the visible card UI. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audi",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "U.S. IATSE Local Directory",
-          "detail": "**Status:** active **Project:** IATSE local directory **Decision:** Add a United States IATSE local directory as a separate lookup aid, searchable by local number, state, city/jurisdiction, craft, and district. It is not a final jurisdiction ruling; final verification should use the official IATSE directory. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_In",
+          "detail": "Status: active Project: IATSE local directory Decision: Add a United States IATSE local directory as a separate lookup aid, searchable by local number, state, city/jurisdiction, craft, and district. It is not a final jurisdiction ruling; final verification should use the official IATSE directory. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Opportunity Calendar Scope Expansion",
-          "detail": "**Status:** active **Project:** Production Atlas calendar model **Decision:** The calendar should track any long-term production opportunity in the live-event industry that may provide accommodations, not only music festivals. Opportunity categories should include festivals, tours, conventions/expos, arena/stadium builds, corporate events, venue residencies, seasonal productions, broadcast/live TV, esports, fairs, and grandstand circuits. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `me",
+          "detail": "Status: active Project: Production Atlas calendar model Decision: The calendar should track any long-term production opportunity in the live-event industry that may provide accommodations, not only music festivals. Opportunity categories should include festivals, tours, conventions/expos, arena/stadium builds, corporate events, venue residencies, seasonal productions, broadcast/live TV, esports, fairs, and grandstand circuits. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chu",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Structured Data Packages",
-          "detail": "**Status:** active **Project:** Production Atlas data architecture **Decision:** The app should load clean structured package files rather than one compressed pipe-delimited master file. Packages include production branches, opportunities, employers, and initially a loader. A later code audit removed compatibility-loader dependence and made the app read directly from structured packages. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_R",
+          "detail": "Status: active Project: Production Atlas data architecture Decision: The app should load clean structured package files rather than one compressed pipe-delimited master file. Packages include production branches, opportunities, employers, and initially a loader. A later code audit removed compatibility-loader dependence and made the app read directly from structured packages. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Phase 2 Opportunity Schema",
-          "detail": "**Status:** completed **Project:** Production Atlas opportunity records **Decision:** Opportunity records should carry normalized fields such as opportunityType, startDate, endDate, venue, producer, status, mapped branches, lodging/accommodation potential, travel potential, per diem potential, long-term value score, and next research actions. A schema document was added to prevent drift back into compressed strings. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks",
+          "detail": "Status: completed Project: Production Atlas opportunity records Decision: Opportunity records should carry normalized fields such as opportunityType, startDate, endDate, venue, producer, status, mapped branches, lodging/accommodation potential, travel potential, per diem potential, long-term value score, and next research actions. A schema document was added to prevent drift back into compressed strings. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Public / Field-Intel Separation",
-          "detail": "**Status:** active **Project:** Production Atlas data safety model **Decision:** Because much production labor information is not public, Production Atlas should separate public evidence from field intelligence. Public app data should show public-safe confidence labels, source types, research status, and human-verification queues. Sensitive/private field details should not be published. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Re",
+          "detail": "Status: active Project: Production Atlas data safety model Decision: Because much production labor information is not public, Production Atlas should separate public evidence from field intelligence. Public app data should show public-safe confidence labels, source types, research status, and human-verification queues. Sensitive/private field details should not be published. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Code Audit and Cleanup Direction",
-          "detail": "**Status:** active **Project:** Production Atlas codebase cleanup **Decision:** Patch/compatibility code should be removed where possible. The active app should read directly from structured packages, avoid old festival-master-data compatibility objects, preserve active/inactive filtering, and keep public-safe classification in the active code path. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-4",
+          "detail": "Status: active Project: Production Atlas codebase cleanup Decision: Patch/compatibility code should be removed where possible. The active app should read directly from structured packages, avoid old festival-master-data compatibility objects, preserve active/inactive filtering, and keep public-safe classification in the active code path. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructio_2026-07-05_18-01-41/ChatGPT_Production",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Branch Research Batch Progress",
-          "detail": "**Status:** active **Project:** Production Atlas branch research packages **Decision:** Research packages were created in branch batches. The later handoff states progress through Logistics batch 005, with Scenic batch 001 data created but its paired report missing. Next sequence should audit/clean the repository, create the missing Scenic batch 001 report, then continue Scenic batch 002. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatGPT_Production_Atlas_-_",
+          "detail": "Status: active Project: Production Atlas branch research packages Decision: Research packages were created in branch batches. The later handoff states progress through Logistics batch 005, with Scenic batch 001 data created but its paired report missing. Next sequence should audit/clean the repository, create the missing Scenic batch 001 report, then continue Scenic batch 002. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_-_Repo_Audit_Instructi",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "AI Collaboration Handoff System",
-          "detail": "**Status:** active **Project:** Production Atlas AI collaboration workflow **Decision:** Add a main handoff package and collaboration log so ChatGPT and Claude can collaborate across chats. The workflow requires reading the collaboration log and handoff first, checking current branch state, appending dated notes, listing commits/files changed, and avoiding overwriting other AI notes unless correcting an error. **Pillar:** pillar-3 (Production Atlas) **Evidence:** `memories/processed/chunks/ChatG",
+          "detail": "Status: active Project: Production Atlas AI collaboration workflow Decision: Add a main handoff package and collaboration log so ChatGPT and Claude can collaborate across chats. The workflow requires reading the collaboration log and handoff first, checking current branch state, appending dated notes, listing commits/files changed, and avoiding overwriting other AI notes unless correcting an error. Pillar: pillar-3 (Production Atlas) Evidence: `memories/processed/chunks/ChatGPT_Production_Atlas_",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -573,6 +573,13 @@
           "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
           "confidence": "high",
           "already_in_roadmap": true
+        },
+        {
+          "suggestion": "Public-cycle helper / owner-file boundary remains a risk",
+          "detail": "Prior audit found a helper-script approach that may violate owner-file rules. Long-term fix should canonicalize cycle behavior in owner files/data rather than stacking workaround scripts.",
+          "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
+          "confidence": "medium",
+          "already_in_roadmap": false
         },
         {
           "suggestion": "Production Atlas public research has verification gaps",
@@ -620,28 +627,28 @@
           "suggestion": "Production-focused festival feed needs source-quality gates",
           "detail": "The RSS/intelligence feed must avoid becoming a generic festival directory or noisy job aggregator. It needs production-intent filtering, source provenance, deduplication, manual approval for borderline items, and RSS/feed validation tests.",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
-          "confidence": "medium",
+          "confidence": "high",
           "already_in_roadmap": true
         },
         {
-          "suggestion": "Repository needs comprehensive audit before more research batches",
-          "detail": "The handoff explicitly says to run a comprehensive code audit and cleanup of `research-version` before continuing research.",
+          "suggestion": "Public vendor staffing relationships remain mostly unverified",
+          "detail": "The app must not present employer leads as confirmed festival-specific vendors without source-backed proof.",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
-          "confidence": "medium",
-          "already_in_roadmap": false
+          "confidence": "high",
+          "already_in_roadmap": true
         },
         {
           "suggestion": "2026 active status source URLs are incomplete",
           "detail": "Some active statuses came from a user-provided report without direct source URLs; those fields still need official/public source-link attachment.",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
-          "confidence": "medium",
+          "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Data structure still needs continued normalization and UI work",
           "detail": "Later phases should add better card displays for lodging, travel, per diem, opportunity type, value score, missing-data checklists, and verification filters.",
           "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
-          "confidence": "medium",
+          "confidence": "high",
           "already_in_roadmap": false
         }
       ]
@@ -651,35 +658,42 @@
       "work_item_candidates": [
         {
           "suggestion": "Calendar Affirmation Scheduler Reliability",
-          "detail": "**Status:** active **Project:** Affirmation calendar automation **Decision:** The calendar affirmation scheduler needs automatic session/authorization renewal inside the calendar service so scheduled event creation does not depend on manual refresh steps. Calendar operations should run through a service layer that verifies access before list/create/update/delete/batch actions. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/chunks/kimi-batch-2026-07-05/kimi-batch-2026-0",
+          "detail": "Status: active Project: Affirmation calendar automation Decision: The calendar affirmation scheduler needs automatic session/authorization renewal inside the calendar service so scheduled event creation does not depend on manual refresh steps. Calendar operations should run through a service layer that verifies access before list/create/update/delete/batch actions. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/kimi-batch-2026-07-05/kimi-batch-2026-07-05__md_handoff_bun",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Invoice Generator Scope Divergence",
-          "detail": "**Status:** deferred **Project:** Custom invoice generator with payments/banking **Decision:** Kimi produced a broad enterprise-grade invoice generator plan with multiple client apps, API gateway, several application services, payment and bank integrations, search/cache/storage services, 12-week build phases, and high cost estimates. This conflicts with the later narrowed Deadhang invoice decision and should be treated as an overbuilt/future reference, not the current MVP. **Pillar:** pillar-4 (",
+          "detail": "Status: deferred Project: Custom invoice generator with payments/banking Decision: Kimi produced a broad enterprise-grade invoice generator plan with multiple client apps, API gateway, several application services, payment and bank integrations, search/cache/storage services, 12-week build phases, and high cost estimates. This conflicts with the later narrowed Deadhang invoice decision and should be treated as an overbuilt/future reference, not the current MVP. Pillar: pillar-4 (Contractor Tools",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "GitHub Connector Limitation Context",
-          "detail": "**Status:** completed **Project:** Tool-capability clarification **Decision:** Kimi could not directly connect to or interact with GitHub repositories; it could only analyze pasted code, generate files, discuss workflows, and read public URLs. This explains why later repo work required a connector-capable agent. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/chunks/kimi-batch-2026-07-05/kimi-batch-2026-07-05__md_handoff_bundle__05_github_connector_capability_context.md",
+          "detail": "Status: completed Project: Tool-capability clarification Decision: Kimi could not directly connect to or interact with GitHub repositories; it could only analyze pasted code, generate files, discuss workflows, and read public URLs. This explains why later repo work required a connector-capable agent. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/kimi-batch-2026-07-05/kimi-batch-2026-07-05__md_handoff_bundle__05_github_connector_capability_context.md__chunk-0001.md` lin",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Code Review Framework / Missing Payload Guardrail",
-          "detail": "**Status:** completed **Project:** Code review workflow framework **Decision:** Preserve the 8-part review framework: Keep, Remove, Rewrite, Security issues, Performance issues, Architecture problems, Commit-ready change list, and AI-agent implementation prompt. Add an operating guardrail: do not hallucinate analysis when no code/payload is provided; stop recursive “paste the code” loops after identifying missing input. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/ch",
+          "detail": "Status: completed Project: Code review workflow framework Decision: Preserve the 8-part review framework: Keep, Remove, Rewrite, Security issues, Performance issues, Architecture problems, Commit-ready change list, and AI-agent implementation prompt. Add an operating guardrail: do not hallucinate analysis when no code/payload is provided; stop recursive “paste the code” loops after identifying missing input. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/kimi-batch-2026",
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
+          "suggestion": "Laravel Backend Backbone for Growth",
+          "detail": "Status: active Project: Deadhang / future Crew Blueprint backend architecture Decision: Begin learning/building Laravel for secure backend foundations while using WordPress for public content publishing. Laravel should handle authentication, roles, permissions, admin workflows, database models, review/publishing workflows, validation, audit logging, and long-term business logic. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-",
+          "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
+          "confidence": "high",
+          "already_in_roadmap": false
+        },
+        {
           "suggestion": "Deadhang Fixed Invoice Generator Architecture",
-          "detail": "**Status:** active **Project:** Contractor invoice tool **Decision:** Use a narrow web-app architecture for invoices: conversational text → PHP/OpenRouter parser → validated JSON → editable review → deterministic calculations → fixed invoice preview/PDF → direct download. Avoid React, Ruby, database, cloud storage, OCR, native Android, drag/drop positioning, server-side draft storage, and AI-controlled totals. **Pillar:** pillar-4 (Contractor Tools) **Evidence:** `memories/processed/chunks/Perpl",
+          "detail": "Status: active Project: Contractor invoice tool Decision: Use a narrow web-app architecture for invoices: conversational text → PHP/OpenRouter parser → validated JSON → editable review → deterministic calculations → fixed invoice preview/PDF → direct download. Avoid React, Ruby, database, cloud storage, OCR, native Android, drag/drop positioning, server-side draft storage, and AI-controlled totals. Pillar: pillar-4 (Contractor Tools) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -699,6 +713,20 @@
           "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": true
+        },
+        {
+          "suggestion": "Laravel/back-end work risks overbuilding before validation",
+          "detail": "Laravel is the right long-term backbone, but the first phase must stay narrow: auth, roles, permissions, admin space, and core data models.",
+          "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
+          "confidence": "high",
+          "already_in_roadmap": false
+        },
+        {
+          "suggestion": "Invoice parser/PDF architecture must not drift",
+          "detail": "The invoice tool should stay narrow and deterministic. Risks include incorrect OpenRouter usage, confusing HTML-to-PDF with pdfmake, using too many pages, adding storage too early, using absolute positioning for variable rows, or relying on browser print as the final PDF method.",
+          "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
+          "confidence": "high",
+          "already_in_roadmap": true
         }
       ]
     },
@@ -707,84 +735,84 @@
       "work_item_candidates": [
         {
           "suggestion": "Public-Safe Context Export Boundary",
-          "detail": "**Status:** active **Project:** Memory/context management **Decision:** The export is a user-specific project/context archive, not a full legal account export. Sensitive sections are separated so they can be redacted before sharing with coders, collaborators, or repositories. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__00_INDEX.md__chunk-0001.md` lines 18-39 and 41-53; `me",
+          "detail": "Status: active Project: Memory/context management Decision: The export is a user-specific project/context archive, not a full legal account export. Sensitive sections are separated so they can be redacted before sharing with coders, collaborators, or repositories. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__00_INDEX.md__chunk-0001.md` lines 18-39 and 41-53; `memories/processed/chu",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Roadmap Navigation Requirement",
-          "detail": "**Status:** active **Project:** 50-year roadmap command-center framework **Decision:** The roadmap/task framework must maintain a linear recommended progression, include a “you are now here” jumper to the last completed point, and allow tasks to be marked “move to later” without deleting them or derailing the primary path. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__05_PRO",
+          "detail": "Status: active Project: 50-year roadmap command-center framework Decision: The roadmap/task framework must maintain a linear recommended progression, include a “you are now here” jumper to the last completed point, and allow tasks to be marked “move to later” without deleting them or derailing the primary path. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__05_PRODUCTION_ATLAS_FESTIV",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Private Task App Direction",
-          "detail": "**Status:** active **Project:** Private command/task app **Decision:** Private task app should be single-user, secure, AI-assisted, and capable of task cleanup, priority sorting, risk flagging, step breakdowns, daily plan generation, and later reminder/task migration. API keys must stay server-side. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__06_TECHNICAL_PROJECTS_AND_APPS",
+          "detail": "Status: active Project: Private command/task app Decision: Private task app should be single-user, secure, AI-assisted, and capable of task cleanup, priority sorting, risk flagging, step breakdowns, daily plan generation, and later reminder/task migration. API keys must stay server-side. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__06_TECHNICAL_PROJECTS_AND_APPS.md__chunk-0001.md` ",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Output and Delivery Preferences",
-          "detail": "**Status:** active **Project:** AI-agent operating rules **Decision:** Aaron strongly prefers complete files, complete code blocks, copy/paste-ready artifacts, downloadable packages when possible, no partial snippets, and no “insert this into your existing file” instructions unless unavoidable. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__08_PREFERENCES_CONSTRAINTS_AND_OPER",
+          "detail": "Status: active Project: AI-agent operating rules Decision: Aaron strongly prefers complete files, complete code blocks, copy/paste-ready artifacts, downloadable packages when possible, no partial snippets, and no “insert this into your existing file” instructions unless unavoidable. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/chatgpt-export-2026-07-05/chatgpt-export-2026-07-05__aaron_bowman_context_export_md__08_PREFERENCES_CONSTRAINTS_AND_OPERATING_RULES.md__chun",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Redaction and Repo Strategy",
-          "detail": "**Status:** active **Project:** Data cleanup / safe handoff strategy **Decision:** Public repos should only receive sanitized derivative context. General project descriptions, brand guidelines, non-sensitive roadmap structure, public-safe research methodology, code architecture notes, generic technical prompts, and UI/UX preferences are generally shareable after review. Private contact, financial, travel, identity, account, and sensitive records must be redacted or kept private. **Pillar:** pill",
+          "detail": "Status: active Project: Data cleanup / safe handoff strategy Decision: Public repos should only receive sanitized derivative context. General project descriptions, brand guidelines, non-sensitive roadmap structure, public-safe research methodology, code architecture notes, generic technical prompts, and UI/UX preferences are generally shareable after review. Private contact, financial, travel, identity, account, and sensitive records must be redacted or kept private. Pillar: pillar-7 (Personal O",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Contentrepo Placeholder Repository",
-          "detail": "**Status:** deferred **Project:** Content repository placeholder **Decision:** The archive does not contain substantive roadmap, product, content, or implementation material. Treat it as a placeholder or empty content repository until additional files are added. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/Contentrepo-main/Contentrepo-main__Contentrepo-main__README.md__chunk-0001.md` lines 17-19; `memories/processed/chunks/Contentrepo-main/Contentrepo-main_",
+          "detail": "Status: deferred Project: Content repository placeholder Decision: The archive does not contain substantive roadmap, product, content, or implementation material. Treat it as a placeholder or empty content repository until additional files are added. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/Contentrepo-main/Contentrepo-main__Contentrepo-main__README.md__chunk-0001.md` lines 17-19; `memories/processed/chunks/Contentrepo-main/Contentrepo-main__Contentrepo-main__.",
           "evidence": "data/raw-reports/2026-07-06-contentrepo-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Roadmap Builder Role Separation",
-          "detail": "**Status:** active **Project:** 50-year roadmap framework **Decision:** Gemini should provide context and questions for the roadmap-building agent, not write the roadmap itself. The final roadmap should be created by a separate agent using the extracted context. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_",
+          "detail": "Status: active Project: 50-year roadmap framework Decision: Gemini should provide context and questions for the roadmap-building agent, not write the roadmap itself. The final roadmap should be created by a separate agent using the extracted context. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_Profitable_Social_En",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Roadmap Milestone Check-In Need",
-          "detail": "**Status:** active **Project:** 50-year roadmap operating structure **Decision:** The roadmap should be comprehensive and include interval-based check-ins so major milestones can be measured and corrected over time. The existing framework needs layered roadmap content added and then committed into the repository. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social",
+          "detail": "Status: active Project: 50-year roadmap operating structure Decision: The roadmap should be comprehensive and include interval-based check-ins so major milestones can be measured and corrected over time. The existing framework needs layered roadmap content added and then committed into the repository. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Roadmap Time-Layer Milestone System",
-          "detail": "**Status:** active **Project:** 50-year roadmap system **Decision:** The roadmap needs layered milestones rather than one flat 50-year horizon. Candidate markers include 1 year, 5 years, 10 years, 20 years, 30 years, and 40 years, with near-term focus prioritized before long-range Homes for Hands implementation. **Pillar:** pillar-7 (Personal Operations / Roadmap System) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: 50-year roadmap system Decision: The roadmap needs layered milestones rather than one flat 50-year horizon. Candidate markers include 1 year, 5 years, 10 years, 20 years, 30 years, and 40 years, with near-term focus prioritized before long-range Homes for Hands implementation. Pillar: pillar-7 (Personal Operations / Roadmap System) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Tier 1 Build-What-Is-Possible-Now Principle",
-          "detail": "**Status:** active **Project:** 50-year roadmap execution order **Decision:** The first practical layer should focus on what can be built now: The Crew Blueprint technical education system, Deadhang Labor operational maturity, Production Atlas/resource infrastructure, and personal workflow/roadmap structure. Physical Homes for Hands implementation belongs later. **Pillar:** pillar-7 (Personal Operations / Roadmap System) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-",
+          "detail": "Status: active Project: 50-year roadmap execution order Decision: The first practical layer should focus on what can be built now: The Crew Blueprint technical education system, Deadhang Labor operational maturity, Production Atlas/resource infrastructure, and personal workflow/roadmap structure. Physical Homes for Hands implementation belongs later. Pillar: pillar-7 (Personal Operations / Roadmap System) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-dee",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Solo Operations Command Center",
-          "detail": "**Status:** active **Project:** Personal/business command center app **Decision:** Treat the command center as a personal operations system, not just a task manager. Core object types should be Tasks, Logs, Decisions, and Reference items. It should support fast capture, daily timeline/log review, tags, outcome notes, search, weekly review summaries, and a split between execution mode and reflection mode. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/Perplexi",
+          "detail": "Status: active Project: Personal/business command center app Decision: Treat the command center as a personal operations system, not just a task manager. Core object types should be Tasks, Logs, Decisions, and Reference items. It should support fast capture, daily timeline/log review, tags, outcome notes, search, weekly review summaries, and a split between execution mode and reflection mode. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Phone/File Organization Automation",
-          "detail": "**Status:** active **Project:** Mobile file intake and separation system **Decision:** Use local-first file automation with clear Business, Personal, Archive, and Inbox roots. Automation should sort by type/source/name/date; AI should classify, rename, and de-duplicate only within controlled boundaries. Personal and business files must remain separated. **Pillar:** pillar-7 (Personal Operations) **Evidence:** `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Per",
+          "detail": "Status: active Project: Mobile file intake and separation system Decision: Use local-first file automation with clear Business, Personal, Archive, and Inbox roots. Automation should sort by type/source/name/date; AI should classify, rename, and de-duplicate only within controlled boundaries. Personal and business files must remain separated. Pillar: pillar-7 (Personal Operations) Evidence: `memories/processed/chunks/Perplexity-Batch-2026-07-05/Perplexity-Batch-2026-07-05__Perplexity-I_need_to_so",
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -792,8 +820,22 @@
       ],
       "blocker_candidates": [
         {
+          "suggestion": "Claude handoff files are missing from expected branches",
+          "detail": "The missing handoffs make prior work harder to audit; current agents must rely on actual files and collaboration logs that exist.",
+          "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
+          "confidence": "high",
+          "already_in_roadmap": true
+        },
+        {
           "suggestion": "Roadmap framework needs anti-sprawl controls",
           "detail": "The “you are now here” jumper and “move to later” task status are required to prevent half-finished projects from being forgotten.",
+          "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
+          "confidence": "high",
+          "already_in_roadmap": true
+        },
+        {
+          "suggestion": "Sensitive export data must not be committed raw",
+          "detail": "The full context export contains sensitive categories and must not be committed publicly without redaction; only sanitized derivative docs should be used for AI-agent handoffs.",
           "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
           "confidence": "high",
           "already_in_roadmap": true
@@ -809,7 +851,7 @@
           "suggestion": "Values need operational translation",
           "detail": "Cultural principles must still be translated into property policies, steward responsibilities, participant expectations, review checkpoints, and measurable milestones.",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
-          "confidence": "medium",
+          "confidence": "high",
           "already_in_roadmap": false
         },
         {
@@ -825,6 +867,13 @@
           "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
           "confidence": "high",
           "already_in_roadmap": true
+        },
+        {
+          "suggestion": "Scenic batch 001 paired report is missing",
+          "detail": "Scenic batch 001 data exists, but its report was not created.",
+          "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
+          "confidence": "medium",
+          "already_in_roadmap": false
         }
       ]
     },
@@ -838,70 +887,70 @@
       "work_item_candidates": [
         {
           "suggestion": "Homestead Cultural Foundation",
-          "detail": "**Status:** active **Project:** Homestead Network / Homes for Hands mission layer **Decision:** The future homestead concept should be grounded in direct communication, mutual respect, individuality, freedom of expression, and open issue-resolution so resentment does not accumulate. **Pillar:** pillar-6 (Homestead Network) **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-4",
+          "detail": "Status: active Project: Homestead Network / Homes for Hands mission layer Decision: The future homestead concept should be grounded in direct communication, mutual respect, individuality, freedom of expression, and open issue-resolution so resentment does not accumulate. Pillar: pillar-6 (Homestead Network) Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46__Gemini_Building_P",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Nonprofit Respite Project",
-          "detail": "**Status:** active **Project:** Homes for Hands / Homestead Network nonprofit layer **Decision:** Homes for Hands should be tracked as a nonprofit homestead project for stagehands and travelers who need respite along the road between gigs. It should also preserve the possibility of a permanent space for people who need a stable landing point rather than only short-term rest. **Pillar:** pillar-6 (Homestead Network) **Evidence:** User clarification on 2026-07-06 during roadmap cleanup conversatio",
+          "detail": "Status: active Project: Homes for Hands / Homestead Network nonprofit layer Decision: Homes for Hands should be tracked as a nonprofit homestead project for stagehands and travelers who need respite along the road between gigs. It should also preserve the possibility of a permanent space for people who need a stable landing point rather than only short-term rest. Pillar: pillar-6 (Homestead Network) Evidence: User clarification on 2026-07-06 during roadmap cleanup conversation.",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homestead as Refuge for Outliers",
-          "detail": "**Status:** active **Project:** Homestead Network identity **Decision:** The homestead/social enterprise is not only housing. It is framed as a refuge and rebuilding environment for displaced or unconventional people who can live with integrity, contribute, learn, and protect the culture of the place. **Pillar:** pillar-6 (Homestead Network) **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-",
+          "detail": "Status: active Project: Homestead Network identity Decision: The homestead/social enterprise is not only housing. It is framed as a refuge and rebuilding environment for displaced or unconventional people who can live with integrity, contribute, learn, and protect the culture of the place. Pillar: pillar-6 (Homestead Network) Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Steward-Led Property Governance",
-          "detail": "**Status:** active **Project:** Homestead governance model **Decision:** Day-to-day property authority should belong to the property steward rather than Aaron directly. Aaron’s role is to select stewards with sound judgment. The steward should preserve respect, order, and culture without unnecessary micromanagement. **Pillar:** pillar-6 (Homestead Network) **Evidence:** `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Socia",
+          "detail": "Status: active Project: Homestead governance model Decision: Day-to-day property authority should belong to the property steward rather than Aaron directly. Aaron’s role is to select stewards with sound judgment. The steward should preserve respect, order, and culture without unnecessary micromanagement. Pillar: pillar-6 (Homestead Network) Evidence: `memories/processed/chunks/Gemini_Building_Profitable_Social_Enterprises_-_2026-07-06_01-07-46/Gemini_Building_Profitable_Social_Enterprises_-_2026",
           "evidence": "data/raw-reports/2026-07-06-gemini-social-enterprise-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Way-Station Model",
-          "detail": "**Status:** active **Project:** Homes for Hands / Homestead Network **Decision:** Homes for Hands should function as a welcoming respite space for travelers and people needing rest, whether or not they are stagehands. Stagehands remain the first and strongest service population, but the long-term vision should not permanently exclude other travelers needing respite. **Pillar:** pillar-6 (Homestead Network / Homes for Hands) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-tru",
+          "detail": "Status: active Project: Homes for Hands / Homestead Network Decision: Homes for Hands should function as a welcoming respite space for travelers and people needing rest, whether or not they are stagehands. Stagehands remain the first and strongest service population, but the long-term vision should not permanently exclude other travelers needing respite. Pillar: pillar-6 (Homestead Network / Homes for Hands) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Resident Categories",
-          "detail": "**Status:** active **Project:** Homes for Hands service model **Decision:** The roadmap should distinguish between transient guests, recurring community members, inner-core permanent residents, and stewards. Most people will pass through temporarily; permanent residents are self-selected by desire, alignment, sincerity, and willingness to carry the culture. **Pillar:** pillar-6 (Homestead Network / Homes for Hands) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-tra",
+          "detail": "Status: active Project: Homes for Hands service model Decision: The roadmap should distinguish between transient guests, recurring community members, inner-core permanent residents, and stewards. Most people will pass through temporarily; permanent residents are self-selected by desire, alignment, sincerity, and willingness to carry the culture. Pillar: pillar-6 (Homestead Network / Homes for Hands) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-cont",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Shared-Care Standard",
-          "detail": "**Status:** active **Project:** Homes for Hands operating culture **Decision:** Space care should be part of the culture. Guests and residents should leave spaces as they found them. The model may include RVs, tents, utilities, simple indoor space use, nominal fees, and low-friction turnover rather than a heavy hotel-style room turnover operation. **Pillar:** pillar-6 (Homestead Network / Homes for Hands) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression",
+          "detail": "Status: active Project: Homes for Hands operating culture Decision: Space care should be part of the culture. Guests and residents should leave spaces as they found them. The model may include RVs, tents, utilities, simple indoor space use, nominal fees, and low-friction turnover rather than a heavy hotel-style room turnover operation. Pillar: pillar-6 (Homestead Network / Homes for Hands) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Teach-First Boundary Model",
-          "detail": "**Status:** active **Project:** Homes for Hands governance **Decision:** Violations of the space should first be handled as opportunities to teach the why behind the community standard. If disruption is destructive and the person is not sincere in repairing the harm, they are no longer welcome unless they sincerely make it right. **Pillar:** pillar-6 (Homestead Network / Homes for Hands) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: Homes for Hands governance Decision: Violations of the space should first be handled as opportunities to teach the why behind the community standard. If disruption is destructive and the person is not sincere in repairing the harm, they are no longer welcome unless they sincerely make it right. Pillar: pillar-6 (Homestead Network / Homes for Hands) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Homes for Hands Guardrails Over Forced Belief",
-          "detail": "**Status:** active **Project:** Homes for Hands governance and culture **Decision:** The project should not attempt to force belief, frequency, or worldview into others. It should create guardrails that guide truth, care, responsibility, and Watch/Do/Teach practice without turning the culture into a rigid manual. **Pillar:** pillar-6 (Homestead Network / Homes for Hands) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: Homes for Hands governance and culture Decision: The project should not attempt to force belief, frequency, or worldview into others. It should create guardrails that guide truth, care, responsibility, and Watch/Do/Teach practice without turning the culture into a rigid manual. Pillar: pillar-6 (Homestead Network / Homes for Hands) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
         },
         {
           "suggestion": "Deadhang Field-to-Homestead Signal",
-          "detail": "**Status:** active **Project:** Deadhang Labor LLC / Homes for Hands interface **Decision:** Jobsite conduct can be one fluid and intuitive signal for whether someone may align with deeper community participation. It should remain one variable, not a rigid residency gate. **Pillar:** pillar-1 (Deadhang Labor LLC) **Evidence:** `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
+          "detail": "Status: active Project: Deadhang Labor LLC / Homes for Hands interface Decision: Jobsite conduct can be one fluid and intuitive signal for whether someone may align with deeper community participation. It should remain one variable, not a rigid residency gate. Pillar: pillar-1 (Deadhang Labor LLC) Evidence: `data/roadmap-deep-context/2026-07-06-gemini-tribe-fit-truth-vs-transgression-deep-context.md`.",
           "evidence": "data/raw-reports/2026-07-06-gemini-tribe-fit-digest.md",
           "confidence": "high",
           "already_in_roadmap": false
@@ -949,24 +998,6 @@
   "unmapped_claims": [
     {
       "kind": "blocker",
-      "title": "Claude handoff files are missing from expected branches",
-      "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Public-cycle helper / owner-file boundary remains a risk",
-      "evidence": "data/raw-reports/2026-07-06-chatgpt-atlas-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Sensitive export data must not be committed raw",
-      "evidence": "data/raw-reports/2026-07-06-chatgpt-context-export-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
       "title": "Producer/vendor evidence often lacks URL-level extraction",
       "evidence": "data/raw-reports/2026-07-06-festival-atlas-digest.md",
       "reason": "no confident branch match"
@@ -975,30 +1006,6 @@
       "kind": "blocker",
       "title": "Code review workflows need actual payload enforcement",
       "evidence": "data/raw-reports/2026-07-06-kimi-batch-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Laravel/back-end work risks overbuilding before validation",
-      "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Invoice parser/PDF architecture must not drift",
-      "evidence": "data/raw-reports/2026-07-06-perplexity-batch-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Scenic batch 001 paired report is missing",
-      "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
-      "reason": "no confident branch match"
-    },
-    {
-      "kind": "blocker",
-      "title": "Public vendor staffing relationships remain mostly unverified",
-      "evidence": "data/raw-reports/2026-07-06-production-atlas-workstream-digest.md",
       "reason": "no confident branch match"
     }
   ],
