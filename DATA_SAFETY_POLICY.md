@@ -1,191 +1,165 @@
 # Data Safety Policy
 
 **Effective:** 2026-07-06  
-**Scope:** All roadmap data committed to this repository and published to GitHub Pages
+**Last updated:** 2026-07-09  
+**Scope:** All roadmap data committed to this repository and all data published by the GitHub Pages dashboard
 
 ---
 
 ## Purpose
 
-The Operations Command Center roadmap is **public** at: https://thecrewblueprint-glitch.github.io/50yearroadmap/
+The Deadhang Labor roadmap dashboard is public at:
 
-This policy ensures that only **business/project-safe** data is committed and displayed.
+https://thecrewblueprint-glitch.github.io/50yearroadmap/
 
----
+This policy keeps the public roadmap business-safe, project-safe, and free of private owner, client, travel, financial, contact, or credential data.
 
-## What IS Allowed
-
-✅ **Allowed in roadmap:**
-- Project titles and purposes
-- Status (active, completed, moved_later, blocked, etc.)
-- Priority levels (critical, high, medium, low)
-- Pillar mappings
-- Evidence links to memory sources (file paths only)
-- General descriptions of work/goals
-
-**Examples:**
-```
-- "Deadhang website SSL/security implementation"
-- "Crew Blueprint course content creation (83-lesson outline)"
-- "Production Atlas deep research (festivals, vendors, logistics)"
-```
+The live dashboard is served from the **repository root** and reads `roadmap.json` directly. The current live model is the **branch/journey model** described in `AGENTS.md`.
 
 ---
 
-## What IS NEVER Allowed
+## What IS allowed in public roadmap data
 
-❌ **FORBIDDEN — will be caught by validation:**
+Allowed in `roadmap.json` and dashboard-facing files:
 
-| Category | Examples | Why |
-|----------|----------|-----|
-| **Contact Info** | Phone, email, mailing address, contact names | Personal privacy |
-| **Financial** | Bank accounts, routing numbers, credit cards, pay rates, tax info | Security + privacy |
-| **Health/Personal** | DOB, medical info, personal relationships, struggles | Privacy |
-| **Work Details** | Specific jobsite names, crew members, client names | Confidentiality |
-| **Travel/Hotels** | Hotel names, locations, trip details | Privacy + security |
-| **Account Credentials** | API keys, passwords, tokens, secrets | Security |
-| **Specific Names** | Aaron, Bowman, client names, employer names | Privacy |
+- Public-safe project names
+- Branch names and branch roles
+- General goals, blockers, and current-state summaries
+- Priority levels: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`
+- Work statuses: `not_started`, `in_progress`, `blocked`, `completed`
+- Phase and lifecycle information
+- General evidence references by file path or digest category
+- Non-sensitive strategic summaries
 
-**Examples of FORBIDDEN text:**
-```
-❌ "Contact (623) 280-3415 for work"
-❌ "Tax filing due by 2026-08-15 (owed $2,500)"
-❌ "Stay at Rodeway Inn Grand Rapids for festival runs"
-❌ "Aaron's DOB: 01/26/1990"
-❌ "Invoice to smith.enterprises@company.com"
+Examples:
+
+```text
+Deadhang website SSL/security implementation
+Crew Blueprint course content workflow
+Production Atlas verification standards
+Contractor invoice MVP scope
 ```
 
 ---
 
-## Validation Process
+## What is never allowed in public roadmap data
 
-All roadmap files pass through **two gates** before commit:
+Forbidden in `roadmap.json`, dashboard files, and presentation-facing text:
 
-### 1. Automated Validation (`validate-roadmap.py`)
+| Category | Do not include | Why |
+|---|---|---|
+| Contact data | phone numbers, emails, mailing addresses | privacy and spam risk |
+| Financial data | bank accounts, card numbers, routing numbers, tax amounts, pay rates | security and privacy |
+| Credentials | passwords, API keys, tokens, secrets | security |
+| Personal identity | owner personal name, private names, personal relationships | privacy |
+| Travel details | hotel names, exact routes, lodging dates, private trip details | personal security |
+| Work-confidential details | private client/jobsite details, crew identities, unpublished logistics | confidentiality |
+| Health/personal context | medical, mental health, DOB, family/relationship details | privacy |
+| Raw memory content | direct quotes or sensitive details from archives | evidence protection |
 
-Runs on every update. **MUST PASS** to proceed.
+If the information would be harmful or uncomfortable if shared publicly, it does not belong in the live roadmap.
 
-Checks:
-- ✓ No phone numbers, emails, addresses
-- ✓ No forbidden keywords (names, locations, account terms)
-- ✓ No credit cards, SSNs, API keys
-- ✓ Valid schema (status, priority, tracks)
-- ✓ All references resolvable
+---
 
-**Run before commit:**
+## Current validation gate
+
+Before committing any change to `roadmap.json`, run:
+
 ```bash
-python scripts/validate-roadmap.py
+python3 scripts/validate-roadmap.py
 ```
 
-Exit code `0` = safe, `1` = BLOCKED
+The validator checks:
 
-### 2. Human Review (You)
+- valid JSON
+- required branch/journey top-level keys
+- valid branch IDs, work-item IDs, phase references, milestone references, and `this_week_focus` references
+- valid enum values for branch lifecycle, phase status, milestone state, work-item priority, and work-item status
+- duplicate work-item IDs
+- public-safety patterns, including email, phone, SSN, card-like values, API keys, real street addresses, and HTML/angle brackets
+- owner-name warnings for manual review
 
-Before pushing, **you** review:
-- Are the project descriptions generic enough?
-- Do titles avoid specific names/contacts?
-- Are evidence links safe?
-- Would this be OK if someone shared it publicly?
+Exit code `0` means pass. Exit code `1` means errors were found and the change must not be committed until fixed.
 
 ---
 
-## Workflow
+## Human review standard
 
-```
-Memory Chunk
-    ↓
-Roadmap Watcher (roadmap-watcher.py)
-    ↓ [extracts safe claims]
-    ↓
-watcher-proposals.json
-    ↓
-YOU REVIEW & DECIDE
-    ↓ [approve/modify]
-    ↓
-data/roadmap/*.json
-    ↓
-validate-roadmap.py ← MUST PASS
-    ↓
-build-roadmap.py
-    ↓
-docs/roadmap.json (public dashboard)
-```
+Automated checks are not enough. Before pushing public roadmap changes, review the text manually:
+
+- Is it safe for the public dashboard?
+- Is it generic enough to avoid exposing clients, contacts, travel, or finances?
+- Does it avoid overstating unconfirmed strategy as decided direction?
+- Does it preserve the owner as the decision-maker?
+- Does it keep raw memories and curated digests as evidence instead of publishing sensitive details?
+
+When unsure, rewrite more generally or ask the owner.
 
 ---
 
-## What to Do If Validation Fails
+## Evidence and memory policy
 
-**Error:** `SENSITIVE DATA DETECTED`
+`memories/` is immutable evidence. Do not overwrite, silently delete, or casually rewrite raw memory archives.
 
-```
-ERROR: SENSITIVE DATA DETECTED in projects[0].title: person
-  Value: "Invoice system for Aaron Bowman's 1099 work"
-```
+`data/raw-reports/` contains curated digests. Treat them as evidence summaries. Do not overwrite them to force the roadmap to say something different.
 
-**Fix:**
-1. Re-word without the name: `"Personal invoice generator app"`
-2. Re-run validation
-3. If it still fails, check the forbidden patterns list above
+Allowed public references:
 
-**Never commit if validation fails.** The GitHub Action will reject it.
+- digest file names
+- general evidence categories
+- high-level source descriptions
 
----
+Not allowed:
 
-## Memory Chunk Policy
-
-The `memories/` folder is **not public** — those ZIP files stay local.
-
-What CAN be referenced in roadmap:
-- Memory file names (e.g., "festival-atlas-research-version")
-- Summary descriptions (e.g., "6 research batches")
-- General evidence categories (e.g., "context documented")
-
-What CANNOT be referenced:
-- Specific quotes from memories
-- Person names from memory chunks
-- Specific email/contact details
+- direct sensitive quotes from memory archives
+- private names or contact data from memories
+- financial, tax, lodging, travel, or credential details
+- private client/jobsite specifics
 
 ---
 
-## For the Roadmap Watcher
+## Roadmap watcher safety model
 
-The watcher (`roadmap-watcher.py`) is **designed to output public-safe data only**.
+`scripts/roadmap-watcher.py` is a proposal generator for the current branch/journey model.
 
 It:
-- ✅ Extracts claims from memories
-- ✅ Strips names, contacts, financial details
-- ✅ Links to general evidence categories
-- ✅ Maps work to pillars
-- ✅ Flags blockers for decision
 
-The watcher **never outputs** names, contacts, or sensitive context.
+- reads `data/raw-reports/*-digest.md`
+- extracts candidate work items and blockers
+- maps candidates to current branches from `roadmap.json`
+- filters unsafe candidates using `data/schema/roadmap-public-safety.json`
+- writes proposals to `data/roadmap/watcher-proposals.json`
 
----
-
-## Emergency Override
-
-If you need to commit something that DOESN'T pass validation:
-
-```bash
-# DON'T USE THIS LIGHTLY
-git commit --no-verify -m "OVERRIDE: reason"
-```
-
-This **will fail deployment** and is intentional — acts as a second gate at the GitHub Action level.
-
-Instead:
-1. Talk to the watcher or me about rewording
-2. Move the sensitive task to a private `data/private/` folder
-3. Reference it in the roadmap only by ID
+It does **not** edit `roadmap.json`. The owner or agent promotes approved proposals by hand, in public-safe wording, then validates `roadmap.json`.
 
 ---
 
-## Questions?
+## If validation fails
 
-If unsure, ask: **"Can this data be shared publicly without harm?"**
+Do not commit failing roadmap data.
 
-If the answer is no, it doesn't go in the roadmap.
+Fix by:
+
+1. Removing or generalizing the sensitive text.
+2. Moving private detail out of the public roadmap.
+3. Re-running `python3 scripts/validate-roadmap.py`.
+4. Committing only after the validator passes.
+
+No emergency override should be used for public roadmap data.
 
 ---
 
-**Last updated:** 2026-07-06
+## Retired model warning
+
+The old pillar/docs build flow is retired.
+
+Do not treat these as live publication targets:
+
+- `vision.json`
+- `pillars.json`
+- old `pillar_id`-keyed proposals
+- `/docs` dashboard output
+- `docs/roadmap.json`
+- `scripts/build-roadmap.py` as a live roadmap builder
+
+The current source of truth is root-level `roadmap.json` using the branch/journey model.
