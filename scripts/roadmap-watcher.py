@@ -189,6 +189,23 @@ def parse_blockers(body: str) -> list[tuple[str, str]]:
     return out
 
 
+def clean_detail(text: str) -> str:
+    """Normalize candidate descriptions before writing proposal details.
+
+    The curated digests were partly created during the retired pillar-model era,
+    so their raw detail text can include legacy labels such as `Pillar: pillar-2`.
+    Proposal output should stay branch/journey-oriented even when the evidence
+    digest still contains those historical labels.
+    """
+    detail = re.sub(r"\*\*", "", text or "")
+    detail = re.sub(r"\s*Pillar:\s*pillar-\d+\s*\([^)]*\)", "", detail)
+    detail = re.sub(r"\s*Pillar:\s*pillar-\d+\b", "", detail)
+    detail = re.sub(r"\s*Evidence:\s*`?memories/processed/[^`\s]+`?[^.]*", "", detail)
+    detail = re.sub(r"\s*Evidence:\s*$", "", detail)
+    detail = re.sub(r"\s+", " ", detail).strip()
+    return detail
+
+
 def extract_claims() -> list[dict]:
     """Pull project/blocker candidates out of every *-digest.md file."""
     claims = []
@@ -271,12 +288,9 @@ def main() -> int:
         already = any(jaccard(title_toks, ex) >= DEDUP_JACCARD
                       for ex in meta[best_id]["existing"])
 
-        detail = re.sub(r"\*\*", "", claim["desc"])          # drop markdown bold
-        detail = re.sub(r"\s+", " ", detail).strip()          # collapse whitespace
-        detail = re.sub(r"\s*Evidence:\s*$", "", detail)      # drop empty trailing label
         entry = {
             "suggestion": claim["title"],
-            "detail": detail[:500],
+            "detail": clean_detail(claim["desc"])[:500],
             "evidence": claim["evidence"],
             "confidence": "high" if best_score >= NAME_TOKEN_WEIGHT else "medium",
             "already_in_roadmap": already,
