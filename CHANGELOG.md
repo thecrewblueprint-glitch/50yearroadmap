@@ -14,18 +14,25 @@ Keep it short but specific. One block per working session is fine.
 
 Things known-incomplete or awaiting a decision. Clear them when resolved.
 
-- **Watcher not active.** A watcher pipeline exists on branch
-  `claude/repository-review-yvxvn5` but targets the retired pillar model and
-  was never merged. Rebuilding it for the current branch/journey model is a
-  planned project (pairs with the future database migration).
-_(No open threads at the moment.)_
-- **No automated `roadmap.json` validator yet.** Integrity is checked by hand
-  against the rules in `AGENTS.md` §4. A validator for the current model is
-  planned.
+- **Watcher remains manual.** The current branch/journey watcher exists and writes
+  proposals only to `data/roadmap/watcher-proposals.json`; it is not wired into
+  CI and never edits `roadmap.json` automatically.
+- **Proposal review backlog.** The latest watcher output contains candidate work
+  items/blockers for human review. Approved items still need to be promoted by
+  hand into `roadmap.json`.
 
 ---
 
 ## Entries
+
+### 2026-07-09 — Documentation cleanup for current branch/journey system
+- Cleaned the stale Open Threads section so it no longer claims the watcher or
+  validator are missing after both were added.
+- Updated the public data-safety policy to match the current repo-root dashboard
+  and branch/journey model, removing retired pillar/docs/build-roadmap language.
+- Updated the watcher detail cleanup so future proposal runs strip legacy
+  pillar-model labels from candidate descriptions before writing proposals.
+- `roadmap.json` was not changed, so no roadmap validation run was required.
 
 ### 2026-07-09 — Handoff doc for GPT
 - Added `CHATGPT_HANDOFF.md`: a current-state orientation for a GPT collaborator
