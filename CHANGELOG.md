@@ -20,10 +20,27 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 - **Proposal review backlog.** The latest watcher output contains candidate work
   items/blockers for human review. Approved items still need to be promoted by
   hand into `roadmap.json`.
+- **30 / 60 / 90 data model follow-up.** The dashboard now has a working
+  30 / 60 / 90 execution layer. The first pass is supplied by `ninety.js` so it
+  can ship without a larger schema migration. A later cleanup can promote the
+  plan into `roadmap.json` as a formal branch/journey data field.
 
 ---
 
 ## Entries
+
+### 2026-07-09 — 30 / 60 / 90 operating dashboard
+- Added a dashboard section for a 30 / 60 / 90 execution layer above the End Goal
+  section in `index.html`.
+- Added `ninety.css` for the three-window dashboard cards and mobile layout.
+- Added `ninety.js` as a standalone first-pass renderer. It reads current
+  `roadmap.json` work items by ID, then displays 30-day, 60-day, and 90-day
+  operating windows tied to existing branch work items.
+- Updated `app.js` with a branch/journey-compatible renderer so the same section
+  can later read from `roadmap.json.thirty_sixty_ninety` if the data model is
+  formally promoted.
+- `roadmap.json` was intentionally not changed in this pass; no roadmap
+  validation run was required.
 
 ### 2026-07-09 — Documentation cleanup for current branch/journey system
 - Cleaned the stale Open Threads section so it no longer claims the watcher or
