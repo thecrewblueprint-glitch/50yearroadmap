@@ -148,3 +148,7 @@ async function loadStandaloneNinetyDashboard() {
 }
 
 loadStandaloneNinetyDashboard();
+// app.js may hide the section if the formal roadmap field is absent. Re-run
+// after app.js finishes its async fetch so this first-pass layer remains visible.
+setTimeout(loadStandaloneNinetyDashboard, 600);
+setTimeout(loadStandaloneNinetyDashboard, 1800);
