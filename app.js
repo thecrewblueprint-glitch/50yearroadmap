@@ -19,6 +19,7 @@ async function loadRoadmap() {
 function renderDashboard() {
     renderUltimateGoal();
     renderPhase();
+    renderNinetyDayDashboard();
     renderEndGoal();
     renderTimeline();
     renderThisWeek();
@@ -213,6 +214,72 @@ function renderUltimateGoal() {
 function renderPhase() {
     document.getElementById('phase-title').textContent = roadmapData.phase || '';
     document.getElementById('phase-description').textContent = roadmapData.phase_description || '';
+}
+
+function renderNinetyDayDashboard() {
+    const section = document.getElementById('ninety-day-section');
+    const container = document.getElementById('ninety-dashboard');
+    const title = document.getElementById('ninety-title');
+    const summary = document.getElementById('ninety-summary');
+    const plan = roadmapData.thirty_sixty_ninety || {};
+    const windows = plan.windows || [];
+
+    if (!section || !container) return;
+    if (!windows.length) {
+        section.style.display = 'none';
+        return;
+    }
+
+    section.style.display = 'block';
+    if (title) title.textContent = plan.title || '30 / 60 / 90 Day Operating Dashboard';
+    if (summary) summary.textContent = plan.summary || '';
+
+    const itemsById = workItemsById();
+    const branchesById = Object.fromEntries((roadmapData.branches || []).map(b => [b.id, b]));
+
+    container.innerHTML = windows.map((windowItem, index) => {
+        const steps = (windowItem.focus_step_ids || []).map(id => itemsById[id]).filter(Boolean);
+        const outcomes = windowItem.outcomes || [];
+        const branchLinks = [...new Set(steps.map(s => s.branch_id))]
+            .map(id => branchesById[id])
+            .filter(Boolean);
+        return `
+            <article class="ninety-card ninety-${index + 1}">
+                <div class="ninety-card-head">
+                    <span class="ninety-window">${escapeHtml(windowItem.label || '')}</span>
+                    <span class="ninety-status">${escapeHtml(windowItem.status || 'active')}</span>
+                </div>
+                <h3>${escapeHtml(windowItem.theme || '')}</h3>
+                <p class="ninety-goal">${escapeHtml(windowItem.goal || '')}</p>
+                ${steps.length ? `
+                    <div class="ninety-block">
+                        <h4>Focus work</h4>
+                        <div class="ninety-steps">
+                            ${steps.map(step => `
+                                <button class="ninety-step" data-branch-id="${escapeHtml(step.branch_id)}">
+                                    <span class="tl-step-dot ${escapeHtml(step.status || 'not_started')}"></span>
+                                    <span>${escapeHtml(step.task)}</span>
+                                    <em>${escapeHtml(step.status || 'not_started').replace(/_/g, ' ')}</em>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>` : ''}
+                ${outcomes.length ? `
+                    <div class="ninety-block">
+                        <h4>Done means</h4>
+                        <ul class="ninety-outcomes">
+                            ${outcomes.map(outcome => `<li>${escapeHtml(outcome)}</li>`).join('')}
+                        </ul>
+                    </div>` : ''}
+                ${windowItem.guardrail ? `<p class="ninety-guardrail"><strong>Guardrail:</strong> ${escapeHtml(windowItem.guardrail)}</p>` : ''}
+                ${branchLinks.length ? `<div class="ninety-branches">${branchLinks.map(b => `<button data-branch-id="${escapeHtml(b.id)}">${escapeHtml(b.name)}</button>`).join('')}</div>` : ''}
+            </article>
+        `;
+    }).join('');
+
+    container.querySelectorAll('[data-branch-id]').forEach(el => {
+        el.addEventListener('click', () => showBranchDetail(el.getAttribute('data-branch-id')));
+    });
 }
 
 function renderThisWeek() {
