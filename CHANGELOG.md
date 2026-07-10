@@ -27,6 +27,12 @@ _(No open threads at the moment.)_
 
 ## Entries
 
+### 2026-07-09 — Handoff doc for GPT
+- Added `CHATGPT_HANDOFF.md`: a current-state orientation for a GPT collaborator
+  (points to AGENTS.md/CHANGELOG, the branch/journey data model, the pipeline,
+  the scripts, the commit-to-main rule, and safety/evidence rules). Replaces the
+  stale pillar-model handoff that only exists on the legacy branch.
+
 ### 2026-07-09 — End-to-end flow audit + watcher accuracy fixes
 - Audited the full pipeline (process-memories → watcher → validator → dashboard).
   Findings: memory processing is deterministic (8 archives → 518 sources → 880
