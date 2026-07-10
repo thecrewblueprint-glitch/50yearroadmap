@@ -29,6 +29,16 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-09 — Claude framework audit handoff
+- Added `CLAUDE_FRAMEWORK_AUDIT_HANDOFF.md` with a handoff note for Claude and
+  the framework audit/recommended sequence to review before larger updates.
+- The note directs the next agent to likely follow the audit path: promote the
+  30 / 60 / 90 layer into `roadmap.json`, update validation, remove the sidecar
+  data once formalized, add moved-later handling, and triage watcher proposals
+  through the framework before promotion.
+- No roadmap data or production page logic was changed, so no roadmap validation
+  run was required.
+
 ### 2026-07-09 — 30 / 60 / 90 operating dashboard
 - Added a dashboard section for a 30 / 60 / 90 execution layer above the End Goal
   section in `index.html`.
