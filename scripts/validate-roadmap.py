@@ -32,7 +32,8 @@ DEFAULT_ROADMAP = ROOT / "roadmap.json"
 SAFETY_SCHEMA = ROOT / "data" / "schema" / "roadmap-public-safety.json"
 
 PRIORITIES = {"CRITICAL", "HIGH", "MEDIUM", "LOW"}
-WORK_STATUS = {"not_started", "in_progress", "blocked", "completed"}
+# 'moved_later' = deferred work: still visible, but off the active path.
+WORK_STATUS = {"not_started", "in_progress", "blocked", "completed", "moved_later"}
 MILESTONE_STATE = {"current", "upcoming", "done"}
 PHASE_STATUS = {"active", "future"}
 LIFECYCLE = {"active", "future"}
@@ -202,6 +203,22 @@ class Validator:
                 tok = tok.strip()
                 if tok and tok not in work_ids:
                     self.err(f"this_week_focus.{key} references unknown work item '{tok}'")
+
+        # ---- thirty_sixty_ninety (30/60/90 operating windows) ----
+        tsn = data.get("thirty_sixty_ninety")
+        if tsn is not None:
+            windows = tsn.get("windows") if isinstance(tsn, dict) else None
+            if not isinstance(windows, list) or not windows:
+                self.err("thirty_sixty_ninety.windows must be a non-empty array")
+            else:
+                for i, win in enumerate(windows):
+                    where = f"thirty_sixty_ninety.windows[{i}]"
+                    if not win.get("label"):
+                        self.warn(f"{where}: missing 'label'")
+                    for sid in win.get("focus_step_ids", []) or []:
+                        if sid not in work_ids:
+                            self.err(f"{where}: focus_step_ids references unknown "
+                                     f"work item '{sid}'")
 
         # ---- ecosystem_flow ----
         flow = (data.get("ecosystem_flow") or {}).get("flow")

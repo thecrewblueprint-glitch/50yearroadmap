@@ -69,7 +69,9 @@ directly and keep it valid.
      critical_blocker, timeline:{ phase_1_ready, description },
      blockers[], work_items[], phase, lifecycle: active|future }`.
   Each work item: `{ id, task, why, priority: CRITICAL|HIGH|MEDIUM|LOW,
-     status: not_started|in_progress|blocked }`.
+     status: not_started|in_progress|blocked|completed|moved_later }`.
+  `moved_later` = deferred work: it stays visible (rendered with a dashed,
+  muted style) but is understood to be off the active path.
 - `journey` — the linear path. `{ you_are_here, start_label,
      milestones[{ id, order, title, area_branch_id, state:current|upcoming|done,
      summary, outcome, step_ids[], leads_to }] }`.
@@ -77,6 +79,11 @@ directly and keep it valid.
   of truth; milestones just sequence existing work.
 - `this_week_focus` — `{ priority_1, priority_2, priority_3, note }` where each
   priority is a comma-separated list of work-item ids.
+- `thirty_sixty_ninety` — the near-term operating layer.
+  `{ title, summary, windows[{ id, label, status, theme, goal,
+     focus_step_ids[], outcomes[], guardrail }] }`. `focus_step_ids` reference
+  `work_items` by id (same single-source-of-truth rule as milestones). Rendered
+  in the Dashboard view by `app.js`; there is no separate renderer.
 - `ecosystem_flow` — `{ flow[] }`, ordered strings describing the loop.
 
 > Note: an older **pillar model** (`vision.json`, `pillars.json`, `projects`,
@@ -97,6 +104,8 @@ Before committing a `roadmap.json` change, confirm:
   appears in exactly one phase.
 - `journey.you_are_here` matches a real milestone id.
 - Every id in `this_week_focus` matches a real work-item id.
+- Every `thirty_sixty_ninety.windows[].focus_step_ids` entry matches a real
+  work-item id.
 - No duplicate work-item ids.
 
 Run the validator instead of checking by hand:

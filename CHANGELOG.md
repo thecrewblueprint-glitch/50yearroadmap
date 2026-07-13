@@ -20,14 +20,27 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 - **Proposal review backlog.** The latest watcher output contains candidate work
   items/blockers for human review. Approved items still need to be promoted by
   hand into `roadmap.json`.
-- **30 / 60 / 90 data model follow-up.** The dashboard now has a working
-  30 / 60 / 90 execution layer. The first pass is supplied by `ninety.js` so it
-  can ship without a larger schema migration. A later cleanup can promote the
-  plan into `roadmap.json` as a formal branch/journey data field.
 
 ---
 
 ## Entries
+
+### 2026-07-09 — Formalize 30/60/90 into roadmap.json + add moved_later (owner-approved)
+- Followed GPT's framework-audit handoff to fix the two-sources-of-truth issue.
+- Moved GPT's 30/60/90 plan verbatim from the `ninety.js` sidecar into
+  `roadmap.json` as a formal `thirty_sixty_ninety` field. `app.js` already read
+  this field, so it now renders the 30/60/90 with no sidecar — deleted
+  `ninety.js` and its `<script>` include (kept `ninety.css`). One source of
+  truth, one renderer.
+- Extended `scripts/validate-roadmap.py`: it now checks every
+  `thirty_sixty_ninety.windows[].focus_step_ids` resolves to a real work item.
+  Verified: live roadmap PASSes; a planted bad focus_step_id FAILs.
+- Added the `moved_later` deferred-work status: valid in the validator, with
+  dashed/muted styling in the work-item list and timeline dots so deferred work
+  stays visible but off the active path. (Also added `completed` styling, which
+  the validator already accepted.)
+- Updated AGENTS.md §3/§4 to document the new field, the `moved_later` status,
+  and the focus_step_ids integrity rule.
 
 ### 2026-07-09 — Claude framework audit handoff
 - Added `CLAUDE_FRAMEWORK_AUDIT_HANDOFF.md` with a handoff note for Claude and

@@ -533,5 +533,67 @@
         "leads_to": "The movement and the Homestead — the destination."
       }
     ]
+  },
+  "thirty_sixty_ninety": {
+    "title": "30 / 60 / 90 Day Operating Dashboard",
+    "summary": "A near-term execution layer that keeps the roadmap linear while translating the current milestone into practical operating windows.",
+    "windows": [
+      {
+        "id": "day-30",
+        "label": "Next 30 days",
+        "status": "current",
+        "theme": "Stabilize the business foundation",
+        "goal": "Get Deadhang's administrative base under control before adding more moving parts.",
+        "focus_step_ids": [
+          "dh-1",
+          "dh-2",
+          "po-1"
+        ],
+        "outcomes": [
+          "Business structure and compliance review is defined or underway",
+          "Gig tracking workflow is documented enough to repeat",
+          "Dashboard remains the active execution surface"
+        ],
+        "guardrail": "Do not start a large platform rebuild before the basic business and tracking foundation is clear."
+      },
+      {
+        "id": "day-60",
+        "label": "Next 60 days",
+        "status": "next",
+        "theme": "Lock the money and workflow tools",
+        "goal": "Define the smallest useful contractor tool set for invoices, payments, and scheduling.",
+        "focus_step_ids": [
+          "ct-1",
+          "ct-2",
+          "ct-3",
+          "ct-4"
+        ],
+        "outcomes": [
+          "Invoice generator scope is reduced to MVP requirements",
+          "Payment tracking requirements are clear",
+          "Calendar authorization risk has a concrete mitigation path"
+        ],
+        "guardrail": "Keep tools narrow: fixed invoice workflow, stable payment tracking, and scheduling reliability before enterprise features."
+      },
+      {
+        "id": "day-90",
+        "label": "Next 90 days",
+        "status": "later",
+        "theme": "Connect labor, training, and job discovery",
+        "goal": "Prepare the first usable loop between Deadhang Labor, Crew Blueprint, Production Atlas, and Contractor Tools.",
+        "focus_step_ids": [
+          "pa-1",
+          "cb-1",
+          "cb-2",
+          "po-2"
+        ],
+        "outcomes": [
+          "Production Atlas has public/private verification standards",
+          "Crew Blueprint has a safer content authority boundary",
+          "Anti-sprawl controls keep skipped work visible without breaking the linear path"
+        ],
+        "guardrail": "Do not turn the roadmap into a storage dump. Promote only public-safe, decision-ready work."
+      }
+    ]
   }
 }

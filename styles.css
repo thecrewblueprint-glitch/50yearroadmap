@@ -482,6 +482,9 @@ button.active {
 .work-item-status.not_started { color: var(--muted); background: rgba(139,149,168,0.1); }
 .work-item-status.in_progress { background: rgba(59,130,246,0.15); color: #60a5fa; }
 .work-item-status.blocked { background: rgba(239,68,68,0.15); color: #ff6b7a; }
+.work-item-status.completed { background: rgba(16,185,129,0.15); color: #34d399; }
+/* Deferred work: visible but clearly off the active path */
+.work-item-status.moved_later { background: rgba(139,149,168,0.08); color: var(--muted); border: 1px dashed var(--border); }
 
 .close-button {
     margin-top: 20px;
@@ -738,6 +741,8 @@ button.active {
 .tl-step-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--muted); }
 .tl-step-dot.in_progress { background: var(--accent); }
 .tl-step-dot.blocked { background: var(--danger); }
+.tl-step-dot.completed { background: var(--success); }
+.tl-step-dot.moved_later { background: transparent; border: 1.5px dashed var(--muted); }
 .tl-step-body { flex: 1; min-width: 0; }
 .tl-step-task { font-weight: 600; }
 .tl-step-why { font-size: 0.85rem; color: var(--muted); }
