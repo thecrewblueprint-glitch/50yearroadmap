@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-09 — Promote 3 Deadhang foundation items from the watcher backlog
+- Triaged the watcher proposals and promoted the 3 genuinely-new, public-safe
+  Deadhang items that sharpen the current 30-day "stabilize the business
+  foundation" window (the rest of GPT's suggested promotions already existed):
+  - `dh-5` Assemble first-year business document system (plan, formation/EIN
+    records, operating agreement)
+  - `dh-6` Select and standardize a client MSA / service agreement
+  - `dh-7` Finish website hardening (SSL/security) and portfolio cleanup
+- Mapped all three onto milestone `m1` ("Solidify Deadhang's foundation") so they
+  stay on the linear path (no orphan work). Left `this_week_focus` and the
+  30/60/90 windows unchanged — sequencing those is the owner's call.
+- Validator passes; items render on the timeline and in the Deadhang branch.
+- Backlog note: many watcher candidates remain (mostly Production Atlas /
+  Personal Operations); promote further items deliberately, not in bulk.
+
 ### 2026-07-09 — Formalize 30/60/90 into roadmap.json + add moved_later (owner-approved)
 - Followed GPT's framework-audit handoff to fix the two-sources-of-truth issue.
 - Moved GPT's 30/60/90 plan verbatim from the `ninety.js` sidecar into

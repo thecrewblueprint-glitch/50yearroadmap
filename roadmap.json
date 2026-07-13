@@ -55,6 +55,27 @@
           "why": "Enable coordination of team deployments and gig assignments",
           "priority": "MEDIUM",
           "status": "not_started"
+        },
+        {
+          "id": "dh-5",
+          "task": "Assemble first-year business document system (plan, formation/EIN records, operating agreement)",
+          "why": "Finalize and organize core business paperwork so operations rest on a complete legal foundation",
+          "priority": "HIGH",
+          "status": "not_started"
+        },
+        {
+          "id": "dh-6",
+          "task": "Select and standardize a client MSA / service agreement",
+          "why": "Adopt a default client contract with clear project authorization before taking on larger contracts",
+          "priority": "HIGH",
+          "status": "not_started"
+        },
+        {
+          "id": "dh-7",
+          "task": "Finish website hardening (SSL / security) and portfolio cleanup",
+          "why": "The site is live; close out remaining SSL/security and portfolio items",
+          "priority": "MEDIUM",
+          "status": "not_started"
         }
       ],
       "phase": 1,
@@ -420,7 +441,10 @@
         "step_ids": [
           "dh-1",
           "dh-2",
-          "po-1"
+          "po-1",
+          "dh-5",
+          "dh-6",
+          "dh-7"
         ],
         "leads_to": "A stable base you can safely scale from."
       },
