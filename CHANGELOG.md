@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-09 — Record real Deadhang / Contractor Tools progress (owner update)
+- Owner reported: website SSL/security fixed, portfolio clean and site running;
+  an invoice + finance-tracking system is in place; last 3 years of finances
+  sorted; tax filings being brought current.
+- Reflected in roadmap.json:
+  - `dh-7` (website hardening/SSL + portfolio) → **completed**
+  - `dh-5` (business documents) → **in_progress** (finances sorted)
+  - New `dh-8` "Resolve tax situation and bring filings current" → **in_progress**
+    (HIGH), mapped onto milestone m1
+  - Removed the resolved Deadhang blocker "Invoice tracking and payment systems
+    incomplete"; refreshed Deadhang current_state; status 30% → 45%
+  - Contractor Tools: `ct-2` (invoice MVP) and `ct-4` (payment tracking) →
+    **completed**; refreshed current_state; status 15% → 35%
+- Validator passes. Re-ran the prioritizer so the backlog reflects the changes.
+
 ### 2026-07-09 — Add proposal prioritizer (ranked "work-on-first" backlog)
 - Added `scripts/prioritize-proposals.py`: a **read-only** ranker over the
   watcher proposals. It deletes nothing and never edits the proposals or

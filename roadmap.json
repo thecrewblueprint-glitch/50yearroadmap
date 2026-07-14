@@ -14,9 +14,9 @@
       "id": "deadhang-labor",
       "name": "Deadhang Labor LLC",
       "role": "Solo contractor turning into labor staffing agency",
-      "status_percentage": 30,
+      "status_percentage": 45,
       "ultimate_goal": "Establish Deadhang as a reliable labor sourcing and staffing entity that can contract large gigs and deploy teams of stagehands.",
-      "current_state": "Currently operating as solo Member-Managed LLC. Successfully generating income through direct contracting. Missing: business structure validation, team deployment capability, systematic gig tracking.",
+      "current_state": "Operating as a solo Member-Managed LLC generating income through direct contracting. Website is live, secured (SSL), and cleaned up. An invoice and finance-tracking system is in place and the last three years of finances are sorted; tax filings are being brought current. Still needed: business structure/compliance review and team-deployment capability.",
       "critical_blocker": "Business affairs and operating structure need review before scaling to team deployment",
       "timeline": {
         "phase_1_ready": "Q4 2026",
@@ -24,8 +24,7 @@
       },
       "blockers": [
         "Deadhang admin items remain open - need business structure review",
-        "Need team deployment and contractor management systems",
-        "Invoice tracking and payment systems incomplete"
+        "Need team deployment and contractor management systems"
       ],
       "work_items": [
         {
@@ -61,7 +60,7 @@
           "task": "Assemble first-year business document system (plan, formation/EIN records, operating agreement)",
           "why": "Finalize and organize core business paperwork so operations rest on a complete legal foundation",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "dh-6",
@@ -75,7 +74,14 @@
           "task": "Finish website hardening (SSL / security) and portfolio cleanup",
           "why": "The site is live; close out remaining SSL/security and portfolio items",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "completed"
+        },
+        {
+          "id": "dh-8",
+          "task": "Resolve tax situation and bring filings current",
+          "why": "Close out back taxes so the business foundation is fully compliant",
+          "priority": "HIGH",
+          "status": "in_progress"
         }
       ],
       "phase": 1,
@@ -195,9 +201,9 @@
       "id": "contractor-tools",
       "name": "Contractor Tools",
       "role": "Infrastructure for payments, scheduling, and team coordination",
-      "status_percentage": 15,
+      "status_percentage": 35,
       "ultimate_goal": "Provide contractors with integrated tools for invoicing, payment tracking, calendar management, and team communication.",
-      "current_state": "Backend infrastructure planned. Invoice system architecture defined. Calendar automation in progress. Communication tools needed. Laravel backend approved but requirements need validation.",
+      "current_state": "Backend infrastructure planned. A working invoice and finance/payment-tracking system is now in place (invoicing and payment tracking done). Remaining: validate backend scope before overbuilding, and make calendar authorization renewal reliable.",
       "critical_blocker": "Invoice and calendar systems need validation against actual MVP requirements",
       "timeline": {
         "phase_1_ready": "Q2 2027",
@@ -222,7 +228,7 @@
           "task": "Scope down invoice generator to MVP requirements",
           "why": "Focus on core functionality before enterprise features",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "ct-3",
@@ -236,7 +242,7 @@
           "task": "Build contractor payment tracking system",
           "why": "Enable contractors to monitor and manage payments",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "completed"
         }
       ],
       "phase": 1,
@@ -444,7 +450,8 @@
           "po-1",
           "dh-5",
           "dh-6",
-          "dh-7"
+          "dh-7",
+          "dh-8"
         ],
         "leads_to": "A stable base you can safely scale from."
       },
