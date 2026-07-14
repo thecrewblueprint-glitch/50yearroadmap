@@ -134,6 +134,11 @@ not committed.
   and writes **proposals** to `data/roadmap/watcher-proposals.json`. It does
   **not** edit `roadmap.json` — a human promotes approved proposals by hand.
   See `WATCHER_GUIDE.md`. (Running it is manual, not wired into CI.)
+- 🟡 **Prioritizer (read-only view)** — `scripts/prioritize-proposals.py` ranks
+  the open watcher candidates into `data/roadmap/proposal-backlog.md` ("work on
+  first" order) using the 30/60/90 windows, blockers-first, and confidence. It
+  **deletes nothing** and never edits the proposals or `roadmap.json`; it only
+  produces the ranked report for the owner to decide from.
 
 ---
 

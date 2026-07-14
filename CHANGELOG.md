@@ -25,6 +25,19 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-09 — Add proposal prioritizer (ranked "work-on-first" backlog)
+- Added `scripts/prioritize-proposals.py`: a **read-only** ranker over the
+  watcher proposals. It deletes nothing and never edits the proposals or
+  `roadmap.json`; it writes `data/roadmap/proposal-backlog.md`.
+- Ranking: by the owner's own 30/60/90 windows (earliest first), the current
+  "you are here" branch leads its tier, blockers before work items, then
+  confidence. Verified the proposals file is byte-identical before/after (md5).
+- Also hides candidates already covered in the roadmap via a token-containment
+  check (catches reworded promotions the watcher's title-only dedup missed) —
+  e.g. the 3 Deadhang items promoted earlier no longer resurface. 117 raw
+  candidates → 108 shown (9 already-covered hidden).
+- Documented in AGENTS.md §5.
+
 ### 2026-07-09 — Promote 3 Deadhang foundation items from the watcher backlog
 - Triaged the watcher proposals and promoted the 3 genuinely-new, public-safe
   Deadhang items that sharpen the current 30-day "stabilize the business
