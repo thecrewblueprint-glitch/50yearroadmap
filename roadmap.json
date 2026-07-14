@@ -78,8 +78,8 @@
         },
         {
           "id": "dh-8",
-          "task": "Resolve tax situation and bring filings current",
-          "why": "Close out back taxes so the business foundation is fully compliant",
+          "task": "Confirm tax balance owed and arrange payment (returns filed)",
+          "why": "Returns are filed; determine what's owed and set up payment (or a payment plan) to fully close out the tax situation",
           "priority": "HIGH",
           "status": "in_progress"
         }
