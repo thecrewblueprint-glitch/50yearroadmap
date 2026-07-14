@@ -78,8 +78,8 @@
         },
         {
           "id": "dh-8",
-          "task": "Confirm tax balance owed and arrange payment (returns filed)",
-          "why": "Returns are filed; determine what's owed and set up payment (or a payment plan) to fully close out the tax situation",
+          "task": "Amend returns if needed, confirm tax balance owed, and arrange payment",
+          "why": "Self-filed returns may need amending now that the financial picture is clearer; then confirm what's owed and set up payment to fully close out taxes",
           "priority": "HIGH",
           "status": "in_progress"
         }
