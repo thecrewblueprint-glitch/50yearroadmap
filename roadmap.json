@@ -382,6 +382,13 @@
           "why": "Set expectations for people who stay and help keep the community running",
           "priority": "LOW",
           "status": "not_started"
+        },
+        {
+          "id": "hs-4",
+          "task": "Investigate Van Life Campgrounds (vanlifecampgrounds.com) as a nomadic-movement connection",
+          "why": "Explore their campground / van-life network as a possible model or partner for the traveling-stagehand Homestead; contact details in data/roadmap/connections.md",
+          "priority": "HIGH",
+          "status": "not_started"
         }
       ]
     }
@@ -559,7 +566,8 @@
         "step_ids": [
           "hs-1",
           "hs-2",
-          "hs-3"
+          "hs-3",
+          "hs-4"
         ],
         "leads_to": "The movement and the Homestead — the destination."
       }

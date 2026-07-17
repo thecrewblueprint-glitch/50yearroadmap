@@ -25,6 +25,17 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-16 — Add nomadic-movement lead: Van Life Campgrounds
+- Owner-supplied lead for the Homestead / nomadic-movement vision.
+- Added `hs-4` to the Homestead branch: "Investigate Van Life Campgrounds
+  (vanlifecampgrounds.com) as a nomadic-movement connection" (HIGH, not_started),
+  mapped onto milestone m8. Website + purpose only — validator passes, no email
+  in roadmap.json.
+- Recorded the full contact (org, website, info@ business email, purpose) in a
+  new `data/roadmap/connections.md` leads log (business contacts only; no private
+  individuals). Ran a reputation check on the domain: verdict unknown, but
+  registered 4+ years (established, not flagged malicious).
+
 ### 2026-07-16 — Add sanitized July MTD work report to the evidence layer
 - Stored a **public-safe** digest of the owner's July 1–16 month-to-date report
   as `data/raw-reports/2026-07-16-july-mtd-work-report-digest.md`.
