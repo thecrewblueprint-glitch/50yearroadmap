@@ -6,8 +6,9 @@
 
 The standard path of a job through the business:
 
-1. **Inquiry** — a producer/staffing company or direct client reaches out (or
-   Deadhang applies/responds to a call for crew).
+1. **Inquiry** — work comes in through two primary channels: **direct client
+   relationships** and **staffing companies** (not job boards). Deadhang may also
+   respond to calls for crew.
 2. **Agreement** — terms set via the client MSA / service agreement, or the
    staffing company's onboarding (W-9 provided; some clients moving from W-2 to
    1099 — see doc 05).
@@ -26,8 +27,7 @@ Systematic gig tracking is being formalized (roadmap `dh-2`) — a repeatable
 record of gigs, roles, hours, clients, and payments that can later be
 automated.
 
-> **To confirm (owner):** the canonical version of steps 1–4 (how a job actually
-> comes in and gets scheduled today), and where the gig log lives.
+> **To confirm (owner):** where the gig log lives (how gigs/hours are tracked today).
 
 ## Notes
 
