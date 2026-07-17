@@ -25,6 +25,13 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-17 — Stage 1 scope drafted (Deadhang canonical documentation)
+- Added `governance/STAGE_1_SCOPE.md`: goal + definition-of-done, proposed
+  `companies/deadhang-labor/` folder, a 12-document canonical set (with per-doc
+  source + readiness), public-safe guardrails, source-material map, and a build
+  sequence. Awaiting owner sign-off on structure + a few ⚠️ facts before drafting.
+- No roadmap/data changes; scoping only.
+
 ### 2026-07-17 — Governance docs added + stale docs refreshed (Stage 0 cont.)
 - Added the genuinely-new governance docs (the ones not already covered):
   `governance/OPEN_DECISIONS.md`, `KNOWN_RISKS.md`, `LESSONS_LEARNED.md`.
