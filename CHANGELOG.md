@@ -25,6 +25,19 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-16 — Add 30-day work summary to the evidence layer
+- Stored the owner-supplied 30-day work summary (Jun 16 – Jul 16) as
+  `data/raw-reports/2026-07-16-30-day-work-summary-digest.md`. Redacted one
+  email address to keep it public-safe (DATA_SAFETY_POLICY); all other content
+  preserved.
+- Confirms/expands real progress across Deadhang (site live, 1099 invoice tool,
+  affirmation calendar), Crew Blueprint (3 publication-ready course packets:
+  RIG-201 96/100, Bridle Math, Predictive Hazard), Festival Atlas (Production
+  Atlas — calendar sorting), and system org (Android file organizer).
+- Not yet reflected into roadmap.json — flagged for owner-directed promotion
+  (esp. Crew Blueprint course content, which shows more progress than the
+  branch currently records). Watcher runs cleanly with the new digest present.
+
 ### 2026-07-09 — Record real Deadhang / Contractor Tools progress (owner update)
 - Owner reported: website SSL/security fixed, portfolio clean and site running;
   an invoice + finance-tracking system is in place; last 3 years of finances
