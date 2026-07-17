@@ -1,6 +1,6 @@
 # 03 — Operations
 
-**Status:** Partial (workflow to confirm/standardize; gig tracking in progress).
+**Status:** Documented (systematic gig tracking being formalized — `dh-2`).
 
 ## End-to-end workflow
 
@@ -23,11 +23,12 @@ The standard path of a job through the business:
 
 ## Gig tracking
 
-Systematic gig tracking is being formalized (roadmap `dh-2`) — a repeatable
-record of gigs, roles, hours, clients, and payments that can later be
-automated.
-
-> **To confirm (owner):** where the gig log lives (how gigs/hours are tracked today).
+- **System of record today:** Google products (Google Sheets / Drive — the
+  work-income tracker), with ChatGPT used to help capture and reconcile gigs,
+  hours, and income.
+- Systematic gig tracking is being **formalized** (roadmap `dh-2`) — a
+  repeatable record of gigs, roles, hours, clients, and payments that can later
+  be automated (and eventually migrated into a database / the command center).
 
 ## Notes
 
