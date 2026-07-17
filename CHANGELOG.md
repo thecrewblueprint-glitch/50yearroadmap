@@ -25,6 +25,30 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-17 — Stage 0: roadmap synchronization + governance framework
+- Acted on the ChatGPT Stage 0 handoff (GPT paused — GitHub connector issue;
+  Claude solo on the repo for now). GPT's session was read-only; nothing had
+  been committed.
+- **Roadmap synchronized with reality** (`roadmap.json`): made Deadhang's
+  Arizona single-member LLC / Schedule C / cash-basis identity explicit
+  (corrected any drift toward Wisconsin); `dh-1` business-structure audit →
+  in_progress (~90%); `dh-6` client MSA → completed; added `dh-9` insurance
+  (`moved_later` — deferred, not forgotten), `dh-10` independent-contractor
+  framework (in_progress), `dh-11` safety documentation (in_progress), `dh-12`
+  print-on-demand merch line under Deadhang (in_progress, no new LLC); refreshed
+  current_state/blockers; Deadhang 45% → 60%. Validator passes.
+- **Governance framework established** in `/governance/`: `README.md` (purpose +
+  Stage 0–5 plan), `CURRENT_STATE.md` (snapshot), `DECISION_LOG.md` (structure,
+  tax, insurance, print-on-demand, single-source-of-truth decisions), and
+  `handoffs/2026-07-17-chatgpt-stage0-handoff.md` (the source handoff, stored
+  verbatim). `AGENTS.md` §8 now points to it.
+- Noted that Stage 0's "collaboration standards" and "AI handoff system" were
+  already largely built (`AGENTS.md`, `CHANGELOG.md`, `CHATGPT_HANDOFF.md`).
+- **Open:** remaining proposed governance docs (EXECUTIVE_SUMMARY, NEXT_ACTIONS,
+  OPEN_DECISIONS, KNOWN_RISKS, LESSONS_LEARNED, SESSION_SUMMARY) — several
+  overlap with existing files; confirm with owner before adding. Stages 1–5 not
+  started (Stage 0 first, by design).
+
 ### 2026-07-16 — Add nomadic-movement lead: Van Life Campgrounds
 - Owner-supplied lead for the Homestead / nomadic-movement vision.
 - Added `hs-4` to the Homestead branch: "Investigate Van Life Campgrounds

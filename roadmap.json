@@ -14,17 +14,19 @@
       "id": "deadhang-labor",
       "name": "Deadhang Labor LLC",
       "role": "Solo contractor turning into labor staffing agency",
-      "status_percentage": 45,
+      "status_percentage": 60,
       "ultimate_goal": "Establish Deadhang as a reliable labor sourcing and staffing entity that can contract large gigs and deploy teams of stagehands.",
-      "current_state": "Operating as a solo Member-Managed LLC generating income through direct contracting. Website is live, secured (SSL), and cleaned up. An invoice and finance-tracking system is in place and the last three years of finances are sorted; tax filings are being brought current. Still needed: business structure/compliance review and team-deployment capability.",
-      "critical_blocker": "Business affairs and operating structure need review before scaling to team deployment",
+      "current_state": "Operating as an Arizona single-member LLC (Schedule C, cash basis, owner-operated) in live-event production labor. Foundation largely in place: EIN, business bank account, website (live + SSL), business email, invoice system, W-9 workflow, record retention, an existing client MSA, and operational structure. In progress: independent-contractor framework and safety documentation. Insurance is intentionally deferred until the business reaches the appropriate scaling stage. Still to build: team-deployment capability. A print-on-demand merch line is being added as an additional Deadhang revenue stream (no new LLC).",
+      "critical_blocker": "Independent-contractor framework and safety documentation must be completed before scaling to team deployment (insurance deferred until scaling).",
       "timeline": {
         "phase_1_ready": "Q4 2026",
         "description": "Validate business structure, establish team deployment framework, build initial contractor network"
       },
       "blockers": [
-        "Deadhang admin items remain open - need business structure review",
-        "Need team deployment and contractor management systems"
+        "Independent-contractor framework in progress",
+        "Safety documentation in progress",
+        "Team-deployment capability not yet built",
+        "Insurance deferred until the appropriate scaling stage"
       ],
       "work_items": [
         {
@@ -32,7 +34,7 @@
           "task": "Complete business structure audit and compliance review",
           "why": "Ensure LLC is properly structured before scaling team operations",
           "priority": "CRITICAL",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "dh-2",
@@ -67,7 +69,7 @@
           "task": "Select and standardize a client MSA / service agreement",
           "why": "Adopt a default client contract with clear project authorization before taking on larger contracts",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "dh-7",
@@ -81,6 +83,34 @@
           "task": "Amend returns if needed, confirm tax balance owed, and arrange payment",
           "why": "Self-filed returns may need amending now that the financial picture is clearer; then confirm what's owed and set up payment to fully close out taxes",
           "priority": "HIGH",
+          "status": "in_progress"
+        },
+        {
+          "id": "dh-9",
+          "task": "Business insurance",
+          "why": "Add business/liability insurance — intentionally deferred until the business reaches the appropriate scaling stage",
+          "priority": "MEDIUM",
+          "status": "moved_later"
+        },
+        {
+          "id": "dh-10",
+          "task": "Build independent-contractor framework",
+          "why": "Legal/operational framework for engaging independent contractors (1099)",
+          "priority": "HIGH",
+          "status": "in_progress"
+        },
+        {
+          "id": "dh-11",
+          "task": "Create safety documentation",
+          "why": "Document safety procedures/standards for live-event production labor",
+          "priority": "HIGH",
+          "status": "in_progress"
+        },
+        {
+          "id": "dh-12",
+          "task": "Launch print-on-demand merch line under Deadhang (no new LLC)",
+          "why": "Additional Deadhang revenue stream: print-on-demand clothing",
+          "priority": "MEDIUM",
           "status": "in_progress"
         }
       ],
@@ -458,7 +488,11 @@
           "dh-5",
           "dh-6",
           "dh-7",
-          "dh-8"
+          "dh-8",
+          "dh-9",
+          "dh-10",
+          "dh-11",
+          "dh-12"
         ],
         "leads_to": "A stable base you can safely scale from."
       },

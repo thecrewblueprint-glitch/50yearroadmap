@@ -182,3 +182,22 @@ When you finish:
 7. If you discovered stranded work on another branch or an unresolved
    inconsistency, note it in the CHANGELOG under "Open threads" and raise it
    with the owner.
+
+---
+
+## 8. Governance
+
+`/governance/` holds the durable operating-governance layer as the repo grows
+into an operational command center:
+
+- `governance/CURRENT_STATE.md` — plain-language snapshot of where things stand.
+- `governance/DECISION_LOG.md` — durable strategic decisions + reasoning (e.g.
+  Arizona single-member LLC / Schedule C / cash basis; no S-Corp yet; insurance
+  deferred; print-on-demand under Deadhang). Consult before reversing direction.
+- `governance/handoffs/` — dated AI/human handoff documents.
+- `governance/README.md` — the folder's purpose and the Stage 0–5 evolution plan.
+
+This file (`AGENTS.md`) is the collaboration standard; `CHANGELOG.md` is the
+work/decision log; `CHATGPT_HANDOFF.md` is the standing AI-onboarding handoff.
+Together with `/governance/` they are the governance system — don't duplicate
+across them.
