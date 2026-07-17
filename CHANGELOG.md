@@ -25,6 +25,24 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-17 — Governance docs added + stale docs refreshed (Stage 0 cont.)
+- Added the genuinely-new governance docs (the ones not already covered):
+  `governance/OPEN_DECISIONS.md`, `KNOWN_RISKS.md`, `LESSONS_LEARNED.md`.
+- Evaluated the docs that already fill the other proposed roles and refreshed the
+  stale ones (Stage 0 = remove outdated info):
+  - `README.md`: it wrongly listed the watcher, `/data/schema`, and
+    `/data/roadmap-deep-context` as "not yet in the repo" (all exist now); updated
+    the pipeline (watcher/prioritizer/validator are built), the data-model snapshot
+    (added north_star/end_goal/phases/journey/thirty_sixty_ninety + full status
+    enum), and added `/governance/`.
+  - `CHATGPT_HANDOFF.md`: refreshed to 2026-07-17 — added `completed`/`moved_later`
+    statuses, the `thirty_sixty_ninety` field, the prioritizer script, governance,
+    Deadhang AZ-LLC facts, Homestead outreach, and the GPT-paused note.
+- Did NOT add duplicate docs: SESSION_SUMMARY (=CHANGELOG), AI_HANDOFF
+  (=CHATGPT_HANDOFF), NEXT_ACTIONS (=roadmap this_week/30-60-90/backlog),
+  EXECUTIVE_SUMMARY (=README + governance CURRENT_STATE) — the existing files serve
+  those roles.
+
 ### 2026-07-17 — Stage 0: roadmap synchronization + governance framework
 - Acted on the ChatGPT Stage 0 handoff (GPT paused — GitHub connector issue;
   Claude solo on the repo for now). GPT's session was read-only; nothing had

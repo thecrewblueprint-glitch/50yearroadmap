@@ -4,8 +4,9 @@ You're joining an existing repository as a collaborating AI. This document
 orients you fast. **Read `AGENTS.md` in full before making any change** — this
 handoff is the summary; `AGENTS.md` is the law.
 
-_Last updated: 2026-07-09. The living record of what's been done is
-`CHANGELOG.md` (read its newest entries first)._
+_Last updated: 2026-07-17. The living record of what's been done is
+`CHANGELOG.md` (read its newest entries first); durable decisions are in
+`governance/DECISION_LOG.md`._
 
 ---
 
@@ -62,13 +63,17 @@ Top-level keys of `roadmap.json`:
   current_state, critical_blocker, timeline:{ phase_1_ready, description },
   blockers[], work_items[], phase, lifecycle: active|future }`.
   Work item: `{ id, task, why, priority: CRITICAL|HIGH|MEDIUM|LOW,
-  status: not_started|in_progress|blocked }`.
+  status: not_started|in_progress|blocked|completed|moved_later }`
+  (`moved_later` = deferred: visible but off the active path).
 - `journey` — `{ you_are_here, start_label, milestones[{ id, order, title,
   area_branch_id, state: current|upcoming|done, summary, outcome, step_ids[],
   leads_to }] }`. `step_ids` reference `work_items` by id (branches stay the
   single source of truth; milestones just sequence existing work).
 - `this_week_focus` — `{ priority_1, priority_2, priority_3, note }` (each
   priority is a comma-separated list of work-item ids).
+- `thirty_sixty_ninety` — `{ title, summary, windows[{ id, label, status, theme,
+  goal, focus_step_ids[], outcomes[], guardrail }] }` (30/60/90 operating layer;
+  `focus_step_ids` reference work items). Rendered by `app.js` in the Dashboard view.
 - `ecosystem_flow` — `{ flow[] }`.
 
 > A previous **pillar model** (`vision.json`, `pillars.json`, `frontier`,
@@ -102,6 +107,9 @@ roadmap.json
   `roadmap.json`.
 - `scripts/validate-roadmap.py` — validates `roadmap.json` (refs resolve, no
   dupes, enums/ranges, public-safety). Exit 0 = pass, 1 = errors.
+- `scripts/prioritize-proposals.py` — ranks open proposals into
+  `data/roadmap/proposal-backlog.md` ("work on first" order). Read-only; deletes
+  nothing.
 
 ## Evidence & safety (do not violate)
 
@@ -116,14 +124,21 @@ roadmap.json
   direction. For direction changes (the Homestead, Crew Blueprint scope, phase
   sequencing, what "you are here" points to), confirm rather than deciding alone.
 
-## Current status (2026-07-09)
+## Current status (2026-07-17)
 
-- Dashboard: fully functional (Timeline, Dashboard, branch hubs, The Vision).
-- Collaboration system: `AGENTS.md` + `CHANGELOG.md` in place.
-- Watcher + validator: built for the current model and audited end-to-end.
-- Useful content merged from the legacy branch (deep-context, digests, safety
-  schema). Raw archives already live under `memories/`.
-- **Open threads:** see the top of `CHANGELOG.md` (currently none blocking).
+- Dashboard: fully functional (Timeline, Dashboard incl. 30/60/90, branch hubs, The Vision).
+- Governance: `/governance/` established (CURRENT_STATE, DECISION_LOG,
+  OPEN_DECISIONS, KNOWN_RISKS, LESSONS_LEARNED, handoffs) alongside `AGENTS.md` +
+  `CHANGELOG.md`. Repo is in **Stage 0** (stabilization) — do Stage 0 before Stages 1–5.
+- Watcher, validator, and prioritizer built and audited; `moved_later` and the
+  `thirty_sixty_ninety` layer are live.
+- Deadhang facts locked: **Arizona single-member LLC / Schedule C / cash basis**
+  (see `DECISION_LOG.md`) — do not drift to other-state assumptions.
+- Homestead outreach started: The Roadie Clinic contacted; connections shortlist
+  in `data/roadmap/connections.md`.
+- **Open threads / decisions:** `CHANGELOG.md` (top) and `governance/OPEN_DECISIONS.md`.
+- **Note:** GPT is paused (GitHub connector issue) — Claude is solo on the repo
+  until that's fixed.
 
 ## Start-here checklist for GPT
 

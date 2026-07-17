@@ -30,18 +30,15 @@ The system is designed to answer one practical question:
 - `/memories`: Raw imported archives and exports; preserved as source evidence.
 - `/memories/processed`: Generated chunks, indexes, and navigation files from raw memory archives.
 - `/data/raw-reports`: Curated operational digests.
-- `/data/roadmap`: Approved roadmap state and decision indexes.
-- `/scripts`: Memory processing and build tools.
-
-Planned / referenced but not yet in the repo:
-
-- `/data/roadmap-deep-context`: Mission, values, identity, and long-range intent context. Referenced by `AGENTS.md` and `data/roadmap/deep-context-decision-sources.json`.
-- A roadmap **watcher** that turns curated digests into proposals — described in the pipeline below as a workflow; there is no watcher script yet.
-- `/data/schema`: Data validation rules.
+- `/data/roadmap`: Approved roadmap state, decision indexes, watcher proposals, the ranked backlog, and the connections/leads log.
+- `/data/roadmap-deep-context`: Mission, values, identity, and long-range intent context (indexed by `data/roadmap/deep-context-decision-sources.json`).
+- `/data/schema`: Public-safety data-validation rules.
+- `/governance`: Current state, decision log, open decisions, known risks, lessons learned, and AI/human handoffs.
+- `/scripts`: Memory processing, the watcher, the validator, and the proposal prioritizer.
 
 ## Data Pipeline
 
-Automated steps are marked ✅; manual/planned steps are marked ⏳.
+Automated/tooled steps are marked ✅; manual steps are marked ⏳.
 
 ```text
 RAW MEMORY ARCHIVES
@@ -49,17 +46,19 @@ RAW MEMORY ARCHIVES
 /memories/processed chunks + indexes
   ↓  ⏳ manual curation
 curated digests in /data/raw-reports
-  ↓  ⏳ watcher (planned — no script yet)
-roadmap proposals
-  ↓  ⏳ manual approval
-approved /data/roadmap state
-  ↓  ⏳ manual authoring
-roadmap.json dashboard snapshot (branch model)
+  ↓  ✅ scripts/roadmap-watcher.py  (proposals only — never edits roadmap.json)
+data/roadmap/watcher-proposals.json
+  ↓  ✅ scripts/prioritize-proposals.py  (ranked "work on first" backlog)
+data/roadmap/proposal-backlog.md
+  ↓  ⏳ owner/agent promotes approved items by hand
+roadmap.json  (branch model)
+  ↓  ✅ scripts/validate-roadmap.py  (gate: refs, enums, PII)
+  ↓  commit to main → dashboard
 ```
 
-Only memory processing is automated today. Everything downstream of the
-processed chunks is currently done by hand; the live `roadmap.json` is
-authored directly in the branch model the dashboard reads.
+Memory processing is automated; the watcher, prioritizer, and validator are
+built and run on demand. Promotion into `roadmap.json` is deliberately manual
+(human-in-the-loop) — the watcher only proposes.
 
 Deep-context files follow a parallel route:
 
@@ -81,12 +80,16 @@ roadmap.json
 
 It uses the **branch model** and includes:
 
-- `ultimate_goal` — the north-star statement
-- `phase` / `phase_description` — the current phase
+- `north_star` / `end_goal` — the destination (the Homestead) and how to reach it
+- `phase` / `phase_description` / `phases[]` — the current phase and the phased plan
 - `this_week_focus` — the priority work items for the week
-- `branches[]` — each branch's goal, current state, % complete, blockers, and work items
+- `thirty_sixty_ninety` — the 30/60/90-day operating windows
+- `branches[]` — each branch's goal, current state, % complete, blockers, and work items (status: `not_started` / `in_progress` / `blocked` / `completed` / `moved_later`)
+- `journey` — the linear "you are here → Homestead" milestone path
 - `ecosystem_flow` — how the branches connect end to end
 
-## Agent Rules
+## Governance & Agent Rules
 
-See `AGENTS.md` for strict rules on how AI agents must interact with this repo.
+- `AGENTS.md` — strict rules for how AI agents interact with this repo (commit to `main`, validate, log).
+- `CHANGELOG.md` — the running work/decision log.
+- `/governance/` — current state, decisions, open decisions, known risks, lessons, and handoffs.
