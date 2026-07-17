@@ -9,7 +9,7 @@ starting read, not gospel; verify independently before sharing anything sensitiv
 
 | Organization | Website | Fit | Contact | Purpose / angle | Status |
 | --- | --- | :---: | --- | --- | --- |
-| The Roadie Clinic | theroadieclinic.com | ★★★★★ | via website | Nonprofit built for touring crew — resources, peer support, and temporary housing. Closest existing model to the Homestead; potential ally + mentor. | outreach drafted |
+| The Roadie Clinic | theroadieclinic.com | ★★★★★ | via website | Nonprofit built for touring crew — resources, peer support, and temporary housing. Closest existing model to the Homestead; potential ally + mentor. | contacted 2026-07-16 — awaiting reply |
 | Backline | backline.care | ★★★★★ | via website | Mental-health + wellness network for the live-event/music industry (1,500+ clinicians, 24/7 line). Resource-partner / referral angle for the population the Homestead serves. | candidate |
 | Workamper News | workamper.com | ★★★★ | via website | Jobs + community network for traveling workers; explicitly includes festival/carnival/crew work. Model for the "connect to work" side of the ecosystem. | candidate |
 | Van Life Campgrounds | vanlifecampgrounds.com | ★★★★ | info@vanlifecampgrounds.com | Network of nomad homebases with work-stay opportunities. Direct model for the campground/homebase network. Domain registered 4+ years; no threat intel. | to_investigate |
