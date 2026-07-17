@@ -1,6 +1,6 @@
 # 01 — Legal Structure
 
-**Status:** Partial (a few formation facts to confirm).
+**Status:** Documented (licenses/registrations tracked in doc 11).
 
 ## Entity
 
@@ -8,6 +8,7 @@
 - **State: Arizona.** (This is fixed — do not drift to any other state. See
   `governance/DECISION_LOG.md`.)
 - **Single-member LLC**, owner-operated.
+- **Formed: 2026** — Deadhang is in its first year of operation.
 
 ## Tax classification
 
@@ -23,9 +24,8 @@
 - **Business bank account:** established (details private).
 - **Operational structure:** in place.
 
-> **To confirm (owner):** year of formation, and whether a registered agent /
-> statutory agent and any AZ transaction-privilege or local business
-> registrations should be noted here (as facts, not sensitive numbers).
+(Any AZ transaction-privilege / local business registrations are tracked in
+doc 11, Compliance & Risk.)
 
 ## Why this structure
 
