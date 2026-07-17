@@ -25,6 +25,19 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-16 — Add sanitized July MTD work report to the evidence layer
+- Stored a **public-safe** digest of the owner's July 1–16 month-to-date report
+  as `data/raw-reports/2026-07-16-july-mtd-work-report-digest.md`.
+- Redacted (per DATA_SAFETY_POLICY, repo is public): income amounts + per-client
+  pay breakdowns, bank/financial details, personal/third-party names and emails,
+  reservation/receipt numbers and lodging specifics, and secret names. The full
+  unredacted report stays private with the owner, not in this repo.
+- Preserved work activity/decisions: 60 confirmed paid labor hours, tax
+  knowledge base + 6 manuals, Upstage W-2→1099 transition, Festival/Production
+  Atlas fixes, Crew Blueprint course-preview workflow, new print-on-demand
+  clothing line + Printify automation spec.
+- Verified the file contains no dollar amounts, emails, phones, or redacted names.
+
 ### 2026-07-16 — Add 30-day work summary to the evidence layer
 - Stored the owner-supplied 30-day work summary (Jun 16 – Jul 16) as
   `data/raw-reports/2026-07-16-30-day-work-summary-digest.md`. Redacted one
