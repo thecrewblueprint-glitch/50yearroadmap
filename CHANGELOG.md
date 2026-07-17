@@ -25,6 +25,18 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-17 — Stage 1 first pass: Deadhang canonical documentation drafted
+- Scaffolded `companies/deadhang-labor/` and drafted all 12 canonical docs
+  (README + 00 overview → 11 compliance/risk): legal structure, services,
+  operations, financial systems, contracts, safety, digital assets, brand,
+  revenue streams, growth model, compliance/risk.
+- Ready docs written fully from repo context; in-progress/gap items marked
+  "To confirm (owner)" rather than blocking. Sensitive detail (income, account
+  numbers, tax records, brand assets) is **referenced**, not reproduced.
+- PII-scanned clean (no emails, dollar amounts, SSN, or full name).
+- Remaining for Stage 1 completion: owner fills the "To confirm" facts;
+  safety + contractor-framework docs finish as that work lands.
+
 ### 2026-07-17 — Stage 1 scope drafted (Deadhang canonical documentation)
 - Added `governance/STAGE_1_SCOPE.md`: goal + definition-of-done, proposed
   `companies/deadhang-labor/` folder, a 12-document canonical set (with per-doc
