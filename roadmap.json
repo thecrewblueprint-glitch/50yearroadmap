@@ -385,10 +385,10 @@
         },
         {
           "id": "hs-4",
-          "task": "Investigate Van Life Campgrounds (vanlifecampgrounds.com) as a nomadic-movement connection",
-          "why": "Explore their campground / van-life network as a possible model or partner for the traveling-stagehand Homestead; contact details in data/roadmap/connections.md",
+          "task": "Investigate & connect with nomadic-movement organizations (rated list in connections.md)",
+          "why": "Build relationships with orgs that support traveling/live-event workers and community/land models for the Homestead. Top picks: The Roadie Clinic, Backline, Workamper News, Van Life Campgrounds. Full rated shortlist: data/roadmap/connections.md",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         }
       ]
     }

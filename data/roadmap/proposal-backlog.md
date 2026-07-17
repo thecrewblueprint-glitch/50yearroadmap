@@ -1,6 +1,6 @@
 # Proposal Backlog — Work-On-First Order
 
-_Generated 2026-07-17T15:35:19+00:00 by `scripts/prioritize-proposals.py`. Read-only view over the watcher proposals — nothing is deleted._
+_Generated 2026-07-17T16:29:17+00:00 by `scripts/prioritize-proposals.py`. Read-only view over the watcher proposals — nothing is deleted._
 
 Ranked by your own 30/60/90 windows (earliest first), blockers before work items, then confidence. Promote deliberately; this is a queue, not a to-do dump.
 
