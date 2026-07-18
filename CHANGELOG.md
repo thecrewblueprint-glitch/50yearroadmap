@@ -25,6 +25,24 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Stage 4 BUILT: Contractor Tools canonical documentation
+- No fresh owner review this time — reconstructed from existing repo evidence
+  (roadmap `ct-1..ct-4` + the July digests' invoice/calendar architecture
+  decisions). Future/unconfirmed pieces (team coordination) marked as such.
+- Scaffolded `companies/contractor-tools/` and drafted README + 6 canonical docs:
+  00_overview, 01_invoice_generator, 02_payment_tracking,
+  03_calendar_infrastructure, 04_architecture_principles, 05_growth_model.
+  Public-safe: describes the tools, never their data (no amounts/clients/PII).
+- Captured the grounded specifics: 1099 invoice generator (single-file HTML;
+  text → PHP/OpenRouter parse → validated JSON → human review → deterministic
+  calc → fixed PDF; payment terms Net 15/30/45/60 + Due on Receipt; AI never
+  controls totals; parser/PDF must-not-drift guardrail), payment tracking (`ct-4`
+  done), calendar ICS feeds (Google/Apple/Outlook) + the authorization-renewal
+  service-layer design (`ct-3`), and the MVP-first/anti-overbuild principles
+  (`ct-1`, `ct-2`).
+- Light roadmap sync (current_state rewritten + canonical-docs pointer; statuses
+  already accurate). Added `STAGE_4_SCOPE.md`, updated CURRENT_STATE. Validator: PASS.
+
 ### 2026-07-18 — Stage 3 BUILT: Production Atlas canonical documentation
 - Owner supplied the Production Atlas completed-work review (go-ahead + source
   material, same flow as Stage 2).

@@ -232,7 +232,7 @@
       "role": "Infrastructure for payments, scheduling, and team coordination",
       "status_percentage": 35,
       "ultimate_goal": "Provide contractors with integrated tools for invoicing, payment tracking, calendar management, and team communication.",
-      "current_state": "Backend infrastructure planned. A working invoice and finance/payment-tracking system is now in place (invoicing and payment tracking done). Remaining: validate backend scope before overbuilding, and make calendar authorization renewal reliable.",
+      "current_state": "Shared infrastructure layer for contractors. Built and in place: a production-ready 1099 invoice generator (single-file HTML, deterministic parse→review→PDF pipeline, multiple payment terms) and a finance/payment-tracking system. Calendar infrastructure works via ICS subscription feeds (Google/Apple/Outlook). Remaining: reliable calendar authorization renewal, and validating backend scope before overbuilding (MVP-first discipline). Canonical documentation lives in companies/contractor-tools/.",
       "critical_blocker": "Invoice and calendar systems need validation against actual MVP requirements",
       "timeline": {
         "phase_1_ready": "Q2 2027",
