@@ -26,6 +26,7 @@ numbers, and personal contact details. Where sensitive detail is essential it is
 | 10 | [Growth Model](10_growth_model.md) | Solo → teams → staffing agency |
 | 11 | [Compliance & Risk](11_compliance_and_risk.md) | Insurance, licenses, compliance |
 | 12 | [Business Document Register](12_document_register.md) | Public-safe index of existing business documents + finalization checklist |
+| 13 | [Current-State Business Plan](13_current_state_business_plan.md) | Living plan describing Deadhang as it is today (companion to the long-term Vision plan) |
 
 ## Status legend
 

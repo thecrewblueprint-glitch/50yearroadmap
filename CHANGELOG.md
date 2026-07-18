@@ -25,6 +25,15 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Add Deadhang current-state business plan (living doc)
+- Owner: keep the aspirational Vision Business Plan as-is; add a **living
+  current-state plan**. Created `companies/deadhang-labor/13_current_state_business_plan.md`
+  — mirrors the vision plan's structure (mission → operating model → foundation →
+  financials → risk → roadmap) but grounded in today's reality (solo operator,
+  direct + staffing-company work, insurance deferred, documents being finalized),
+  plus a "bridge: current state → vision" staged path. Public-safe (no figures/PII),
+  self-updating rule stated. README Deadhang count 13→14. Validator: PASS.
+
 ### 2026-07-18 — 30-day work: reviewed existing Deadhang business documents
 - Owner asked to review the business documents already created (they live in
   private Google Drive, not the repo). Reviewed the real document set via the
