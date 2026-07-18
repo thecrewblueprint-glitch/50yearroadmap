@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Refresh dashboard + timeline currency (roadmap.json)
+- Brought the live dashboard/timeline source up to date after the Deadhang document work:
+  - `generated_at` 2026-07-09 → 2026-07-18.
+  - Deadhang `current_state` rewritten to reflect canonical docs, the drafted IC
+    agreement (attorney-review gate), Mesa business license, live tracker, and
+    current-state plan/SOPs; `status_percentage` 60 → 63; `critical_blocker` refined.
+  - `this_week_focus` refreshed (dh-5/dh-8 finalize docs + taxes; dh-10 attorney
+    review; cb-4/pa-3/po-2) — the old dh-1/dh-2 focus was stale.
+  - **30-day window** re-themed "Finalize the business foundation" (its old outcomes
+    — structure reviewed, tracker live, dashboard clean — are now met); focus
+    dh-5/dh-8/dh-10.
+  - **60-day window** re-themed "Harden the contractor tools" and repointed off the
+    completed ct-2/ct-4 to the remaining ct-1/ct-3.
+- Validator: PASS (0 warnings); all focus/journey references resolve.
+
 ### 2026-07-18 — 30-day work: closed the Deadhang document gaps (P&L, SOPs, marketing)
 - Filled the four gaps from the document register (doc 12):
   - **SOPs** → new repo doc `companies/deadhang-labor/14_sops.md` (public-safe):

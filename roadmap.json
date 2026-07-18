@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-09T00:00:00.000000",
+  "generated_at": "2026-07-18T00:00:00.000000",
   "ultimate_goal": "Build a movement connecting stagehands with training, jobs, and community through an integrated ecosystem of labor management, skill development, and opportunity discovery.",
   "phase": "Phase 1: Labor → Training → Jobs",
   "phase_description": "Establish the core labor sourcing and training infrastructure to create a foundation for long-term community building.",
   "this_week_focus": {
-    "priority_1": "dh-1, dh-2",
-    "priority_2": "cb-4, pa-3",
-    "priority_3": "ct-1, po-2",
-    "note": "Focus on Deadhang business fundamentals while advancing Crew Blueprint and Production Atlas planning"
+    "priority_1": "dh-5, dh-8",
+    "priority_2": "dh-10, cb-4",
+    "priority_3": "pa-3, po-2",
+    "note": "Finalize/de-duplicate the Deadhang business documents (dh-5) and close out taxes (dh-8); get the contractor agreement + MSA attorney-reviewed (dh-10); keep advancing Crew Blueprint content and Production Atlas research."
   },
   "branches": [
     {
       "id": "deadhang-labor",
       "name": "Deadhang Labor LLC",
       "role": "Solo contractor turning into labor staffing agency",
-      "status_percentage": 60,
+      "status_percentage": 63,
       "ultimate_goal": "Establish Deadhang as a reliable labor sourcing and staffing entity that can contract large gigs and deploy teams of stagehands.",
-      "current_state": "Operating as an Arizona single-member LLC (Schedule C, cash basis, owner-operated) in live-event production labor. Foundation largely in place: EIN, business bank account, website (live + SSL), business email, invoice system, W-9 workflow, record retention, an existing client MSA, and operational structure. In progress: independent-contractor framework and safety documentation. Insurance is intentionally deferred until the business reaches the appropriate scaling stage. Still to build: team-deployment capability. A print-on-demand merch line is being added as an additional Deadhang revenue stream (no new LLC).",
-      "critical_blocker": "Independent-contractor framework and safety documentation must be completed before scaling to team deployment (insurance deferred until scaling).",
+      "current_state": "Operating as an Arizona single-member LLC (Schedule C, cash basis, owner-operated) in live-event production labor. Foundation is largely in place: EIN, business bank account, website (live + SSL, with complete privacy/cookie/terms pages), business email, invoice system + a live gig/contracts/payments tracker, W-9 workflow, record retention, a Client MSA template, a drafted Master Independent Contractor Agreement, a City of Mesa business license, and full canonical documentation (companies/deadhang-labor/ — incl. a living current-state business plan, a document register, and SOPs). In progress: finalizing/de-duplicating the business-document set (dh-5), closing out taxes (dh-8), and safety documentation (dh-11). The IC agreement's remaining gate is Arizona attorney review (dh-10). Insurance is intentionally deferred until scaling (dh-9). Still to build: team-deployment capability (dh-3/dh-4). A print-on-demand merch line is being added (dh-12, no new LLC).",
+      "critical_blocker": "Independent-contractor agreement drafted — Arizona attorney review is the gate before engaging others; safety documentation and team-deployment capability still to build (insurance deferred until scaling).",
       "timeline": {
         "phase_1_ready": "Q4 2026",
         "description": "Validate business structure, establish team deployment framework, build initial contractor network"
@@ -613,38 +613,36 @@
         "id": "day-30",
         "label": "Next 30 days",
         "status": "current",
-        "theme": "Stabilize the business foundation",
-        "goal": "Get Deadhang's administrative base under control before adding more moving parts.",
+        "theme": "Finalize the business foundation",
+        "goal": "Close out Deadhang's document finalization and taxes so the administrative base is fully solid.",
         "focus_step_ids": [
-          "dh-1",
-          "dh-2",
-          "po-2"
+          "dh-5",
+          "dh-8",
+          "dh-10"
         ],
         "outcomes": [
-          "Business structure and compliance review is defined or underway",
-          "Gig tracking workflow is documented enough to repeat",
-          "Dashboard remains the active execution surface (kept clean via anti-sprawl gates)"
+          "Business documents de-duplicated and consolidated to one canonical set (dh-5)",
+          "Tax balance confirmed and payment arranged; returns amended if needed (dh-8)",
+          "Contractor agreement + MSA sent for Arizona attorney review (dh-10)"
         ],
-        "guardrail": "Do not start a large platform rebuild before the basic business and tracking foundation is clear."
+        "guardrail": "Do not engage contractors or scale to team work before the IC agreement is attorney-reviewed and insurance is in place."
       },
       {
         "id": "day-60",
         "label": "Next 60 days",
         "status": "next",
-        "theme": "Lock the money and workflow tools",
-        "goal": "Define the smallest useful contractor tool set for invoices, payments, and scheduling.",
+        "theme": "Harden the contractor tools",
+        "goal": "Close the remaining reliability gaps in the contractor tool set (invoicing and payment tracking are already built).",
         "focus_step_ids": [
           "ct-1",
-          "ct-2",
-          "ct-3",
-          "ct-4"
+          "ct-3"
         ],
         "outcomes": [
-          "Invoice generator scope is reduced to MVP requirements",
-          "Payment tracking requirements are clear",
-          "Calendar authorization risk has a concrete mitigation path"
+          "Backend scope validated against real MVP needs — no overbuilding (ct-1)",
+          "Calendar authorization renews reliably without manual refresh (ct-3)",
+          "Invoice generator + payment tracking confirmed stable (ct-2, ct-4 already done)"
         ],
-        "guardrail": "Keep tools narrow: fixed invoice workflow, stable payment tracking, and scheduling reliability before enterprise features."
+        "guardrail": "Keep tools narrow and reliability-first: don't add backend/enterprise features before the real requirement is validated."
       },
       {
         "id": "day-90",
