@@ -24,21 +24,31 @@ system. Much of that is already built — treat these as part of governance:
 - **`scripts/validate-roadmap.py`**, **`roadmap-watcher.py`**,
   **`prioritize-proposals.py`** — the enforcement/automation layer.
 
+## Other files here
+
+- `KNOWN_RISKS.md`, `LESSONS_LEARNED.md`, `OPEN_DECISIONS.md` — risk, learning,
+  and open-decision registers.
+- `STAGE_1_SCOPE.md` … `STAGE_5_SCOPE.md` — the per-stage documentation plans
+  (each marked BUILT).
+- `AUDIT_2026-07-18.md` — the full repository audit.
+
 ## The long-term repository evolution (from the 2026-07-17 handoff)
 
-- **Stage 0 — Stabilization & governance** *(in progress)*: remove outdated info,
-  synchronize the roadmap with reality, and establish governance + collaboration +
-  AI-handoff standards. Do this before further project development.
-- **Stage 1 — Deadhang Labor canonical documentation**: Deadhang fully
-  reconstructable from repo docs alone.
-- **Stage 2 — The Crew Blueprint documentation**: safety philosophy, course
-  architecture, standards, research workflow, authority hierarchy.
-- **Stage 3 — Production Atlas**: architecture, data model, verification
-  pipeline, methodology — documented before implementation continues.
-- **Stage 4 — Shared infrastructure**: common auth, contractors, scheduling,
-  payments, shared data across projects.
-- **Stage 5 — Executive command center**: operational dashboard + decision,
-  risk, and progress trackers + master roadmap + AI collaboration system.
+Each documentation stage lands in `companies/<company>/` and is scoped in the
+matching `STAGE_*_SCOPE.md`.
+
+- **Stage 0 — Stabilization & governance** ✅ *complete*: outdated info removed,
+  roadmap synchronized with reality, and governance + collaboration + AI-handoff
+  standards established.
+- **Stage 1 — Deadhang Labor canonical documentation** ✅ `companies/deadhang-labor/`.
+- **Stage 2 — The Crew Blueprint documentation** ✅ `companies/crew-blueprint/`.
+- **Stage 3 — Production Atlas** ✅ `companies/production-atlas/`.
+- **Stage 4 — Contractor Tools (shared infrastructure)** ✅ `companies/contractor-tools/`.
+- **Stage 5 — Personal Operations / command center** ✅ `companies/personal-operations/`.
+
+All five companies now have canonical documentation. Ongoing work is currency
+(keep docs + roadmap in sync as reality moves) and the remaining per-branch work
+items in `roadmap.json`.
 
 ## Principle
 

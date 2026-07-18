@@ -1,0 +1,33 @@
+name: Validate Roadmap
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'roadmap.json'
+      - 'scripts/validate-roadmap.py'
+      - 'data/schema/roadmap-public-safety.json'
+      - '.github/workflows/validate-roadmap.yml'
+  pull_request:
+    paths:
+      - 'roadmap.json'
+      - 'scripts/validate-roadmap.py'
+      - 'data/schema/roadmap-public-safety.json'
+      - '.github/workflows/validate-roadmap.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate roadmap.json (schema, references, public-safety)
+        run: python scripts/validate-roadmap.py

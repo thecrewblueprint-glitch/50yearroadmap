@@ -1,7 +1,3 @@
-# Build artifact from scripts/build-roadmap.py (legacy pillar compiler).
-# Regenerable; not the live dashboard file.
-data/roadmap/compiled.json
-
 # OS / editor noise
 .DS_Store
 Thumbs.db

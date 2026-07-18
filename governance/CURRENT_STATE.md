@@ -34,7 +34,7 @@ closeout (returns filed — amend if needed, confirm balance, pay).
 - **The Crew Blueprint** (~35%) — training resource; **foundation complete and no longer blocked by software** (vision, course architecture, multi-AI content workflow, brand, legal/authority model, website shell, plugin architecture all decided). Next-gen platform intentionally deferred; the real constraint is now content-production volume. Canonical docs in `companies/crew-blueprint/`.
 - **Production Atlas** (~50%) — live-event **industry intelligence/research** platform (not a job board); static GitHub Pages app reading manifest-driven research packages (`festival-atlas` repo, `research-version` branch). Architecture, methodology, public-safe data model, and validation settled; department research ~85% (Scenic incomplete). Remaining: research-corpus depth, usability, governance. Canonical docs in `companies/production-atlas/`.
 - **Contractor Tools** (~35%) — shared infrastructure layer; built: 1099 invoice generator (deterministic single-file tool) + payment tracking; calendar feeds (ICS, multi-platform) working. Remaining: reliable calendar authorization renewal (`ct-3`), backend-scope validation (`ct-1`); team coordination is future. Canonical docs in `companies/contractor-tools/`.
-- **Personal Operations / Roadmap System** — this repo/command center; governance now being established.
+- **Personal Operations / Roadmap System** (~65%) — this repo/command center; mature and operational (live dashboard, branch-model source of truth, AI pipeline, governance + CI validator). Remaining: anti-sprawl scope gates (`po-2`), documentation templates (`po-5`), deferred database migration (OD-5). Canonical docs in `companies/personal-operations/`.
 
 ## Phase 2 (the destination)
 
@@ -44,6 +44,10 @@ closeout (returns filed — amend if needed, confirm balance, pay).
 
 ## Where governance stands
 
-Stage 0 in progress: roadmap synchronized with reality (this snapshot),
-governance folder established, collaboration + AI-handoff standards already in
-place (`AGENTS.md`, `CHANGELOG.md`, `CHATGPT_HANDOFF.md`).
+Stage 0 complete: roadmap synchronized with reality, governance folder
+established, collaboration + AI-handoff standards in place (`AGENTS.md`,
+`CHANGELOG.md`, `CHATGPT_HANDOFF.md`), and a CI validator wired in. Stages 1–5
+(canonical documentation for all five companies) are built — see
+`companies/` and `governance/STAGE_*_SCOPE.md`. A full repository audit is
+recorded in `governance/AUDIT_2026-07-18.md`. Ongoing work is currency and the
+remaining per-branch roadmap items.

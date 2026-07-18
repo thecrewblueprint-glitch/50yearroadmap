@@ -77,9 +77,10 @@ Top-level keys of `roadmap.json`:
 - `ecosystem_flow` — `{ flow[] }`.
 
 > A previous **pillar model** (`vision.json`, `pillars.json`, `frontier`,
-> `watcher-proposals.json` keyed by `pillar_id`) is **retired**. Do not
-> reintroduce it into `roadmap.json`. `scripts/build-roadmap.py` targets that
-> old model and only writes a throwaway `data/roadmap/compiled.json` — ignore it.
+> `pillar_id`-keyed proposals) is **retired**; its files and
+> `scripts/build-roadmap.py` were **removed 2026-07-18**. Do not reintroduce it
+> into `roadmap.json`. (The current `watcher-proposals.json` is the branch-model
+> watcher output — that one is live.)
 
 ## The pipeline
 

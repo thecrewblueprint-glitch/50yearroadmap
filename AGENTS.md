@@ -87,9 +87,10 @@ directly and keep it valid.
 - `ecosystem_flow` — `{ flow[] }`, ordered strings describing the loop.
 
 > Note: an older **pillar model** (`vision.json`, `pillars.json`, `projects`,
-> `tasks`, `frontier`, `watcher-proposals.json`) predates this. It is retired.
-> Do not reintroduce it into the live `roadmap.json`. `scripts/build-roadmap.py`
-> targets that old model and writes only to a throwaway `data/roadmap/compiled.json`.
+> `tasks`, `frontier`) predates this. It is retired, and its files
+> (`vision.json`, `pillars.json`, `scripts/build-roadmap.py`, the `compiled.json`
+> artifact) were **removed 2026-07-18**. Do not reintroduce it into the live
+> `roadmap.json`.
 
 ---
 

@@ -27,6 +27,7 @@ The system is designed to answer one practical question:
 ## Structure
 
 - Root (`index.html`, `app.js`, `styles.css`, `roadmap.json`): the live GitHub Pages dashboard. Pages serves from the repository root.
+- `/companies`: Canonical, rebuildable documentation for each company/branch (the permanent knowledge base — see below).
 - `/memories`: Raw imported archives and exports; preserved as source evidence.
 - `/memories/processed`: Generated chunks, indexes, and navigation files from raw memory archives.
 - `/data/raw-reports`: Curated operational digests.
@@ -87,6 +88,25 @@ It uses the **branch model** and includes:
 - `branches[]` — each branch's goal, current state, % complete, blockers, and work items (status: `not_started` / `in_progress` / `blocked` / `completed` / `moved_later`)
 - `journey` — the linear "you are here → Homestead" milestone path
 - `ecosystem_flow` — how the branches connect end to end
+
+## Canonical Company Documentation
+
+`/companies/<company>/` holds the permanent, rebuildable record of each
+company/branch — enough that someone who has never seen the business could
+understand and rebuild it from the repo alone. Everything is public-safe (no PII,
+financials, or private data). Status as of 2026-07-18:
+
+| Company | Folder | Docs | State |
+| --- | --- | --- | --- |
+| Deadhang Labor LLC | `companies/deadhang-labor/` | 12 | ✅ Documented |
+| The Crew Blueprint | `companies/crew-blueprint/` | 9 | ✅ Documented |
+| Production Atlas | `companies/production-atlas/` | 9 | ✅ Documented |
+| Contractor Tools | `companies/contractor-tools/` | 6 | ✅ Documented |
+| Personal Operations / Roadmap System | `companies/personal-operations/` | 6 | ✅ Documented |
+
+Each folder opens with a `README.md` index. The documentation is built stage by
+stage under `governance/STAGE_*_SCOPE.md`; the reasoning and current snapshot live
+in `governance/`.
 
 ## Governance & Agent Rules
 

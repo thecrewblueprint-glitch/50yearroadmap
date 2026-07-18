@@ -6,7 +6,7 @@
   "this_week_focus": {
     "priority_1": "dh-1, dh-2",
     "priority_2": "cb-4, pa-3",
-    "priority_3": "ct-1, po-1",
+    "priority_3": "ct-1, po-2",
     "note": "Focus on Deadhang business fundamentals while advancing Crew Blueprint and Production Atlas planning"
   },
   "branches": [
@@ -281,20 +281,18 @@
       "id": "personal-operations",
       "name": "Personal Operations / Roadmap System",
       "role": "Decision framework and execution system for the entire initiative",
-      "status_percentage": 35,
+      "status_percentage": 65,
       "ultimate_goal": "Maintain a living, operational roadmap system that guides decisions, tracks progress, prevents sprawl, and communicates vision to stakeholders.",
-      "current_state": "Framework established. Blocker structure defined. Deep context decision sources created. Anti-sprawl controls incomplete. Database migration planned. Work dashboard in development.",
-      "critical_blocker": "Roadmap context must stay operational - need to balance detail with actionability",
+      "current_state": "Mature and operational. The command center is live on GitHub Pages with roadmap.json (branch model) as the single source of truth, rendered as Timeline + Dashboard + 30/60/90 + branch hubs + The Vision views (professional palette, pagination). Governance framework is established (AGENTS.md, CHANGELOG.md, governance/, DATA_SAFETY_POLICY.md, public-safety schema, and a CI validator). The AI pipeline is built (process-memories, watcher, prioritizer, validator — proposals stay human-in-the-loop). Canonical company documentation is being built out under companies/. Remaining: finish anti-sprawl scope gates, downloadable documentation templates, and the eventual database migration (deferred, OD-5). Canonical documentation lives in companies/personal-operations/.",
+      "critical_blocker": "Not blocked — remaining work is polish (anti-sprawl scope gates, documentation templates) and the deferred database migration (OD-5).",
       "timeline": {
         "phase_1_ready": "Q3 2026",
-        "description": "Complete roadmap navigation system, implement anti-sprawl controls, build execution dashboard"
+        "description": "Finish anti-sprawl scope gates and documentation templates; database migration deferred until JSON editing becomes the bottleneck"
       },
       "blockers": [
-        "Roadmap framework needs anti-sprawl controls",
-        "Sensitive export data must not be committed raw",
-        "Command center can become too dense without detail/review separation",
-        "Missing Claude handoff documentation files",
-        "Roadmap time-layer needs concrete near-term milestones"
+        "Anti-sprawl scope gates only partially in place (validator + moved_later + prioritizer exist; more gating possible)",
+        "Sensitive export data must not be committed raw (ongoing policy discipline)",
+        "Command center can become too dense without detail/review separation"
       ],
       "work_items": [
         {
@@ -302,28 +300,28 @@
           "task": "Build work execution dashboard with this-week focus",
           "why": "Create actionable interface for tracking and completing work",
           "priority": "CRITICAL",
-          "status": "in_progress"
+          "status": "completed"
         },
         {
           "id": "po-2",
           "task": "Implement anti-sprawl controls and scope gates",
           "why": "Prevent roadmap from becoming unmanageable",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "po-3",
           "task": "Add concrete near-term milestones (next 90 days)",
           "why": "Translate vision into actionable quarterly targets",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "po-4",
           "task": "Implement layered views (overview vs. detail)",
           "why": "Keep dashboard focused without losing decision context",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "po-5",
@@ -619,12 +617,12 @@
         "focus_step_ids": [
           "dh-1",
           "dh-2",
-          "po-1"
+          "po-2"
         ],
         "outcomes": [
           "Business structure and compliance review is defined or underway",
           "Gig tracking workflow is documented enough to repeat",
-          "Dashboard remains the active execution surface"
+          "Dashboard remains the active execution surface (kept clean via anti-sprawl gates)"
         ],
         "guardrail": "Do not start a large platform rebuild before the basic business and tracking foundation is clear."
       },

@@ -151,9 +151,10 @@ No emergency override should be used for public roadmap data.
 
 ## Retired model warning
 
-The old pillar/docs build flow is retired.
-
-Do not treat these as live publication targets:
+The old pillar/docs build flow is retired. Its files (`vision.json`,
+`pillars.json`, `scripts/build-roadmap.py`, the `compiled.json` artifact) were
+**removed 2026-07-18**. Do not recreate or treat these as live publication
+targets:
 
 - `vision.json`
 - `pillars.json`

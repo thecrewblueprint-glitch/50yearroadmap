@@ -25,6 +25,38 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Repository audit + post-audit cleanup + Stage 5
+- **Audit.** Full repository audit recorded in `governance/AUDIT_2026-07-18.md`
+  (structure, roadmap integrity, docs, git history, per-project status, tech debt,
+  governance). Verdict: healthy — validator passes, all roadmap refs resolve, zero
+  broken links, clean single-trunk history. Gaps were currency/hygiene. Then
+  executed the recommended fixes:
+- **README** refreshed to surface `companies/` canonical documentation + a 5-of-5
+  status table.
+- **CI gate added** — `.github/workflows/validate-roadmap.yml` runs
+  `validate-roadmap.py` on push/PR touching the roadmap, schema, or validator.
+- **Legacy pillar debt removed** — deleted `scripts/build-roadmap.py`,
+  `data/roadmap/{vision.json,pillars.json}`, and the `compiled.json` artifact;
+  cleaned `.gitignore`; updated the retired-model notes in AGENTS/CHATGPT_HANDOFF/
+  DATA_SAFETY_POLICY to say "removed 2026-07-18". (`deep-context-decision-sources.json`
+  is NOT legacy — used by the watcher — retained.)
+- **Stale docs retired** — deleted `UI_UX_ANALYSIS.md` (retired 8-pillar model)
+  and `CLAUDE_FRAMEWORK_AUDIT_HANDOFF.md` (superseded). Kept
+  `INTERACTIVE_DASHBOARD_SPEC.md` (unbuilt future value; now referenced from the
+  personal-operations docs).
+- **Stage 5 BUILT — Personal Operations / command center.** Scaffolded
+  `companies/personal-operations/` + README + 5 docs (overview, data model,
+  dashboard, AI pipeline, governance, growth model). Synced the roadmap
+  `personal-operations` branch to reality: `po-1` (dashboard) / `po-3` (90-day) /
+  `po-4` (layered views) → `completed`; `po-2` → `in_progress`; state rewritten;
+  status 35→65; repointed this_week_focus + 30-day focus off the completed po-1.
+  Added `STAGE_5_SCOPE.md`.
+- **Watcher-output convention documented** (in `companies/personal-operations/03_ai_pipeline.md`):
+  keep tracked, revert incidental regeneration.
+- **governance/README + CURRENT_STATE** updated: Stage 0 marked complete, Stages
+  1–5 indexed with their `companies/` folders. **All five companies now have
+  canonical documentation.** Validator: PASS (0 warnings).
+
 ### 2026-07-18 — Stage 4 BUILT: Contractor Tools canonical documentation
 - No fresh owner review this time — reconstructed from existing repo evidence
   (roadmap `ct-1..ct-4` + the July digests' invoice/calendar architecture
