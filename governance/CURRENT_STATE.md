@@ -32,7 +32,7 @@ closeout (returns filed — amend if needed, confirm balance, pay).
 
 - **Deadhang Labor LLC** (~60%) — foundation largely in place; scaling + contractor/safety work ahead.
 - **The Crew Blueprint** (~35%) — training resource; **foundation complete and no longer blocked by software** (vision, course architecture, multi-AI content workflow, brand, legal/authority model, website shell, plugin architecture all decided). Next-gen platform intentionally deferred; the real constraint is now content-production volume. Canonical docs in `companies/crew-blueprint/`.
-- **Production Atlas / Festival Atlas** — public-safe research + job-discovery platform; active dev on calendar/filters.
+- **Production Atlas** (~50%) — live-event **industry intelligence/research** platform (not a job board); static GitHub Pages app reading manifest-driven research packages (`festival-atlas` repo, `research-version` branch). Architecture, methodology, public-safe data model, and validation settled; department research ~85% (Scenic incomplete). Remaining: research-corpus depth, usability, governance. Canonical docs in `companies/production-atlas/`.
 - **Contractor Tools** — invoice + payment tracking in place; backend scope + calendar reliability remain.
 - **Personal Operations / Roadmap System** — this repo/command center; governance now being established.
 

@@ -5,7 +5,7 @@
   "phase_description": "Establish the core labor sourcing and training infrastructure to create a foundation for long-term community building.",
   "this_week_focus": {
     "priority_1": "dh-1, dh-2",
-    "priority_2": "cb-4, pa-1",
+    "priority_2": "cb-4, pa-3",
     "priority_3": "ct-1, po-1",
     "note": "Focus on Deadhang business fundamentals while advancing Crew Blueprint and Production Atlas planning"
   },
@@ -170,21 +170,21 @@
     {
       "id": "production-atlas",
       "name": "Production Atlas",
-      "role": "Job sourcing and opportunity discovery platform",
-      "status_percentage": 20,
-      "ultimate_goal": "Create a visual, searchable job discovery platform that connects contractors and workers to employment opportunities and links them directly to hiring companies.",
-      "current_state": "Frontier pillar with 34 active items and 19 blockers. Research infrastructure established. Public/private data boundary needs definition. Source URL cleanup in progress. Verification standards incomplete.",
-      "critical_blocker": "Public research has verification gaps - need verification standards and human review process",
+      "role": "Live-event industry intelligence & opportunity-research platform (not a job board)",
+      "status_percentage": 50,
+      "ultimate_goal": "Become the U.S. live-event industry's primary research platform — making employer discovery, vendor ecosystems, career pathways, opportunity mapping, and regional production intelligence structured, searchable, and actionable.",
+      "current_state": "Moved beyond defining its architecture. It is a static GitHub Pages app (no backend/login/database/payment/scraping) that reads manifest-driven, structured research packages; product is 'Production Atlas' in the festival-atlas repo, with research on the research-version branch. Settled: vision, architecture, branching, research methodology, public-safe data model, and validation. Application navigation (~11 pages) and research framework are ~95%. Department research ~85% complete (Staging, Rigging, Lighting, Audio, Video/LED, Power, Site Ops, Logistics substantially done; Scenic started, not finished). Remaining: complete Scenic, expand employer/opportunity datasets, finish normalized-date wiring, usability, and governance/docs. Canonical documentation lives in companies/production-atlas/.",
+      "critical_blocker": "Not architecture anymore — remaining work is research-corpus depth (Scenic + datasets), usability, and governance/documentation.",
       "timeline": {
         "phase_1_ready": "Q1 2027",
-        "description": "Implement data verification system, establish company relationships, launch job discovery MVP"
+        "description": "Complete the research corpus (Scenic + datasets), improve usability, and establish governance so the repo is a durable collaborative knowledge system"
       },
       "blockers": [
-        "Public-safe research boundary verification gaps",
-        "Source URL cleanup and inventory incomplete",
-        "Cannot rely on public sources alone for crew logistics data",
-        "Vendor staffing relationships remain unverified",
-        "Festival feed needs source-quality gates"
+        "Scenic department research incomplete",
+        "Employer/opportunity datasets still expanding",
+        "Normalized date system not yet wired into all applicable pages",
+        "Mobile usability, filtering, and planning views need improvement",
+        "Governance & collaboration documentation still light (~40%)"
       ],
       "work_items": [
         {
@@ -192,35 +192,35 @@
           "task": "Define public/private research boundary and verification standards",
           "why": "Establish quality gates before scaling data collection and publication",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "pa-2",
-          "task": "Complete 2026 source URL inventory and cleanup",
-          "why": "Ensure data sources are current, verified, and properly documented",
+          "task": "Complete source URL inventory/cleanup and repository modernization",
+          "why": "Keep data sources current and verified; finish migration to the shared-core architecture",
           "priority": "MEDIUM",
           "status": "in_progress"
         },
         {
           "id": "pa-3",
-          "task": "Build human verification assistance mechanism",
-          "why": "Enable collaborative fact-checking of opportunity and vendor data",
-          "priority": "MEDIUM",
-          "status": "not_started"
+          "task": "Complete Scenic department research and expand employer/opportunity datasets",
+          "why": "Deepen the research corpus — the primary remaining work now that architecture is settled",
+          "priority": "HIGH",
+          "status": "in_progress"
         },
         {
           "id": "pa-4",
           "task": "Establish company relationship partnerships",
-          "why": "Create direct data pipelines with employers and vendors for job postings",
-          "priority": "HIGH",
+          "why": "Create direct data pipelines with employers and vendors over time",
+          "priority": "MEDIUM",
           "status": "not_started"
         },
         {
           "id": "pa-5",
-          "task": "Design and build job discovery MVP interface",
-          "why": "Create searchable, visual platform for contractors to find opportunities",
+          "task": "Improve usability (mobile, filtering, planning views) and finish normalized-date wiring",
+          "why": "Make the mature app easier to use across pages; the interface exists and now needs polish",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "in_progress"
         }
       ],
       "phase": 1,
@@ -514,17 +514,17 @@
       {
         "id": "m3",
         "order": 3,
-        "title": "Find the work (Production Atlas)",
+        "title": "Map the industry (Production Atlas)",
         "area_branch_id": "production-atlas",
         "state": "upcoming",
-        "summary": "Build the job-discovery engine that shows where work is and connects contractors straight to the companies hiring for it.",
-        "outcome": "A trustworthy map of opportunities contractors can act on.",
+        "summary": "Grow the industry-intelligence platform (not a job board): a static, research-package-driven map of employers, vendors, departments, IATSE pathways, and geographic opportunity. Architecture and the public-safe data model are settled; the work now is research-corpus depth and usability.",
+        "outcome": "A trustworthy, searchable map of the industry contractors can act on.",
         "step_ids": [
-          "pa-1",
+          "pa-3",
           "pa-2",
-          "pa-4",
           "pa-5",
-          "pa-3"
+          "pa-4",
+          "pa-1"
         ],
         "leads_to": "A steady inflow of work to feed people into."
       },
@@ -654,13 +654,13 @@
         "theme": "Connect labor, training, and job discovery",
         "goal": "Prepare the first usable loop between Deadhang Labor, Crew Blueprint, Production Atlas, and Contractor Tools.",
         "focus_step_ids": [
-          "pa-1",
+          "pa-3",
           "cb-4",
           "cb-2",
           "po-2"
         ],
         "outcomes": [
-          "Production Atlas has public/private verification standards",
+          "Production Atlas deepens its research corpus (Scenic + employer/opportunity datasets)",
           "Crew Blueprint grows its canonical course packets and discipline/pathway library",
           "Anti-sprawl controls keep skipped work visible without breaking the linear path"
         ],
