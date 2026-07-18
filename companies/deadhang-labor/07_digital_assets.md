@@ -4,22 +4,44 @@
 
 ## Website
 
-- **deadhanglaborllc.com** — a 5-page static HTML/CSS site (index, about,
-  portfolio, services, contact).
+- **deadhanglaborllc.com** — a static HTML/CSS site: index, about, portfolio,
+  services, contact, **plus legal pages** (privacy, cookies, terms).
 - **Live and secured (SSL).** Responsive with mobile navigation.
 - Navy & gold brand identity (see doc 08).
 - **Contact form** via Formspree → routes to the business email.
 - **Portfolio:** curated photo set (structures assisted; accurate captions).
 - **Hosting:** Namecheap Stellar Plus (cPanel).
+- **Cross-links:** footer links to The Crew Blueprint and the 365-Day
+  Affirmations Calendar (`/affirmations`).
 
-### Open website issues (tracked)
+### Legal pages (live — reviewed 2026-07-18)
 
-- Hamburger menu not opening on tap (JS/CSS selector mismatch).
-- Remove Crew One portfolio photos (liability).
-- Privacy policy must name Formspree as a third-party processor.
-- Verify Google Analytics status (determines cookie-consent banner need).
+- **Privacy Policy** (`privacy.html`) — complete; names Formspree, Google Fonts,
+  and hosting logs as processors; states no tracking/advertising cookies; Arizona
+  governing law (Maricopa County); effective 2026-06-15; 30-day response commitment.
+- **Terms & Disclaimer** (`terms.html`) — complete; services, "as-is"/no-warranty,
+  liability limitation, **independent-contractor status**, IP ownership, AZ
+  governing law; states portfolio credits reflect work "in a labor capacity as an
+  independent contractor."
+- **Cookie Policy** (`cookies.html`) — present; consistent with the no-tracking
+  posture.
+
+### Open website items (tracked)
+
+- **Portfolio disclaimer (recommended):** add a trademark / role disclaimer **on
+  the portfolio page itself** — names/logos are trademarks of their owners,
+  referenced for identification only; Deadhang provided independent labor/support
+  in an IC capacity; no affiliation/endorsement implied. (The clause exists in
+  Terms, but not where the named events appear.)
+- **Caption framing:** lead captions with the labor role (e.g. "Lost Lands — Main
+  Stage labor support") rather than build/deployment verbs that can imply sole
+  responsibility (see doc 08).
+- Hamburger menu behavior on tap — verify fixed.
 - Complete/verify remaining SSL/security hardening.
-- Add Country Thunder Wisconsin portfolio content.
+
+_Resolved since the earlier list: privacy policy now names Formspree; no tracking
+cookies (no cookie-consent banner required); Country Thunder portfolio content
+present._
 
 ## Business email
 

@@ -24,7 +24,14 @@
 ## Standards
 
 - Portfolio captions must be accurate and non-inflated (venue credibility over
-  hype).
+  hype). **Lead with the labor/support role** ("provided labor support for…",
+  "Main Stage labor support") rather than build/deployment/operations verbs that
+  can imply sole responsibility for a structure or show.
+- **Trademark / nominative use:** event, festival, tour, venue, and artist names
+  and logos are others' trademarks. Reference them for identification only, and
+  carry a disclaimer wherever they appear (notably the portfolio page) stating
+  Deadhang provided independent IC labor and is **not affiliated with or endorsed
+  by** those parties. (See doc 07 for the recommended portfolio disclaimer text.)
 - Consistent navy/gold across website, invoices (branded PDF), and merch.
 
 ## Design system (per-project CSS schemas)

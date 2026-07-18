@@ -25,6 +25,23 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Evaluated deadhanglaborllc.com content
+- Reviewed the live site (home, about, portfolio, services, contact, and the legal
+  pages) via WebFetch.
+- **Legal pages already exist and are complete** — Privacy (names Formspree/Google
+  Fonts, no tracking cookies, AZ/Maricopa, effective 2026-06-15), Terms &
+  Disclaimer (IC status, IP, liability, AZ law), Cookie Policy. The earlier
+  "website privacy/terms" gap is **closed** (doc 12 updated).
+- **Updated doc 07** (digital assets): documented the legal pages, marked resolved
+  items (Formspree named; no tracking cookies), and recorded the two remaining
+  website items.
+- **One real recommendation:** add a **trademark/role disclaimer on the portfolio
+  page** (big named events/artists/tours are used with no on-page nominative-use
+  disclaimer) and lead captions with the labor role rather than build/deployment
+  verbs. Recorded as a brand standard (doc 08) with drop-in disclaimer text (doc 07).
+- Content/voice otherwise strong and correctly signals a solo IC operator.
+  Validator: PASS; scans clean.
+
 ### 2026-07-18 — Add Deadhang current-state business plan (living doc)
 - Owner: keep the aspirational Vision Business Plan as-is; add a **living
   current-state plan**. Created `companies/deadhang-labor/13_current_state_business_plan.md`

@@ -56,8 +56,10 @@ Not found / to confirm (candidates for creation):
 
 - **Profit & Loss statement** — not located (financial tracking exists; a formal
   P&L may not).
-- **Website privacy policy / terms of service** — the site is live (doc 07); confirm
-  these pages exist.
+- **Website privacy policy / terms of service** — ✅ **exist and are complete**
+  (live: `privacy.html`, `cookies.html`, `terms.html`; Arizona-governed; effective
+  2026-06-15 — reviewed 2026-07-18, see doc 07). One open item: add a
+  trademark/role disclaimer on the **portfolio page** (doc 07/08).
 - **Standard Operating Procedures (SOPs)** — not located as standalone docs.
 - **Marketing / content calendar** — task trackers exist; a marketing-specific
   one may not.
