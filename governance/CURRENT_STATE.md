@@ -4,7 +4,7 @@ A plain-language snapshot of where things actually stand. Update it when reality
 moves. For the live, structured version see `roadmap.json` (the dashboard);
 for the running history see `CHANGELOG.md`.
 
-_Snapshot: 2026-07-17._
+_Snapshot: 2026-07-18._
 
 ## Business identity (fixed)
 
@@ -31,7 +31,7 @@ closeout (returns filed — amend if needed, confirm balance, pay).
 ## Projects at a glance (Phase 1 branches)
 
 - **Deadhang Labor LLC** (~60%) — foundation largely in place; scaling + contractor/safety work ahead.
-- **The Crew Blueprint** — training resource; real course content produced (see the July work digests), platform/LMS still the constraint.
+- **The Crew Blueprint** (~35%) — training resource; **foundation complete and no longer blocked by software** (vision, course architecture, multi-AI content workflow, brand, legal/authority model, website shell, plugin architecture all decided). Next-gen platform intentionally deferred; the real constraint is now content-production volume. Canonical docs in `companies/crew-blueprint/`.
 - **Production Atlas / Festival Atlas** — public-safe research + job-discovery platform; active dev on calendar/filters.
 - **Contractor Tools** — invoice + payment tracking in place; backend scope + calendar reliability remain.
 - **Personal Operations / Roadmap System** — this repo/command center; governance now being established.

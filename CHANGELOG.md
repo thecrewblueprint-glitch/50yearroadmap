@@ -25,6 +25,26 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Stage 2 BUILT: The Crew Blueprint canonical documentation
+- Owner supplied a full completed-work review that answered both open scope
+  questions (authority/safety model = job-readiness, not certification; content
+  pipeline = topic → plan → NotebookLM research → Claude draft → Manus QA → DOCX
+  packet → archive). Green-lit the build.
+- Scaffolded `companies/crew-blueprint/` and drafted all 9 canonical docs:
+  README + 00_overview, 01_learning_model, 02_authority_and_safety, 03_curriculum,
+  04_standards_alignment, 05_platform, 06_brand, 07_content_pipeline,
+  08_growth_model. Public-safe throughout (no certification claims; catalog/scope
+  only, not full paid lessons; no PII/pricing).
+- **Synced roadmap crew-blueprint branch to reality:** the key correction is that
+  it is **no longer blocked by software** — platform work (`cb-3`) set to
+  `moved_later` (intentionally deferred); authority model (`cb-1`) → `completed`;
+  content mapping (`cb-2`) and packet production (`cb-4`) → `in_progress`.
+  Rewrote current_state/critical_blocker/blockers (constraint is now content
+  volume). Bumped status 25→35. Repointed this_week_focus, 90-day focus, and
+  journey m4 off the completed cb-1 to the active content work.
+- Updated `governance/CURRENT_STATE.md` (Crew Blueprint line + snapshot date) and
+  marked `STAGE_2_SCOPE.md` BUILT. Validator: PASS (0 warnings).
+
 ### 2026-07-18 — Stage 2 scoped: The Crew Blueprint canonical documentation
 - Added `governance/STAGE_2_SCOPE.md` (mirrors Stage 1 structure): proposed
   `companies/crew-blueprint/` folder + 9-doc set, per-doc source/readiness table,
@@ -32,7 +52,6 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
   architecture/catalog but do **not** reproduce full paid lessons), source-material
   map, build sequence, and the handful of owner-input gaps (authority/safety model,
   content pipeline steps).
-- Awaiting owner sign-off before scaffolding/drafting — same gate as Stage 1.
 
 ### 2026-07-17 — Stage 1: Deadhang docs completed via owner interview
 - One-item-at-a-time interview filled every "To confirm" fact:

@@ -1,6 +1,11 @@
 # Stage 2 Scope — The Crew Blueprint Canonical Documentation
 
-**Status:** scoping — awaiting owner sign-off before scaffolding/drafting.
+**Status:** BUILT (2026-07-18). Owner supplied the full completed-work review,
+which answered both open questions (authority/safety model and content
+pipeline). All 9 docs drafted in `companies/crew-blueprint/`; roadmap
+crew-blueprint branch synced to reality (platform deferred, `cb-1` complete).
+Remaining: catalog grows as new packets are produced (`cb-4`); discipline/pathway
+map builds out (`cb-2`).
 **Goal:** everything about The Crew Blueprint is reconstructable from repository
 documentation alone — what it is, what it teaches, how the content is
 organized, its authority/safety model, its brand, and its platform plan.

@@ -5,7 +5,7 @@
   "phase_description": "Establish the core labor sourcing and training infrastructure to create a foundation for long-term community building.",
   "this_week_focus": {
     "priority_1": "dh-1, dh-2",
-    "priority_2": "cb-1, pa-1",
+    "priority_2": "cb-4, pa-1",
     "priority_3": "ct-1, po-1",
     "note": "Focus on Deadhang business fundamentals while advancing Crew Blueprint and Production Atlas planning"
   },
@@ -121,19 +121,18 @@
       "id": "crew-blueprint",
       "name": "The Crew Blueprint",
       "role": "Skill development and industry knowledge resource",
-      "status_percentage": 25,
+      "status_percentage": 35,
       "ultimate_goal": "Provide stagehands with a visual, workflow-based learning system that teaches skills, context, and industry integration without formal certification.",
-      "current_state": "In content-first pause. No LMS platform yet. Brand system defined. Core concept of discipline/pathway mapping established. Platform instability remains a blocker for content expansion.",
-      "critical_blocker": "Platform shell/LMS instability blocks content expansion and deployment",
+      "current_state": "Foundation complete and no longer blocked by software development. Vision, standardized course architecture, multi-AI content workflow, brand, and legal/authority philosophy (job-readiness, not certification) are all decided. Website shell is live (WordPress.com, industrial Extendable theme, staging-first, Coming Soon) and the modular plugin architecture is defined. The next-generation platform is intentionally deferred; the website stays a lightweight presentation layer. Primary work is now content and documentation: produce canonical course packets, continue Stagehand Fundamentals, and organize the discipline/pathway library. Canonical documentation lives in companies/crew-blueprint/.",
+      "critical_blocker": "Not platform anymore — the constraint is content-production volume: producing canonical course packets and the discipline/pathway library.",
       "timeline": {
         "phase_1_ready": "Q3 2026",
         "description": "Complete resource library organization by discipline/pathway, launch foundational curriculum"
       },
       "blockers": [
-        "Platform instability must be resolved before scaling content",
-        "Authority and safety trust model needs definition",
-        "Repository structure needs granular discipline/pathway mapping",
-        "LMS remains paused pending platform stabilization"
+        "Content-production volume is the real constraint (packets take time)",
+        "Discipline/pathway repository mapping still to be built out",
+        "Next-generation platform (LMS/Laravel/AWS/etc.) intentionally deferred until content justifies it"
       ],
       "work_items": [
         {
@@ -141,28 +140,28 @@
           "task": "Define safety and content authority model",
           "why": "Establish trust framework before scaling training content deployment",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "completed"
         },
         {
           "id": "cb-2",
           "task": "Map discipline/pathway repository structure",
           "why": "Organize content logically for learner navigation across roles and skill levels",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "cb-3",
-          "task": "Stabilize platform infrastructure",
-          "why": "Remove technical blockers to content expansion",
-          "priority": "CRITICAL",
-          "status": "not_started"
+          "task": "Stabilize/build next-generation platform infrastructure",
+          "why": "Deferred by decision — keep the website lightweight until content volume justifies building the next platform",
+          "priority": "MEDIUM",
+          "status": "moved_later"
         },
         {
           "id": "cb-4",
-          "task": "Create foundational discipline resources",
-          "why": "Build initial content library for core stagehand skills",
-          "priority": "MEDIUM",
-          "status": "not_started"
+          "task": "Create foundational discipline resources (canonical course packets)",
+          "why": "Build initial content library for core stagehand skills; content is now the primary work",
+          "priority": "HIGH",
+          "status": "in_progress"
         }
       ],
       "phase": 1,
@@ -535,13 +534,13 @@
         "title": "Teach the skills (The Crew Blueprint)",
         "area_branch_id": "crew-blueprint",
         "state": "upcoming",
-        "summary": "Launch the training resource: a stable platform and a visual, workflow-based way for stagehands to learn the craft and how it fits the bigger picture.",
+        "summary": "Grow the training resource content-first: canonical course packets and a visual, workflow-based way for stagehands to learn the craft and how it fits the bigger picture. The authority/safety model is set; the next-gen platform is deferred until content justifies it.",
         "outcome": "People can level up their stagehand skills through the Blueprint.",
         "step_ids": [
-          "cb-3",
-          "cb-1",
+          "cb-4",
           "cb-2",
-          "cb-4"
+          "cb-1",
+          "cb-3"
         ],
         "leads_to": "A pipeline of better-prepared workers."
       },
@@ -656,13 +655,13 @@
         "goal": "Prepare the first usable loop between Deadhang Labor, Crew Blueprint, Production Atlas, and Contractor Tools.",
         "focus_step_ids": [
           "pa-1",
-          "cb-1",
+          "cb-4",
           "cb-2",
           "po-2"
         ],
         "outcomes": [
           "Production Atlas has public/private verification standards",
-          "Crew Blueprint has a safer content authority boundary",
+          "Crew Blueprint grows its canonical course packets and discipline/pathway library",
           "Anti-sprawl controls keep skipped work visible without breaking the linear path"
         ],
         "guardrail": "Do not turn the roadmap into a storage dump. Promote only public-safe, decision-ready work."
