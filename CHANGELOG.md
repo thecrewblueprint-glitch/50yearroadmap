@@ -25,6 +25,15 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Stage 2 scoped: The Crew Blueprint canonical documentation
+- Added `governance/STAGE_2_SCOPE.md` (mirrors Stage 1 structure): proposed
+  `companies/crew-blueprint/` folder + 9-doc set, per-doc source/readiness table,
+  public-safe guardrails (**no certification claims**; describe course
+  architecture/catalog but do **not** reproduce full paid lessons), source-material
+  map, build sequence, and the handful of owner-input gaps (authority/safety model,
+  content pipeline steps).
+- Awaiting owner sign-off before scaffolding/drafting — same gate as Stage 1.
+
 ### 2026-07-17 — Stage 1: Deadhang docs completed via owner interview
 - One-item-at-a-time interview filled every "To confirm" fact:
   - `01` Legal — **formed 2026** (first year); AZ single-member LLC.
