@@ -23,10 +23,11 @@
         "description": "Validate business structure, establish team deployment framework, build initial contractor network"
       },
       "blockers": [
-        "Independent-contractor framework in progress",
+        "Independent-contractor agreement drafted — Arizona attorney review pending before operational use",
         "Safety documentation in progress",
         "Team-deployment capability not yet built",
-        "Insurance deferred until the appropriate scaling stage"
+        "Insurance deferred until the appropriate scaling stage",
+        "Business documents need finalization: de-duplicate to one canonical version each and consolidate account/folder ownership"
       ],
       "work_items": [
         {
@@ -39,9 +40,9 @@
         {
           "id": "dh-2",
           "task": "Document current gig tracking workflow",
-          "why": "Establish baseline for future automation of gig history and contractor assignment",
+          "why": "A live '2026 Work, Contracts & Payments Master Tracker' exists and is kept current; formalize/standardize it as the baseline for future automation",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "dh-3",
@@ -60,7 +61,7 @@
         {
           "id": "dh-5",
           "task": "Assemble first-year business document system (plan, formation/EIN records, operating agreement)",
-          "why": "Finalize and organize core business paperwork so operations rest on a complete legal foundation",
+          "why": "Core docs exist (formation, EIN, operating agreement, MSA, contractor agreement, business plan, financial/invoice systems — indexed in companies/deadhang-labor/12_document_register.md). Remaining: de-duplicate to one canonical version each, consolidate account/folder ownership, and fill gaps (P&L, website privacy/terms, SOPs)",
           "priority": "HIGH",
           "status": "in_progress"
         },
@@ -95,7 +96,7 @@
         {
           "id": "dh-10",
           "task": "Build independent-contractor framework",
-          "why": "Legal/operational framework for engaging independent contractors (1099)",
+          "why": "A thorough 23-section Master Independent Contractor Agreement template already exists (doc 12). Remaining gate: Arizona attorney review before operational use (multi-state classification, workers'-comp exposure) — highest priority given 1099-misclassification risk",
           "priority": "HIGH",
           "status": "in_progress"
         },

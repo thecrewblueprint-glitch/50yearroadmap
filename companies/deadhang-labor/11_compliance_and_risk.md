@@ -24,9 +24,13 @@
 
 ## Licenses / permits
 
-- **None currently.** Deadhang's core **service labor** does not require an
-  Arizona TPT (transaction privilege / sales tax) license or a local business
-  license.
+- **Local business license:** a **City of Mesa business license application was
+  filed (May 2026, application fee paid).** (Corrects an earlier note that said
+  "none.") Confirm the current status/renewal cadence and keep the record with the
+  formation documents (doc 12). Record/reference numbers stay in private storage.
+- **AZ TPT (sales tax):** **not currently required** for Deadhang's core
+  **service labor** (services aren't tangible goods). This changes with merch —
+  see below.
 - **Trigger to revisit — merch:** launching the **print-on-demand t-shirt line**
   (`dh-12`) means selling tangible goods, which will likely require **AZ TPT
   registration** and sales-tax collection/remittance. Evaluate and register

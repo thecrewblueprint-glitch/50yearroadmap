@@ -25,6 +25,31 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — 30-day work: reviewed existing Deadhang business documents
+- Owner asked to review the business documents already created (they live in
+  private Google Drive, not the repo). Reviewed the real document set via the
+  Google Drive connector.
+- **Found more than the roadmap credited:** formation docs (Articles, EIN CP-575,
+  Operating Agreement), a **City of Mesa business license application** (May 2026,
+  fee paid), Client MSA, a thorough **Master Independent Contractor Agreement**
+  template (23 sections, AZ governing law), W-9/direct-deposit/onboarding forms,
+  Financial Tracking System, Master Invoice Template, a live "2026 Work, Contracts
+  & Payments Master Tracker," and a comprehensive Business Plan.
+- **Added `companies/deadhang-labor/12_document_register.md`** — a public-safe
+  index of what exists + a finalization checklist (de-dup, consolidate account
+  ownership, attorney review, fill gaps). No PII/financials.
+- **Reconciled canonical docs/roadmap to reality:**
+  - Doc 11: corrected the licenses note — a Mesa business license **was applied
+    for** (previously said "none"). Kept TPT-not-required-for-services.
+  - Doc 05: the Client MSA and the IC agreement **templates exist**; remaining
+    gate is Arizona attorney review.
+  - Roadmap: `dh-2` not_started→in_progress (live tracker exists); `dh-5` and
+    `dh-10` why-text updated to reflect existing docs + finalization/legal-review
+    gate; added a "business documents need finalization" blocker.
+- Flagged the **Business Plan as aspirational** (staffing agency ahead of current
+  solo reality) — use as target (doc 10), not current state.
+- README Deadhang doc count 12→13. Validator: PASS; PII re-scan clean.
+
 ### 2026-07-18 — Repository audit + post-audit cleanup + Stage 5
 - **Audit.** Full repository audit recorded in `governance/AUDIT_2026-07-18.md`
   (structure, roadmap integrity, docs, git history, per-project status, tech debt,

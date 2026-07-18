@@ -25,6 +25,7 @@ numbers, and personal contact details. Where sensitive detail is essential it is
 | 09 | [Revenue Streams](09_revenue_streams.md) | Labor, merch, calendar |
 | 10 | [Growth Model](10_growth_model.md) | Solo → teams → staffing agency |
 | 11 | [Compliance & Risk](11_compliance_and_risk.md) | Insurance, licenses, compliance |
+| 12 | [Business Document Register](12_document_register.md) | Public-safe index of existing business documents + finalization checklist |
 
 ## Status legend
 
@@ -32,4 +33,6 @@ Within each doc: **Documented** (complete) · **Partial** (known, gaps marked) �
 **To confirm** (needs owner input). See `governance/STAGE_1_SCOPE.md` for the
 Stage 1 plan and definition of done.
 
-_Last updated: 2026-07-17._
+_Last updated: 2026-07-18 (added doc 12 after reviewing the owner's existing
+business documents; reconciled the business license and contractor-agreement
+facts)._

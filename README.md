@@ -98,7 +98,7 @@ financials, or private data). Status as of 2026-07-18:
 
 | Company | Folder | Docs | State |
 | --- | --- | --- | --- |
-| Deadhang Labor LLC | `companies/deadhang-labor/` | 12 | ✅ Documented |
+| Deadhang Labor LLC | `companies/deadhang-labor/` | 13 | ✅ Documented |
 | The Crew Blueprint | `companies/crew-blueprint/` | 9 | ✅ Documented |
 | Production Atlas | `companies/production-atlas/` | 9 | ✅ Documented |
 | Contractor Tools | `companies/contractor-tools/` | 6 | ✅ Documented |
