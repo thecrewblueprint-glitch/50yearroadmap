@@ -52,17 +52,24 @@ looks like the live one).
 
 ## Gaps vs. a first-year document set
 
-Not found / to confirm (candidates for creation):
+Gap status (2026-07-18 — all four addressed):
 
-- **Profit & Loss statement** — not located (financial tracking exists; a formal
-  P&L may not).
+- **Profit & Loss statement** — ✅ **template created** (`Deadhang_Labor_LLC_Profit_and_Loss_2026_TEMPLATE.xlsx`):
+  monthly, formula-driven, Schedule-C-aligned categories. Delivered for private
+  storage; fill with real figures in Drive, **not** here.
 - **Website privacy policy / terms of service** — ✅ **exist and are complete**
   (live: `privacy.html`, `cookies.html`, `terms.html`; Arizona-governed; effective
   2026-06-15 — reviewed 2026-07-18, see doc 07). One open item: add a
   trademark/role disclaimer on the **portfolio page** (doc 07/08).
-- **Standard Operating Procedures (SOPs)** — not located as standalone docs.
-- **Marketing / content calendar** — task trackers exist; a marketing-specific
-  one may not.
+- **Standard Operating Procedures (SOPs)** — ✅ **written** as doc 14
+  (`14_sops.md`), public-safe.
+- **Marketing / content calendar** — ✅ **template created**
+  (`Deadhang_Labor_LLC_Marketing_Content_Calendar_TEMPLATE.xlsx`): dated calendar
+  with drop-downs + an ideas/themes backlog. Delivered for private use.
+
+> The two `.xlsx` templates are **deliverables kept in private storage** (they
+> hold or will hold figures/plans), not committed to this public repo. This
+> register records that they exist.
 
 ## Finalization checklist (the "documents require finalization" item)
 

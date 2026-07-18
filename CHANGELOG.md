@@ -25,6 +25,20 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — 30-day work: closed the Deadhang document gaps (P&L, SOPs, marketing)
+- Filled the four gaps from the document register (doc 12):
+  - **SOPs** → new repo doc `companies/deadhang-labor/14_sops.md` (public-safe):
+    inquiry→booking→pre-gig→show-day→invoice→payment→tracking→recordkeeping, plus
+    gated contractor-engagement and merch/TPT procedures.
+  - **Profit & Loss** → `Deadhang_Labor_LLC_Profit_and_Loss_2026_TEMPLATE.xlsx`:
+    monthly, formula-driven, Schedule-C-aligned. Delivered for private storage
+    (fill with real figures in Drive, not the public repo).
+  - **Marketing / content calendar** → `Deadhang_Labor_LLC_Marketing_Content_Calendar_TEMPLATE.xlsx`:
+    dated calendar with drop-downs + an ideas/themes backlog. Delivered privately.
+  - **Website privacy/terms** → already closed (exist live; see prior entry).
+- The two `.xlsx` templates are deliverables kept in private storage (not committed
+  to this public repo); doc 12 records that they exist. README Deadhang count 14→15.
+
 ### 2026-07-18 — Website update handoff for the Deadhang site developer
 - Wrote `companies/deadhang-labor/handoffs/2026-07-18-website-portfolio-disclaimer.md`
   — a self-contained coder handoff to (1) add the trademark/role disclaimer to
