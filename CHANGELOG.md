@@ -25,6 +25,14 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Website update handoff for the Deadhang site developer
+- Wrote `companies/deadhang-labor/handoffs/2026-07-18-website-portfolio-disclaimer.md`
+  — a self-contained coder handoff to (1) add the trademark/role disclaimer to
+  `portfolio.html` (drop-in HTML + fallback CSS), (2) re-frame captions to lead
+  with the labor role (current→suggested table, owner confirms exact role), and
+  (3) verify the mobile menu + HTTPS. Explicitly scopes OUT the legal pages and the
+  brand. Public-safe.
+
 ### 2026-07-18 — Evaluated deadhanglaborllc.com content
 - Reviewed the live site (home, about, portfolio, services, contact, and the legal
   pages) via WebFetch.
