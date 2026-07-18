@@ -1,8 +1,9 @@
 # Stage 1 Scope — Deadhang Labor LLC Canonical Documentation
 
-**Status:** scaffolded + first-pass drafted (`companies/deadhang-labor/`, all 12
-docs). Remaining: fill the "To confirm" items with owner input, and finish the
-in-progress docs (safety, contractor framework) as that work lands.
+**Status:** documented — owner interview complete; all "To confirm" facts filled
+(formation year, work channels, gig-log system, safety baseline, brand-source,
+licenses). Remaining: docs `05` (contractor framework) and `06` (detailed safety
+procedures) finish as roadmap `dh-10` / `dh-11` land; optional tagline (`08`).
 **Goal:** everything about Deadhang Labor LLC is reconstructable from repository
 documentation alone.
 

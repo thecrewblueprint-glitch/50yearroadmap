@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-17 — Stage 1: Deadhang docs completed via owner interview
+- One-item-at-a-time interview filled every "To confirm" fact:
+  - `01` Legal — **formed 2026** (first year); AZ single-member LLC.
+  - `03` Operations — work comes in via **direct relationships + staffing
+    companies**; gig log lives in **Google Sheets/Drive + ChatGPT** (formalizing via `dh-2`).
+  - `06` Safety — operating baseline: **OSHA / ANSI / ESTA / ETCP first + site
+    requirements** (detailed procedures still build via `dh-11`).
+  - `08` Brand — exact navy/gold from the **site CSS** (source of truth); noted
+    per-project CSS schemas (Deadhang, Crew Blueprint, roadmap, Production Atlas).
+  - `11` Compliance — **no TPT/business license now** (service labor); **merch
+    t-shirt launch (`dh-12`) triggers likely AZ TPT registration** — evaluate before selling.
+- Docs 00, 01, 02, 03, 04, 07, 08, 09, 10, 11 are Documented. Remaining: `05`
+  (contractor framework) and `06` (detailed procedures) complete as `dh-10`/`dh-11`
+  land; optional tagline. Stage 1 substantially complete.
+
 ### 2026-07-17 — Stage 1 first pass: Deadhang canonical documentation drafted
 - Scaffolded `companies/deadhang-labor/` and drafted all 12 canonical docs
   (README + 00 overview → 11 compliance/risk): legal structure, services,

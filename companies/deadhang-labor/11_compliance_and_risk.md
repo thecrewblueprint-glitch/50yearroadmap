@@ -1,6 +1,6 @@
 # 11 — Compliance & Risk
 
-**Status:** Documented (a few items to confirm).
+**Status:** Documented.
 
 ## Insurance
 
@@ -24,9 +24,15 @@
 
 ## Licenses / permits
 
-> **To confirm (owner):** any Arizona/local business licenses, transaction
-> privilege tax registration, or event/site-specific permits that apply. Capture
-> as facts (not sensitive numbers).
+- **None currently.** Deadhang's core **service labor** does not require an
+  Arizona TPT (transaction privilege / sales tax) license or a local business
+  license.
+- **Trigger to revisit — merch:** launching the **print-on-demand t-shirt line**
+  (`dh-12`) means selling tangible goods, which will likely require **AZ TPT
+  registration** and sales-tax collection/remittance. Evaluate and register
+  **before** merch sales begin (note: the print-on-demand provider's built-in tax
+  handling affects exactly what Deadhang must do). Tracked as a compliance step
+  of the merch launch.
 
 ## Risk posture
 
