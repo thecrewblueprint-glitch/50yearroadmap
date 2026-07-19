@@ -6,7 +6,7 @@ let workItemsItemsPerPage = 3;
 
 async function loadRoadmap() {
     try {
-        const response = await fetch('roadmap.json', { cache: 'no-store' });
+        const response = await fetch('roadmap.json?v=' + Date.now(), { cache: 'no-store' });
         if (!response.ok) throw new Error('Could not load roadmap.json');
         roadmapData = await response.json();
         renderDashboard();

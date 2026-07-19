@@ -160,7 +160,7 @@
         async function load() {
             let data;
             try {
-                const res = await fetch('roadmap.json', { cache: 'no-store' });
+                const res = await fetch('roadmap.json?v=' + Date.now(), { cache: 'no-store' });
                 if (!res.ok) throw new Error('load failed');
                 data = await res.json();
             } catch (e) {
