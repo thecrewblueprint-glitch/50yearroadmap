@@ -6,6 +6,22 @@ Newest first.
 
 ---
 
+## 2026-07-18 — Crew Blueprint delivery: gamified static, not an LMS
+**Decision:** The Crew Blueprint's delivery is a **gamified, static, browser-based
+experience — not a traditional LMS.** The discipline/pathway map (`cb-2`) becomes a
+**skill tree**; learner progress is stored **client-side (localStorage)**, so there
+are **no accounts, database, or backend.** Mechanics start **highly simplified**
+(XP, streaks, progress, one interaction per node) and grow later. Course DOCX
+packets remain the content source of truth; gamified modules wrap them. First
+step: one MVP module from an existing packet (`cb-5`). Resolves **OD-4** and
+reframes `cb-3` (was "next-generation platform/LMS").
+**Why:** A static, client-side gamified experience is *simpler* than an LMS and
+**sidesteps the exact platform instability that blocked the LMS** (accounts +
+DB + backend). It also fits the Blueprint's existing model better — the pathway
+map is already a skill tree, and XP/badges reward *skill* without implying
+certification (consistent with the no-cert stance). Simplify the mechanics first;
+add depth once the format is proven.
+
 ## 2026-07-17 — Business structure: remain an Arizona single-member LLC
 **Decision:** Deadhang Labor LLC remains an **Arizona LLC**, single-member,
 **Schedule C**, **cash basis**, owner-operated, live-event production labor.

@@ -24,6 +24,12 @@ learner navigate logically — by the role they work and the level they're at �
 rather than through an undifferentiated pile of lessons. Building this granular
 discipline/pathway structure in the repository is tracked as roadmap `cb-2`.
 
+**This map is the skill tree.** Per the 2026-07-18 delivery decision (doc 05), the
+Blueprint is delivered as a **gamified static experience**, and the
+discipline/pathway map *is* its skill tree — nodes to unlock across disciplines
+and levels, with progress kept client-side. So `cb-2` does double duty: it
+organizes the content *and* defines the game structure.
+
 ## Progression philosophy
 
 - Courses build from **fundamentals** upward; a learner establishes a base

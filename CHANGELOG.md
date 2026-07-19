@@ -25,6 +25,22 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Decision: Crew Blueprint delivery = gamified static, not an LMS
+- Owner decided a **gamified, static, browser-based** delivery over an LMS —
+  simpler and it sidesteps the platform instability that blocked the LMS
+  (no accounts/DB/backend; progress in localStorage). Discipline/pathway map =
+  skill tree; mechanics start highly simplified and grow.
+- Recorded in `governance/DECISION_LOG.md`; **resolved OD-4** (moved out of
+  `OPEN_DECISIONS.md`).
+- Roadmap: reframed `cb-3` ("Build gamified static learning delivery…", status
+  moved_later→not_started), rewrote crew-blueprint current_state + blockers, and
+  **added `cb-5`** ("Ship first gamified MVP module from an existing packet") —
+  added via the new promote helper (dogfood), then wired into journey milestone m4.
+- Reconciled the Crew Blueprint docs to the decision: `05_platform` (full
+  gamified-delivery section; LMS/heavy-infra reframed as retired/gated), plus
+  `00_overview`, `01_learning_model` (skill tree), `07_content_pipeline`,
+  `08_growth_model`, and the folder README. Validator: PASS (0 warnings).
+
 ### 2026-07-18 — Add promote helper + document the two-path update workflow
 - Built `scripts/promote-proposals.py` — the human-in-the-loop "apply" step that
   the pipeline was missing. Reads owner-approved changes from

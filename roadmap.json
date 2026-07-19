@@ -124,7 +124,7 @@
       "role": "Skill development and industry knowledge resource",
       "status_percentage": 35,
       "ultimate_goal": "Provide stagehands with a visual, workflow-based learning system that teaches skills, context, and industry integration without formal certification.",
-      "current_state": "Foundation complete and no longer blocked by software development. Vision, standardized course architecture, multi-AI content workflow, brand, and legal/authority philosophy (job-readiness, not certification) are all decided. Website shell is live (WordPress.com, industrial Extendable theme, staging-first, Coming Soon) and the modular plugin architecture is defined. The next-generation platform is intentionally deferred; the website stays a lightweight presentation layer. Primary work is now content and documentation: produce canonical course packets, continue Stagehand Fundamentals, and organize the discipline/pathway library. Canonical documentation lives in companies/crew-blueprint/.",
+      "current_state": "Foundation complete and no longer blocked by software development. Vision, standardized course architecture, multi-AI content workflow, brand, and legal/authority philosophy (job-readiness, not certification) are all decided. Website shell is live (WordPress.com, industrial Extendable theme, staging-first, Coming Soon). DELIVERY DECISION (2026-07-18): a gamified, static, browser-based experience — NOT a traditional LMS. The discipline/pathway map becomes a skill tree; progress is stored client-side (localStorage), so there are no accounts, database, or backend to break (this sidesteps the instability that blocked the LMS). Mechanics start highly simplified (XP, streaks, progress, one interaction per node) and grow later. Primary work is still content: produce canonical course packets, continue Stagehand Fundamentals, and organize the discipline/pathway library — then wrap packets in gamified modules. Canonical documentation lives in companies/crew-blueprint/.",
       "critical_blocker": "Not platform anymore — the constraint is content-production volume: producing canonical course packets and the discipline/pathway library.",
       "timeline": {
         "phase_1_ready": "Q3 2026",
@@ -132,8 +132,8 @@
       },
       "blockers": [
         "Content-production volume is the real constraint (packets take time)",
-        "Discipline/pathway repository mapping still to be built out",
-        "Next-generation platform (LMS/Laravel/AWS/etc.) intentionally deferred until content justifies it"
+        "Discipline/pathway repository mapping still to be built out (this becomes the skill tree)",
+        "Gamified delivery chosen over an LMS; heavy platform (Laravel/AWS/accounts/DB) is off the table for now — start static + client-side"
       ],
       "work_items": [
         {
@@ -152,10 +152,10 @@
         },
         {
           "id": "cb-3",
-          "task": "Stabilize/build next-generation platform infrastructure",
-          "why": "Deferred by decision — keep the website lightweight until content volume justifies building the next platform",
+          "task": "Build gamified static learning delivery (skill tree, client-side progress — not an LMS)",
+          "why": "Chosen over an LMS: a static, browser-based gamified experience (localStorage progress, no accounts/DB/backend) is simpler and sidesteps the platform instability that blocked the LMS. Discipline/pathway map = skill tree; mechanics start highly simplified and grow.",
           "priority": "MEDIUM",
-          "status": "moved_later"
+          "status": "not_started"
         },
         {
           "id": "cb-4",
@@ -163,6 +163,13 @@
           "why": "Build initial content library for core stagehand skills; content is now the primary work",
           "priority": "HIGH",
           "status": "in_progress"
+        },
+        {
+          "id": "cb-5",
+          "task": "Ship first gamified MVP module from an existing packet (static, client-side progress)",
+          "why": "Prove the gamified format cheaply: take one publication-ready packet (e.g. Rigging Hardware ID) and build it as a single static skill-tree node with XP, a streak, a progress bar, and one real interaction, progress saved in localStorage, no backend. Validates the format before building the full tree.",
+          "priority": "HIGH",
+          "status": "not_started"
         }
       ],
       "phase": 1,
@@ -538,6 +545,7 @@
         "step_ids": [
           "cb-4",
           "cb-2",
+          "cb-5",
           "cb-1",
           "cb-3"
         ],

@@ -39,8 +39,8 @@ project.
 
 - The **course packet is the single source of truth.**
 - **Website and platform content are generated from the packets — not the other
-  way around.** Downstream surfaces (the site, the future LMS) present the packet;
-  they never become an independent source that the packet has to chase.
+  way around.** Downstream surfaces (the site, the gamified modules) present the
+  packet; they never become an independent source that the packet has to chase.
 
 ## Where packets live
 

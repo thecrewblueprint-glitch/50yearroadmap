@@ -14,9 +14,10 @@ brand, its content pipeline, and its platform plan.
 The **foundation is essentially complete** — vision, course architecture,
 content workflow, brand, legal philosophy, website shell, plugin architecture,
 and the multi-AI content workflow are all decided. The Crew Blueprint is **no
-longer blocked by software development.** The next-generation platform is
-**intentionally deferred**; the website stays a lightweight presentation layer
-until there is enough content to justify building the next platform.
+longer blocked by software development.** Delivery is decided: a **gamified,
+static, browser-based experience — not an LMS** (client-side progress, no
+accounts/DB/backend; see doc 05). The heavy LMS/next-gen-platform path is off the
+table.
 
 The **primary work now is content and documentation** — producing canonical
 course packets and building this knowledge base and its governance — not

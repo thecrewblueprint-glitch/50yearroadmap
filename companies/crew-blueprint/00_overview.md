@@ -42,9 +42,10 @@ discipline-specific skill.
 ## Current stage
 
 Foundation complete; **content-first**. The Crew Blueprint is no longer blocked
-by software development — the next-generation platform is intentionally deferred
-while the priority is producing high-quality course content and the governance
-and documentation to support it long term (see docs 05 and 08).
+by software development. Delivery is decided: a **gamified, static, browser-based
+experience — not an LMS** (doc 05). The priority is producing high-quality course
+content and wrapping it in simple gamified modules, plus the governance and
+documentation to support it long term (see docs 05 and 08).
 
 ## Where it sits in the ecosystem
 

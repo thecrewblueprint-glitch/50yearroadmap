@@ -14,14 +14,15 @@ now **producing and organizing high-quality training content** and building the
 ## The path
 
 1. **Content-first (now).** Produce canonical course packets (doc 07), continue
-   **Stagehand Fundamentals**, and build additional foundational courses. Keep the
-   website a lightweight presentation layer (doc 05).
-2. **Foundational library.** Organize the resource library by discipline/pathway
-   (doc 01, roadmap `cb-2`) and grow enough foundational content to make the
-   resource genuinely useful (roadmap `cb-4`).
-3. **Next-generation platform (later).** Once content volume justifies it, build
-   the deferred platform (Laravel/AWS/DB/RAG/search/accounts/mobile — doc 05).
-   Content demand pulls the platform into existence, not the reverse.
+   **Stagehand Fundamentals**, and build additional foundational courses.
+2. **Foundational library + first gamified module.** Organize the resource library
+   by discipline/pathway (doc 01, roadmap `cb-2` — this becomes the skill tree) and
+   ship one **gamified MVP module** from an existing packet (`cb-5`) to prove the
+   format.
+3. **Gamified delivery (static).** Grow the skill tree of gamified modules —
+   client-side progress, no accounts/DB/backend (doc 05, `cb-3`). Mechanics start
+   simple and deepen. Heavy infrastructure (accounts/cloud) only if a real need
+   (cross-device, leaderboards) emerges — not before.
 
 ## Highest-priority active work
 
@@ -52,7 +53,7 @@ workers.
 | Documentation | 70% |
 | Website infrastructure | 75% |
 | Production content | 10–15% |
-| Next-generation platform | 5% |
+| Gamified delivery (static, client-side) | direction decided; first module `cb-5` not yet built |
 
 The foundation is built. The work ahead is **content and documentation volume**,
 paced deliberately, with the platform following once the content justifies it.
