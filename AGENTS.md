@@ -140,6 +140,13 @@ not committed.
   first" order) using the 30/60/90 windows, blockers-first, and confidence. It
   **deletes nothing** and never edits the proposals or `roadmap.json`; it only
   produces the ranked report for the owner to decide from.
+- 🟡 **Promote helper (the "apply" step)** — `scripts/promote-proposals.py` reads
+  the owner-approved changes in `data/roadmap/promotions.json` (status updates,
+  new work items, new blockers) and writes them into `roadmap.json` with
+  auto-assigned IDs and enum checks, then runs the validator and **rolls back on
+  failure**. It is the only script that writes `roadmap.json`, and only from
+  changes the owner approved. Two paths feed it: watcher evidence, and real-world
+  progress the watcher can't see (described directly). See `WATCHER_GUIDE.md`.
 
 ---
 

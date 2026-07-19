@@ -18,11 +18,17 @@ curated digests in /data/raw-reports
 data/roadmap/watcher-proposals.json
   ↓  scripts/prioritize-proposals.py  (ranked "work on first" backlog)
 data/roadmap/proposal-backlog.md
-  ↓  owner/agent promotes approved items by hand     [human-in-the-loop]
+  ↓  owner records approvals in data/roadmap/promotions.json   [human-in-the-loop]
+  ↓  scripts/promote-proposals.py  (applies + auto-IDs + validates, rollback on fail)
 roadmap.json  (branch model)
   ↓  scripts/validate-roadmap.py  (gate: refs, enums, public-safety)
   ↓  commit to main → dashboard
 ```
+
+There are **two update paths**, both ending at the promote step: **evidence-based**
+(the watcher proposes from digests) and **real-world progress** the watcher can't
+see (Drive, website, "I filed my taxes") — the latter is described directly in
+`promotions.json`. See `WATCHER_GUIDE.md` for the full workflow.
 
 ## The scripts
 
@@ -36,6 +42,12 @@ roadmap.json  (branch model)
 - **`prioritize-proposals.py`** — read-only ranking of proposals into
   `proposal-backlog.md` (by 30/60/90 window → current branch → blockers →
   confidence). **Deletes nothing** (principle 5).
+- **`promote-proposals.py`** — the "apply" step. Reads `promotions.json` (your
+  approved changes: status updates, new work items, new blockers), writes them
+  into `roadmap.json` with auto-assigned IDs and enum checks, runs the validator,
+  and **rolls back** if validation fails. Resets `promotions.json` on success so
+  nothing is applied twice. This is the only script that writes `roadmap.json`,
+  and only from changes you approved.
 - **`validate-roadmap.py`** — the gate: checks references, status enums, ranges,
   duplicates, and public-safety (PII/street-address/HTML). Exit 0 pass / 1 fail.
   Wired into CI via `.github/workflows/validate-roadmap.yml`.

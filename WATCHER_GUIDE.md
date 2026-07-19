@@ -44,16 +44,84 @@ only the Python standard library.
 - `unmapped_claims` — candidates with no confident branch match (triage by hand).
 - `flagged_unsafe` — candidates withheld for public-safety review.
 
-## The review workflow (human in the loop)
+## Two ways progress reaches the roadmap
 
-1. Run the watcher.
-2. Open `data/roadmap/watcher-proposals.json`. Skim each branch's candidates
-   where `already_in_roadmap` is `false`.
-3. For anything worth keeping, add it to the matching branch's `work_items` or
-   `blockers` in `roadmap.json` — in your own words, with a proper `id`.
-4. Check `unmapped_claims` for anything important that needs a home.
-5. Validate `roadmap.json` (see `AGENTS.md` §4) and log the change in
-   `CHANGELOG.md`.
+The watcher is **not** a reality-sync. It only reads the curated digests in
+`data/raw-reports/` — it cannot see your Google Drive, your website, or your work
+outside those files. So there are two paths, and both end at the same safe
+**promote** step:
 
-The watcher proposes; you decide. Nothing reaches the live dashboard until you
-put it in `roadmap.json` yourself.
+- **Path A — evidence-based (watcher).** The watcher proposes candidates from the
+  digests. You approve the good ones.
+- **Path B — real-world progress (the watcher can't see).** Things like "I filed
+  my taxes," "the site is updated," "these docs now exist." You (or an AI helper)
+  describe them directly.
+
+Both paths are applied with the **promote helper**, which writes into
+`roadmap.json` for you — assigning IDs, enforcing the enums, and validating (with
+rollback) so the roadmap can never end up broken or unsafe.
+
+## The promote helper
+
+`scripts/promote-proposals.py` reads a small file you control —
+`data/roadmap/promotions.json` — and applies it to `roadmap.json`. It supports
+three kinds of change:
+
+```json
+{
+  "set_status": { "dh-6": "completed", "dh-2": "in_progress" },
+
+  "add_work_items": [
+    { "branch_id": "deadhang-labor",
+      "task": "Register for AZ TPT before merch sales",
+      "why": "Selling tangible goods triggers AZ transaction privilege tax",
+      "priority": "MEDIUM",
+      "status": "not_started" }
+  ],
+
+  "add_blockers": [
+    { "branch_id": "production-atlas", "text": "Scenic dataset still incomplete" }
+  ]
+}
+```
+
+Run it:
+
+```bash
+python3 scripts/promote-proposals.py --dry-run   # preview; writes nothing
+python3 scripts/promote-proposals.py             # apply
+```
+
+Guarantees:
+
+- **All-or-nothing.** If any entry is invalid it refuses and changes nothing.
+- **Auto-IDs.** New work items get the next id for the branch (`dh-13`, `cb-5`, …).
+- **Enum-checked.** `status` ∈ {not_started, in_progress, blocked, completed,
+  moved_later}; `priority` ∈ {CRITICAL, HIGH, MEDIUM, LOW}.
+- **Validated with rollback.** It runs `validate-roadmap.py`; if that fails
+  (including the public-safety/PII scan), `roadmap.json` is restored untouched.
+- **No double-apply.** On success it resets `promotions.json` to the empty template.
+
+## The full workflow (human in the loop)
+
+**Path A — from the watcher:**
+1. `python3 scripts/roadmap-watcher.py` — regenerate proposals.
+2. `python3 scripts/prioritize-proposals.py` — rank them into
+   `data/roadmap/proposal-backlog.md`.
+3. Read the backlog. For each item you approve, add an entry to
+   `promotions.json` (`add_work_items` / `add_blockers`) — in your own clean words.
+
+**Path B — real-world progress:**
+1. Just describe it in `promotions.json` — most often a `set_status` (mark an
+   existing item `completed`/`in_progress`) or a new work item/blocker.
+
+**Then, for both:**
+4. `python3 scripts/promote-proposals.py --dry-run` to preview, then run it for real.
+5. If you added a **new work item**, the validator may warn it isn't referenced by
+   any journey milestone. That's a nudge, not an error — wire it into a milestone's
+   `step_ids` (or a 30/60/90 window) by hand if it belongs on the timeline.
+6. Review `git diff roadmap.json`, log the change in `CHANGELOG.md`, and commit.
+   The live dashboard/timeline pick it up on the next load.
+
+The watcher proposes; the promote helper applies safely; you always decide what
+gets in.

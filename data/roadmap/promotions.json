@@ -1,0 +1,6 @@
+{
+  "_README": "Record approved roadmap updates here, then run `python3 scripts/promote-proposals.py`. On success this file is reset. See WATCHER_GUIDE.md for the full workflow.",
+  "set_status": {},
+  "add_work_items": [],
+  "add_blockers": []
+}

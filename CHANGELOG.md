@@ -25,6 +25,24 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Add promote helper + document the two-path update workflow
+- Built `scripts/promote-proposals.py` — the human-in-the-loop "apply" step that
+  the pipeline was missing. Reads owner-approved changes from
+  `data/roadmap/promotions.json` (status updates, new work items, new blockers),
+  writes them into `roadmap.json` with **auto-assigned IDs** and enum checks, runs
+  the validator, and **rolls back on any failure** (including the public-safety/PII
+  scan). Resets `promotions.json` on success so nothing double-applies. `--dry-run`
+  previews. It is now the only script that writes `roadmap.json`.
+- Added `data/roadmap/promotions.json` (empty template).
+- Tested end-to-end: apply (auto-ID `dh-13`, status change, blocker) → validator
+  PASS; PII case → rolled back, no leak. Reverted all test data.
+- **Documented the two update paths** (evidence-based via the watcher; real-world
+  progress the watcher can't see) in `WATCHER_GUIDE.md`, and synced the pipeline
+  description across `AGENTS.md`, `README.md`, and
+  `companies/personal-operations/03_ai_pipeline.md`.
+- Clarifies the design: the watcher is not a reality-sync — it proposes from
+  curated digests only; the promote helper applies what you approve.
+
 ### 2026-07-18 — Refresh dashboard + timeline currency (roadmap.json)
 - Brought the live dashboard/timeline source up to date after the Deadhang document work:
   - `generated_at` 2026-07-09 → 2026-07-18.

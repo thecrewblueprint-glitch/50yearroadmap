@@ -35,7 +35,7 @@ The system is designed to answer one practical question:
 - `/data/roadmap-deep-context`: Mission, values, identity, and long-range intent context (indexed by `data/roadmap/deep-context-decision-sources.json`).
 - `/data/schema`: Public-safety data-validation rules.
 - `/governance`: Current state, decision log, open decisions, known risks, lessons learned, and AI/human handoffs.
-- `/scripts`: Memory processing, the watcher, the validator, and the proposal prioritizer.
+- `/scripts`: Memory processing, the watcher, the prioritizer, the promote helper, and the validator.
 
 ## Data Pipeline
 
@@ -51,15 +51,19 @@ curated digests in /data/raw-reports
 data/roadmap/watcher-proposals.json
   ↓  ✅ scripts/prioritize-proposals.py  (ranked "work on first" backlog)
 data/roadmap/proposal-backlog.md
-  ↓  ⏳ owner/agent promotes approved items by hand
+  ↓  ⏳ owner records approvals in data/roadmap/promotions.json
+  ↓  ✅ scripts/promote-proposals.py  (applies + auto-IDs + validates, rollback on fail)
 roadmap.json  (branch model)
   ↓  ✅ scripts/validate-roadmap.py  (gate: refs, enums, PII)
   ↓  commit to main → dashboard
 ```
 
-Memory processing is automated; the watcher, prioritizer, and validator are
-built and run on demand. Promotion into `roadmap.json` is deliberately manual
-(human-in-the-loop) — the watcher only proposes.
+Memory processing is automated; the watcher, prioritizer, promote helper, and
+validator are built and run on demand. Promotion into `roadmap.json` is
+deliberately human-in-the-loop — the watcher only proposes, and the promote
+helper only applies changes **you approved** in `promotions.json`. Two update
+paths feed it: evidence the watcher found, and real-world progress it can't see
+(described directly). See `WATCHER_GUIDE.md`.
 
 Deep-context files follow a parallel route:
 
