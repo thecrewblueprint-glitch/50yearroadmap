@@ -25,6 +25,19 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-18 — Partnership Playbook: framework laid down
+- Started a cross-company **Partnership Playbook** (`partnerships/`) — the strategic
+  system for using partnerships to accelerate growth across Deadhang, Crew Blueprint,
+  Production Atlas, and the Homestead.
+- Built the **framework first** (per owner's systematic approach): README index with
+  the strategic spine (rent-the-infrastructure, find one anchor, sequence by leverage)
+  + nine scoped stubs (strategy, value proposition, partner types, targeting, the
+  offer, outreach, pipeline, deal structures, risks & review). Each stub defines its
+  purpose and how it connects to its neighbors, so the whole coheres before filling.
+- Sections will be filled **one at a time, in order**, starting with 01_strategy.
+  Public-safe (strategy + templates only; partner specifics stay private); the live
+  target list remains `data/roadmap/connections.md`.
+
 ### 2026-07-18 — Decision: Crew Blueprint delivery = gamified static, not an LMS
 - Owner decided a **gamified, static, browser-based** delivery over an LMS —
   simpler and it sidesteps the platform instability that blocked the LMS
