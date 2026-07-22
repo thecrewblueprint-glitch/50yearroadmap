@@ -25,6 +25,32 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — BUILT: lighting-hand lessons plugged onto the framework (in action)
+- Owner: *"build the lighting lessons onto the framework so I can see it in action."*
+  Built **four real lighting-hand lessons as framework modules** — the whole thesis
+  working end-to-end: real lessons dropped into the walkable, anime-styled engine as
+  stations you walk between. Stations: **① Coiling** (tap OVER/UNDER pucks in
+  alternation; wrong rhythm builds twists), **② Pin the Truss** (seat all 4 pins,
+  then call it ready — calling early with pins missing warns you), **③ Hang & Make
+  Safe** (tap the fixture: clamp → bond → address → check, then send to trim; skip
+  the bond and it **falls to the deck**), **④ Fly to Trim** (you must physically
+  **walk out of the red drop-zone** before calling the fly — call it from under the
+  load and it stops you). Each completion earns XP, levels up, and saves.
+- **Architecture honored:** the lessons are written purely against the module SDK
+  (`CB.registerModule` + `ctx`/`CB`) and the engine stays content-free. The private
+  build = the same public engine (placeholder demos stripped) + a `lighting.js`
+  lesson pack. Fixed two real usability issues found in testing: torus targets have
+  a hole at center (swapped coil choices to solid pucks) and clustered pins were
+  finicky (made the truss joint one tap-to-seat target).
+- **Smoke-tested in Chromium:** 0 errors; all four stations complete on the happy
+  path (XP 350, level up); safe-failure paths verified — fixture **falls** when
+  flown un-bonded (does not complete; auto-resets to retry), and the fly is
+  **blocked** when called from inside the drop-zone; recovers and completes when
+  done safely.
+- **Delivered privately** (Drive/chat) per doc 09 — this build carries lesson
+  content, so unlike the content-free engine it stays out of the public repo. The
+  repo records that it exists.
+
 ### 2026-07-22 — BUILT: the experience FRAMEWORK ("The Shop Floor") + anime aesthetic
 - Owner's call: *"build the framework… the best framework you can build to layer
   the data and modules onto,"* and *"anime style aesthetic."* Built the composable
