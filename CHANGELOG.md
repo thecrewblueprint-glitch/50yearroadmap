@@ -25,6 +25,14 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Captured the embodied-game vision + build ladder (Crew Blueprint)
+- Owner's full delivery vision: an **actual playable game with characters and
+  scenes** — learners look around a jobsite, see the items being taught, and
+  *experience* why listening and head-on-a-swivel matter. Market-validated
+  (Interplay/Transfr win on simulation).
+- Recorded in `companies/crew-blueprint/05_platform.md` with an honest 4-rung
+  build ladder: cards (done) → **playable 2D scenes (next)** → first-person 3D →
+  full sim/VR. Each rung gated on the previous proving the feel.
 ### 2026-07-22 — cb-5 v2: full UI/UX audit on the gamified module prototype
 - Owner flagged UI/UX issues + scrolling errors. Audited and fixed: **scroll position
   now resets to top on every screen/step change** (the main bug — you landed

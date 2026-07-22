@@ -31,6 +31,25 @@ Anything requiring accounts/cloud (cross-device sync, leaderboards, social) is a
 *later* option, gated the same way heavier infrastructure always is here — only
 when the simple version is genuinely the bottleneck.
 
+## The destination vision — an embodied game (owner, 2026-07-22)
+
+The owner's full vision goes beyond gamified lessons: **an actual playable game
+with characters and scenes** — the learner is *in* the jobsite, can **look
+around**, sees the items being taught (cases, truss, forklifts, barricade), and
+*experiences* why listening and keeping your head on a swivel matter, rather
+than reading that they do. (Market-validated: Interplay/Transfr win on
+simulation; see `partnerships/research/01`.)
+
+The build ladder, so scope stays honest:
+1. **Cards** — skill tree + choices + XP (the current `cb-5` prototype). ✅
+2. **Playable scenes** — 2D jobsite scenes with look-around, moving hazards,
+   characters, and calls to react to; each lesson's DO step becomes a scene.
+   *The next prototype layer.*
+3. **First-person 3D** (e.g. Three.js low-poly venue) — after scenes prove the feel.
+4. **Full simulation/VR** — the far-future, Interplay-class endgame.
+
+Each rung is gated on the one before it proving the feel — never jump the ladder.
+
 ## Website foundation (in place)
 
 - **Domain** secured.
