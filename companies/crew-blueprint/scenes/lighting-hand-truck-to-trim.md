@@ -56,19 +56,28 @@ the learner** (the judgment call they must make themselves).
 - **Assessed by the learner:** Does this match the plot? Am I blocking an exit or a
   push path? Will the next step reach this easily?
 
-### Beat 3 — Prep the fixture (the critical-safety beat)
+### Beat 3 — Prep the fixture + **ground-check it powered on** (the critical-safety beat)
 - **Objective:** Open the case and prep a fixture to hang — **proper clamp** on the
   pipe/truss, **safety cable (bond) attached — mandatory**, yoke tightened, cable
-  dressed, **address/DMX set.**
+  dressed, **address/DMX set** — and **power it up and confirm it works on the ground,
+  before it flies.** Fixtures are typically **struck and checked at arm's reach**
+  (does it power, does it home, does it answer its address?) precisely because a dead
+  fixture is trivial to fix on the deck and miserable to fix at trim.
 - **Ambient:** This gear is about to go overhead; tools should be tethered; fixtures
-  are heavy and pinchy.
-- **Safe-failure consequence (the big one):** **Skip the safety cable** and it looks
-  fine on the ground — but at Beat 4/5, if the clamp fails, the fixture **falls from
-  trim.** The learner sees the catastrophic cost of the shortcut **safely**, with the
-  lesson made explicit: the safety cable is the difference between a scare and a
-  fatality. This is the lesson's spine — a deadly mistake taught without anyone hurt.
+  are heavy and pinchy; live power on the deck.
+- **Safe-failure consequence (two, both taught here):**
+  - **Skip the safety cable** and it looks fine on the ground — but at Beat 4, if the
+    clamp fails, the fixture **falls from trim.** The learner sees the catastrophic
+    cost of the shortcut **safely** — the safety cable is the difference between a
+    scare and a fatality. This is the lesson's spine: a deadly mistake taught with no
+    one hurt.
+  - **Fly it without ground-checking** and a dead pixel / no-strike / wrong-address
+    fixture only reveals itself **once it's at trim** — now it has to come **back
+    down** (or a tech goes up), costing the whole load the time. The learner learns
+    to *catch it on the deck.*
 - **Assessed by the learner:** Is the clamp rated and fully seated? **Is the safety
-  cable on?** Is the address right? Is anything going to swing free?
+  cable on?** Is the address right? **Did it power up and respond before I let it go
+  up?** Is anything going to swing free?
 
 ### Beat 4 — Fly it / send to trim
 - **Objective:** The truss goes up on motors. **Running the motors is the rigger's
@@ -84,22 +93,27 @@ the learner** (the judgment call they must make themselves).
   the call go out? (Rigging boundary respected — this reinforces the positioning:
   ground hands support the fly; riggers rig.)
 
-### Beat 5 — Trim & power on
-- **Objective:** At trim, **power distribution basics** — land on the correct circuit,
-  don't overload it, dress cable so there are **no trip hazards** (matted/taped in
-  walkways), follow the **power-up sequence**, then **confirm the fixture answers its
-  address** from the board.
-- **Ambient:** Electrical safety; cable in walkways must be managed.
+### Beat 5 — At trim: land power & data, dress, re-confirm
+- **Objective:** The fixture already powered and answered on the deck (Beat 3); at
+  trim the job is the **distribution and dress** — land the truss on the **correct
+  circuit** without overloading it, run **power and data** cleanly, dress cable so
+  there are **no trip hazards** (matted/taped in walkways), and **re-confirm it still
+  answers its address** now that it's flown. This is the *final* check, not the first
+  power-on.
+- **Ambient:** Electrical safety; cable in walkways must be managed; work still
+  happening overhead nearby.
 - **Safe-failure consequence:** Overload a circuit or make a bad connection → the
-  breaker trips (potentially mid-show); a data/address error → the fixture is **dark
-  when the LD calls for it.** Both shown safely, tied to "the show can't happen."
+  breaker trips (potentially mid-show); a run left across a walkway → a trip hazard;
+  a data cable knocked loose in the fly that you *don't* re-check → the fixture is
+  **dark when the LD calls for it.** All shown safely, tied to "the show can't happen."
 - **Assessed by the learner:** Is this circuit already loaded? Is the run a trip
-  hazard? Does it respond when I test the address?
+  hazard? Does it **still** respond now that it's up?
 
 ### End state
-Fixture **floating at trim, powered, addressed, and answering the board.** The
-learner has taken it the whole way — and, more importantly, has had to *judge the
-safety of each step themselves,* seeing the safe cost of every shortcut.
+Fixture **at trim — powered, addressed, dressed, and answering the board** (it was
+ground-checked live before the fly, and re-confirmed after). The learner has taken it
+the whole way — and, more importantly, has had to *judge the safety and readiness of
+each step themselves,* seeing the safe cost of every shortcut.
 
 ---
 
@@ -109,9 +123,9 @@ safety of each step themselves,* seeing the safe cost of every shortcut.
 |------|--------------|------------------|
 | 1 | Truck unload / case handling | partial (*Dock Sweep*) |
 | 2 | Staging to the plot | not built |
-| 3 | Clamp + **safety cable** + address | not built — **highest-value atom** |
+| 3 | Clamp + **safety cable** + address + **ground power-check** | not built — **highest-value atom** |
 | 4 | Clearing / spotting the fly to trim | not built |
-| 5 | Circuit load + cable dress + power-up | not built |
+| 5 | Land circuit + data + dress + **re-confirm** at trim | not built |
 | (related atom) | Over-under coiling | prototyped (*Coil Line*) |
 
 **Build order recommendation:** Beat 3 (clamp + safety cable) first — it carries the
