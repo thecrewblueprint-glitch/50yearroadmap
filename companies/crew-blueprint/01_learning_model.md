@@ -33,7 +33,11 @@ organizes the content *and* defines the game structure.
 ## Progression philosophy
 
 - Courses build from **fundamentals** upward; a learner establishes a base
-  before specialized material.
+  before specialized material. **"Fundamentals" = ground / field-hand work** —
+  general labor, load-in/out, gear handling, jobsite safety & professionalism —
+  taught to **US standards** from real lived experience. Specialized disciplines,
+  and eventually **rigging**, come much later. Crew Blueprint deliberately does
+  **not** lead with rigging.
 - Each course applies the **standardized architecture** in doc 03 (consistent
   lesson/module/quiz format, an 80% passing score, safety callouts, professional
   habits, common beginner mistakes, reflection questions, and jobsite examples).

@@ -40,16 +40,23 @@ it.
 
 ## Catalog (current)
 
-- **Stagehand Fundamentals** — the foundational course; **active, continuing**
-  (roadmap `cb-4`). Establishes the base every learner starts from.
-- **Publication-ready packets** (aligned to OSHA / ASME / ANSI / ESTA / ETCP —
-  see doc 04), described by title and scope only:
-  - **Rigging Hardware Identification & Safety Inspection** — identifying rigging
-    hardware and performing safety inspections.
-  - **Bridle Math & Angle Tension** — the math of bridles and how angle affects
-    tension/load.
-  - **Predictive Hazard Recognition** — spotting hazards before they become
-    incidents (three-zone assessment, show-flow risk lifecycle).
+**Start here — ground/field-hand fundamentals (the core, `cb-4`):**
+
+- **Stagehand Fundamentals** — the foundational course and the **entry point every
+  learner starts from**: general field work, load-in/out, gear handling, jobsite
+  safety & professionalism — taught from the owner's real, lived **ground
+  expertise**, to US standards. This is where Crew Blueprint leads.
+
+**Later — specialized/rigging content (future, not the foundation):**
+
+- Rigging packets exist but are **advanced, far-future** material, not the entry
+  point (rigging is the owner's personal goal, not where the platform begins).
+  Described by title/scope only, aligned to OSHA / ASME / ANSI / ESTA / ETCP
+  (doc 04):
+  - **Rigging Hardware Identification & Safety Inspection**
+  - **Bridle Math & Angle Tension**
+  - **Predictive Hazard Recognition** (three-zone assessment, show-flow risk
+    lifecycle) — the most ground-applicable of the three.
 
 New courses are added by producing new packets through the pipeline in doc 07 and
 extending the discipline/pathway map in doc 01.

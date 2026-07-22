@@ -4,11 +4,18 @@
 
 ## Mission
 
-The Crew Blueprint is a **professional training resource for live-event
-production workers**, focused on **real-world job readiness** rather than
-certification. It exists to teach stagehands the skills they use on the job, the
-context behind them, and how their work fits into the larger production — so a
-worker learns *what* they're doing, *why*, and *how it fits the bigger picture.*
+The Crew Blueprint is a **professional training resource for American live-event
+field hands**, focused on **real-world job readiness** rather than certification,
+built to **US industry standards** (OSHA / ANSI / ESTA / ETCP + US practice). It
+teaches the skills a hand uses on the job, the context behind them, and how the
+work fits into the larger production — *what* you're doing, *why*, and *how it
+fits the bigger picture.*
+
+**Ground-up, and first of its kind.** It starts at the **ground / field-hand**
+level — general field work, taught from real lived experience — and grows toward
+specialized disciplines later. The aim is to be the **first US-standard gamified
+training** for the trade: a comparable platform exists (Tech Crew HQ) but it is
+Australia-only, built to Australian standards. See `partnerships/research/01`.
 
 ## Who it serves
 

@@ -7,14 +7,16 @@ production, and rigging in live music — and how did they do it?
 
 ## Bottom line
 
-The exact niche — **gamified training for professional live-music stagehands,
-with real rigging depth** — is **essentially open.** One close analog exists
-(**Tech Crew HQ**, Australia), the gamified-trades *model* is proven at scale in
-**other** trades (**Interplay Learning**, **Transfr** — 500k+ / 330+ sims), and
-the live-event training field is full of **traditional, non-gamified** players who
-are better read as **content/credibility partners than competitors.** That
-combination — a proven pattern, one distant analog, and a credibility-rich field
-with no gamified pro-rigging offering — is a strong opening for Crew Blueprint.
+The exact niche — **gamified training for American live-event field hands, taught
+ground-up and tailored to US industry standards** — is **essentially open.** One
+close analog exists but it's **Australian** (**Tech Crew HQ**, built to Australian
+standards); the gamified-trades *model* is proven at scale in **other** trades
+(**Interplay Learning**, **Transfr** — 500k+ / 330+ sims); and the US live-event
+training field is full of **traditional, non-gamified** players who are better read
+as **content/credibility partners than competitors.** The opening for Crew
+Blueprint: **be the first to build the American-standard version** — starting at
+the **ground/field-hand** level (the owner's real expertise and the biggest
+audience), with rigging as a *far-future* course, not the entry point.
 
 ## Tier 1 — Direct analog: **Tech Crew HQ** (Australia)
 
@@ -38,14 +40,18 @@ The closest thing to Crew Blueprint that exists today.
 
 **What it proves:** a gamified backstage-crew training product is real and viable.
 **Where Crew Blueprint differs (the opening):**
-1. **Rigging** — Tech Crew HQ **does not cover rigging.** Rigging is Crew
-   Blueprint's *strongest* asset (publication-ready packets, ETCP alignment).
-2. **Audience** — they serve students/community theatre; Crew Blueprint targets
-   **working professional live-music crew** (touring, festivals, arenas).
+1. **US standards** — Tech Crew HQ teaches to **Australian** standards/curriculum.
+   Crew Blueprint would be built to **American** industry standards
+   (OSHA / ANSI / ESTA / ETCP) and US live-event practice — a *different product*,
+   not a tweak. **First-mover on the American standard.**
+2. **Start at the ground** — begin with **field-hand / ground-crew fundamentals**
+   (general labor, load-in/out, gear handling, jobsite safety & professionalism) —
+   the owner's real, lived expertise and the widest entry point. Rigging is a
+   *long-term, aspirational* course, **not** where Crew Blueprint leads.
 3. **Depth of gamification** — theirs is light; Crew Blueprint's skill-tree + real
    interactions can go deeper.
-4. **Geography** — they're AU-focused; Crew Blueprint is US live-music. → more a
-   **potential partner/licensor than a competitor.**
+4. **Geography** — they're AU-focused; Crew Blueprint is US. → more a **potential
+   partner/licensor than a competitor.**
 
 ## Tier 2 — Proven model to emulate (different trades)
 
@@ -95,16 +101,22 @@ are Crew Blueprint's **content/credibility/distribution partner candidates**
 ## Strategic implications (the whitespace)
 
 Crew Blueprint's defensible position = the intersection **no one occupies**:
-**professional live-music audience × real rigging depth × genuine gamification ×
-US market.** Tech Crew HQ owns none of that intersection; the field owns
-credibility but not gamification; Interplay/Transfr own gamification but not the
-industry.
+**American field hands × ground-up fundamentals × genuine gamification × US
+industry standards.** Tech Crew HQ owns the format but for *Australia*; the US
+field owns credibility but not gamification; Interplay/Transfr own gamification but
+not the industry.
 
-- **Lead with rigging** — it's the clearest gap and your strongest content.
+- **Lead with ground/field fundamentals, not rigging.** Teach from the owner's
+  real ground expertise — it's honest, the biggest audience, and the fastest to
+  build. Rigging is a far-future course and the owner's *personal* goal, not the
+  foundation.
+- **Be the American standard.** Tech Crew HQ built the format for Australia; no one
+  has built the US-standard version. Being first to codify American field-work
+  training (OSHA/ANSI/ESTA/ETCP + US practice) is the position.
 - **Emulate Interplay's mechanics** (points/badges/progress + one real
   interaction), not an LMS — consistent with the `cb-3` decision.
-- **Position pro, not academic** — the working-crew angle differentiates from Tech
-  Crew HQ and the college programs.
+- **Position for working *and* aspiring US hands** — practical, entry-friendly,
+  pro — differentiating from Tech Crew HQ (AU/education) and the college programs.
 
 ## Partner leads (candidates for `connections.md`)
 

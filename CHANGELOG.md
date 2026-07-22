@@ -25,6 +25,16 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Crew Blueprint repositioned: US-standard, ground-up, first-mover
+- Owner correction: **do not lead with rigging.** Build to **US industry standards**
+  and teach **ground-up** — start with field-hand/ground fundamentals (the owner's
+  real expertise); specialized disciplines and rigging come far later. Aim: the
+  **first US-standard gamified training** for the trade (Tech Crew HQ proved the
+  format but is Australia-only).
+- Recorded in `governance/DECISION_LOG.md`. Updated roadmap crew-blueprint
+  (ultimate_goal, current_state, `cb-4`, `cb-5` — MVP is now a ground-work
+  fundamental, not rigging), docs `00/01/03`, and corrected
+  `partnerships/research/01` (the earlier "lead with rigging" call). Validator: PASS.
 ### 2026-07-21 — Recorded the owner's operating truth (deep context)
 - Added `data/roadmap-deep-context/2026-07-21-owner-operating-truth-deep-context.md`
   — the owner's own words on how they work ("ideas → words → creation … for myself

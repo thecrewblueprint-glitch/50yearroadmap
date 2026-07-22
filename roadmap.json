@@ -130,8 +130,8 @@
       "name": "The Crew Blueprint",
       "role": "Skill development and industry knowledge resource",
       "status_percentage": 35,
-      "ultimate_goal": "Provide stagehands with a visual, workflow-based learning system that teaches skills, context, and industry integration without formal certification.",
-      "current_state": "Foundation complete and no longer blocked by software development. Vision, standardized course architecture, multi-AI content workflow, brand, and legal/authority philosophy (job-readiness, not certification) are all decided. Website shell is live (WordPress.com, industrial Extendable theme, staging-first, Coming Soon). DELIVERY DECISION (2026-07-18): a gamified, static, browser-based experience — NOT a traditional LMS. The discipline/pathway map becomes a skill tree; progress is stored client-side (localStorage), so there are no accounts, database, or backend to break (this sidesteps the instability that blocked the LMS). Mechanics start highly simplified (XP, streaks, progress, one interaction per node) and grow later. Primary work is still content: produce canonical course packets, continue Stagehand Fundamentals, and organize the discipline/pathway library — then wrap packets in gamified modules. Canonical documentation lives in companies/crew-blueprint/.",
+      "ultimate_goal": "Be the first US-standard, gamified, ground-up learning system for American live-event field hands — teaching skills, context, and industry integration (general field work first, specialized disciplines and rigging later) without formal certification.",
+      "current_state": "Foundation complete and no longer blocked by software development. Vision, standardized course architecture, multi-AI content workflow, brand, and legal/authority philosophy (job-readiness, not certification) are all decided. Website shell is live (WordPress.com, industrial Extendable theme, staging-first, Coming Soon). DELIVERY DECISION (2026-07-18): a gamified, static, browser-based experience — NOT a traditional LMS. The discipline/pathway map becomes a skill tree; progress is stored client-side (localStorage), so there are no accounts, database, or backend to break (this sidesteps the instability that blocked the LMS). Mechanics start highly simplified (XP, streaks, progress, one interaction per node) and grow later. POSITIONING DECISION (2026-07-21): built to US industry standards and taught GROUND-UP — start with field-hand / ground-crew fundamentals (general labor, load-in/out, gear handling, jobsite safety & professionalism — the owner's real, lived expertise and the widest entry point); specialized disciplines and (eventually) rigging come much later. Rigging is the owner's personal goal, not the foundation. Aim: be the FIRST US-standard gamified training for the trade — Tech Crew HQ proved the format but is Australia-only (Australian standards). Primary work is still content, now ground-first: produce canonical packets, continue Stagehand Fundamentals, organize the discipline/pathway (skill-tree) library — then wrap packets in gamified modules. Canonical documentation lives in companies/crew-blueprint/.",
       "critical_blocker": "Not platform anymore — the constraint is content-production volume: producing canonical course packets and the discipline/pathway library.",
       "timeline": {
         "phase_1_ready": "Q3 2026",
@@ -166,15 +166,15 @@
         },
         {
           "id": "cb-4",
-          "task": "Create foundational discipline resources (canonical course packets)",
-          "why": "Build initial content library for core stagehand skills; content is now the primary work",
+          "task": "Create foundational resources — ground/field-hand fundamentals first (canonical packets)",
+          "why": "Build the initial library starting with GROUND/FIELD-HAND fundamentals (general labor, load-in/out, gear handling, jobsite safety & professionalism) — the owner's real expertise and the widest entry point, built to US standards. Specialized disciplines and rigging come later. Content is the primary work.",
           "priority": "HIGH",
           "status": "in_progress"
         },
         {
           "id": "cb-5",
-          "task": "Ship first gamified MVP module from an existing packet (static, client-side progress)",
-          "why": "Prove the gamified format cheaply: take one publication-ready packet (e.g. Rigging Hardware ID) and build it as a single static skill-tree node with XP, a streak, a progress bar, and one real interaction, progress saved in localStorage, no backend. Validates the format before building the full tree.",
+          "task": "Ship first gamified MVP module — a ground/field-hand fundamental (static, client-side progress)",
+          "why": "Prove the gamified format cheaply with a GROUND-WORK fundamental the owner can author from real expertise (e.g. jobsite safety & professionalism, or load-in/out basics) — a single static skill-tree node with XP, a streak, a progress bar, and one real interaction, progress in localStorage, no backend, built to US standards. Entry-level, not rigging (that's far-future). Validates the format before building the full tree.",
           "priority": "HIGH",
           "status": "not_started"
         },

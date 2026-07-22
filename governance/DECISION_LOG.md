@@ -6,6 +6,23 @@ Newest first.
 
 ---
 
+## 2026-07-21 — Crew Blueprint positioning: US-standard, ground-up, first-mover
+**Decision:** The Crew Blueprint is built to **US industry standards** and taught
+**ground-up** — starting with **field-hand / ground-crew fundamentals** (general
+labor, load-in/out, gear handling, jobsite safety & professionalism), the owner's
+**real lived expertise**. Specialized disciplines and **rigging come much later**;
+rigging is the owner's *personal* goal, **not** the platform's foundation
+(corrects earlier "lead with rigging" guidance). The aim is to be the **first
+US-standard gamified training** for the trade.
+**Why:** (1) **Authenticity/credibility** — teach from where the owner actually
+has depth (ground work), not rigging he's still learning. (2) **Market** — the one
+close analog, **Tech Crew HQ, is Australia-only** (Australian standards); the
+American-standard version doesn't exist, so building it is genuine first-mover
+whitespace. (3) **Reach + speed** — ground/field hands are the biggest audience
+and the easiest content to gamify first, so the MVP ships faster. Updated
+`cb-4`/`cb-5`, the crew-blueprint branch, docs 00/01/03, and
+`partnerships/research/01`.
+
 ## 2026-07-18 — Partnerships: build first, partner later
 **Decision:** The owner will **build more of the ecosystem himself before
 approaching partners.** Partnership *research and leads* are captured (the
