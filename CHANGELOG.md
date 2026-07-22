@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Homestead: retire the build, keep a light care seed (major reshape)
+- Owner realization/decision: the abundant US van-life resource ecosystem already
+  solves the caravan's travel & lodging (free/cheap, at scale), so the physical
+  Homestead **build is retired** and **land acquisition is off the table** — no land,
+  no build, no business, no framework. Recorded in `governance/DECISION_LOG.md`.
+- **Reshaped the roadmap's endgame:** retired the `land-acquisition` branch (removed
+  branch + journey milestone + Phase-2 ref); reframed the `homestead` branch as the
+  **Homes for Hands care seed** (a 'live & travel free' resource guide + a mutual-aid/
+  ally ethos; hs-1..hs-4 rewritten, all low/light). Rewrote north_star, end_goal,
+  Phase 2 ('Homes for Hands - the care seed'), and the final journey milestone
+  ('Care for the caravan'). 6 branches now; validator PASS (0 warnings).
+- Updated `partnerships/research/04` (strategic implications → don't build it),
+  `governance/CURRENT_STATE.md`, and the `connections.md` Homestead section.
+- The care seed preserves the part existing resources don't cover — crew who need
+  help — closest to the owner's 'for others, out of love' purpose.
 ### 2026-07-22 — Reframe RV/camping services as resources; add The Dyrt; name "the caravan"
 - Owner distinction: Escapees / Harvest Hosts (and similar) aren't partnership
   targets — they're **resources the caravan uses** for lodging/logistics, or

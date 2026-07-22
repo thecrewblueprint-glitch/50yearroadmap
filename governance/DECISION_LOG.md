@@ -6,6 +6,26 @@ Newest first.
 
 ---
 
+## 2026-07-22 — Homestead: don't build it — keep a light care seed
+**Decision:** The physical **Homestead build is retired**, and **land acquisition
+is off the table.** The abundance of existing US van-life resources (The Dyrt,
+Harvest Hosts, Escapees, Workamper, free campsites) already solves lodging &
+travel for the caravan at scale, for free or cheap — there is **no need to build
+a framework, buy land, or run a business.** What remains is a **light care seed
+(Homes for Hands):** (1) a curated "live & travel free" resource guide pointing
+the caravan at what already exists, and (2) a mutual-aid / ally ethos for crew who
+need help (Roadie Clinic / Backline style). Care and information, **not capital.**
+The `land-acquisition` branch is retired; the `homestead` branch is reframed as
+the care seed; the north star, end goal, Phase 2, and the final journey milestone
+are reframed away from "acquire land + build a home base."
+**Why:** Applying the ecosystem's own discipline (don't build what you can use;
+rent the infrastructure; stay demand-pulled) to the plan's most capital-intensive
+branch. The logistics problem the Homestead was meant to solve is already solved
+by others at scale; rebuilding it would cost years and serious capital for no
+added value. The part existing resources *don't* cover — care for the crew member
+with nothing — is preserved in the effortless care seed, which is also the part
+closest to the owner's stated purpose ("for others, out of love").
+
 ## 2026-07-21 — Crew Blueprint positioning: US-standard, ground-up, first-mover
 **Decision:** The Crew Blueprint is built to **US industry standards** and taught
 **ground-up** — starting with **field-hand / ground-crew fundamentals** (general

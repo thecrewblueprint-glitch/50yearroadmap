@@ -36,11 +36,15 @@ closeout (returns filed — amend if needed, confirm balance, pay).
 - **Contractor Tools** (~35%) — shared infrastructure layer; built: 1099 invoice generator (deterministic single-file tool) + payment tracking; calendar feeds (ICS, multi-platform) working. Remaining: reliable calendar authorization renewal (`ct-3`), backend-scope validation (`ct-1`); team coordination is future. Canonical docs in `companies/contractor-tools/`.
 - **Personal Operations / Roadmap System** (~65%) — this repo/command center; mature and operational (live dashboard, branch-model source of truth, AI pipeline, governance + CI validator). Remaining: anti-sprawl scope gates (`po-2`), documentation templates (`po-5`), deferred database migration (OD-5). Canonical docs in `companies/personal-operations/`.
 
-## Phase 2 (the destination)
+## Phase 2 — Homes for Hands (the care seed)
 
-- **Land Acquisition** and **The Homestead / Homes for Hands** — nomadic-movement
-  home base for traveling live-event workers. Outreach started (The Roadie Clinic
-  contacted; rated connection shortlist in `data/roadmap/connections.md`).
+- **The physical Homestead build is RETIRED** (decision 2026-07-22); the
+  **Land Acquisition branch is retired.** The existing US van-life resource
+  ecosystem already solves travel & lodging for the caravan — no land, build, or
+  business needed. What remains is a **light care seed (Homes for Hands):** a
+  curated "live & travel free" resource guide + a mutual-aid/ally ethos for crew
+  who need help (Roadie Clinic contacted; resources/allies in
+  `data/roadmap/connections.md`). Care and information, not capital.
 
 ## Where governance stands
 

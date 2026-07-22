@@ -85,20 +85,27 @@ Not housing/land models, but community/credibility partners for the vision:
 - **HOWA (Homes on Wheels Alliance)** — helping people live nomadically.
 - **Van Life Campgrounds** — nomadic-camping resource (owner-provided lead).
 
-## Strategic implications (the Homestead's play)
+## Strategic implications — DECISION (2026-07-22): don't build it
 
-- **Copy the Escapees structure, change the tribe.** The differentiator is a
-  community of **live-event/touring workers** — shared trade, shared touring
-  rhythm, a home base for the off-season and between tours.
-- **Borrow the Harvest Hosts host-network model** to reach scale without buying
-  land: a membership + reciprocity network of welcoming hosts (venues, member
-  properties, small businesses) for traveling crew — the light path alongside a
-  small owned base.
-- **AZ overlap is a real asset** — Escapees already runs a co-op in Benson, AZ;
-  Deadhang is AZ-based. Study that co-op specifically.
-- **Sequence honestly** — this is the Phase-2, long-horizon vision; keep the
-  mission partners warm (Roadie Clinic contacted), and learn the co-op model now
-  so the eventual build isn't from zero.
+The research led to a clear owner decision: **the physical Homestead build is
+retired.** The abundance of existing US resources *is* the answer — the caravan
+already has, for free or cheap, everything a built home base would have provided.
+
+- **The problem is already solved by other people's infrastructure.** Free-camp
+  finders (The Dyrt), host networks (Harvest Hosts), member co-ops (Escapees),
+  work-for-housing (Workamper). Rebuilding that = years and serious capital to
+  duplicate what exists at scale. Don't.
+- **Keep a light care seed instead (Homes for Hands).** Two effortless things the
+  resources *don't* cover: (1) a **curated 'live & travel free' resource guide**
+  that points the caravan at what already exists; (2) a **mutual-aid / ally ethos**
+  for the crew member who's broke or burned-out with nothing — connect them to
+  allies (Roadie Clinic, Backline) and to each other. Care and information, not
+  capital.
+- **What the models are now for:** study Escapees/Harvest Hosts as *references*
+  for how communities/networks work, and list them as *resources the caravan
+  uses* — **not** as things to replicate or partner with.
+- Recorded in `governance/DECISION_LOG.md`; roadmap reshaped (land-acquisition
+  branch retired; Homestead branch = the light care seed).
 
 ## Leads & resources (for `connections.md`)
 

@@ -357,86 +357,49 @@
       "lifecycle": "active"
     },
     {
-      "id": "land-acquisition",
-      "name": "Land Acquisition",
-      "role": "Securing the ground the Homestead is built on",
-      "phase": 2,
-      "lifecycle": "future",
-      "status_percentage": 0,
-      "ultimate_goal": "Acquire and hold suitable land as the physical foundation for the Homestead community.",
-      "current_state": "Future phase. Not started. Depends on the Phase 1 engine generating enough stability and revenue to support a land purchase.",
-      "critical_blocker": "Requires a self-sustaining Phase 1 engine before land can responsibly be acquired",
-      "timeline": {
-        "phase_1_ready": "Phase 2",
-        "description": "Begins once the Labor to Training to Jobs engine is self-sustaining"
-      },
-      "blockers": [
-        "Depends on Phase 1 revenue and stability",
-        "Location, financing, and use requirements not yet defined"
-      ],
-      "work_items": [
-        {
-          "id": "la-1",
-          "task": "Define location, size, and use requirements for the Homestead land",
-          "why": "Know what to look for before committing capital",
-          "priority": "LOW",
-          "status": "not_started"
-        },
-        {
-          "id": "la-2",
-          "task": "Outline financing path for acquisition",
-          "why": "Understand how a purchase gets funded from Phase 1 revenue",
-          "priority": "LOW",
-          "status": "not_started"
-        }
-      ]
-    },
-    {
       "id": "homestead",
-      "name": "The Homestead / Homes for Hands",
-      "role": "The destination - a community home base for traveling stagehands",
+      "name": "Homes for Hands (care seed)",
+      "role": "A light care ethos for the caravan — resources + mutual aid, no land/build/business",
       "phase": 2,
-      "lifecycle": "future",
-      "status_percentage": 0,
-      "ultimate_goal": "A centralized place where stagehands and traveling workers rest between gigs, find resources, get trained, and connect with contractors to source work - staying for a nominal fee, with a path for permanent residents who help care for the community.",
-      "current_state": "Vision stage and the ultimate destination. Deferred until the Phase 1 engine runs and land is secured. Housing is added later, on top of the labor / training / job-placement flow.",
-      "critical_blocker": "Requires the Phase 1 foundation and acquired land before it can begin",
+      "lifecycle": "active",
+      "status_percentage": 10,
+      "ultimate_goal": "Keep the Homes for Hands care ethos alive without building anything: point the caravan (the mobile community of traveling live-event workers) to the existing US resources that already solve travel & lodging for free or cheap, and cultivate mutual aid among crew — care and information, not a place we own or run.",
+      "current_state": "Reframed 2026-07-22. The physical Homestead build is RETIRED and land acquisition is off the table: the US van-life resource ecosystem (The Dyrt, Harvest Hosts, Escapees, Workamper, free campsites) already solves lodging & travel for the caravan at scale, free or cheap. No land, no build, no business, no framework to run. What remains is a LIGHT care seed — a curated 'live & travel free' resource guide + a mutual-aid / ally ethos (Roadie Clinic / Backline style) for crew who need help. Resources + allies live in data/roadmap/connections.md and partnerships/research/04.",
+      "critical_blocker": "None — deliberately light: a resource guide + care ethos, no capital, land, or build.",
       "timeline": {
-        "phase_1_ready": "Phase 2",
-        "description": "Begins after the engine is self-sustaining and land is secured"
+        "phase_1_ready": "anytime (light)",
+        "description": "Can be done anytime; low priority. No dependency on capital or Phase 1 revenue."
       },
       "blockers": [
-        "Depends on the Phase 1 Labor to Training to Jobs engine",
-        "Depends on Land Acquisition",
-        "Operating model (stays, fees, resident stewardship) not yet defined"
+        "Kept intentionally light — the risk is over-building this again, not under-building it"
       ],
       "work_items": [
         {
           "id": "hs-1",
-          "task": "Define the Homestead operating model: stays, nominal fees, and resident stewardship",
-          "why": "Turn the vision into concrete rules for how the place runs",
+          "task": "Curate a 'live & travel free' resource guide for the caravan",
+          "why": "Point crew to the existing free/low-cost resources that already solve travel & lodging (The Dyrt, Harvest Hosts, Escapees, free campsites, Workamper). The useful, effortless version of the Homestead.",
           "priority": "LOW",
           "status": "not_started"
         },
         {
           "id": "hs-2",
-          "task": "Define the way-station experience: rest, resources, and gig connections for visiting contractors",
-          "why": "This is the core service the Homestead provides between gigs",
+          "task": "Cultivate the Homes for Hands mutual-aid / ally ethos",
+          "why": "Connect crew who need help to allies (Roadie Clinic, Backline) and to each other — mutual aid among the caravan. Care, not housing we run.",
           "priority": "LOW",
           "status": "not_started"
         },
         {
           "id": "hs-3",
-          "task": "Define the permanent-resident / community-care standard",
-          "why": "Set expectations for people who stay and help keep the community running",
+          "task": "Set the light care standard: what help is offered, and clear limits",
+          "why": "Define what Homes for Hands is and is NOT — a resource guide + mutual aid, not a place, a business, or a promise we can't keep.",
           "priority": "LOW",
           "status": "not_started"
         },
         {
           "id": "hs-4",
-          "task": "Investigate & connect with nomadic-movement organizations (rated list in connections.md)",
-          "why": "Build relationships with orgs that support traveling/live-event workers and community/land models for the Homestead. The Roadie Clinic contacted; Escapees/Xscapers is a near-exact co-op-land model to study (Benson AZ). Further outreach deferred (build-first). Full rated shortlist: data/roadmap/connections.md",
-          "priority": "HIGH",
+          "task": "Keep ally relationships and the resource/leads list current",
+          "why": "The Roadie Clinic is contacted; keep allies warm and the resources/leads in data/roadmap/connections.md up to date. Deferred/light (build-first).",
+          "priority": "LOW",
           "status": "in_progress"
         }
       ]
@@ -452,15 +415,14 @@
       "6. Repeat: System learns from gigs, improves training, expands opportunities"
     ]
   },
-  "north_star": "Build the movement and the Homestead: a community home base where traveling stagehands rest between gigs, find resources, get trained, and connect to work — powered by a self-sustaining Labor to Training to Jobs engine.",
+  "north_star": "Build the movement: a self-sustaining Labor → Training → Jobs engine that lifts up live-event crew — connecting them to skills, work, and community, and pointing them to the resources and mutual aid that let them live and travel well. (The physical Homestead build is retired: the existing US van-life resource ecosystem already provides the lodging/travel infrastructure; what remains is the care ethos — Homes for Hands.)",
   "end_goal": {
-    "destination": "The Homestead + the movement around it",
-    "what_it_is": "A centralized place where stagehands and traveling workers stop and rest between gigs, find resources, get trained, and connect with contractors to source work. People stay for a nominal fee that keeps the doors open; those who want to stay permanently can, so long as they help care for the community.",
+    "destination": "The movement + a thriving caravan, with a Homes for Hands care ethos — not a place we build or own.",
+    "what_it_is": "A self-sustaining Labor → Training → Jobs movement that lifts live-event crew, plus a light care seed: pointing the caravan (traveling crew) to the existing free/low-cost resources that already solve travel & lodging, and mutual aid for those who need help. Care and information, not capital — no land, no built home base, no business to run.",
     "how_to_reach_it": [
-      "Phase 1 - Build the engine: make Deadhang Labor, The Crew Blueprint, Production Atlas, and Contractor Tools into a working Labor to Training to Jobs flow that earns revenue and grows a community of contractors.",
-      "Phase 2 - Acquire the ground: secure land once the Phase 1 engine is self-sustaining.",
-      "Phase 2 - Build the Homestead: stand up the physical home base and the way-station / stewardship model on that land.",
-      "Ongoing - Grow the movement: the engine keeps feeding people, training, and work into the Homestead community."
+      "Phase 1 - Build the engine: make Deadhang Labor, The Crew Blueprint, Production Atlas, and Contractor Tools into a working Labor → Training → Jobs flow that earns revenue and grows a community of contractors.",
+      "Keep it light (Homes for Hands): curate a 'live & travel free' resource guide for the caravan and cultivate mutual aid; the physical Homestead build is retired because existing resources already solve it.",
+      "Ongoing - Grow the movement: the engine keeps feeding people, training, and work into a community that looks out for its own."
     ]
   },
   "phases": [
@@ -479,11 +441,10 @@
     },
     {
       "number": 2,
-      "name": "The Homestead - The Destination",
-      "status": "future",
-      "goal": "Acquire land and build the physical community home base once the Phase 1 engine can support it.",
+      "name": "Homes for Hands - the care seed",
+      "status": "active",
+      "goal": "Keep the care ethos alive without building anything: point the caravan to the existing resources that already solve travel & lodging, and cultivate mutual aid. No land, no build, no business.",
       "branch_ids": [
-        "land-acquisition",
         "homestead"
       ]
     }
@@ -595,37 +556,23 @@
           "po-4",
           "po-5"
         ],
-        "leads_to": "Enough stability and revenue to reach for the Homestead."
+        "leads_to": "A self-sustaining movement — and a community that cares for its own."
       },
       {
         "id": "m7",
         "order": 7,
-        "title": "Acquire the land",
-        "area_branch_id": "land-acquisition",
-        "state": "upcoming",
-        "summary": "With the engine self-sustaining, secure the ground the Homestead will be built on.",
-        "outcome": "Land is secured for the community home base.",
-        "step_ids": [
-          "la-1",
-          "la-2"
-        ],
-        "leads_to": "A place to build the destination."
-      },
-      {
-        "id": "m8",
-        "order": 8,
-        "title": "Build the Homestead",
+        "title": "Care for the caravan (Homes for Hands)",
         "area_branch_id": "homestead",
         "state": "upcoming",
-        "summary": "Stand up the community home base: a way-station where traveling stagehands rest between gigs, find resources, get trained, and connect to work — with a path for permanent residents who help care for it.",
-        "outcome": "The Homestead is open and serving the community.",
+        "summary": "No home base to build — the existing US van-life resource ecosystem already solves lodging & travel for the caravan, free or cheap. Keep a light care seed: a 'live & travel free' resource guide + a mutual-aid / ally ethos for crew who need help. Care and information, not capital.",
+        "outcome": "The caravan travels and rests on existing resources; crew in need are pointed to help — care without a build.",
         "step_ids": [
           "hs-1",
           "hs-2",
           "hs-3",
           "hs-4"
         ],
-        "leads_to": "The movement and the Homestead — the destination."
+        "leads_to": "A movement that lifts live-event crew and looks out for its own."
       }
     ]
   },

@@ -57,7 +57,12 @@ independently before sharing anything sensitive.
 | Giggs | giggs.live | ★★ | via website | Live-event pro community + jobs. Cross-promotion. | future |
 | Pollstar | pollstar.com | ★ | — | Touring-data incumbent (Live Nation-owned). **Benchmark, not a partner.** | model |
 
-## The Homestead — nomadic-movement (Phase 2)
+## Homes for Hands (care seed) — allies & resources for the caravan
+
+_The physical Homestead build is retired (2026-07-22): existing resources solve
+travel & lodging. This is now a light care seed — **allies** (mission orgs) +
+**resources** the caravan uses. See `governance/DECISION_LOG.md`._
+
 
 | Organization | Website | Fit | Contact | Purpose / angle | Status |
 | --- | --- | :---: | --- | --- | --- |
