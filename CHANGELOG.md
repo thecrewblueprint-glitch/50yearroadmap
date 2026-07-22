@@ -25,6 +25,28 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — MILESTONE: validated foundation for the gamified 3D learning system
+- Owner's call after playing the prototypes: *"a good prototype that allows for a
+  good starting point of this project."* Marking the checkpoint — the gamified,
+  skill-first, safe-failure, web-3D/WebXR approach is **validated as the project's
+  foundation**, no longer just an idea. What now exists as the starting point:
+  - **A proven build stack** — self-contained Three.js scenes, no backend, run from
+    a downloaded file on a phone, WebXR-ready (VR is a later port, not a restart).
+  - **Two working 3D skill atoms** — *Coil Line* (over-under coiling; safety ambient)
+    and *Make It Safe* (hang + bond three fixtures by tapping them; safe-failure
+    fall). Plus the Module 1 skill-tree (cards) and Dock Sweep (2D scene).
+  - **A validated design model** — learn → do → check → debrief; teach a specific
+    skill first, safety ambient; **safe failure with visible consequences**; backed
+    by research/05 (Transfr/Interplay + simulation learning science).
+  - **A role-workflow spine** — the lighting-hand truck-to-trim lesson designed as
+    ordered atoms (`companies/crew-blueprint/scenes/`).
+- **Next-step forks** (owner to choose): (a) factor the shared scene code into a
+  reusable **scene kit** so new atoms are assembled not rebuilt (research/05's
+  recommendation); (b) build the **3rd atom** (truss-pinning) to keep learning the
+  craft; (c) refine interaction (tap-advances vs tap-and-pick specific steps);
+  (d) deepen one atom toward a full role-workflow slice. Open threads still owed:
+  the owner's answers on "bridges" and how much of focus is hand-work.
+
 ### 2026-07-22 — Research (how it's built) + BUILT: "Make It Safe" (2nd 3D atom)
 - **Research/05 — "how comparables are built."** At the owner's ask, shifted from
   *who exists* to *how it's manifested + what it takes.* Studied Transfr (native VR
