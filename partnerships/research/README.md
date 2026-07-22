@@ -29,9 +29,11 @@ Each ends with **strategic implications** (whitespace) and **partner leads**.
 | 02 | [Labor staffing](02_labor-staffing-landscape.md) | Live-event stagehand staffing companies — for Deadhang Labor (competitors *and* partners) |
 | 03 | [Industry intelligence](03_industry-intelligence-landscape.md) | Directories, job boards, touring data — for Production Atlas |
 | 04 | [Nomadic community](04_nomadic-community-landscape.md) | Nomad-community + co-op land models — for the Homestead |
+| 05 | [How comparables are built](05_how-comparables-are-built.md) | **Manifestation + build insights** — how Transfr/Interplay/skill-sims are actually built, what the learning science says, and what it takes to build ours (for `cb-5` / the build ladder) |
 
-All four Phase-1+2 sectors now have a first-pass landscape study. Next: deepen any
-one (e.g. profile a specific target in depth), and promote the best leads into
+The four Phase-1+2 sectors have a first-pass landscape study; **05** shifts from
+*who exists* to *how it's built* — feeding the Crew Blueprint prototype builds
+directly. Next: deepen any one, and promote the best leads into
 `data/roadmap/connections.md`.
 
 ## Guardrail
