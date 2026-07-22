@@ -61,7 +61,8 @@ independently before sharing anything sensitive.
 
 _The physical Homestead build is retired (2026-07-22): existing resources solve
 travel & lodging. This is now a light care seed — **allies** (mission orgs) +
-**resources** the caravan uses. See `governance/DECISION_LOG.md`._
+**resources** the caravan uses. See `governance/DECISION_LOG.md`. The caravan-facing
+guide is `data/roadmap/homes-for-hands-guide.md` (`hs-1`)._
 
 
 | Organization | Website | Fit | Contact | Purpose / angle | Status |

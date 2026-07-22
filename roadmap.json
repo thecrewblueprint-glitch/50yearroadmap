@@ -377,9 +377,9 @@
         {
           "id": "hs-1",
           "task": "Curate a 'live & travel free' resource guide for the caravan",
-          "why": "Point crew to the existing free/low-cost resources that already solve travel & lodging (The Dyrt, Harvest Hosts, Escapees, free campsites, Workamper). The useful, effortless version of the Homestead.",
+          "why": "Point crew to the existing free/low-cost resources that already solve travel & lodging (The Dyrt, Harvest Hosts, Escapees, free campsites, Workamper) + where to turn when they need real help. First draft written: data/roadmap/homes-for-hands-guide.md (living; verify details). The useful, effortless version of the Homestead.",
           "priority": "LOW",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "hs-2",

@@ -25,6 +25,14 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Draft the Homes for Hands 'Live & Travel Free' guide (hs-1)
+- Wrote `data/roadmap/homes-for-hands-guide.md` — the caravan-facing resource guide
+  (the tangible form of the care seed): finding free/cheap places to sleep (The Dyrt,
+  public-land dispersed camping, finder apps), host networks (Harvest Hosts,
+  Escapees), community (Xscapers, Workamper), work-for-stay, and **where to turn for
+  real help** (Roadie Clinic, Backline, HOWA, 211, 988) + the Homes for Hands
+  mutual-aid ethos and honest limits. Public-safe; living/verify-before-use.
+- `hs-1` → in_progress; linked from `connections.md`. Validator: PASS.
 ### 2026-07-22 — Homestead: retire the build, keep a light care seed (major reshape)
 - Owner realization/decision: the abundant US van-life resource ecosystem already
   solves the caravan's travel & lodging (free/cheap, at scale), so the physical
