@@ -4,9 +4,10 @@
 **Type:** Role-based, end-to-end workflow lesson (see `governance/DECISION_LOG.md`
 — "lessons are role-based full workflows" + "safe failure with real consequences").
 **Role:** Lighting hand (ground crew / electrician's helper), **US standard.**
-**Arc:** Walk a lighting hand all the way from *their fixtures on the truck* to
-*a fixture floating at trim, powered on, and answering the board* — the point at
-which the show can actually happen.
+**Arc:** Walk a lighting hand through the **whole** ground-up process — from
+*fixtures on the truck* to a *rig built, wired, ground-checked, flown to trim,
+landed on power, and focused where the LD wants it* — the point at which the show
+can actually happen. (Every step it takes, in the order it takes them.)
 
 ---
 
@@ -33,104 +34,151 @@ Each beat is an **atomic scene** (some atoms already prototyped). For every beat
 **Safe-failure consequence** (what a mistake costs, shown safely) · **Assessed by
 the learner** (the judgment call they must make themselves).
 
-### Beat 1 — Unload from the truck
-- **Objective:** Get lighting cases off the truck safely — control the ramp/liftgate,
-  push a rolling case from the **ends** not the sides, two-hand the heavy ones, mind
-  the tail of the case, keep it under control the whole way down.
-- **Ambient:** Loaders and a forklift working the same truck; a sloped ramp; other
-  departments' gear staged tight.
-- **Safe-failure consequence:** Let a case get away on the ramp → it runs, tips, and
-  a fixture inside is damaged (visible dollar cost) — or it catches a foot. Shown
-  safely, then reset.
-- **Assessed by the learner:** Is the ramp clear? Is this a one-person or two-person
-  case? Who's behind me?
-- **Atom status:** Case handling partly prototyped in *Dock Sweep*.
+> **This sequence is a draft for the owner's correction.** Order and terminology
+> below are best-effort; the owner's field knowledge is the source of truth. Items
+> flagged **⚠confirm** are ones to verify or rename. Add/reorder freely.
 
-### Beat 2 — Stage / spot the cases
-- **Objective:** Move each case to the right spot per the LD's plot / spike marks,
-  in **build order**, without blocking paths or egress.
-- **Ambient:** Keep the fire lane and walkways clear; other departments need the
-  same floor.
-- **Safe-failure consequence:** Stage in the wrong place or block a path → rework
-  (you move it all again), the chief loses time, or the fire marshal flags the lane.
-- **Assessed by the learner:** Does this match the plot? Am I blocking an exit or a
-  push path? Will the next step reach this easily?
+The full arc is a **ground-up flown lighting rig**: build the truss on the deck,
+hang and wire the fixtures, ground-check them, fly to trim, then focus. Steps run
+in order; each has **objective · ambient · safe-failure consequence · learner's
+judgment call.**
 
-### Beat 3 — Prep the fixture + **ground-check it powered on** (the critical-safety beat)
-- **Objective:** Open the case and prep a fixture to hang — **proper clamp** on the
-  pipe/truss, **safety cable (bond) attached — mandatory**, yoke tightened, cable
-  dressed, **address/DMX set** — and **power it up and confirm it works on the ground,
-  before it flies.** Fixtures are typically **struck and checked at arm's reach**
-  (does it power, does it home, does it answer its address?) precisely because a dead
-  fixture is trivial to fix on the deck and miserable to fix at trim.
-- **Ambient:** This gear is about to go overhead; tools should be tethered; fixtures
-  are heavy and pinchy; live power on the deck.
-- **Safe-failure consequence (two, both taught here):**
-  - **Skip the safety cable** and it looks fine on the ground — but at Beat 4, if the
-    clamp fails, the fixture **falls from trim.** The learner sees the catastrophic
-    cost of the shortcut **safely** — the safety cable is the difference between a
-    scare and a fatality. This is the lesson's spine: a deadly mistake taught with no
-    one hurt.
-  - **Fly it without ground-checking** and a dead pixel / no-strike / wrong-address
-    fixture only reveals itself **once it's at trim** — now it has to come **back
-    down** (or a tech goes up), costing the whole load the time. The learner learns
-    to *catch it on the deck.*
-- **Assessed by the learner:** Is the clamp rated and fully seated? **Is the safety
-  cable on?** Is the address right? **Did it power up and respond before I let it go
-  up?** Is anything going to swing free?
+### 1 — Unload from the truck
+- **Objective:** Get truss and fixture cases off the truck safely — control the
+  ramp/liftgate, push a rolling case from the **ends** not the sides, two-hand the
+  heavy ones, mind the tail of the case.
+- **Ambient:** Loaders and a forklift on the same truck; sloped ramp; tight staging.
+- **Consequence:** A case gets away on the ramp → it tips, a fixture is damaged
+  ($$), or it catches a foot.
+- **Learner judges:** Is the ramp clear? One-person or two-person case? Who's behind me?
+- **Atom:** case handling — partly prototyped in *Dock Sweep*.
 
-### Beat 4 — Fly it / send to trim
-- **Objective:** The truss goes up on motors. **Running the motors is the rigger's
-  job, not the ground hand's** — the lighting hand's job is to **clear the area,
-  call/echo "HEADS!", keep everyone out from under the moving load, spot, and watch
-  their cable feed** so nothing snags or pulls as it rises.
-- **Ambient:** Head on a swivel — a load is moving overhead. This is where "never
-  stand under a load" becomes visceral.
-- **Safe-failure consequence:** Stand under the load, miss the "heads" call, or let a
-  feeder cable snag → a dropped object, a fixture yanked loose, or a near-miss.
-  Combined with a skipped Beat-3 safety cable, this is where the fixture falls.
-- **Assessed by the learner:** Is anyone under this? Is my cable free to travel? Did
-  the call go out? (Rigging boundary respected — this reinforces the positioning:
-  ground hands support the fly; riggers rig.)
+### 2 — Roll & stage to the build position
+- **Objective:** Move truss and cases to **where the rig gets built** (usually under
+  where it will fly), laid out in **build order** per the LD's plot, clear of paths
+  and egress.
+- **Ambient:** Keep fire lanes and walkways clear; other departments share the floor.
+- **Consequence:** Staged in the wrong place / blocking a path → you move it all
+  again, the chief loses time, the fire marshal flags the lane.
+- **Learner judges:** Does this match the plot? Am I under the fly point? Blocking an
+  exit or a push path?
 
-### Beat 5 — At trim: land power & data, dress, re-confirm
-- **Objective:** The fixture already powered and answered on the deck (Beat 3); at
-  trim the job is the **distribution and dress** — land the truss on the **correct
-  circuit** without overloading it, run **power and data** cleanly, dress cable so
-  there are **no trip hazards** (matted/taped in walkways), and **re-confirm it still
-  answers its address** now that it's flown. This is the *final* check, not the first
-  power-on.
-- **Ambient:** Electrical safety; cable in walkways must be managed; work still
-  happening overhead nearby.
-- **Safe-failure consequence:** Overload a circuit or make a bad connection → the
-  breaker trips (potentially mid-show); a run left across a walkway → a trip hazard;
-  a data cable knocked loose in the fly that you *don't* re-check → the fixture is
-  **dark when the LD calls for it.** All shown safely, tied to "the show can't happen."
-- **Assessed by the learner:** Is this circuit already loaded? Is the run a trip
-  hazard? Does it **still** respond now that it's up?
+### 3 — Lay out & **pin the truss together**
+- **Objective:** Lay truss sections end to end in the right order/orientation and
+  **connect them** — seat the connectors and **pin each junction** (spigot/connector
+  pins + **retaining clips / R-clips**, ⚠confirm your standard hardware), so the truss
+  line is one solid, rated structure. Add corner blocks / bases as the plot needs.
+- **Ambient:** Pinch points at every junction; heavy sections; partners lifting.
+- **Consequence:** A junction left **unpinned or half-pinned** → the truss is not
+  rated and can fail under load in the air; caught on the ground it's a two-second
+  fix, missed it's catastrophic. A section built in the wrong order/orientation →
+  the whole line comes apart to redo.
+- **Learner judges:** Is **every** pin in and clipped? Right section, right way round?
+  Fingers clear of the junction?
+
+### 4 — Hang & safety the fixtures on the truss
+- **Objective:** Clamp each fixture to the truss at its **plotted position**, with the
+  **right clamp fully seated**, the **safety cable (bond) attached — mandatory**, yoke
+  set, and the **address/DMX set.**
+- **Ambient:** Working over the truss; tools tethered; heavy, pinchy fixtures.
+- **Consequence (the spine):** **Skip the safety cable** — looks fine now, but if the
+  clamp ever fails at trim the fixture **falls.** Taught **safely**; the safety cable
+  is the difference between a scare and a fatality. Wrong position/address → it's in
+  the wrong place in the light plot and has to be re-hung or re-addressed.
+- **Learner judges:** Clamp rated and seated? **Safety cable on — every one?** Right
+  position, right address?
+
+### 5 — Run power & data; **plug the fixtures at their breakouts** ⚠confirm "bridges"
+- **Objective:** Run the **power** (multicable / socapex fan-outs) and **data** (DMX)
+  along the truss, and **plug each fixture into its breakout / distro point** on the
+  truss (⚠the owner's term "**bridges**" — confirm whether this means the multicable
+  **breakout**, an **opto-splitter**, or the truss **bridge** position). **Dress and
+  tie** every run to the truss so nothing hangs, pulls, or fouls when it flies.
+- **Ambient:** Live power soon; cable weight on the truss; data topology matters.
+- **Consequence:** A fixture **not plugged / plugged to the wrong breakout** → it's
+  dark or on the wrong circuit. Cable **left undressed** → it snags or drops on the
+  fly. Data run wrong → a whole branch goes dark.
+- **Learner judges:** Is every fixture on power **and** data? Is every run tied off?
+  Right breakout for this fixture?
+
+### 6 — **Ground-check it powered on** (before anything flies)
+- **Objective:** **Power up and confirm the rig works at arm's reach** — each fixture
+  **strikes / homes / answers its address** — because a dead fixture is trivial to fix
+  on the deck and miserable at trim.
+- **Ambient:** Live power on the deck; people around the truss.
+- **Consequence:** **Fly it unchecked** and a no-strike / dead / mis-addressed fixture
+  only shows **at trim** — now it comes **back down** (or a tech rides up), eating the
+  whole load's time. Learner learns to **catch it on the deck.**
+- **Learner judges:** Did every fixture power and respond **before** I called it ready
+  to fly?
+
+### 7 — Fly to trim (support the rigger; don't be the rigger)
+- **Objective:** The truss goes up on motors. **Running motors is the rigger's job.**
+  The lighting hand **clears the area, calls/echoes "HEADS!", keeps everyone out from
+  under the moving load, spots, tends tag lines, and watches the power/data feed** so
+  nothing snags or pulls as it rises.
+- **Ambient:** Head on a swivel — a load is moving overhead. "Never stand under a
+  load" made visceral.
+- **Consequence:** Stand under it, miss the "heads" call, or let a feeder snag → a
+  dropped object, a fixture yanked loose, a near-miss. With a skipped safety cable
+  (step 4), this is where a fixture falls.
+- **Learner judges:** Is anyone under this? Is my cable free to travel? Did the call
+  go out? (Rigging boundary respected: ground hands support the fly; riggers rig.)
+
+### 8 — Land power & data at trim; dress; re-confirm
+- **Objective:** With the rig at trim, **land the truss circuits on the right
+  power** without **overloading**, confirm the data feed, **dress walkway runs (mat /
+  tape) so there are no trip hazards**, and **re-confirm the rig still answers** now
+  that it's flown.
+- **Ambient:** Electrical safety; cable in walkways; work still overhead nearby.
+- **Consequence:** Overload a circuit / bad connection → breaker trips (maybe
+  mid-show); a run across a walkway → trip hazard; a data cable knocked loose on the
+  fly and **not** re-checked → dark on cue.
+- **Learner judges:** Is this circuit already loaded? Is the run a trip hazard? Does
+  it **still** respond now it's up?
+
+### 9 — Focus: **move & adjust where the lighting tech / LD asks**
+- **Objective:** During focus the LD/lighting tech calls fixtures and directions;
+  the hand **pans/tilts, adjusts position, shutters/shapes, or nudges the fixture as
+  directed** (⚠conventionals are focused by hand; movers are largely focused from the
+  board — confirm how much hand-focus your target rigs use). **Listen, repeat back,
+  do exactly what's asked**, confirm, move to the next.
+- **Ambient:** Working at height / near the rig; taking direction precisely; other
+  hands on other fixtures.
+- **Consequence:** Mis-hear or guess instead of confirming → the wrong fixture moves,
+  the LD loses time, the look is wrong. This is where **listening** (the ambient
+  skill) becomes the whole task.
+- **Learner judges:** Did I hear the exact fixture and direction? Did I repeat it
+  back? Is it doing what they actually asked?
 
 ### End state
-Fixture **at trim — powered, addressed, dressed, and answering the board** (it was
-ground-checked live before the fly, and re-confirmed after). The learner has taken it
-the whole way — and, more importantly, has had to *judge the safety and readiness of
-each step themselves,* seeing the safe cost of every shortcut.
+The rig is **built, wired, ground-checked, flown to trim, landed on power, dressed,
+and focused** — powered on and answering the board, exactly where the LD wants it.
+**The show can happen.** The learner took it the whole way and, at every step, had to
+**judge the safety and readiness themselves** — seeing the safe cost of every shortcut.
 
 ---
 
 ## How this composes from atoms
 
-| Beat | Atomic scene | Prototype status |
+| Step | Atomic scene | Prototype status |
 |------|--------------|------------------|
 | 1 | Truck unload / case handling | partial (*Dock Sweep*) |
-| 2 | Staging to the plot | not built |
-| 3 | Clamp + **safety cable** + address + **ground power-check** | not built — **highest-value atom** |
-| 4 | Clearing / spotting the fly to trim | not built |
-| 5 | Land circuit + data + dress + **re-confirm** at trim | not built |
+| 2 | Roll & stage to the build position | not built |
+| 3 | **Pin the truss together** | not built |
+| 4 | Clamp + **safety cable** + address the fixture | not built — **highest-value atom** |
+| 5 | Run power/data + **plug at breakouts** + dress | not built |
+| 6 | **Ground-check powered on** | not built |
+| 7 | Support the fly to trim (clear/spot/call) | not built |
+| 8 | Land circuit + data + dress + re-confirm | not built |
+| 9 | **Focus** — adjust where the LD asks (listening) | not built |
 | (related atom) | Over-under coiling | prototyped (*Coil Line*) |
 
-**Build order recommendation:** Beat 3 (clamp + safety cable) first — it carries the
-lesson's most important safe-failure consequence and is the clearest single-skill
-scene. Prove the consequence model there, then build outward to the full arc.
+**Build order recommendation:** Build **step 4 (clamp + safety cable + address)**
+first — it carries the lesson's most important safe-failure consequence (a fixture
+that falls) and is the clearest single-skill scene. Then **step 3 (pinning the
+truss)** — the other structural "did you actually secure it?" beat. Prove the
+consequence model on those two, then build outward to the full arc.
 
 ## Guardrails carried in
 - **US standard**, ground-up, **first-mover** (see doc 03, `DECISION_LOG.md`).
