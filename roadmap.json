@@ -167,14 +167,14 @@
         {
           "id": "cb-4",
           "task": "Create foundational resources — ground/field-hand fundamentals first (canonical packets)",
-          "why": "Build the initial library starting with GROUND/FIELD-HAND fundamentals (general labor, load-in/out, gear handling, jobsite safety & professionalism) — the owner's real expertise and the widest entry point, built to US standards. Specialized disciplines and rigging come later. Content is the primary work.",
+          "why": "Ground-first library, built to US standards. HEAD START: Course 1 'Your First Work Call' Module 1 is COMPLETE — 5 entry-level lessons (what a stagehand does, load-in/show/load-out, work environments, the crew, being valuable) in structured JSON, QA-reviewed (inventory: companies/crew-blueprint/09_content_inventory.md). Lighting/video/rigging/hazard folders started. Remaining: finish/organize more ground modules; specialized disciplines and rigging later.",
           "priority": "HIGH",
           "status": "in_progress"
         },
         {
           "id": "cb-5",
           "task": "Ship first gamified MVP module — a ground/field-hand fundamental (static, client-side progress)",
-          "why": "Prove the gamified format cheaply with a GROUND-WORK fundamental the owner can author from real expertise (e.g. jobsite safety & professionalism, or load-in/out basics) — a single static skill-tree node with XP, a streak, a progress bar, and one real interaction, progress in localStorage, no backend, built to US standards. Entry-level, not rigging (that's far-future). Validates the format before building the full tree.",
+          "why": "PACKAGING task, not authoring — the content exists. module-01-lessons.json (Course 1, Module 1) is already a structured 5-lesson data model (knowledge_check → quiz, example_tasks → interaction, key_takeaway). Wrap it in the static gamified shell: 5 lessons → 5 skill-tree nodes with XP/streak/progress + one real interaction each, localStorage, no backend, US-standard. Proves the format from real existing content (inventory doc 09).",
           "priority": "HIGH",
           "status": "not_started"
         },

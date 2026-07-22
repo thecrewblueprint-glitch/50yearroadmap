@@ -36,6 +36,7 @@ platform engineering.
 | [06_brand](06_brand.md) | Industrial dark identity, CSS schema, voice |
 | [07_content_pipeline](07_content_pipeline.md) | The multi-AI workflow: research → draft → QA → packet → archive |
 | [08_growth_model](08_growth_model.md) | Content-first now → foundational library → next-gen platform |
+| [09_content_inventory](09_content_inventory.md) | Map of existing course content in Drive (Course 1 ground fundamentals complete; gamification-ready) |
 
 ## Guardrails (this repo is public)
 

@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Reviewed & mapped the Crew Blueprint content (it exists)
+- Owner: the ground-work content is already built (scattered across accounts/computer,
+  "no idea which account has what"). Reviewed via the Drive connector.
+- **Found it, and it's on-target.** All Crew Blueprint content the connector sees is
+  in the owner's personal Google account, in a hub folder "Course Data Packages"
+  (organized by discipline). **Course 1 'Your First Work Call' Module 1 is COMPLETE**
+  — 5 entry-level, US-context ground/field-hand lessons in structured JSON
+  (`module-01-lessons.json`), QA-reviewed. Lighting/video/rigging/hazard folders
+  started; WordPress backups separate.
+- Added `companies/crew-blueprint/09_content_inventory.md` — a public-safe map of
+  what exists, where, and how ready it is to gamify (no lesson bodies). README +1.
+- Reconciled roadmap: `cb-4` now notes Module 1 complete; `cb-5` reframed as a
+  **packaging** task (wrap the existing JSON in the gamified shell), not authoring.
+- PII: abstracted the account (owner's personal Google account) — no email in repo.
+  Validator: PASS.
 ### 2026-07-21 — Crew Blueprint repositioned: US-standard, ground-up, first-mover
 - Owner correction: **do not lead with rigging.** Build to **US industry standards**
   and teach **ground-up** — start with field-hand/ground fundamentals (the owner's
