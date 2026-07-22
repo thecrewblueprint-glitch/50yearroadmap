@@ -25,6 +25,18 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Capture all partnership leads as future considerations (build-first)
+- Owner decision: **build more himself before approaching partners.** Recorded in
+  `governance/DECISION_LOG.md`; noted at the top of the `partnerships/` playbook.
+- Broadened `data/roadmap/connections.md` from Homestead-only into the **cross-company
+  leads registry** — all research leads added, organized by company (Deadhang staffing,
+  Crew Blueprint training, Production Atlas data, Homestead), with Fit + status
+  (`future`/`model`/`reference`/`contacted`) and the build-first posture stated.
+- Roadmap: added `dh-13` and `cb-6` (partnership-lead items, `moved_later`) via the
+  promote helper and wired into milestones m5/m4; reframed `pa-4` → `moved_later`;
+  updated `hs-4` note (Escapees co-op-land model; further outreach deferred).
+- Nothing set to active outreach except The Roadie Clinic (already contacted).
+  Validator: PASS (0 warnings); no emails in roadmap.json.
 ### 2026-07-21 — Partnership research: labor-staffing, industry-intelligence, nomadic-community
 - Completed the sector sweep (docs 02–04 in `partnerships/research/`):
   - **Labor staffing (Deadhang):** mature national market (Rhino, Crew One, Upstage,

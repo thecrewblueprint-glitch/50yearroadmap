@@ -6,6 +6,20 @@ Newest first.
 
 ---
 
+## 2026-07-18 — Partnerships: build first, partner later
+**Decision:** The owner will **build more of the ecosystem himself before
+approaching partners.** Partnership *research and leads* are captured (the
+`partnerships/` playbook + `partnerships/research/`, and the cross-company
+`data/roadmap/connections.md` registry), but **active outreach is deliberately
+deferred** — the leads are future considerations, not a to-do now. Exception:
+The Roadie Clinic (already contacted). Reflected in the roadmap by setting the
+partnership-lead items to `moved_later` (`dh-13`, `cb-6`, `pa-4`; Homestead
+`hs-4` continues at a slow pace).
+**Why:** The owner wants a stronger, more-built foundation to show before
+bringing his ideas "to the eyes of those I am seeking help from" — better
+leverage, a more credible offer, and less risk of pitching before there's
+something compelling to point to. Capture the map now; walk it later.
+
 ## 2026-07-18 — Crew Blueprint delivery: gamified static, not an LMS
 **Decision:** The Crew Blueprint's delivery is a **gamified, static, browser-based
 experience — not a traditional LMS.** The discipline/pathway map (`cb-2`) becomes a

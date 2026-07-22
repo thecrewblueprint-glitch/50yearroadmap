@@ -113,6 +113,13 @@
           "why": "Additional Deadhang revenue stream: print-on-demand clothing",
           "priority": "MEDIUM",
           "status": "in_progress"
+        },
+        {
+          "id": "dh-13",
+          "task": "Investigate staffing-company partnership leads (preferred-subcontractor)",
+          "why": "Rated leads captured in data/roadmap/connections.md (Upstage is the warmest — existing 1099 relationship — plus Crew One, Rhino, Show Support, Stage Crew, ShowPros). Outreach deliberately deferred: build more first (owner posture, build-first). See partnerships/ playbook + research.",
+          "priority": "MEDIUM",
+          "status": "moved_later"
         }
       ],
       "phase": 1,
@@ -170,6 +177,13 @@
           "why": "Prove the gamified format cheaply: take one publication-ready packet (e.g. Rigging Hardware ID) and build it as a single static skill-tree node with XP, a streak, a progress bar, and one real interaction, progress saved in localStorage, no backend. Validates the format before building the full tree.",
           "priority": "HIGH",
           "status": "not_started"
+        },
+        {
+          "id": "cb-6",
+          "task": "Investigate training/content partnership leads",
+          "why": "Rated leads captured in data/roadmap/connections.md (Tech Crew HQ — closest analog, lacks rigging; Academy of Live Technology/Rock Lititz; ETCP/ESTA; Bigger Hammer; Rugged Training; ITI). Outreach deferred: build the first gamified module (cb-5) first. See partnerships/ playbook + research.",
+          "priority": "MEDIUM",
+          "status": "moved_later"
         }
       ],
       "phase": 1,
@@ -219,9 +233,9 @@
         {
           "id": "pa-4",
           "task": "Establish company relationship partnerships",
-          "why": "Create direct data pipelines with employers and vendors over time",
+          "why": "Data/community/credibility leads captured in data/roadmap/connections.md (IATSE, ProductionHUB, Giggs; Pollstar = benchmark). Outreach deliberately deferred: build more of the platform first (owner posture, build-first). See partnerships/ playbook + research.",
           "priority": "MEDIUM",
-          "status": "not_started"
+          "status": "moved_later"
         },
         {
           "id": "pa-5",
@@ -421,7 +435,7 @@
         {
           "id": "hs-4",
           "task": "Investigate & connect with nomadic-movement organizations (rated list in connections.md)",
-          "why": "Build relationships with orgs that support traveling/live-event workers and community/land models for the Homestead. Top picks: The Roadie Clinic, Backline, Workamper News, Van Life Campgrounds. Full rated shortlist: data/roadmap/connections.md",
+          "why": "Build relationships with orgs that support traveling/live-event workers and community/land models for the Homestead. The Roadie Clinic contacted; Escapees/Xscapers is a near-exact co-op-land model to study (Benson AZ). Further outreach deferred (build-first). Full rated shortlist: data/roadmap/connections.md",
           "priority": "HIGH",
           "status": "in_progress"
         }
@@ -547,7 +561,8 @@
           "cb-2",
           "cb-5",
           "cb-1",
-          "cb-3"
+          "cb-3",
+          "cb-6"
         ],
         "leads_to": "A pipeline of better-prepared workers."
       },
@@ -561,7 +576,8 @@
         "outcome": "Deadhang can staff and lead multi-person jobs.",
         "step_ids": [
           "dh-3",
-          "dh-4"
+          "dh-4",
+          "dh-13"
         ],
         "leads_to": "The labor engine that powers the whole system."
       },

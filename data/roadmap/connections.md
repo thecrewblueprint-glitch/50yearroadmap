@@ -1,19 +1,71 @@
 # Connections & Leads
 
-Potential contacts and organizations to investigate for the Homestead /
-nomadic-movement vision (Phase 2). Referenced from the `roadmap.json` Homestead
-work item. **Business/organization contacts only** — do not record private
-individuals' personal contact details here. Fit = how well the org matches the
-vision (a community home base for traveling live-event workers). Ratings are a
-starting read, not gospel; verify independently before sharing anything sensitive.
+Cross-company registry of potential partners, models, and organizations to
+**investigate and consider in the future**, surfaced by the landscape research in
+`partnerships/research/`. Referenced from `roadmap.json` (each branch's
+partnership-leads work item).
+
+> **Posture (owner, 2026-07-18): build first, partner later.** The owner intends
+> to build more of the ecosystem himself before approaching partners. These leads
+> are **captured for the future, not for active outreach now** — except The Roadie
+> Clinic, already contacted. Don't cold-outreach from this list without the owner
+> saying it's time.
+
+**Business/organization contacts only** — never record private individuals'
+personal details here. **Fit** = strategic priority as a lead. **Status:**
+`contacted` · `future` (partner candidate, deferred) · `model` (study/learn-from,
+not a contact target) · `reference` (resource). Ratings are a starting read;
+verify URLs and details independently before sharing anything sensitive.
+
+## Deadhang Labor — staffing partners (playbook Track 1)
 
 | Organization | Website | Fit | Contact | Purpose / angle | Status |
 | --- | --- | :---: | --- | --- | --- |
-| The Roadie Clinic | theroadieclinic.com | ★★★★★ | via website | Nonprofit built for touring crew — resources, peer support, and temporary housing. Closest existing model to the Homestead; potential ally + mentor. | contacted 2026-07-16 — awaiting reply |
-| Backline | backline.care | ★★★★★ | via website | Mental-health + wellness network for the live-event/music industry (1,500+ clinicians, 24/7 line). Resource-partner / referral angle for the population the Homestead serves. | candidate |
-| Workamper News | workamper.com | ★★★★ | via website | Jobs + community network for traveling workers; explicitly includes festival/carnival/crew work. Model for the "connect to work" side of the ecosystem. | candidate |
-| Van Life Campgrounds | vanlifecampgrounds.com | ★★★★ | info@vanlifecampgrounds.com | Network of nomad homebases with work-stay opportunities. Direct model for the campground/homebase network. Domain registered 4+ years; no threat intel. | to_investigate |
-| Homes on Wheels Alliance (HOWA) | homesonwheelsalliance.org | ★★★★ | via website | 501(c)(3) supporting nomads (builds, emergency fund, gatherings). Model for the nonprofit + community-care ethos; possible mission ally. | candidate |
-| Foundation for Intentional Community | ic.org | ★★★ | via website | Directory of 1,200+ intentional communities, land trusts, cohousing, co-ops. Research resource for the Homestead land + governance structure. | reference |
-| Escapees RV Club | escapees.com | ★★★ | via website | Long-running full-timer support network (member services, domicile/mail). Model for member support + belonging at scale. | reference |
-| Nomad Base Camp | nomadbasecamp.org | ★★ | via website | Digital-nomad cohousing network. Adjacent (remote workers vs. event crew), but a coliving-model reference. | reference |
+| Upstage Companies | upstagecompanies.com | ★★★★★ | existing 1099 relationship | Preferred-subcontractor / crew-lead — **warmest door** (already work with them). | future (warm) |
+| Crew One Productions | crewoneproductions.com | ★★★★ | portfolio connection | National staffing (stagehands/riggers/spot). Subcontractor candidate. | future |
+| Rhino Staging | rhinostaging.com | ★★★★ | via website | Leading national event-labor staffing. | future |
+| Show Support USA | showsupport.us | ★★★ | via website | Event crew coordination / staffing. | future |
+| Stage Crew | stagecrew.us | ★★★ | via website | Full-spectrum crew staffing. | future |
+| ShowPros | showprostaff.com | ★★★ | via website | Skilled labor & staffing for live events. | future |
+
+## The Crew Blueprint — training/content partners (Track 3) + models
+
+| Organization | Website | Fit | Contact | Purpose / angle | Status |
+| --- | --- | :---: | --- | --- | --- |
+| Tech Crew HQ | techcrewhq.com | ★★★★ | via website | Closest analog; **lacks rigging** (your gap = your offer); content-share / licensing / rigging-module candidate. Different market (AU/education). | future |
+| Academy of Live Technology (Rock Lititz) | academyoflivetechnology.com | ★★★★ | via website | Major US training hub; credibility + reach. High-value, harder to land. | future |
+| ETCP / ESTA | etcp.esta.org | ★★★★ | via website | The certification standard Crew Blueprint aligns to; credibility relationship. | future |
+| Bigger Hammer | biggerhammer.com | ★★★ | via website | ETCP-recognized safety trainer; co-brand / endorsement. | future |
+| Rugged Training Group | rugged-training.com | ★★★ | via website | Stagehand/forklift/production training; co-brand. | future |
+| ITI | iti.com | ★★★ | via website | Entertainment rigging courses + a VR crane simulator. | future |
+| Interplay Learning | interplaylearning.com | ★★ | — | Gamified-trades **benchmark** (points/badges/sim, 500k+ trained, other trades). Study the mechanics. | model |
+| Transfr | transfrinc.com | ★★ | — | VR trades training; engagement/retention model. | model |
+
+## Production Atlas — data / community / credibility
+
+| Organization | Website | Fit | Contact | Purpose / angle | Status |
+| --- | --- | :---: | --- | --- | --- |
+| IATSE (locals / national) | iatse.net | ★★★★ | via locals | Pathways, credibility, worker reach — serves Production Atlas **and** Crew Blueprint (one relationship, two businesses). | future |
+| ProductionHUB | productionhub.com | ★★★ | via website | Largest live-event directory/jobs marketplace (150k+ profiles). Data / referral / cross-promo. | future |
+| Giggs | giggs.live | ★★ | via website | Live-event pro community + jobs. Cross-promotion. | future |
+| Pollstar | pollstar.com | ★ | — | Touring-data incumbent (Live Nation-owned). **Benchmark, not a partner.** | model |
+
+## The Homestead — nomadic-movement (Phase 2)
+
+| Organization | Website | Fit | Contact | Purpose / angle | Status |
+| --- | --- | :---: | --- | --- | --- |
+| The Roadie Clinic | theroadieclinic.com | ★★★★★ | via website | Nonprofit for touring crew — resources, peer support, temporary housing. Closest existing model; ally + mentor. | contacted 2026-07-16 — awaiting reply |
+| Escapees RV Club / Xscapers | escapees.com | ★★★★★ | via website | **Near-exact structural model:** 40-yr member club with **member-owned co-op land parks** (incl. Benson, AZ) + working-nomad subgroup building a home base. Study the co-op structure + membership economics. | model |
+| Backline | backline.care | ★★★★★ | via website | Mental-health + wellness network for live-event/music industry. Resource-partner / referral for the population the Homestead serves. | future |
+| Workamper News | workamper.com | ★★★★ | via website | Jobs + community for traveling workers (incl. festival/crew). Model for the "connect to work" + work-for-housing side. | future |
+| Van Life Campgrounds | vanlifecampgrounds.com | ★★★★ | info@vanlifecampgrounds.com | Network of nomad homebases with work-stay. Direct model for the campground/homebase network. | future |
+| Homes on Wheels Alliance (HOWA) | homesonwheelsalliance.org | ★★★★ | via website | 501(c)(3) supporting nomads. Model for the nonprofit + community-care ethos; mission ally. | future |
+| Foundation for Intentional Community | ic.org | ★★★ | via website | Directory of 1,200+ intentional communities, land trusts, cohousing, co-ops. Research resource for land + governance. | reference |
+| Nomad Base Camp | nomadbasecamp.org | ★★ | via website | Digital-nomad cohousing network. Coliving-model reference. | reference |
+
+---
+
+_Add rows as research surfaces new leads. Keep this in sync with
+`partnerships/research/` (the "how they did it" studies) and the playbook's
+targeting (section 04). The email above is a business contact provided by the
+owner; **never** copy emails into `roadmap.json` (the validator blocks them)._

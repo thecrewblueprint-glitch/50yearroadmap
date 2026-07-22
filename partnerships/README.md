@@ -10,6 +10,15 @@ deal structures.
 > the numbered sections are being filled **one at a time, in order**, each checked
 > for cohesion with the whole. Sections marked _stub_ are scoped but not yet written.
 
+## Posture: build first, partner later (2026-07-18)
+
+The owner has decided to **build more of the ecosystem himself before approaching
+partners** (`governance/DECISION_LOG.md`). This playbook and its research are
+**ready for when it's time** — leads are captured in `data/roadmap/connections.md`
+as *future* considerations, and the roadmap's partnership items sit at
+`moved_later`. **Do not start cold outreach from this playbook until the owner
+says it's time.** (Exception: The Roadie Clinic, already contacted.)
+
 ## The strategic spine (read this first)
 
 Everything in this playbook hangs off three ideas. If a section ever contradicts
