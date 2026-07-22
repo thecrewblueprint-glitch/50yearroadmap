@@ -14,8 +14,15 @@ partnership-leads work item).
 **Business/organization contacts only** — never record private individuals'
 personal details here. **Fit** = strategic priority as a lead. **Status:**
 `contacted` · `future` (partner candidate, deferred) · `model` (study/learn-from,
-not a contact target) · `reference` (resource). Ratings are a starting read;
-verify URLs and details independently before sharing anything sensitive.
+not a contact target) · `resource` (a service/tool the **caravan** uses for
+lodging/logistics, or a model to build our own — **not** a partner to court) ·
+`reference` (background). Ratings are a starting read; verify URLs and details
+independently before sharing anything sensitive.
+
+> **"The caravan"** = the owner's term for the mobile community of traveling
+> live-event workers the Homestead forms and serves. Some entries below are
+> **resources the caravan uses** (campsite/lodging finders, host networks), not
+> partners — see the `resource` status.
 
 ## Deadhang Labor — staffing partners (playbook Track 1)
 
@@ -55,10 +62,11 @@ verify URLs and details independently before sharing anything sensitive.
 | Organization | Website | Fit | Contact | Purpose / angle | Status |
 | --- | --- | :---: | --- | --- | --- |
 | The Roadie Clinic | theroadieclinic.com | ★★★★★ | via website | Nonprofit for touring crew — resources, peer support, temporary housing. Closest existing model; ally + mentor. | contacted 2026-07-16 — awaiting reply |
-| Escapees RV Club / Xscapers | escapees.com | ★★★★★ | via website | **Own-the-land model:** 40-yr member club with **member-owned co-op land parks** (incl. Benson, AZ) + working-nomad subgroup building a home base. Study the co-op structure + membership economics; **possible partner** when building the base. | future (model) |
-| Harvest Hosts (+ Boondockers Welcome) | harvesthosts.com | ★★★★ | via website | **Host-network model:** membership + reciprocity network of ~9,700 host locations (small businesses + private properties) for free overnight RV stays — scales without owning land. Model for the Homestead's way-station network; **possible partner** (a live-event-worker-friendly host network). | future (model) |
+| Escapees RV Club / Xscapers | escapees.com | ★★★★★ | via website | **Own-the-land model** to study: 40-yr member club with **member-owned co-op land parks** (incl. Benson, AZ) + working-nomad subgroup building a home base. A model for the Homestead's owned base + a membership resource the caravan can use. | resource |
+| Harvest Hosts (+ Boondockers Welcome) | harvesthosts.com | ★★★★ | via website | **Host-network model** to study + **resource** the caravan can use: membership + reciprocity network of ~9,700 host locations for free overnight RV stays (no land ownership). Template for the way-station layer. | resource |
+| The Dyrt | thedyrt.com | ★★★★ | app / website | **Campsite finder resource** the caravan uses: large US camping app — campground reviews, free-camping finder, offline maps/trip planning (PRO tier). Practical lodging tool for traveling crew between gigs. | resource |
 | Backline | backline.care | ★★★★★ | via website | Mental-health + wellness network for live-event/music industry. Resource-partner / referral for the population the Homestead serves. | future |
-| Workamper News | workamper.com | ★★★★ | via website | Jobs + community for traveling workers (incl. festival/crew). Model for the "connect to work" + work-for-housing side. | future |
+| Workamper News | workamper.com | ★★★★ | via website | Jobs + community for traveling workers (incl. festival/crew); a **resource** for the "connect to work" + work-for-housing side the caravan can use, and a model to study. | resource |
 | Van Life Campgrounds | vanlifecampgrounds.com | ★★★★ | info@vanlifecampgrounds.com | Network of nomad homebases with work-stay. Direct model for the campground/homebase network. | future |
 | Homes on Wheels Alliance (HOWA) | homesonwheelsalliance.org | ★★★★ | via website | 501(c)(3) supporting nomads. Model for the nonprofit + community-care ethos; mission ally. | future |
 | Foundation for Intentional Community | ic.org | ★★★ | via website | Directory of 1,200+ intentional communities, land trusts, cohousing, co-ops. Research resource for land + governance. | reference |

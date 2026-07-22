@@ -25,6 +25,16 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Reframe RV/camping services as resources; add The Dyrt; name "the caravan"
+- Owner distinction: Escapees / Harvest Hosts (and similar) aren't partnership
+  targets — they're **resources the caravan uses** for lodging/logistics, or
+  **models** to study. Added a `resource` status to `connections.md` and
+  recategorized Escapees, Harvest Hosts, Workamper accordingly.
+- Added **The Dyrt** (owner-provided) — US camping app / free-campsite finder — as
+  a lodging resource for the caravan (connections.md + `partnerships/research/04`).
+- Captured **"the caravan"** = the owner's term for the mobile community of
+  traveling live-event workers the Homestead forms and serves. Split the Homestead
+  research leads into partners/allies vs. resources/models. Validator: PASS.
 ### 2026-07-21 — Add Escapees + Harvest Hosts to Homestead research/leads
 - Owner request. Added **Harvest Hosts** (+ Boondockers Welcome) to
   `partnerships/research/04` and `connections.md` — the **distributed host-network**

@@ -1,9 +1,17 @@
 # 04 — Nomadic-Community Landscape (The Homestead)
 
-**For:** The Homestead — a home-base community for traveling live-event workers.
+**For:** The Homestead — a home-base community for **"the caravan"** (the owner's
+term for the mobile community of traveling live-event workers the Homestead forms
+and serves).
 **Question:** Has anyone built a land/home-base community for nomadic workers, and
 what's the model?
 **Researched:** 2026-07-21 (web).
+
+> **Partner vs. resource (owner's distinction, 2026-07-22):** the RV/camping
+> services below are mostly **resources** — services the *caravan* uses for
+> lodging/logistics, or **models** to study when building the Homestead — **not
+> partnership targets.** True partners/allies here are the mission orgs (Roadie
+> Clinic, Backline, HOWA).
 
 ## Bottom line
 
@@ -54,11 +62,19 @@ Harvest Hosts = **network the bases** (membership + reciprocity, no ownership).
 The Homestead can borrow from both — a small owned home base *plus* a wider host
 network.
 
-## Adjacent model — work + housing matching
+## Resources the caravan uses (lodging / logistics)
 
-- **Workamper / Escapees / RoverPass** — match nomads to jobs that include
-  **on-site housing** (campgrounds, parks, resorts). Proves the "work-for-housing"
-  mechanic, though not live-event specific.
+Existing services the caravan can **use** today for lodging and finding places to
+stay — not partners, just tools (and, for some, models to study):
+
+- **The Dyrt** — large US camping app: campground reviews, a **free-camping
+  finder**, offline maps + trip planning (PRO tier). A practical lodging tool for
+  crew traveling between gigs.
+- **Harvest Hosts** — membership host network for free overnight stays (also a
+  model, above).
+- **Escapees** — member services + co-op park access (also the co-op model, above).
+- **Workamper / RoverPass** — match nomads to jobs that include **on-site
+  housing**; the "work-for-housing" mechanic.
 
 ## The field — mission-aligned orgs (already on the shortlist)
 
@@ -84,19 +100,22 @@ Not housing/land models, but community/credibility partners for the vision:
   mission partners warm (Roadie Clinic contacted), and learn the co-op model now
   so the eventual build isn't from zero.
 
-## Partner leads (for `connections.md`)
+## Leads & resources (for `connections.md`)
 
-- **Escapees RV Club / Xscapers** — the own-the-land co-op model; possible
-  guidance/partner on structure. Reach out when it's time to build the base.
-- **Harvest Hosts** (incl. Boondockers Welcome) — the distributed host-network
-  model; possible partner (a live-event-worker-friendly host network) or a model
-  to emulate for the way-station layer.
-- **Workamper** — work-for-housing mechanic.
-- Existing shortlist: **Roadie Clinic** (contacted), **Backline**, **HOWA**,
-  **Van Life Campgrounds**.
+**Partners / allies (mission — genuine relationships to build):**
+- **Roadie Clinic** (contacted), **Backline**, **HOWA**, **Van Life Campgrounds**.
+
+**Resources & models (services the caravan uses / templates to study — NOT
+partners to court):**
+- **Escapees / Xscapers** — own-the-land co-op **model** + membership resource.
+- **Harvest Hosts** (incl. Boondockers Welcome) — host-network **model** + lodging
+  resource.
+- **The Dyrt** — campsite-finder **resource** for the caravan.
+- **Workamper** — work-for-housing mechanic / resource.
 
 ## Sources
 
 - [Escapees RV Club](https://www.escapees.com/) · [Xscapers (working nomads)](https://www.escapees.com/xscapers) · [Escapees Co-Op Parks](https://www.escapees.com/escapees-co-op-parks-benefit/xscapers-around-the-campfire-at-skp-saguaro-co-op-benson-az-d/) · [40 years of community](https://www.escapees.com/blog/40-years-escapees-rv-club)
 - [Harvest Hosts — how it works](https://www.harvesthosts.com/how-it-works) · [What is Harvest Hosts (2026 guide)](https://www.harvesthosts.com/blog/what-is-harvest-hosts-a-complete-guide-to-how-it-works) · [Harvest Hosts + Boondockers Welcome](https://www.harvesthosts.com/pages/harvest-hosts-boondockers-welcome)
+- [The Dyrt — camping app / free campsites](https://thedyrt.com/)
 - [Workamper — what is workamping](https://workamper.com/about/what-is-workamping/unique-workamping-jobs/) · [Escapees — employers offering on-site housing](https://www.escapees.com/blog/employers-offering-on-site-housing)
