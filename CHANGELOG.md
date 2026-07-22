@@ -25,6 +25,20 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Partnership research: gamified-learning landscape
+- Started `partnerships/research/` (sector-by-sector "who already built a version
+  of this idea" landscape research). First study: gamified stagehand/rigging/
+  production training for The Crew Blueprint.
+- **Key finding:** the niche (pro live-music crew × real rigging × real
+  gamification × US) is essentially open. Closest analog = **Tech Crew HQ** (AU;
+  light gamification, no rigging, education market — a potential partner/licensor,
+  not a direct competitor). Proven model = **Interplay Learning / Transfr**
+  (gamified trades at scale, other trades). The traditional field (Rock Lititz /
+  Academy of Live Technology, ITI, Bigger Hammer, Rugged Training, USITT, ETCP) is
+  best read as content/credibility **partners**, not competitors.
+- Captured partner leads for `connections.md`; validates the `cb-3` gamified
+  direction and points Crew Blueprint to lead with rigging.
+
 ### 2026-07-18 — Partnership Playbook: framework laid down
 - Started a cross-company **Partnership Playbook** (`partnerships/`) — the strategic
   system for using partnerships to accelerate growth across Deadhang, Crew Blueprint,

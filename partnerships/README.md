@@ -51,6 +51,13 @@ Read top to bottom; each section builds on the ones above it.
 | 08 | [Deal Structures](08_deal_structures.md) | Partnership models + terms; the 1099 / insurance / classification considerations |
 | 09 | [Risks & Review](09_risks_and_review.md) | Guardrails (dependency, bandwidth, classification), success metrics, review cadence |
 
+## Research
+
+[`research/`](research/README.md) holds sector-by-sector landscape research —
+**who has already built a version of each idea**, classified as competitor /
+model / partner, feeding real leads into 04 (Targeting) and `connections.md`.
+First study: [gamified learning for stagehands/rigging](research/01_gamified-learning-landscape.md).
+
 ## How to use it
 
 - **Strategizing / choosing where to focus:** read 01–03.
