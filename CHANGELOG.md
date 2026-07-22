@@ -25,6 +25,12 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Recorded the owner's vision & source (deep context)
+- Added `data/roadmap-deep-context/2026-07-22-owner-vision-and-source-deep-context.md`
+  — the owner's own words on where the vision comes from and the mandate for the
+  system: **record the daily insights faithfully, and go beyond storage — turn the
+  words into real things people can benefit from.** Companion to the operating-truth
+  doc. Verbatim, public-safe.
 ### 2026-07-22 — Draft the Homes for Hands 'Live & Travel Free' guide (hs-1)
 - Wrote `data/roadmap/homes-for-hands-guide.md` — the caravan-facing resource guide
   (the tangible form of the care seed): finding free/cheap places to sleep (The Dyrt,
