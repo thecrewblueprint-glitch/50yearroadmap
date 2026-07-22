@@ -6,6 +6,40 @@ Newest first.
 
 ---
 
+## 2026-07-22 — Learning design: teach a specific skill first; safety is the ambient layer. 3D/VR is the intended platform.
+**Decision (two parts, from the owner after playing "Dock Sweep"):**
+
+1. **Foreground = a specific, concrete skill or piece of knowledge. Safety
+   awareness is the *ambient* layer, not the lesson.** Dock Sweep proved the
+   embodied feel, but it made *safety awareness itself* the objective. Going
+   forward, each scene must **teach a specific thing** (a named skill, a named
+   piece of gear, a correct procedure) as its foreground objective, and drill
+   **head-on-a-swivel / listening** as a **constant background condition** that
+   runs *while* the specific skill is being taught — always present, never the
+   headline. Safety is how you carry yourself on every scene; it is not the
+   curriculum.
+
+2. **The intended platform direction is 3D / VR.** The owner's real dream is a
+   **3D and/or virtual-reality experience** — being bodily present on the jobsite,
+   not looking at a 2D scene. This is explicitly acknowledged as a **much bigger
+   project** and remains gated on the ladder (prove the specific-skill teaching
+   loop in a cheaper medium first), but it is now the **stated destination**, not
+   a "maybe." The build ladder's rungs 3–4 (first-person 3D → full sim/VR) are
+   the target, and browser-based **WebXR** is the realistic on-ramp (one
+   self-contained file that runs on a phone in 2D/3D and can enter VR on a
+   headset, no app store, no backend).
+
+**Why:** The value of the platform is *specific trade competence* — the owner's
+ground-up, US-standard knowledge — with professional situational awareness baked
+into how every task is performed. Making safety the lesson (as Dock Sweep did)
+inverts that. And the owner has been consistent that the true vision is embodied
+presence; naming 3D/VR as the destination keeps the cheaper 2D rungs honest about
+what they're a stepping-stone *toward*.
+**Implications:** Future scenes are designed skill-first (safety as ambient
+constant). The next prototype rung is a **first-person / 3D scene built around one
+specific skill**, not another awareness drill. Recorded on the build ladder in
+`companies/crew-blueprint/05_platform.md`.
+
 ## 2026-07-22 — Homestead: don't build it — keep a light care seed
 **Decision:** The physical **Homestead build is retired**, and **land acquisition
 is off the table.** The abundance of existing US van-life resources (The Dyrt,

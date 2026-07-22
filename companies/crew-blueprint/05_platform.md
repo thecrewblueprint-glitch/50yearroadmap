@@ -40,15 +40,33 @@ around**, sees the items being taught (cases, truss, forklifts, barricade), and
 than reading that they do. (Market-validated: Interplay/Transfr win on
 simulation; see `partnerships/research/01`.)
 
-The build ladder, so scope stays honest:
-1. **Cards** — skill tree + choices + XP (the current `cb-5` prototype). ✅
-2. **Playable scenes** — 2D jobsite scenes with look-around, moving hazards,
-   characters, and calls to react to; each lesson's DO step becomes a scene.
-   *The next prototype layer.*
-3. **First-person 3D** (e.g. Three.js low-poly venue) — after scenes prove the feel.
-4. **Full simulation/VR** — the far-future, Interplay-class endgame.
+**Design rule (owner, 2026-07-22, after playing "Dock Sweep"):** every scene
+**teaches a specific thing** — a named skill, a named piece of gear, a correct
+procedure — as its **foreground objective.** Safety awareness (head-on-a-swivel,
+listening) is the **ambient background layer** that runs *while* the specific
+skill is taught — always present, never the headline. Dock Sweep proved the
+embodied feel but made *awareness itself* the lesson; that was the prototype's
+job, not the pattern. (See `governance/DECISION_LOG.md`.)
 
-Each rung is gated on the one before it proving the feel — never jump the ladder.
+**The stated destination is 3D / VR** — bodily presence on the jobsite, not a 2D
+view. It is a much bigger project and stays gated on the ladder, but it is the
+target, not a "maybe." Browser-based **WebXR** is the realistic on-ramp: one
+self-contained file that runs on a phone in 2D/3D and can enter VR on a headset —
+no app store, no backend.
+
+The build ladder, so scope stays honest:
+1. **Cards** — skill tree + choices + XP (Module 1 prototype). ✅
+2. **Playable 2D scenes** — look-around jobsite scene; "Dock Sweep" proved the
+   embodied feel. ✅ (prototype delivered) — *but rebuilt skill-first next time,
+   with safety as the ambient layer, not the objective.*
+3. **First-person 3D** — a WebXR scene (e.g. Three.js low-poly venue) built
+   around **one specific skill**, with situational awareness ambient. *The next
+   prototype rung — and the first step toward the owner's real 3D/VR vision.*
+4. **Full simulation / VR** — the Interplay/Transfr-class endgame; the owner's
+   stated destination.
+
+Each rung is gated on the one before it proving the loop — never jump the ladder.
+Rung 2 proved *embodiment*; rung 3 must prove *teaching a specific skill in 3D*.
 
 ## Website foundation (in place)
 
