@@ -25,6 +25,14 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Add Escapees + Harvest Hosts to Homestead research/leads
+- Owner request. Added **Harvest Hosts** (+ Boondockers Welcome) to
+  `partnerships/research/04` and `connections.md` — the **distributed host-network**
+  model (membership + reciprocity, ~9,700 host locations, no land ownership): the
+  complement to Escapees' **own-the-land** co-op model. Framed the two together
+  (own a small base + network wider hosts) and noted both as possible partners.
+- Elevated **Escapees/Xscapers** from model-only to a possible partnership lead.
+  All deferred (build-first). Validator: PASS.
 ### 2026-07-21 — Reviewed & mapped the Crew Blueprint content (it exists)
 - Owner: the ground-work content is already built (scattered across accounts/computer,
   "no idea which account has what"). Reviewed via the Drive connector.
