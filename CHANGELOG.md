@@ -50,6 +50,14 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
   → "HANGING BY THE BOND". Delivered privately (per doc 09).
 - Two 3D atoms now exist (Coil Line, Make It Safe) — enough to compare and decide
   what needs work before building more.
+- **Iterated Make It Safe → v2 (owner feedback: "multiple fixtures, let me click on
+  things not just the check box").** Now **three fixtures** on one truss; the
+  checklist is gone — you **tap the actual fixtures in 3D** (raycast pick) and each
+  tap does that fixture's next step (clamp → bond → address → check), with a live
+  status badge above each (C/B/A/K pips + address). Fly the truss with any fixture
+  un-bonded and those fixtures fall. Fixed portrait-FOV spacing so all three are
+  visible/tappable by default. Re-verified in Chromium: real raycast taps hit the
+  correct fixture, 0 errors, ALL ROCK SOLID / A FIXTURE FELL both fire.
 
 ### 2026-07-22 — BUILT: "Coil Line" — first 3D / WebXR scene (build ladder rung 3) + learning-design direction
 - Built the first **true 3D scene** and the first **skill-first** one: a
