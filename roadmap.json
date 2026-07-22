@@ -174,9 +174,9 @@
         {
           "id": "cb-5",
           "task": "Ship first gamified MVP module — a ground/field-hand fundamental (static, client-side progress)",
-          "why": "PACKAGING task, not authoring — the content exists. module-01-lessons.json (Course 1, Module 1) is already a structured 5-lesson data model (knowledge_check → quiz, example_tasks → interaction, key_takeaway). Wrap it in the static gamified shell: 5 lessons → 5 skill-tree nodes with XP/streak/progress + one real interaction each, localStorage, no backend, US-standard. Proves the format from real existing content (inventory doc 09).",
+          "why": "FIRST PROTOTYPE BUILT (2026-07-22): Module 1 'Your First Work Call' as a playable single-file skill tree — 5 lesson nodes (learn → do → check → result), one real interaction each, 80% pass gates, XP/streak/rank, localStorage progress, industrial dark theme, no backend. Smoke-tested end-to-end in Chromium (0 errors). Delivered to the owner privately (full lesson content stays out of the public repo per doc 09). Remaining: owner vision-check → iterate → deploy to the Crew Blueprint site.",
           "priority": "HIGH",
-          "status": "not_started"
+          "status": "in_progress"
         },
         {
           "id": "cb-6",

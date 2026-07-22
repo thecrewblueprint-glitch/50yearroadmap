@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — BUILT: first gamified module prototype (cb-5)
+- Built the first playable Crew Blueprint prototype: **Module 1 "Your First Work
+  Call" as a single-file gamified skill tree** — 5 lesson nodes (learn → do →
+  check → result) using the owner's real lesson content, one interaction per node
+  (task multi-select, call-type sorting, scenario judgment), knowledge checks,
+  **80% pass gates**, XP/streak/rank (Green Hand → Crew-Ready), localStorage
+  progress, industrial dark theme, fully self-contained (no backend, no external
+  requests). Footer carries the no-certification / employer-authorization
+  disclaimer.
+- **Smoke-tested end-to-end in Chromium via Playwright:** tree renders (5 nodes,
+  4 locked), lesson 1 played to 100%, +170 XP banked, node 2 unlocked, progress
+  persisted, zero page errors.
+- Delivered to the owner privately — the full lesson content stays out of the
+  public repo per the doc-09 guardrail; the repo records that it exists.
+- `cb-5` → in_progress (remaining: owner vision-check → iterate → deploy).
 ### 2026-07-22 — Recorded the owner's vision & source (deep context)
 - Added `data/roadmap-deep-context/2026-07-22-owner-vision-and-source-deep-context.md`
   — the owner's own words on where the vision comes from and the mandate for the
