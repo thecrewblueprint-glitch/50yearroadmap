@@ -240,6 +240,13 @@ addEventListener('resize', () => {
   camera.aspect = w / h; camera.updateProjectionMatrix(); renderer.setSize(w, h);
 });
 
+// "hands" rig for carry / manipulate interactions — a held object rides here,
+// in front of the view, and moves with you as you walk. Deeper than tapping.
+const hands = new THREE.Group(); camera.add(hands); hands.position.set(0.34, -0.66, -1.25);
+let heldMesh = null;
+function holdMesh(mesh) { if (heldMesh) return false; hands.add(mesh); mesh.position.set(0, 0, 0); mesh.rotation.set(0, 0, 0); heldMesh = mesh; return true; }
+function releaseMesh() { if (!heldMesh) return null; const m = heldMesh; const wp = new THREE.Vector3(); m.getWorldPosition(wp); scene.add(m); m.position.copy(wp); heldMesh = null; return m; }
+
 // ---------------------------------------------------------------- MATERIALS
 const MAT = {
   floor: toonMat(0x46474b),   // sealed concrete
@@ -373,6 +380,7 @@ function makeCtx(mod) {
     hud: HUD, beep, audio: { beep },
     progress: { get xp() { return progress.xp; }, addXP, isDone: (id) => !!progress.done[id || mod.id] },
     complete(score, opts) { completeModule(mod, score, opts); },
+    hold: (m) => holdMesh(m), release: () => releaseMesh(), held: () => heldMesh,
     rng: Math.random,
   };
 }
@@ -425,7 +433,7 @@ function updateReticle() {
   currentTarget = null;
   if (state !== 'play') { setReticle(false); return; }
   raycaster.setFromCamera(CENTER, camera);
-  const meshes = interactables.map(i => i.mesh);
+  const meshes = interactables.map(i => i.mesh).filter(m => m !== heldMesh);
   const hits = raycaster.intersectObjects(meshes, true);
   if (hits.length) {
     const it = findInteractable(hits[0].object);
@@ -472,7 +480,7 @@ function tapAt(clientX, clientY) {
   const r = renderer.domElement.getBoundingClientRect();
   const ndc = new THREE.Vector2(((clientX - r.left) / r.width) * 2 - 1, -((clientY - r.top) / r.height) * 2 + 1);
   raycaster.setFromCamera(ndc, camera);
-  const hits = raycaster.intersectObjects(interactables.map(i => i.mesh), true);
+  const hits = raycaster.intersectObjects(interactables.map(i => i.mesh).filter(m => m !== heldMesh), true);
   if (hits.length) {
     const it = findInteractable(hits[0].object);
     if (it && rig.position.distanceTo(worldPos(it.mesh)) <= it.range) { it.onActivate(it.module.ctx, it.mesh); return true; }

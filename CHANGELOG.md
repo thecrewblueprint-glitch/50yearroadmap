@@ -25,6 +25,23 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Deeper interaction: grab-and-carry + a Load-In station
+- Continued past tapping toward the "deeper interaction" frontier. Added a reusable
+  **grab-and-carry** capability to the engine — `ctx.hold(mesh)` / `ctx.release()` /
+  `ctx.held()`: pick an object up (it rides in front of the view and moves with you),
+  carry it through the world, set it down / snap it to a target. Held objects are
+  excluded from interaction raycasts so you can still aim at drop targets.
+- Proved it with a new **Load-In** lesson (workflow step 2, staging): walk to a
+  **road case**, pick it up, **carry it across the floor**, and walk onto its green
+  **spike mark** to set it down — completing the stage. Makes walking matter and is
+  the first interaction that's more than a tap. The lighting arc is now **five
+  stations** (Load-In · Coil · Pin the Truss · Hang & Make Safe · Fly to Trim).
+- **Verified in Chromium:** carry pick-up + walk-onto-mark drop completes, all five
+  stations complete, 0 errors. Tuned the held-item position lower/further so it
+  doesn't block the view. Engine + public `the-shop-floor.html` updated (the carry
+  API is now in the framework); lesson build re-delivered privately per doc 09.
+  Architecture doc (module SDK) updated.
+
 ### 2026-07-22 — Movement fix: floating joystick + direct stop (owner feedback)
 - Owner: movement felt *"sticky, not fluid,"* should *"stop when I lift my finger,"*
   and *"move the direction I flow my finger, not where I click."* Root cause: the

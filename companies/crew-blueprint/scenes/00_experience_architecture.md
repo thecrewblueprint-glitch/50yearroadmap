@@ -20,8 +20,11 @@ more content. This is the substrate; lessons are data on top of it.
   and **look** (drag / mouse / headset). Movement is relative to gaze; bounded.
 - **Interaction** — a **reticle** (center-screen marker) + **tap** + **VR
   controller ray**. Objects register as *interactables* with a label, a range, and
-  an `onActivate`. This is the "deeper than clicking" seam: today it's aim-and-act;
-  grab/drag/manipulate extend the same registry later.
+  an `onActivate`. The "deeper than clicking" seam is live: beyond aim-and-act,
+  the engine now supports **grab-and-carry** (`hold`/`release`/`held`) — pick an
+  object up, carry it through the world, and set it down / snap it to a target.
+  The Load-In lesson uses it (carry a road case to its spike mark). Further
+  manipulation (drag-to-fit, two-hand) extends the same primitives.
 - **HUD** — objective, teach banner, toast, reticle affordance, XP/level — shared,
   API-driven. Lessons call `ctx.hud.teach(...)`, never build their own.
 - **Progression** — XP, level, per-module completion, **saved to localStorage**.
@@ -54,8 +57,11 @@ CB.registerModule({
 **The `ctx` an engine hands each module** (its whole SDK surface): `THREE, scene,
 group, camera, rig, playerPos(), interactable(mesh, opts), hud {objective, teach,
 toast}, beep, progress {xp, addXP, isDone}, complete(score, opts), rng`. Plus
-world-building helpers on `CB`: `makeBox`, **`mat(color)`** (anime toon material),
-**`outline(mesh)`** (silhouette), `gradientMap`.
+**carry / manipulate** primitives (deeper than tapping): `hold(mesh)` (pick an
+object up — it rides in front of the view and moves with you), `release()` (set it
+down; returns the mesh so the module can snap it to a target), `held()` (the object
+currently carried, or null). Plus world-building helpers on `CB`: `makeBox`,
+**`mat(color)`** (anime toon material), **`outline(mesh)`** (silhouette), `gradientMap`.
 
 **The rule that keeps the vision open:** a lesson only ever touches the world
 through `ctx` and `CB` — it never sets up its own renderer/camera/controls. That's
