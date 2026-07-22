@@ -6,6 +6,42 @@ Newest first.
 
 ---
 
+## 2026-07-22 — Learning design: safe failure with real consequences; lessons are role-based full workflows
+**Decision (owner, refining the same day):** Two more design principles, from the
+owner after the "Coil Line" prototype:
+
+1. **Safe failure with real, visible consequences is the teaching mechanism.**
+   The experience must be **realistic** — a learner can make mistakes, and the
+   **cost of each mistake is shown** (safely, with no real-world harm) so they
+   *feel* why it matters and learn to **assess safety conditions themselves.**
+   The point is not to punish; it's that the consequence teaches. (Coil Line
+   already does this: a bad coil visibly becomes a bird's-nest that someone has
+   to fix — the cost is legible, the failure is safe.) Every scene should let the
+   learner fail safely and then *see and understand* what that failure would have
+   cost on a real call, while still keeping the **foreground on the growth /
+   craft the show actually needs** (not fear).
+
+2. **Full lessons are role-based, end-to-end workflows — not just single skills.**
+   The unit of a complete lesson is a **whole job sequence for a role**, e.g. walk
+   a **lighting hand** all the way through: **unload their fixtures from the truck
+   → stage/prep them → fly them → up to trim → powered on.** Single-skill scenes
+   (like coiling) are the atoms; the destination is stitching them into the real
+   arc of a role's day, with safe-failure consequences at each beat. First target
+   workflow: the lighting-hand truck-to-trim lesson (design captured in
+   `companies/crew-blueprint/scenes/lighting-hand-truck-to-trim.md`).
+
+**Why:** This is the difference between a drill and *training a hand.* Real
+competence is knowing the whole sequence and the consequences of getting each
+step wrong — assessed by the learner, not narrated at them. Modelling consequences
+safely is exactly what simulation buys you over a video or a quiz (the
+Interplay/Transfr thesis), and role-based workflows are how the platform maps to
+the jobs people are actually hired to do.
+**Implications:** Scene design gets a **consequence model** (what each mistake
+costs, shown safely) and a **role-workflow spine** (atoms → full role arc). The
+next design target is the lighting-hand truck-to-trim workflow; individual beats
+(e.g. coiling, case handling, fixture prep, flying to trim, power-up checks)
+become the atomic scenes that compose it.
+
 ## 2026-07-22 — Learning design: teach a specific skill first; safety is the ambient layer. 3D/VR is the intended platform.
 **Decision (two parts, from the owner after playing "Dock Sweep"):**
 

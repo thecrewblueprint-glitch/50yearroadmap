@@ -48,6 +48,18 @@ skill is taught — always present, never the headline. Dock Sweep proved the
 embodied feel but made *awareness itself* the lesson; that was the prototype's
 job, not the pattern. (See `governance/DECISION_LOG.md`.)
 
+**Two more design rules (owner, 2026-07-22):**
+- **Safe failure with visible consequences.** Learners are *allowed* to make
+  mistakes; each mistake shows its **real cost** — a damaged fixture, a blocked
+  fire lane, a tripped breaker, a fixture falling from trim — **safely**, and the
+  learner **assesses the safety conditions themselves** rather than being told.
+  The consequence is the teacher. (Coil Line already does this: a bad coil becomes
+  a bird's-nest someone has to fix.)
+- **Full lessons are role-based, end-to-end workflows.** Single-skill scenes are
+  the *atoms*; a complete lesson stitches them into a role's real arc — e.g. a
+  **lighting hand from truck to trim, powered on** (designed in
+  `scenes/lighting-hand-truck-to-trim.md`).
+
 **The stated destination is 3D / VR** — bodily presence on the jobsite, not a 2D
 view. It is a much bigger project and stays gated on the ladder, but it is the
 target, not a "maybe." Browser-based **WebXR** is the realistic on-ramp: one

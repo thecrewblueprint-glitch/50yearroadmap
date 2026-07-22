@@ -25,6 +25,36 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — BUILT: "Coil Line" — first 3D / WebXR scene (build ladder rung 3) + learning-design direction
+- Built the first **true 3D scene** and the first **skill-first** one: a
+  self-contained first-person WebGL scene (Three.js inlined — no CDN, works
+  offline) where the learner stands on a dock, **drags to look around**, and
+  **coils a cable over-under** loop by loop — the objective is a **specific hand
+  skill**, with situational awareness (a forklift + crew moving through) running
+  **ambient**, not as the lesson. Teaches over (normal loop) / under (flip the
+  wrist) alternation via learn → do → **recall-check**, then a **throw** that pays
+  out clean or tangles into a bird's-nest. Corrects Dock Sweep's inversion (which
+  made awareness the objective). **WebXR "Enter VR" button** appears on a headset.
+- Recorded the owner's **learning-design direction** (`governance/DECISION_LOG.md`):
+  (1) **safe failure with real, visible consequences** is the teaching mechanism —
+  learners fail safely, *see the cost*, and **assess safety conditions themselves**;
+  (2) full lessons are **role-based, end-to-end workflows**, not single skills.
+  Wrote the first full-workflow design — **lighting hand, truck to trim, powered
+  on** — broken into 5 beats each with objective / ambient / safe-failure
+  consequence / learner judgment call
+  (`companies/crew-blueprint/scenes/lighting-hand-truck-to-trim.md`). The safety-
+  cable beat carries the lesson's spine: a deadly shortcut taught with no one hurt.
+- **Smoke-tested in Chromium (SwiftShader WebGL) via Playwright:** engine loads
+  from the inlined blob, 0 page/console errors, 0px overflow, start → play → throw
+  → end → replay all transition, perfect alternating play → 100 / "CLEAN COIL",
+  all-one-direction → 40 / "BIRD'S NEST" (4 twists). Fixed a parenting bug (forklift
+  body was added to the scene instead of its group, so it never hid) found via an
+  in-scene raycast probe. Composition tuned (coil reads as in-hand; world label
+  hidden except in VR).
+- Delivered privately per the doc-09 guardrail; the repo records that it exists.
+  Build ladder in `05_platform.md` updated (rung 3 reached; consequence model +
+  role-workflow spine added). `cb-5` note covers both prototypes.
+
 ### 2026-07-22 — BUILT: "Dock Sweep" — first playable scene (build ladder rung 2)
 - Built the first **embodied playable scene** the owner envisioned: a single-file
   canvas game where the learner **drags to look around a load-in dock wider than
