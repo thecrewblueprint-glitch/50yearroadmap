@@ -62,12 +62,14 @@
     font-weight:700;color:#dfe5ea;opacity:0;transition:opacity .2s;max-width:90vw;text-align:center;}
   #toast.show{opacity:1;}
 
-  /* movement joystick (touch) */
-  #stick{position:absolute;left:calc(20px + env(safe-area-inset-left));bottom:calc(28px + env(safe-area-inset-bottom));
-    width:118px;height:118px;border-radius:50%;background:#12161b66;border:1px solid var(--line);touch-action:none;}
-  #stickNub{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;
-    background:#e9edf1cc;border:1px solid #ffffff33;transition:background .15s;}
-  #stickHint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:.6rem;color:#0e1013;font-weight:900;letter-spacing:.08em;pointer-events:none;}
+  /* movement — floating joystick: a big touch zone (lower-left) + a base that
+     appears wherever your finger lands and steers by your drag direction */
+  #stickZone{position:absolute;left:0;bottom:0;width:48vw;height:56vh;touch-action:none;z-index:6;}
+  #stickBase{position:fixed;left:0;top:0;width:124px;height:124px;margin:-62px 0 0 -62px;border-radius:50%;
+    background:#12161b66;border:1px solid var(--line);display:none;pointer-events:none;z-index:6;}
+  #stickBase.show{display:block;}
+  #stickNub{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;
+    background:var(--amber);border:1px solid #ffffff44;box-shadow:0 2px 10px #0006;}
 
   /* interact button (touch, right thumb) */
   #actBtn{position:absolute;right:calc(22px + env(safe-area-inset-right));bottom:calc(44px + env(safe-area-inset-bottom));
@@ -105,7 +107,7 @@
   #vrBtn{margin-top:12px;}
 
   /* desktop shows keys, hides touch controls */
-  body.desktop #stick, body.desktop #actBtn{display:none;}
+  body.desktop #stickZone, body.desktop #stickBase, body.desktop #actBtn{display:none;}
   #debug{display:none;}
 </style>
 <div id="stage"></div>
@@ -129,7 +131,8 @@
   <div id="teach"></div>
   <div id="toast"></div>
 
-  <div id="stick"><div id="stickNub"></div><div id="stickHint">MOVE</div></div>
+  <div id="stickZone"></div>
+  <div id="stickBase"><div id="stickNub"></div></div>
   <button id="actBtn">INTERACT</button>
 
   <div id="hint">drag to look · left stick to walk · center the marker on a station and interact</div>
@@ -498,44 +501,49 @@ cv.addEventListener('pointerup', e => {
 });
 cv.addEventListener('pointercancel', () => { lookId = null; });
 
-// touch joystick
-const stick = $('stick'); let stickId = null, sVec = { x: 0, y: 0 };
-const nub = $('stickNub');
-stick.addEventListener('pointerdown', e => { stickId = e.pointerId; stick.setPointerCapture(e.pointerId); moveStick(e); e.stopPropagation(); });
-stick.addEventListener('pointermove', e => { if (e.pointerId === stickId) { moveStick(e); e.stopPropagation(); } });
-stick.addEventListener('pointerup', e => { if (e.pointerId === stickId) { stickId = null; sVec = { x: 0, y: 0 }; nub.style.left = '50%'; nub.style.top = '50%'; nub.style.background = '#e9edf1cc'; e.stopPropagation(); } });
-function moveStick(e) {
-  const r = stick.getBoundingClientRect();
-  let dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
-  const max = r.width / 2 - 8, len = Math.hypot(dx, dy);
-  if (len > max) { dx *= max / len; dy *= max / len; }
-  nub.style.left = (50 + dx / r.width * 100) + '%'; nub.style.top = (50 + dy / r.height * 100) + '%';
-  nub.style.background = 'var(--amber)';
-  sVec = { x: dx / max, y: dy / max };
+// FLOATING joystick: it originates where your finger lands and steers by the
+// direction you drag FROM that point. Lift = stop instantly.
+const zone = $('stickZone'), base = $('stickBase'), nub = $('stickNub');
+let stickId = null, sVec = { x: 0, y: 0 };
+const R = 54; // px throw to reach full speed
+zone.addEventListener('pointerdown', e => {
+  stickId = e.pointerId;
+  base.style.left = e.clientX + 'px'; base.style.top = e.clientY + 'px'; base.classList.add('show');
+  nub.style.transform = 'translate(0px,0px)'; sVec = { x: 0, y: 0 };
+  zone.setPointerCapture(e.pointerId); e.preventDefault();
+});
+zone.addEventListener('pointermove', e => {
+  if (e.pointerId !== stickId) return;
+  const bx = parseFloat(base.style.left), by = parseFloat(base.style.top);
+  let dx = e.clientX - bx, dy = e.clientY - by;
+  const len = Math.hypot(dx, dy); if (len > R) { dx *= R / len; dy *= R / len; }
+  nub.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+  sVec = { x: dx / R, y: dy / R };
+});
+function endStick(e) {
+  if (e && e.pointerId !== stickId) return;
+  stickId = null; sVec = { x: 0, y: 0 }; base.classList.remove('show'); nub.style.transform = 'translate(0px,0px)';
 }
+zone.addEventListener('pointerup', endStick);
+zone.addEventListener('pointercancel', endStick);
 $('actBtn').addEventListener('pointerdown', e => { e.stopPropagation(); activate(); });
 
-const SPEED = 2.9;
-const vel = { x: 0, z: 0 };
+// DIRECT movement — responsive, and stops the instant there's no input
+const SPEED = 3.1;
 function movePlayer(dt) {
-  let mx = 0, mz = 0;
-  if (state === 'play') {
-    mx = sVec.x; mz = sVec.y;                          // joystick
-    if (keys['w'] || keys['arrowup']) mz -= 1;
-    if (keys['s'] || keys['arrowdown']) mz += 1;
-    if (keys['a'] || keys['arrowleft']) mx -= 1;
-    if (keys['d'] || keys['arrowright']) mx += 1;
-    const len = Math.hypot(mx, mz); if (len > 1) { mx /= len; mz /= len; }
-  }
-  // target world-space velocity (forward is where you look)
-  const sin = Math.sin(yaw), cos = Math.cos(yaw);
-  const tvx = (mx * cos + mz * sin) * SPEED, tvz = (-mx * sin + mz * cos) * SPEED;
-  // smooth accel / decel so start & stop feel natural
-  const k = Math.min(1, 12 * dt);
-  vel.x += (tvx - vel.x) * k; vel.z += (tvz - vel.z) * k;
-  if (Math.abs(vel.x) < 1e-3 && Math.abs(vel.z) < 1e-3) return;
-  rig.position.x = clampV(rig.position.x + vel.x * dt, -BOUNDS.x, BOUNDS.x);
-  rig.position.z = clampV(rig.position.z + vel.z * dt, -BOUNDS.z, BOUNDS.z);
+  if (state !== 'play') return;
+  let mx = sVec.x, mz = sVec.y;
+  if (keys['w'] || keys['arrowup']) mz -= 1;
+  if (keys['s'] || keys['arrowdown']) mz += 1;
+  if (keys['a'] || keys['arrowleft']) mx -= 1;
+  if (keys['d'] || keys['arrowright']) mx += 1;
+  const len = Math.hypot(mx, mz);
+  if (len < 0.08) return;                    // deadzone + instant stop on release
+  if (len > 1) { mx /= len; mz /= len; }
+  const sin = Math.sin(yaw), cos = Math.cos(yaw); // forward = where you look
+  const wx = mx * cos + mz * sin, wz = -mx * sin + mz * cos;
+  rig.position.x = clampV(rig.position.x + wx * SPEED * dt, -BOUNDS.x, BOUNDS.x);
+  rig.position.z = clampV(rig.position.z + wz * SPEED * dt, -BOUNDS.z, BOUNDS.z);
 }
 
 // nearest station → drives the objective HUD (seamless, no hard "enter")

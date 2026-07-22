@@ -25,6 +25,20 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Movement fix: floating joystick + direct stop (owner feedback)
+- Owner: movement felt *"sticky, not fluid,"* should *"stop when I lift my finger,"*
+  and *"move the direction I flow my finger, not where I click."* Root cause: the
+  accel/decel smoothing added in the UX sweep made it glide to a stop (sticky), and
+  the joystick read absolute position in a fixed widget.
+- **Fix (shared engine):** replaced it with a **floating joystick** — touch anywhere
+  in the lower-left and the stick spawns under your thumb; direction is your drag
+  **relative to that touch-down point**, not the tap location. Movement is now
+  **direct** (no velocity smoothing) so it's responsive and **stops instantly on
+  release** (with a small deadzone). Right side still drags to look.
+- **Verified in Chromium (touch-emulated):** a simulated drag moves the player, and
+  releasing halts it with zero drift; all four lighting stations still complete,
+  0 errors. Public `the-shop-floor.html` updated; lesson build re-delivered privately.
+
 ### 2026-07-22 — UX sweep + realistic-anime repalette (framework + lessons)
 - Owner: *"do a full UI/UX sweep, make it smoother"* + *"realistic styling but keep
   the anime touch — real colors that look like anime artwork."* Applied to the
