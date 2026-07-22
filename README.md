@@ -2,6 +2,23 @@
 
 A repo-backed, AI-assisted roadmap, memory, evidence, and project-state system.
 
+> ## © Copyright & Use — All Rights Reserved
+>
+> Copyright © 2026 **Aaron Bowman / Deadhang Labor LLC**. All rights reserved.
+>
+> This repository is **public for transparency only** — an open, honest reflection
+> of the work being done and the systems being built. **It is not open source, and
+> no license to use it is granted.** No one may use, copy, reproduce, modify,
+> publish, distribute, or create derivative works from any part of it, for any
+> purpose, without prior **written** permission. Using anything here beyond simply
+> viewing it is **copyright infringement**.
+>
+> Public visibility does **not** place this work in the public domain. (GitHub's
+> own Terms let other users view and *fork* a public repo within GitHub; that is a
+> platform function, not a license from the owner.) Bundled third-party open-source
+> components keep their own licenses — see `THIRD_PARTY_NOTICES.md`. Full terms:
+> [`LICENSE`](LICENSE).
+
 ## Dashboard
 
 View the GitHub Pages dashboard here:
