@@ -39,8 +39,12 @@ material layer (`CB.mat` / `CB.outline`; see
 - **Toon / cel shading** — banded (stepped) lighting instead of smooth gradients.
 - **Outlines** — crisp black inverted-hull silhouettes on hero objects and
   characters.
-- **Gradient sky + brighter, more saturated palette** — teal/amber/coral accents
-  over the industrial base.
+- **Realistic palette, anime rendering** (owner refinement, 2026-07-22): *real*
+  jobsite colors — concrete-grey floors, dark industrial walls, aluminium truss,
+  black road cases / fixtures, hi-vis yellow crew, a dim warehouse backdrop — drawn
+  in the cel-shaded + outlined style. The goal is "real colors that look like anime
+  artwork," not a stylized/neon palette. Gameplay-signal colors stay as clear
+  accents (hi-vis, safe-green go-markers, red hazard, safety-amber bond).
 
 This is the *game* aesthetic; the website/marketing brand above (industrial
 *Extendable*) still governs the site. Recorded in `governance/DECISION_LOG.md`.

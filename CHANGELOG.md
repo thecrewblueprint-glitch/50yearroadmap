@@ -25,6 +25,27 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — UX sweep + realistic-anime repalette (framework + lessons)
+- Owner: *"do a full UI/UX sweep, make it smoother"* + *"realistic styling but keep
+  the anime touch — real colors that look like anime artwork."* Applied to the
+  shared engine, so both the public framework and the private lighting build get it.
+- **UX:** a **waypoint** chip that points to the nearest unfinished station (edge
+  arrow when it's behind you); the object you're aimed at **pops** (scale bump) so
+  it's obvious what you'll hit; interact hint reads **"tap" on touch / "E" on
+  desktop**; **smooth walk accel/decel** instead of snapping; **LEVEL-UP** toast +
+  sound; station labels **fade** as you approach; removed the debug readout; the
+  INTERACT button is more prominent; the control hint auto-fades.
+- **Aesthetic:** kept the cel-shading + outlines but swapped the stylized cool-blue
+  palette for **believable jobsite colors** — concrete floor, dark industrial
+  walls, aluminium truss, black road cases / fixtures, hi-vis crew, dim warehouse
+  backdrop. Signal colors stay as clear accents. Fixed a blown-out white truss.
+  Recorded in doc 06 (brand).
+- **Re-verified in Chromium:** framework + all four lighting stations still complete
+  (walk / interact / XP / level / save), safe-failure paths intact, 0 errors.
+- **Public framework updated in the repo** (`.../experience/the-shop-floor.html`
+  — content-free, so it stays public and live); the lesson build is re-delivered
+  privately per doc 09.
+
 ### 2026-07-22 — BUILT: lighting-hand lessons plugged onto the framework (in action)
 - Owner: *"build the lighting lessons onto the framework so I can see it in action."*
   Built **four real lighting-hand lessons as framework modules** — the whole thesis

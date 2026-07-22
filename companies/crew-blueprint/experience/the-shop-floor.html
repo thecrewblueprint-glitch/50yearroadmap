@@ -72,12 +72,21 @@
   /* interact button (touch, right thumb) */
   #actBtn{position:absolute;right:calc(22px + env(safe-area-inset-right));bottom:calc(44px + env(safe-area-inset-bottom));
     width:92px;height:92px;border-radius:50%;background:var(--amber);color:#0e1013;border:none;font-weight:900;
-    font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 6px 20px #0008;opacity:.35;transition:opacity .15s,transform .05s;}
-  #actBtn.live{opacity:1;}
+    font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 6px 20px #0008;opacity:.5;transition:opacity .15s,transform .1s;}
+  #actBtn.live{opacity:1;transform:scale(1.06);}
   #actBtn:active{transform:translateY(2px);}
 
   #hint{position:absolute;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);
-    font-size:.68rem;color:var(--steel);letter-spacing:.04em;text-align:center;opacity:.85;}
+    font-size:.68rem;color:var(--steel);letter-spacing:.04em;text-align:center;opacity:.85;transition:opacity .6s;max-width:80vw;}
+
+  /* waypoint: points you to the next unfinished station */
+  #waypoint{position:absolute;left:0;top:0;transform:translate(-50%,-50%);pointer-events:none;
+    display:none;align-items:center;gap:6px;background:#0e1013e0;border:1px solid var(--amber);
+    border-radius:999px;padding:5px 11px 5px 8px;white-space:nowrap;box-shadow:0 2px 10px #0007;}
+  #waypoint.show{display:flex;}
+  #waypoint .arw{color:var(--amber);font-size:.9rem;line-height:1;transform-origin:center;}
+  #waypoint .txt{font-size:.72rem;font-weight:800;letter-spacing:.02em;color:var(--ink);}
+  #waypoint .dst{font-size:.66rem;font-weight:800;color:var(--steel);}
 
   /* overlays */
   .overlay{position:fixed;inset:0;background:#0b0d10f2;display:flex;flex-direction:column;align-items:center;
@@ -97,7 +106,7 @@
 
   /* desktop shows keys, hides touch controls */
   body.desktop #stick, body.desktop #actBtn{display:none;}
-  #debug{position:absolute;right:8px;bottom:8px;font-size:.6rem;color:#4a545e;font-family:monospace;pointer-events:none;}
+  #debug{display:none;}
 </style>
 <div id="stage"></div>
 
@@ -114,6 +123,7 @@
 
   <div id="reticle"><div class="ring"></div><div class="dot"></div></div>
   <div id="actHint"></div>
+  <div id="waypoint"><span class="arw">▲</span><span class="txt" id="wpName">—</span><span class="dst" id="wpDist"></span></div>
 
   <div id="objective"></div>
   <div id="teach"></div>
@@ -194,12 +204,12 @@ renderer.xr.enabled = true;
 stage.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
-scene.fog = new THREE.Fog(0x141a26, 18, 52);
-// anime sky — soft vertical gradient background
+scene.fog = new THREE.Fog(0x1b1c1f, 18, 54);
+// realistic-but-anime backdrop: a dim warehouse, painterly vertical gradient
 (function skyGradient() {
   const c = document.createElement('canvas'); c.width = 8; c.height = 256; const g = c.getContext('2d');
   const grad = g.createLinearGradient(0, 0, 0, 256);
-  grad.addColorStop(0, '#20283c'); grad.addColorStop(0.5, '#171d2b'); grad.addColorStop(1, '#0f131a');
+  grad.addColorStop(0, '#33322f'); grad.addColorStop(0.45, '#26262a'); grad.addColorStop(1, '#161618');
   g.fillStyle = grad; g.fillRect(0, 0, 8, 256);
   scene.background = new THREE.CanvasTexture(c);
 })();
@@ -229,16 +239,16 @@ addEventListener('resize', () => {
 
 // ---------------------------------------------------------------- MATERIALS
 const MAT = {
-  floor: toonMat(0x2a3346),
-  wall:  toonMat(0x39445c),
-  crate: toonMat(0x3f4a63),
-  tape:  toonMat(0x4defa1),
-  truss: toonMat(0xaab6c6),
-  pad:   new THREE.MeshBasicMaterial({ color: 0x4defa1, transparent: true, opacity: 0.18 }),
-  padRing: new THREE.MeshBasicMaterial({ color: 0x4defa1, transparent: true, opacity: 0.95 }),
-  hivis: toonMat(0xffc23d),
-  skin:  toonMat(0xf3c8a0),
-  hair:  toonMat(0x2c3140),
+  floor: toonMat(0x46474b),   // sealed concrete
+  wall:  toonMat(0x37383c),   // dark industrial wall
+  crate: toonMat(0x1e2023),   // black road case
+  tape:  toonMat(0x36b06a),   // green gaff / dept tape
+  truss: toonMat(0x878d95),   // aluminium
+  pad:   new THREE.MeshBasicMaterial({ color: 0x36d17a, transparent: true, opacity: 0.17 }),
+  padRing: new THREE.MeshBasicMaterial({ color: 0x36d17a, transparent: true, opacity: 0.95 }),
+  hivis: toonMat(0xf7b419),   // safety hi-vis yellow
+  skin:  toonMat(0xe3b78e),
+  hair:  toonMat(0x2a2521),
 };
 function box(w, h, d, mat, x, y, z, parent) {
   const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
@@ -248,17 +258,17 @@ function box(w, h, d, mat, x, y, z, parent) {
 // ---------------------------------------------------------------- WORLD
 const BOUNDS = { x: 11, z: 9 };   // half-extents the player can walk within
 function buildWorld() {
-  // anime lighting: soft ambient + a strong key (drives the cel bands) + cool rim
-  scene.add(new THREE.HemisphereLight(0xafc4dc, 0x232838, 0.6));
-  const key = new THREE.DirectionalLight(0xfff0cf, 1.15); key.position.set(8, 14, 6); scene.add(key);
-  const rim = new THREE.DirectionalLight(0x6fd0ff, 0.55); rim.position.set(-7, 6, -9); scene.add(rim);
-  for (const [x, z, col] of [[-6, -6, 0xffc98a], [6, -6, 0x8be0ff], [0, 6, 0xffc98a]]) {
-    const lamp = new THREE.PointLight(col, 0.45, 28); lamp.position.set(x, 5, z); scene.add(lamp);
+  // realistic venue light: neutral ambient + warm work-light key (drives cel bands) + soft cool rim
+  scene.add(new THREE.HemisphereLight(0xc2c6cb, 0x2a2723, 0.55));
+  const key = new THREE.DirectionalLight(0xffefd0, 1.1); key.position.set(8, 14, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x8fb6e8, 0.4); rim.position.set(-7, 6, -9); scene.add(rim);
+  for (const [x, z, col] of [[-6, -6, 0xffd39a], [6, -6, 0xbcd6ff], [0, 6, 0xffd39a]]) {
+    const lamp = new THREE.PointLight(col, 0.4, 28); lamp.position.set(x, 5, z); scene.add(lamp);
   }
   box(60, 0.1, 60, MAT.floor, 0, -0.05, 0);
-  // floor grid (teal, anime pop)
-  const grid = new THREE.GridHelper(48, 48, 0x4defa1, 0x2f3a4e);
-  grid.material.transparent = true; grid.material.opacity = 0.5; grid.position.y = 0.02; scene.add(grid);
+  // floor grid — subtle painted/taped lines
+  const grid = new THREE.GridHelper(48, 48, 0x6a6d73, 0x3b3c40);
+  grid.material.transparent = true; grid.material.opacity = 0.32; grid.position.y = 0.02; scene.add(grid);
   // perimeter walls (just past bounds)
   box((BOUNDS.x + 1) * 2, 9, 0.4, MAT.wall, 0, 4.5, -(BOUNDS.z + 1));
   box((BOUNDS.x + 1) * 2, 9, 0.4, MAT.wall, 0, 4.5, (BOUNDS.z + 1));
@@ -308,7 +318,13 @@ function loadProgress() {
 function saveProgress() { try { localStorage.setItem(SAVE_KEY, JSON.stringify(progress)); } catch (_) {} }
 function levelFor(xp) { return 1 + Math.floor(xp / 150); }
 function xpIntoLevel(xp) { return xp % 150; }
-function addXP(n) { progress.xp += n; saveProgress(); refreshHUD(); }
+let lastLevel = levelFor(progress.xp);
+function addXP(n) {
+  progress.xp += n; saveProgress();
+  const nl = levelFor(progress.xp);
+  if (nl > lastLevel) { lastLevel = nl; HUD.toast('★ LEVEL UP — Level ' + nl); beep(700, 0.12); setTimeout(() => beep(950, 0.14), 130); }
+  refreshHUD();
+}
 
 // ---------------------------------------------------------------- HUD API
 const HUD = {
@@ -416,6 +432,16 @@ function updateReticle() {
     }
   }
   setReticle(!!currentTarget, currentTarget ? currentTarget.label : '');
+  setHighlight(currentTarget ? currentTarget.mesh : null);
+}
+// pop whatever the reticle is on, so it's obvious what you'll interact with
+// (a scale bump reads cleanly on any colour, unlike an emissive tint on dark props)
+let _hi = null;
+function setHighlight(mesh) {
+  if (_hi === mesh) return;
+  if (_hi) _hi.scale.setScalar(_hi.userData._s0 || 1);
+  _hi = mesh;
+  if (_hi) { if (_hi.userData._s0 === undefined) _hi.userData._s0 = _hi.scale.x || 1; _hi.scale.setScalar((_hi.userData._s0 || 1) * 1.08); }
 }
 function findInteractable(obj) {
   let o = obj;
@@ -424,11 +450,13 @@ function findInteractable(obj) {
 }
 const _wp = new THREE.Vector3();
 function worldPos(m) { m.getWorldPosition(_wp); return _wp.clone(); }
+const COARSE = matchMedia('(pointer: coarse)').matches;
+const KEYHINT = COARSE ? 'tap' : 'E';
 function setReticle(hot, label) {
   $('reticle').classList.toggle('hot', hot);
   $('actBtn').classList.toggle('live', hot);
   const h = $('actHint');
-  if (hot && label) { h.innerHTML = label + ' <span class="key">·&nbsp;E</span>'; h.classList.add('show'); }
+  if (hot && label) { h.innerHTML = label + ' <span class="key">·&nbsp;' + KEYHINT + '</span>'; h.classList.add('show'); }
   else h.classList.remove('show');
 }
 function activate() {
@@ -487,21 +515,27 @@ function moveStick(e) {
 }
 $('actBtn').addEventListener('pointerdown', e => { e.stopPropagation(); activate(); });
 
-const SPEED = 2.7;
+const SPEED = 2.9;
+const vel = { x: 0, z: 0 };
 function movePlayer(dt) {
-  if (state !== 'play') return;
-  let mx = sVec.x, mz = sVec.y;                       // joystick
-  if (keys['w'] || keys['arrowup']) mz -= 1;
-  if (keys['s'] || keys['arrowdown']) mz += 1;
-  if (keys['a'] || keys['arrowleft']) mx -= 1;
-  if (keys['d'] || keys['arrowright']) mx += 1;
-  const len = Math.hypot(mx, mz); if (len < 0.02) return;
-  if (len > 1) { mx /= len; mz /= len; }
-  // rotate by yaw so "forward" is where you look
+  let mx = 0, mz = 0;
+  if (state === 'play') {
+    mx = sVec.x; mz = sVec.y;                          // joystick
+    if (keys['w'] || keys['arrowup']) mz -= 1;
+    if (keys['s'] || keys['arrowdown']) mz += 1;
+    if (keys['a'] || keys['arrowleft']) mx -= 1;
+    if (keys['d'] || keys['arrowright']) mx += 1;
+    const len = Math.hypot(mx, mz); if (len > 1) { mx /= len; mz /= len; }
+  }
+  // target world-space velocity (forward is where you look)
   const sin = Math.sin(yaw), cos = Math.cos(yaw);
-  const wx = mx * cos + mz * sin, wz = -mx * sin + mz * cos;
-  rig.position.x = clampV(rig.position.x + wx * SPEED * dt, -BOUNDS.x, BOUNDS.x);
-  rig.position.z = clampV(rig.position.z + wz * SPEED * dt, -BOUNDS.z, BOUNDS.z);
+  const tvx = (mx * cos + mz * sin) * SPEED, tvz = (-mx * sin + mz * cos) * SPEED;
+  // smooth accel / decel so start & stop feel natural
+  const k = Math.min(1, 12 * dt);
+  vel.x += (tvx - vel.x) * k; vel.z += (tvz - vel.z) * k;
+  if (Math.abs(vel.x) < 1e-3 && Math.abs(vel.z) < 1e-3) return;
+  rig.position.x = clampV(rig.position.x + vel.x * dt, -BOUNDS.x, BOUNDS.x);
+  rig.position.z = clampV(rig.position.z + vel.z * dt, -BOUNDS.z, BOUNDS.z);
 }
 
 // nearest station → drives the objective HUD (seamless, no hard "enter")
@@ -526,6 +560,34 @@ function updateStations() {
   }
 }
 
+// points you to the nearest unfinished station — on it if visible, clamped to the
+// screen edge (with a turn arrow) when it's off to the side or behind you
+const _wpv = new THREE.Vector3();
+function updateWaypoint() {
+  const wp = $('waypoint');
+  if (state !== 'play') { wp.classList.remove('show'); return; }
+  let best = null, bd = 1e9;
+  for (const m of modules) { if (progress.done[m.id]) continue; const d = Math.hypot(rig.position.x - m.station.x, rig.position.z - m.station.z); if (d < bd) { bd = d; best = m; } }
+  if (!best || bd < 2.0) { wp.classList.remove('show'); return; }
+  const W = stage.clientWidth, H = stage.clientHeight;
+  _wpv.set(best.station.x, 1.4, best.station.z);
+  const cs = _wpv.clone().applyMatrix4(camera.matrixWorldInverse); // camera space, -z = forward
+  const inFront = cs.z < 0;
+  const ndc = _wpv.clone().project(camera);
+  let sx = (ndc.x * 0.5 + 0.5) * W, sy = (-ndc.y * 0.5 + 0.5) * H;
+  const centered = inFront && Math.abs(ndc.x) < 0.55 && Math.abs(ndc.y) < 0.72;
+  if (centered) { wp.classList.remove('show'); return; }   // you can already see it — no clutter
+  if (!inFront) { sx = cs.x < 0 ? 40 : W - 40; sy = H * 0.62; }
+  const cx = clampV(sx, 44, W - 44), cy = clampV(sy, 92, H - 132);
+  const onEdge = !inFront || cx !== sx || cy !== sy;
+  wp.style.left = cx + 'px'; wp.style.top = cy + 'px';
+  $('wpName').textContent = best.title; $('wpDist').textContent = Math.round(bd) + 'm';
+  const arw = wp.querySelector('.arw');
+  if (onEdge) { const ang = Math.atan2(cy - H / 2, cx - W / 2); arw.textContent = '▲'; arw.style.transform = 'rotate(' + (ang * 180 / Math.PI + 90) + 'deg)'; }
+  else { arw.textContent = '◎'; arw.style.transform = 'none'; }
+  wp.classList.add('show');
+}
+
 // ---------------------------------------------------------------- PANEL
 function showPanel(o) {
   $('panelTag').textContent = o.tag || 'STATION'; $('panelTitle').textContent = o.title || '';
@@ -543,11 +605,13 @@ let last = now();
 renderer.setAnimationLoop(() => {
   const t = now(), dt = Math.min((t - last) / 1000, 0.05); last = t;
   if (!renderer.xr.isPresenting) { rig.rotation.y = yaw; camera.rotation.x = pitch; }
-  movePlayer(dt); updateStations(); updateReticle();
-  // pulse station rings + face labels handled by Sprite; animate rings
-  for (const m of modules) if (m.pad) { const s = 1 + Math.sin(t * 0.004 + m.station.x) * 0.05; m.pad.ring.scale.setScalar(s); }
+  movePlayer(dt); updateStations(); updateReticle(); updateWaypoint();
+  // animate station rings + fade each label by distance (readable far, out of the way up close)
+  for (const m of modules) {
+    if (m.pad) m.pad.ring.scale.setScalar(1 + Math.sin(t * 0.004 + m.station.x) * 0.05);
+    if (m.label) m.label.spr.material.opacity = clampV((Math.hypot(rig.position.x - m.station.x, rig.position.z - m.station.z) - 1.8) / 1.6, 0, 1);
+  }
   for (const m of modules) if (m.built && m.update && m === activeStation) m.update(m.ctx, dt);
-  $('debug').textContent = state === 'play' ? ('x' + rig.position.x.toFixed(1) + ' z' + rig.position.z.toFixed(1)) : '';
   renderer.render(scene, camera);
 });
 
@@ -573,7 +637,7 @@ async function initXR() {
 initXR();
 
 // ---------------------------------------------------------------- BOOT + UI
-function begin() { state = 'play'; $('startScreen').classList.add('hide'); refreshHUD(); }
+function begin() { state = 'play'; $('startScreen').classList.add('hide'); refreshHUD(); setTimeout(() => { const h = $('hint'); if (h) h.style.opacity = '0'; }, 9000); }
 $('startBtn').addEventListener('click', () => { initAudio(); if (AC && AC.state === 'suspended') AC.resume(); begin(); });
 $('muteBtn').addEventListener('click', () => { muted = !muted; $('muteBtn').textContent = muted ? '♪̶' : '♪'; $('muteBtn').style.opacity = muted ? .5 : 1; });
 if (!matchMedia('(pointer: coarse)').matches) document.body.classList.add('desktop');
@@ -657,6 +721,11 @@ window.__cb = {
     return tapAt(r.left + (p.x * 0.5 + 0.5) * r.width, r.top + (-p.y * 0.5 + 0.5) * r.height);
   },
   interact() { activate(); },
+  diag() { return { active: activeStation ? activeStation.id : null, interactables: interactables.length, built: modules.filter(m => m.built).map(m => m.id), pos: { x: +rig.position.x.toFixed(2), z: +rig.position.z.toFixed(2) } }; },
+  tapIx(id, idx) { const list = interactables.filter(i => i.module.id === id); const it = list[idx]; if (!it) return false;
+    const p = worldPos(it.mesh).project(camera); const r = renderer.domElement.getBoundingClientRect();
+    return tapAt(r.left + (p.x * 0.5 + 0.5) * r.width, r.top + (-p.y * 0.5 + 0.5) * r.height); },
+  ixCount(id) { return interactables.filter(i => i.module.id === id).length; },
   aimedAt() { return currentTarget ? currentTarget.module.id : null; },
   resetProgress() { progress.xp = 0; progress.done = {}; saveProgress(); modules.forEach(drawStationLabel); refreshHUD(); },
   ready: true,
