@@ -84,8 +84,12 @@ black inverted-hull **outlines**, a soft gradient sky, and a brighter, more
 saturated palette. Baked into the engine's material layer (`CB.mat` / `CB.outline`)
 so all content inherits it. See `governance/DECISION_LOG.md` and doc 06 (brand).
 
-## Guardrail
+## Where it lives
 
-The framework is content-free and public-safe to describe; the **playable file and
-any lesson content stay in private storage** (Drive), per doc 09. This repo records
-that the framework exists and how modules plug in — not the built lessons.
+- **The content-free framework is committed to this public repo** at
+  `companies/crew-blueprint/experience/the-shop-floor.html`, and is playable at its
+  GitHub Pages URL (no download needed). It has no lesson content and no PII — it is
+  the engine, safe to publish.
+- **Lesson content and the lesson-carrying playable builds stay private** (Drive),
+  per doc 09. So: the *engine* is public; the *lessons* that plug into it are not.
+  This repo records how modules plug in — never the built lesson content.
