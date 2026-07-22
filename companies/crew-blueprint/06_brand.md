@@ -29,6 +29,22 @@ Atlas each keep their own — see
 truth** for exact colors and type; values are not hardcoded here, so the brand
 stays in sync with the site (industrial *Extendable* theme — see doc 05).
 
+## Game aesthetic — anime / cel-shaded (owner, 2026-07-22)
+
+The **playable experience** has a distinct **anime** look — deliberately not the
+grey, corporate feel of most training sims. Baked into the experience framework's
+material layer (`CB.mat` / `CB.outline`; see
+`scenes/00_experience_architecture.md`) so all lessons inherit it:
+
+- **Toon / cel shading** — banded (stepped) lighting instead of smooth gradients.
+- **Outlines** — crisp black inverted-hull silhouettes on hero objects and
+  characters.
+- **Gradient sky + brighter, more saturated palette** — teal/amber/coral accents
+  over the industrial base.
+
+This is the *game* aesthetic; the website/marketing brand above (industrial
+*Extendable*) still governs the site. Recorded in `governance/DECISION_LOG.md`.
+
 ## Asset locations (referenced)
 
 Logos, imagery, and design assets are maintained in the private content

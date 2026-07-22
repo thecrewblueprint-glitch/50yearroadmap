@@ -6,6 +6,32 @@ Newest first.
 
 ---
 
+## 2026-07-22 — Experience architecture: build the framework first; anime aesthetic
+**Decision (two parts, owner):**
+
+1. **Build the composable framework before more content.** The prototypes must
+   layer into **one seamless, forward-progressing, walkable experience with
+   interaction deeper than clicking** — not a pile of separate click-games. So the
+   engine is built first and lessons plug into it as **modules at stations** in one
+   world. The framework owns world/player(walk+look)/interaction(reticle+tap+VR
+   ray)/HUD/progression(XP saved)/WebXR; lessons only touch it through a `ctx`/`CB`
+   SDK and never set up their own renderer/camera/controls. Spec:
+   `companies/crew-blueprint/scenes/00_experience_architecture.md`. Prototype
+   "The Shop Floor" built + verified 2026-07-22 (walk, gaze/tap interact, complete,
+   XP, save — with 3 throwaway placeholder stations).
+   **Why:** this is the difference between "a few handmade demos" and a *system*.
+   It makes walking, VR, and deeper-interaction upgrades land everywhere at once,
+   and lets the existing atoms (Coil Line, Make It Safe) become stations in one
+   world instead of dead-end files.
+
+2. **Anime / cel-shaded aesthetic.** The visual style is **anime**: toon materials
+   (banded lighting) + black **outlines** (inverted-hull silhouette), a gradient
+   sky, and a brighter, more saturated palette. Baked into the engine's material
+   layer (`CB.mat` / `CB.outline`) so **all content inherits it** for free.
+   Recorded in doc 06 (brand). **Why:** a distinct, approachable, ownable look that
+   sets the platform apart from grey corporate-training sims and fits a game, not
+   an LMS.
+
 ## 2026-07-22 — Learning design: safe failure with real consequences; lessons are role-based full workflows
 **Decision (owner, refining the same day):** Two more design principles, from the
 owner after the "Coil Line" prototype:

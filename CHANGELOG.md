@@ -25,6 +25,31 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — BUILT: the experience FRAMEWORK ("The Shop Floor") + anime aesthetic
+- Owner's call: *"build the framework… the best framework you can build to layer
+  the data and modules onto,"* and *"anime style aesthetic."* Built the composable
+  engine the lessons plug into — content-free on purpose.
+- **What it is:** one **walkable** first-person jobsite where each lesson is a
+  **module** placed at a **station**. The engine owns world / player (walk via
+  touch-joystick or WASD + look via drag/mouse/headset) / interaction (**reticle +
+  tap + VR controller ray**) / HUD / **progression (XP, levels, saved to
+  localStorage)** / WebXR. Lessons register via `CB.registerModule({...})` and only
+  touch the world through a `ctx`/`CB` SDK — never their own renderer/camera — which
+  is exactly what lets the existing atoms become stations in one world and makes
+  walking/VR/deeper-interaction upgrades land everywhere at once. Contract spec:
+  `companies/crew-blueprint/scenes/00_experience_architecture.md`.
+- **Anime aesthetic baked in:** toon/cel shading (banded lighting) + black
+  inverted-hull **outlines** + gradient sky + brighter palette, in the engine's
+  material layer (`CB.mat`/`CB.outline`) so all content inherits it. Recorded in
+  `DECISION_LOG.md` and doc 06.
+- **Smoke-tested in Chromium:** 0 errors, 0px overflow; walking moves the player,
+  gaze-aim finds a station's interactable, interact + tap both complete stations,
+  XP accrues (50→90→120) and levels up, progress saves. Three throwaway placeholder
+  stations included only to prove the loop; they get deleted when real lessons land.
+- Delivered privately per doc 09. **Next:** migrate Coil Line / Make It Safe into
+  `build(ctx)` modules and register them as stations; build the truss-pin atom as a
+  new station.
+
 ### 2026-07-22 — MILESTONE: validated foundation for the gamified 3D learning system
 - Owner's call after playing the prototypes: *"a good prototype that allows for a
   good starting point of this project."* Marking the checkpoint — the gamified,
