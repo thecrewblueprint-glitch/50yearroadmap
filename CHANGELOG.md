@@ -25,6 +25,11 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Recorded the owner's operating truth (deep context)
+- Added `data/roadmap-deep-context/2026-07-21-owner-operating-truth-deep-context.md`
+  — the owner's own words on how they work ("ideas → words → creation … for myself
+  and for others out of love"), recorded verbatim at their word that it's "just
+  facts of my being." The why beneath every branch. Public-safe; no private detail.
 ### 2026-07-21 — Capture all partnership leads as future considerations (build-first)
 - Owner decision: **build more himself before approaching partners.** Recorded in
   `governance/DECISION_LOG.md`; noted at the top of the `partnerships/` playbook.
