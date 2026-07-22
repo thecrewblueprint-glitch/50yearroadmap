@@ -174,7 +174,7 @@
         {
           "id": "cb-5",
           "task": "Ship first gamified MVP module — a ground/field-hand fundamental (static, client-side progress)",
-          "why": "FIRST PROTOTYPE BUILT (2026-07-22): Module 1 'Your First Work Call' as a playable single-file skill tree — 5 lesson nodes (learn → do → check → result), one real interaction each, 80% pass gates, XP/streak/rank, localStorage progress, industrial dark theme, no backend. Smoke-tested end-to-end in Chromium (0 errors). Delivered to the owner privately (full lesson content stays out of the public repo per doc 09). Remaining: owner vision-check → iterate → deploy to the Crew Blueprint site.",
+          "why": "TWO PROTOTYPES BUILT (2026-07-22). (1) Module 1 'Your First Work Call' — a playable single-file skill tree: 5 lesson nodes (learn → do → check → result), one real interaction each, 80% pass gates, XP/streak/rank, localStorage, no backend (build-ladder rung 1: cards). (2) 'Dock Sweep' — the first embodied playable SCENE (build-ladder rung 2): drag to look around a load-in dock wider than the screen, catch timed hazards (forklift/rolling case/overhead load) and lead-calls before their ring runs out, tap gear to learn it; teaches listening + head-on-a-swivel, AWARENESS meter + debrief ratings. Both smoke-tested end-to-end in Chromium (0 errors) and delivered privately (content stays out of the public repo per doc 09). Remaining: owner vision-check on Dock Sweep's feel → build the other lessons as scenes → iterate → deploy to the Crew Blueprint site.",
           "priority": "HIGH",
           "status": "in_progress"
         },

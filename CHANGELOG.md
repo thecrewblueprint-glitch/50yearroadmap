@@ -25,6 +25,29 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — BUILT: "Dock Sweep" — first playable scene (build ladder rung 2)
+- Built the first **embodied playable scene** the owner envisioned: a single-file
+  canvas game where the learner **drags to look around a load-in dock wider than
+  the screen** and reacts to what happens while they're looking elsewhere — a
+  forklift crossing, a case rolling loose, a load swinging overhead, the lead
+  calling out. Off-screen events raise **edge arrows**; each hazard must be pointed
+  at before its timed ring runs out. An **AWARENESS meter** and score drive a
+  debrief with ratings ("SENT HOME EARLY" → "CREW CHIEF NOTICED YOU"). Gear
+  (road case, barricade, truss, shackle) is **tappable to learn** what it is and
+  how a green hand treats it. Teaches the two things the owner named: **listening**
+  (lead calls) and **keeping your head on a swivel** (moving hazards). Fully
+  self-contained — no backend, no external requests; works on a phone.
+- This is **rung 2** of the build ladder in `05_platform.md` (cards → **playable
+  2D scenes** → first-person 3D → full sim/VR).
+- **Smoke-tested in Chromium via Playwright:** syntax clean, zero page/console
+  errors, 0px horizontal overflow, start → play → end → replay all transition,
+  camera pans the full 2400px world, hazard alerts score and feed AWARENESS,
+  debrief renders a real score/rating/takeaway, gear inspection popup works.
+- Delivered to the owner privately — the scene stays out of the public repo per
+  the doc-09 guardrail; the repo records that it exists. Awaiting the owner's
+  vision-check on whether the *feel* lands before the other lessons become scenes.
+- `cb-5` note updated to reflect the first scene prototype exists.
+
 ### 2026-07-22 — Captured the embodied-game vision + build ladder (Crew Blueprint)
 - Owner's full delivery vision: an **actual playable game with characters and
   scenes** — learners look around a jobsite, see the items being taught, and
