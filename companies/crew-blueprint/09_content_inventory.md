@@ -16,6 +16,7 @@ exists, where, its state, and how ready it is to gamify.
 | Folder | What's in it | State |
 | --- | --- | --- |
 | **Course 1: Your First Work Call** | The ground/field-hand fundamentals course (Module 1 complete — see below); QA review reports | ✅ Module 1 complete; more modules to come |
+| **Playable Prototypes** | The self-contained playable builds (see below) + an "About" record | ✅ 3 prototypes; newest = *Coil Line* (3D) |
 | **Module Data Packages** | `module-01-lessons.json` (structured lessons) + `crew-blueprint-v0.3-data-module-01.zip` | ✅ structured, gamification-ready |
 | **Rigging & Hardware** | `TCB-RIG-201_Rigging_Course_Final.pdf` | ✅ final — but **advanced/future** (not the entry point) |
 | **Predictive Hazard Recognition** | `Predictive_Hazard_Recognition_Course.docx` | ✅ drafted |
@@ -60,6 +61,18 @@ directly onto a gamified skill-tree module:
 
 So **`cb-5` is a packaging task, not a content task** — wrap this existing JSON in
 the static gamified shell.
+
+## Playable Prototypes (the built experiences)
+
+Stored in **Course Data Packages → "Playable Prototypes"** (Drive). Each is one
+self-contained HTML file — no install, no backend, no internet needed. The files
+are kept out of this public repo on purpose (the repo records that they exist;
+the playable content lives in Drive). Rungs of the build ladder (doc 05):
+
+1. **Module 1 — "Your First Work Call"** — cards / skill tree (rung 1).
+2. **Dock Sweep** — first 2D look-around scene (rung 2).
+3. **Coil Line** — first true 3D / WebXR scene (rung 3); teaches over-under
+   coiling skill-first, safety ambient, safe-failure "bird's-nest" consequence.
 
 ## Finalization / consolidation (the owner's "which account has what" problem)
 
