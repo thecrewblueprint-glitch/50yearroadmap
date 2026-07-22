@@ -25,6 +25,32 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Research (how it's built) + BUILT: "Make It Safe" (2nd 3D atom)
+- **Research/05 — "how comparables are built."** At the owner's ask, shifted from
+  *who exists* to *how it's manifested + what it takes.* Studied Transfr (native VR
+  on Quest), Interplay (web 3D "SkillMill" + VR — the closest model), and
+  welding/forklift motor-skill sims, plus the simulation-training learning science
+  (deliberate practice, fading scaffolds, terminal feedback, briefing→scenario→
+  debrief, RCDP, fidelity matched to learner). Conclusion: our stack (Three.js
+  web-first, WebXR as a later *port* not a restart) and our learn→do→check→debrief
+  loop are the right, cheap, evidence-backed path; the real work is procedure
+  fidelity + a reusable scene kit. Distilled concrete design rules; indexed in the
+  research README.
+- **BUILT: "Make It Safe"** — the second 3D atom and the highest-value one (step 4
+  of the lighting-hand workflow). Hang a fixture on a truss: seat the clamp, attach
+  the **safety cable**, set the address, ground-check it — then fly to trim. The
+  "fly it" shortcut is always available and a chief-patience meter tempts you to
+  rush; **fly without the safety cable and the fixture falls to the deck** (safe
+  failure, visible cost). Applies the research rules (name the 2–3 things that make
+  it right, instant feedback, debrief with the consequence, short/replayable, reuses
+  the Coil Line scene kit, WebXR-ready). Deliberately makes safety the *objective*
+  (it's the safety lesson) — contrast to Coil Line where safety is ambient.
+- **Smoke-tested in Chromium:** 0 errors, 0px overflow; all consequence paths
+  verified — skip-bond → "IT FELL", all-done → "ROCK SOLID" (100), bond-but-no-clamp
+  → "HANGING BY THE BOND". Delivered privately (per doc 09).
+- Two 3D atoms now exist (Coil Line, Make It Safe) — enough to compare and decide
+  what needs work before building more.
+
 ### 2026-07-22 — BUILT: "Coil Line" — first 3D / WebXR scene (build ladder rung 3) + learning-design direction
 - Built the first **true 3D scene** and the first **skill-first** one: a
   self-contained first-person WebGL scene (Three.js inlined — no CDN, works
