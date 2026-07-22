@@ -25,6 +25,21 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — cb-5 v2: full UI/UX audit on the gamified module prototype
+- Owner flagged UI/UX issues + scrolling errors. Audited and fixed: **scroll position
+  now resets to top on every screen/step change** (the main bug — you landed
+  mid-page after each transition); after grading a list, the view scrolls back to
+  the marked answers; replaced the `confirm()` reset (silently blocked in sandboxed
+  viewers) with a two-tap inline confirm; correct-answer reveal on the sorting game
+  now shows green (was amber = confusable with "your pick"); review-run messaging
+  fixed (a failed replay no longer says "no XP banked" when the earlier pass
+  stands, and banked XP now shows the true delta); mobile polish (no double-tap
+  zoom, no text-selection on taps, horizontal-overflow guard, safe-area padding,
+  fade-in transitions); multi-select check button disabled until a pick, with a
+  live selected-count.
+- Re-verified end-to-end in Chromium: scroll reset confirmed (859px → 0), 0px
+  horizontal overflow, L1 + L2 played through (310 XP), green reveal on wrong
+  sort, two-tap reset works, zero page errors. Delivered v2 privately.
 ### 2026-07-22 — BUILT: first gamified module prototype (cb-5)
 - Built the first playable Crew Blueprint prototype: **Module 1 "Your First Work
   Call" as a single-file gamified skill tree** — 5 lesson nodes (learn → do →
