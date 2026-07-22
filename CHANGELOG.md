@@ -25,6 +25,22 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-21 — Partnership research: labor-staffing, industry-intelligence, nomadic-community
+- Completed the sector sweep (docs 02–04 in `partnerships/research/`):
+  - **Labor staffing (Deadhang):** mature national market (Rhino, Crew One, Upstage,
+    Show Support, Stage Crew, ShowPros). These are competitors *and* Deadhang's best
+    partners — Deadhang already works through Upstage (1099) and Crew One (portfolio).
+    Validates Track 1 (become preferred subcontractor); warm starts exist.
+  - **Industry intelligence (Production Atlas):** job-board/directory lane taken
+    (ProductionHUB 150k+, Giggs); premium touring data owned by Pollstar (Live
+    Nation). None do Atlas's worker-facing structured department/pathway/regional
+    intelligence — confirms the "not a job board" positioning and the whitespace.
+  - **Nomadic community (Homestead):** live-event-specific version is whitespace, but
+    **Escapees RV Club / Xscapers** is a near-exact proven template (member co-op
+    LAND parks incl. Benson AZ; working-nomad subgroup; 40 yrs). Study + apply.
+- Captured partner leads per sector for `connections.md`. All four sectors now have a
+  first-pass landscape study.
+
 ### 2026-07-21 — Partnership research: gamified-learning landscape
 - Started `partnerships/research/` (sector-by-sector "who already built a version
   of this idea" landscape research). First study: gamified stagehand/rigging/

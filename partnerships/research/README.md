@@ -26,9 +26,13 @@ Each ends with **strategic implications** (whitespace) and **partner leads**.
 | # | Sector | Covers |
 | --- | --- | --- |
 | 01 | [Gamified learning (stagehand / rigging / production)](01_gamified-learning-landscape.md) | Who has gamified live-event/stagehand training — for The Crew Blueprint |
+| 02 | [Labor staffing](02_labor-staffing-landscape.md) | Live-event stagehand staffing companies — for Deadhang Labor (competitors *and* partners) |
+| 03 | [Industry intelligence](03_industry-intelligence-landscape.md) | Directories, job boards, touring data — for Production Atlas |
+| 04 | [Nomadic community](04_nomadic-community-landscape.md) | Nomad-community + co-op land models — for the Homestead |
 
-_Planned next: Deadhang labor-staffing analogs · Production Atlas
-research-platform analogs · Homestead / nomadic-worker community analogs._
+All four Phase-1+2 sectors now have a first-pass landscape study. Next: deepen any
+one (e.g. profile a specific target in depth), and promote the best leads into
+`data/roadmap/connections.md`.
 
 ## Guardrail
 
