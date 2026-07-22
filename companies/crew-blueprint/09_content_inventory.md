@@ -86,5 +86,15 @@ the playable content lives in Drive). Rungs of the build ladder (doc 05):
 
 ## Guardrail
 
-Full lesson content is the product and stays in private storage. This inventory
-lists titles, structure, and state only — never the lesson bodies.
+**Full course content is the product and stays in private storage** — the
+canonical DOCX/JSON course packets, complete curriculum, and full lesson scripts
+live in Drive; this inventory lists titles, structure, and state only, never the
+lesson bodies.
+
+**Playable prototypes are the exception (public, by owner's decision 2026-07-22):**
+the self-contained playable builds now live in the public repo under
+`experience/` as a transparent showcase of what's being built (framework
+`the-shop-floor.html`; lesson arc `lighting-hand.html`). They carry only the
+limited teaching text needed to demonstrate the mechanics — not the full course
+packets — and are protected by the repo `LICENSE` (all rights reserved). Line:
+**prototypes = public showcase; full course product = private.**

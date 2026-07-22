@@ -25,6 +25,19 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Playable prototypes published to the repo (owner decision)
+- Owner: add the playable build to the GitHub repo. Committed the lighting-hand
+  lesson arc at `companies/crew-blueprint/experience/lighting-hand.html` (five
+  stations: Load-In, Coil, Pin the Truss, Hang & Make Safe, Fly to Trim), alongside
+  the framework `the-shop-floor.html`. Both are playable at their GitHub Pages URLs.
+- **Guardrail shift, recorded:** playable **prototypes** are now public (a
+  transparent showcase, protected by the repo LICENSE); the **full course content**
+  — canonical DOCX/JSON packets, complete curriculum, full lesson scripts (the
+  product) — **stays private in Drive** per doc 09. Line: prototypes = public
+  showcase; full course product = private. Updated doc 09, the experience README,
+  and the architecture doc to keep the guardrail coherent.
+
+
 ### 2026-07-22 — Deeper interaction: grab-and-carry + a Load-In station
 - Continued past tapping toward the "deeper interaction" frontier. Added a reusable
   **grab-and-carry** capability to the engine — `ctx.hold(mesh)` / `ctx.release()` /

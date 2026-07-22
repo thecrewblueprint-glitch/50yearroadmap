@@ -90,12 +90,13 @@ black inverted-hull **outlines**, a soft gradient sky, and a brighter, more
 saturated palette. Baked into the engine's material layer (`CB.mat` / `CB.outline`)
 so all content inherits it. See `governance/DECISION_LOG.md` and doc 06 (brand).
 
-## Where it lives
+## Where it lives (updated 2026-07-22)
 
-- **The content-free framework is committed to this public repo** at
-  `companies/crew-blueprint/experience/the-shop-floor.html`, and is playable at its
-  GitHub Pages URL (no download needed). It has no lesson content and no PII — it is
-  the engine, safe to publish.
-- **Lesson content and the lesson-carrying playable builds stay private** (Drive),
-  per doc 09. So: the *engine* is public; the *lessons* that plug into it are not.
-  This repo records how modules plug in — never the built lesson content.
+- **The playable prototypes are committed to this public repo** under
+  `companies/crew-blueprint/experience/` — the **framework** (`the-shop-floor.html`)
+  and the **lighting-hand lesson arc** (`lighting-hand.html`) — and are playable at
+  their GitHub Pages URLs (no download needed). They are the transparent showcase of
+  what's being built, protected by the repo `LICENSE`.
+- **The full course content stays private** (Drive) — the canonical DOCX/JSON
+  packets, complete curriculum, and full lesson scripts (the product), per doc 09.
+  Line: **prototypes = public showcase; full course product = private.**
