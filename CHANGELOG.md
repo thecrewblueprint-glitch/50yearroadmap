@@ -25,6 +25,26 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Digest: Midwest work base & IATSE outreach (mobile-work plan, pt. 2)
+- Companion to the travel/vehicle-tax digest. Captured the owner's handoff on where
+  to base for vanlife stagehand work in
+  `companies/deadhang-labor/16_midwest_work_base_and_iatse_outreach.md`.
+- **Key shift:** relationships beat market size. With an **Indy IATSE** contact and
+  a **Grand Rapids IATSE Local 26 head-rigger** contact, the city ranking moved to
+  **1) Grand Rapids / West MI (Local 26)  2) Indianapolis  3) Milwaukee/Kenosha
+  backup  4) Chicago only for high-paying targeted calls.** Recorded the Local 26
+  public contact block, a draft outreach message + follow-up questions, and the
+  decision rule for picking the first landing zone.
+- **Ties to doc 15:** booking these specific calls *before* driving is what makes
+  the trip documented business (deductible) vs. speculative. Registered the two
+  IATSE locals in `data/roadmap/connections.md` as **work-access** leads (owner
+  getting his own calls — the build-first/no-cold-outreach posture doesn't apply).
+  Public org info only; no personal contact PII. Indexed in the Deadhang README.
+- Docs 15 + 16 form the ready-to-formalize **"mobile operations / travel-for-work"**
+  plan branch — offered to add it to `roadmap.json` with tracked work items on the
+  owner's word.
+
+
 ### 2026-07-22 — Digest: business travel & vehicle tax (new mobile-work plan branch)
 - Owner is weighing a **new branch of the plan** — traveling to the Midwest to find
   live-event work, van/camping along the way — and asked to digest research on

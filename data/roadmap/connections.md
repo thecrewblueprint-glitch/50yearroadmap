@@ -35,6 +35,20 @@ independently before sharing anything sensitive.
 | Stage Crew | stagecrew.us | ★★★ | via website | Full-spectrum crew staffing. | future |
 | ShowPros | showprostaff.com | ★★★ | via website | Skilled labor & staffing for live events. | future |
 
+## Deadhang Labor — IATSE locals (work access, owner's mobile-work plan)
+
+> These are **work-access relationships** — the owner getting his own stagehand /
+> rigging-support calls through union connections — **not** partnership targets. The
+> build-first, don't-cold-outreach posture does **not** apply here; reaching out
+> **is** the plan (see
+> `companies/deadhang-labor/16_midwest_work_base_and_iatse_outreach.md`). Only the
+> organizations are recorded here — never a contact's personal details.
+
+| Organization | Website | Fit | Contact | Purpose / angle | Status |
+| --- | --- | :---: | --- | --- | --- |
+| IATSE Local 26 — Grand Rapids & West Michigan | iatse26.org | ★★★★★ | head-rigger connection (personal) + iatse26.org/contact | **Primary landing-zone lead** — relationship-based access to calls, vanlife-friendly, low city friction. | owner's plan — contact now |
+| Indianapolis IATSE (local) | — | ★★★★ | personal IATSE contact | Alt landing zone — possibly stronger **year-round** call volume. | owner's plan — contact now |
+
 ## The Crew Blueprint — training/content partners (Track 3) + models
 
 | Organization | Website | Fit | Contact | Purpose / angle | Status |
