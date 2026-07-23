@@ -28,6 +28,7 @@ numbers, and personal contact details. Where sensitive detail is essential it is
 | 12 | [Business Document Register](12_document_register.md) | Public-safe index of existing business documents + finalization checklist |
 | 13 | [Current-State Business Plan](13_current_state_business_plan.md) | Living plan describing Deadhang as it is today (companion to the long-term Vision plan) |
 | 14 | [Standard Operating Procedures](14_sops.md) | Step-by-step SOPs: inquiry→booking→gig→invoice→payment→records, plus contractor/merch procedures |
+| 15 | [Business Travel & Vehicle Tax](15_business_travel_vehicle_deductions.md) | Digest: can the van + Midwest work-travel be a write-off? Section 179, mileage/lodging, the "documented business vs. speculative job-hunt" line (a new plan branch; **not tax advice**) |
 
 ## Status legend
 

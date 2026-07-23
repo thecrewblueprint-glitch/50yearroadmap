@@ -25,6 +25,24 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Digest: business travel & vehicle tax (new mobile-work plan branch)
+- Owner is weighing a **new branch of the plan** — traveling to the Midwest to find
+  live-event work, van/camping along the way — and asked to digest research on
+  whether the van + travel are tax-deductible. Captured it in
+  `companies/deadhang-labor/15_business_travel_vehicle_deductions.md`.
+- **Bottom line digested:** deductible **only** as an active self-employed
+  contractor (Deadhang Labor LLC) traveling for **documented** business in the trade
+  — **not** for W-2 job-hunting and **not** for speculative "hope to find work"
+  travel (intent alone fails the IRS test). Section 179 for the van (GVWR > 6,000 lbs,
+  >50% business use, business-% only; living upgrades never deductible); mileage +
+  campground/lodging deductible when away from the tax home for booked business;
+  the "tax home" trap for full-time mobile workers; an audit-trail checklist.
+- Framed to the plan, tied to `dh-8` (tax closeout) and the caravan / "live & travel
+  free" thread. **Flagged as general info, NOT tax advice** — confirm with a tax
+  pro; line up concrete gigs before driving. Offered to formalize it as a roadmap
+  branch on request. Indexed in the Deadhang Labor README.
+
+
 ### 2026-07-22 — Playable prototypes published to the repo (owner decision)
 - Owner: add the playable build to the GitHub repo. Committed the lighting-hand
   lesson arc at `companies/crew-blueprint/experience/lighting-hand.html` (five
