@@ -1,5 +1,9 @@
 # Experience — playable prototypes
 
+> **New here? Read [`OVERVIEW.md`](OVERVIEW.md)** — a one-page digest of the whole
+> experience effort (what it is, the decisions, what exists, how it's built, and
+> what's next). This README covers just the files in this folder.
+
 Playable prototypes of The Crew Blueprint learning experience — the walkable,
 anime/cel-shaded, WebXR-ready engine and the lessons that plug into it. Each is a
 single self-contained file (no backend, no build step, runs offline; open it in a

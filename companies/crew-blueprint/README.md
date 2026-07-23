@@ -38,6 +38,18 @@ platform engineering.
 | [08_growth_model](08_growth_model.md) | Content-first now → foundational library → next-gen platform |
 | [09_content_inventory](09_content_inventory.md) | Map of existing course content in Drive (Course 1 ground fundamentals complete; gamification-ready) |
 
+## The playable experience
+
+The gamified delivery is being **built and is playable now.** Start with the
+one-page digest:
+
+| Doc | Covers |
+| --- | --- |
+| [experience/OVERVIEW](experience/OVERVIEW.md) | **Digest** — what the playable experience is, the decisions, what exists, how it's built, and what's next |
+| [experience/](experience/) | The playable prototypes (framework `the-shop-floor.html` + `lighting-hand.html`), live on GitHub Pages |
+| [scenes/00_experience_architecture](scenes/00_experience_architecture.md) | The engine + the module contract lessons plug into |
+| [scenes/lighting-hand-truck-to-trim](scenes/lighting-hand-truck-to-trim.md) | The full lighting-hand workflow design (the lessons' source) |
+
 ## Guardrails (this repo is public)
 
 - **No certification claims.** The Crew Blueprint teaches skills and context; it
