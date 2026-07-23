@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T00:00:00.000000",
+  "generated_at": "2026-07-22T00:00:00.000000",
   "ultimate_goal": "Build a movement connecting stagehands with training, jobs, and community through an integrated ecosystem of labor management, skill development, and opportunity discovery.",
   "phase": "Phase 1: Labor → Training → Jobs",
   "phase_description": "Establish the core labor sourcing and training infrastructure to create a foundation for long-term community building.",
@@ -357,6 +357,62 @@
       "lifecycle": "active"
     },
     {
+      "id": "mobile-operations",
+      "name": "Mobile Operations (Travel-for-Work)",
+      "role": "Base out of the Midwest in the van and work steady live-event calls — relationship-first, tax-smart",
+      "phase": 1,
+      "lifecycle": "active",
+      "status_percentage": 5,
+      "ultimate_goal": "Establish a stable Midwest work base where the owner can vanlife/camp while working steady stagehand & live-event calls — landing first through IATSE relationships (Grand Rapids Local 26 / Indianapolis) and structuring the travel as documented business through Deadhang Labor LLC so it's tax-smart. A dependable personal income base that funds the rest of the ecosystem while living mobile.",
+      "current_state": "New plan branch (2026-07-22), digested from the owner's handoff. Two docs hold it: companies/deadhang-labor/16 (city ranking + IATSE outreach — a Grand Rapids Local 26 head-rigger connection makes GR the top landing zone, Indianapolis #2, Milwaukee/Kenosha backup, Chicago only for high-paying targeted calls) and companies/deadhang-labor/15 (travel/vehicle tax — deductible only as an active contractor traveling for documented, pre-booked business, not speculative job-hunting). No outreach sent yet; the draft message and decision rule are ready.",
+      "critical_blocker": "None — next action is reaching out to the Grand Rapids Local 26 and Indy IATSE contacts to gauge call volume before committing a landing zone.",
+      "timeline": {
+        "phase_1_ready": "now",
+        "description": "Actionable immediately; gated only on the IATSE contacts' responses, not on capital or other branches."
+      },
+      "blockers": [
+        "Deductibility requires booking specific calls BEFORE driving (documented business, not speculation) — see doc 15",
+        "Choice of first landing zone depends on the IATSE contacts' answers on year-round call volume"
+      ],
+      "work_items": [
+        {
+          "id": "mob-1",
+          "task": "Reach out to the Grand Rapids IATSE Local 26 head-rigger contact (draft message ready in doc 16)",
+          "why": "A personal connection inside a local — especially a head rigger — beats cold-applying in a bigger market; this is the top landing-zone lead.",
+          "priority": "HIGH",
+          "status": "not_started"
+        },
+        {
+          "id": "mob-2",
+          "task": "Ask the Indianapolis IATSE contact about year-round call volume",
+          "why": "Indy may offer steadier year-round work; needed to compare landing zones against Grand Rapids.",
+          "priority": "HIGH",
+          "status": "not_started"
+        },
+        {
+          "id": "mob-3",
+          "task": "Pick the first landing zone (Grand Rapids vs Indianapolis) from the responses",
+          "why": "Decision rule (doc 16): clear GR path → Grand Rapids; clearer Indy volume → Indianapolis; both warm → GR for vanlife comfort + relationship access.",
+          "priority": "MEDIUM",
+          "status": "not_started"
+        },
+        {
+          "id": "mob-4",
+          "task": "Line up concrete calls before the drive",
+          "why": "Booked calls are both the income and the documented-business proof that makes the travel deductible (doc 15) instead of speculative job-hunting.",
+          "priority": "HIGH",
+          "status": "not_started"
+        },
+        {
+          "id": "mob-5",
+          "task": "Confirm the travel/vehicle tax treatment with a tax pro (fold into dh-8)",
+          "why": "Deductibility hinges on active-contractor status + documented business + the tax-home rule (doc 15); verify before relying on any of it.",
+          "priority": "MEDIUM",
+          "status": "not_started"
+        }
+      ]
+    },
+    {
       "id": "homestead",
       "name": "Homes for Hands (care seed)",
       "role": "A light care ethos for the caravan — resources + mutual aid, no land/build/business",
@@ -436,7 +492,8 @@
         "crew-blueprint",
         "production-atlas",
         "contractor-tools",
-        "personal-operations"
+        "personal-operations",
+        "mobile-operations"
       ]
     },
     {
@@ -477,8 +534,25 @@
         "leads_to": "A stable base you can safely scale from."
       },
       {
-        "id": "m2",
+        "id": "m-mob",
         "order": 2,
+        "title": "Land a steady Midwest work base",
+        "area_branch_id": "mobile-operations",
+        "state": "upcoming",
+        "summary": "Base out of the van in the Midwest and work steady live-event calls — landing first through IATSE relationships (Grand Rapids Local 26 / Indianapolis) and structuring the travel as documented business so it's tax-smart.",
+        "outcome": "A reliable stream of stagehand / rigging-support calls from a chosen home market, funding the rest of the build while living mobile.",
+        "step_ids": [
+          "mob-1",
+          "mob-2",
+          "mob-3",
+          "mob-4",
+          "mob-5"
+        ],
+        "leads_to": "A dependable personal income base that powers the whole ecosystem forward."
+      },
+      {
+        "id": "m2",
+        "order": 3,
         "title": "Get paid reliably",
         "area_branch_id": "contractor-tools",
         "state": "upcoming",
@@ -494,7 +568,7 @@
       },
       {
         "id": "m3",
-        "order": 3,
+        "order": 4,
         "title": "Map the industry (Production Atlas)",
         "area_branch_id": "production-atlas",
         "state": "upcoming",
@@ -511,7 +585,7 @@
       },
       {
         "id": "m4",
-        "order": 4,
+        "order": 5,
         "title": "Teach the skills (The Crew Blueprint)",
         "area_branch_id": "crew-blueprint",
         "state": "upcoming",
@@ -529,7 +603,7 @@
       },
       {
         "id": "m5",
-        "order": 5,
+        "order": 6,
         "title": "Build teams & win bigger contracts",
         "area_branch_id": "deadhang-labor",
         "state": "upcoming",
@@ -544,7 +618,7 @@
       },
       {
         "id": "m6",
-        "order": 6,
+        "order": 7,
         "title": "Close the loop — the engine sustains itself",
         "area_branch_id": "personal-operations",
         "state": "upcoming",
@@ -560,7 +634,7 @@
       },
       {
         "id": "m7",
-        "order": 7,
+        "order": 8,
         "title": "Care for the caravan (Homes for Hands)",
         "area_branch_id": "homestead",
         "state": "upcoming",

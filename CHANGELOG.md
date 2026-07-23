@@ -25,6 +25,23 @@ Things known-incomplete or awaiting a decision. Clear them when resolved.
 
 ## Entries
 
+### 2026-07-22 — Formalized the Mobile Operations (Travel-for-Work) roadmap branch
+- Owner said go. Turned the two digests (docs 15 + 16) into a real **`mobile-operations`**
+  branch in `roadmap.json` (Phase 1, lifecycle active), so it shows on the dashboard
+  and the timeline. Ultimate goal: a stable Midwest work base — vanlife/camp while
+  working steady stagehand & live-event calls, landed through IATSE relationships
+  and structured as documented (tax-smart) business travel.
+- **Work items:** mob-1 contact the Grand Rapids Local 26 head-rigger (draft ready);
+  mob-2 ask the Indy IATSE contact about year-round call volume; mob-3 pick the first
+  landing zone (decision rule); mob-4 line up concrete calls before the drive (also
+  the tax audit trail); mob-5 confirm tax treatment with a pro (folds into dh-8).
+- **Timeline:** added journey milestone **`m-mob` "Land a steady Midwest work base"**
+  right after m1 (Solidify Deadhang's foundation) — it's the owner securing his own
+  income base — and renumbered the chain (now 8 milestones). Validator passes.
+- Immediate next action is **mob-1** (reach out to Local 26); left `this_week_focus`
+  as the owner curated it.
+
+
 ### 2026-07-22 — Digest: Midwest work base & IATSE outreach (mobile-work plan, pt. 2)
 - Companion to the travel/vehicle-tax digest. Captured the owner's handoff on where
   to base for vanlife stagehand work in
